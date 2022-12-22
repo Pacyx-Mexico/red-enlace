@@ -1,0 +1,10 @@
+export * from './CarIcon';
+export * from './MedicineIcon';
+export * from './UserPolicyMontain';
+export * from './MedicalExpensesIcon';
+export * from './PersonIcon';
+export * from './ReportIcon';
+export * from './ChatIcon';
+export * from './IdeaIcon';
+export * from './StarIcon';
+// export * from './RedLogo';
