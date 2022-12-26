@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import gradientImageBg from "../../assets/images/hero-siniestro.png";
+//import gradientImageBg from "../../assets/images/hero-siniestro.png";
 import phone from "../../assets/images/phone.png";
 import { Image } from "react-bootstrap";
 
@@ -12,7 +12,7 @@ export const HeroSiniestro = () => {
           <div className="col-lg-6 offset-xl-1 order-lg-2 d-flex">
             <Image
               className="gradient_img_bg position-absolute"
-              src={gradientImageBg}
+              src={"gradientImageBg"}
               alt="Gradient background element"
             />
           </div>
