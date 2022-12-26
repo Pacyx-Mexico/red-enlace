@@ -62,6 +62,18 @@
   height: 100%;
 }
 
+.btn-first {
+  background-color: #ffffff;
+  border: 2px solid #1d45c2 !important;
+  color: #1d45c2;
+  padding: 1rem 3rem;
+}
+
+.btn-first:hover {
+  background-color: #1d45c2;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 600px) {
   .headerText {
     justify-content: flex-start;
