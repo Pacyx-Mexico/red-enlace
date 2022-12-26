@@ -7,4 +7,7 @@ export * from './ReportIcon';
 export * from './ChatIcon';
 export * from './IdeaIcon';
 export * from './StarIcon';
+export * from './MuerteIcon';
+export * from './HospitalIcon';
+export * from './ComputerIcon';
 // export * from './RedLogo';
