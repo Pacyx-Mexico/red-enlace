@@ -53,12 +53,13 @@ export default function Navbar({ type }) {
               smooth={true}
               offset={-70}
               duration={500}
+              className="color-white"
             >
               Productos
             </Link>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <Link to="/siniestro">Siniestros</Link>
+            <Link to="/siniestro" className="color-white">Siniestros</Link>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <Link
@@ -67,6 +68,7 @@ export default function Navbar({ type }) {
               smooth={true}
               offset={-70}
               duration={500}
+              className="color-white"
             >
               Agentes
             </Link>
@@ -78,6 +80,7 @@ export default function Navbar({ type }) {
               smooth={true}
               offset={-70}
               duration={500}
+              className="color-white"
             >
               Clientes
             </Link>
@@ -89,6 +92,7 @@ export default function Navbar({ type }) {
               smooth={true}
               offset={-70}
               duration={500}
+              className="color-white"
             >
               Facturación
             </Link>
