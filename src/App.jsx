@@ -21,7 +21,6 @@ function App() {
         <Routes>
           <Route path="*" element={<Inicio />} />
           <Route path="/" element={<Inicio />} />
-
           <Route path="/deducible-gastos-medicos" element={<GastosMedicos />} />
           <Route
             path="/cotizador-deducible-autos"
