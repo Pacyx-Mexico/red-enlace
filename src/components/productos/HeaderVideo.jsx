@@ -27,7 +27,9 @@ function HeaderVideo({ video, title }) {
 
             <div onClick={scrollTop} className="d-md-none">
               <Link to="/cotizador-deducible-gastos-medicos">
-                <Button text="Contratar" />
+                <button className="btn btn-lg btn-first rounded-pill fw-bold mx-auto w-100 opacity-75 fs-1">
+                  Cotizar
+                </button>
               </Link>
             </div>
           </div>
