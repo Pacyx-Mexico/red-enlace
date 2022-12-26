@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import descriptionImg from "../../assets/images/description-image.png"
-import descriptionImg_mb from "../../assets/images/description-image.png";
+import descriptionImg_mb from "../../assets/images/description-mobile.png";
 
 export const Description = () => {
   return (
@@ -40,11 +40,11 @@ export const Description = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-5">
-            <img className="img-fluid h-100 position-relative" src={descriptionImg_mb} alt="" />
+          <div className="my-5 pt-5">
+            <img className="position-relative w-100 description_mb" src={descriptionImg_mb} alt="" />
           </div>
           <div className="px-4">
-            <p className="mt-3 fs-20 fw-light text-center">
+            <p className="mt-3 mb-0 fs-20 fw-light text-center">
               Con nosotros, tú eliges el porcentaje:
             </p>
             <p className="text-dark mb-5 fs-30 fw-bold text-center">
@@ -67,23 +67,41 @@ const DescriptionSection = styled.section`
   border: 10px solid #6983d6 !important;
   }
 
-  .col-md-5 .position-relative {
-    left: -10rem;
-  }
-
-  .fs-30 {
-    font-size: 30px;
-  }
-
-  .fs-20 {
-    font-size: 20px;
+  .col-md-5 .img-fluid {
+    right: 7rem;
   }
 
   .fs-15 {
     font-size: 15px;
   }
 
+  .fs-20 {
+    font-size: 20px;
+  }
+
+  .fs-30 {
+    font-size: 30px;
+  }
+
   .fs-42 {
     font-size: 42px;
+  }
+
+  @media (max-width: 576px) {
+    .description_mb {
+      right: 25rem;
+      width: 90rem;
+    }
+
+    .fs-30 {
+    font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .description_mb {
+    right: 30%;
+    width: 100%;
+  }
   }
 `

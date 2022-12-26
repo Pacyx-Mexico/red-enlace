@@ -4,8 +4,6 @@ export const ComputerIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="84.672"
-      height="94.687"
       viewBox="0 0 84.672 94.687"
     >
       <g id="Group_483" data-name="Group 483" transform="translate(2.549 2.5)">

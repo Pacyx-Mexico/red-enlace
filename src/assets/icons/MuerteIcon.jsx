@@ -4,8 +4,6 @@ export const MuerteIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="86.03"
-      height="90.605"
       viewBox="0 0 86.03 90.605"
     >
       <g id="Group_393" data-name="Group 393" transform="translate(3 3)">
