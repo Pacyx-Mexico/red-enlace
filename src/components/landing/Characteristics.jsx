@@ -32,6 +32,7 @@ export const Characteristics = () => {
                 </p>
               </div>
             </div>
+            
           </div>
           <div className="col-auto">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center">
