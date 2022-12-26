@@ -1,9 +1,4 @@
 import styled from "styled-components";
-import gradientBgNoOp from "../../assets/images/gradient-image-bg-no-op.png";
-import man from "../../assets/images/hombre.png";
-import gradientBg from "../../assets/images/gradient-image-bg.png";
-import RedLogo from "../../assets/images/RedLogo.png";
-import manMb from "../../assets/images/hombre-mobile.png";
 import { Image } from "react-bootstrap";
 import { RedEnlaceBg } from "../../assets/backgrounds";
 
@@ -12,15 +7,15 @@ export const Hero = () => {
     <HeroContainer className="home position-relative" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
-        src={ gradientBgNoOp }
+        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-no-op.png" }
         alt="Gradient background element"
       />
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
-        src={ gradientBgNoOp }
+        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-no-op.png" }
         alt="Gradient background element"
       />
-      <Image className="man_img-bg position-absolute d-none d-md-block" src={ man } alt="" />
+      <Image className="man_img-bg position-absolute d-none d-md-block" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre.png" } alt="" />
       <div className=" container w-50 position-absolute RE_img_bg d-none d-md-block">
         <RedEnlaceBg />
       </div>
@@ -35,7 +30,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-sm-none">
+      <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-md-none">
         <div className="home__info-mb d-flex flex-column justify-content-center align-items-center">
           <h2 className="pr-xxl-5 fw-bold z-index text-primary h1-heading primary_title">
             Ahorro
@@ -44,16 +39,16 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center z-index-2 position-absolute">
-        <Image className="man_img-mb img-fluid d-sm-none position-relative" src={ manMb } alt="" />
+      <div className="d-flex justify-content-center z-index-2 position-absolute w-100 h-100">
+        <Image className="man_img-mb img-fluid d-md-none position-relative" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png" } alt="" />
         <Image
-        className="gradient_img_bg_sm img-fluid position-absolute d-sm-none"
-        src={ gradientBg }
+        className="gradient_img_bg_sm img-fluid position-absolute d-md-none"
+        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg.png" }
         alt="Gradient background element"
         />
         <Image
-        className="redlogo img-fluid position-absolute d-sm-none"
-        src={ RedLogo }
+        className="redlogo img-fluid position-absolute d-m-none"
+        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/RedLogo.png" }
         alt="Gradient background element"
         />
       </div>
@@ -94,8 +89,7 @@ const HeroContainer = styled.section`
   .RE_img_bg {
     z-index: 1;
     height: 40% !important;
-    width: auto;
-    top: 21rem;
+    top: 30%;
     right: 0;
     opacity: 0.2;
   }
@@ -107,11 +101,11 @@ const HeroContainer = styled.section`
     margin-left: 30rem;
   }
 
-  @media (max-width:576px) {
-    height: 155rem;
+  @media (max-width:768px) {
+    height: 168rem;
     .gradient_img_bg_sm {
       left: 0;
-      top: 47.3%;
+      bottom: 0;
       width: 100%;
       height: 112rem;
     }
@@ -131,14 +125,13 @@ const HeroContainer = styled.section`
 
     .home__info-mb {
       position: absolute;
-      top: 15rem;
+      top: 20rem;
     }
 
     .man_img-mb {
-      top: 59rem;
+      bottom: -67.1rem;
       left: 0;
-      right: 0;
-      width: 90%;
+      width: auto;
       height: 60%;
       z-index:4
     }
@@ -148,7 +141,7 @@ const HeroContainer = styled.section`
     }
 
     .redlogo {
-    top: 132rem;
+    bottom: 0;
     left: 0;
     z-index: 15;
     }
