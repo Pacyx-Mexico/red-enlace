@@ -47,7 +47,7 @@ export default function Navbar({ type }) {
             <LinkRouter to="/">Inicio</LinkRouter>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <Link
+            <LinkRouter
               to="productos"
               spy={true}
               smooth={true}
@@ -56,13 +56,15 @@ export default function Navbar({ type }) {
               className="color-white"
             >
               Productos
-            </Link>
+            </LinkRouter>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <Link to="/siniestro" className="color-white">Siniestros</Link>
+            <LinkRouter to="/siniestro" className="color-white">
+              Siniestros
+            </LinkRouter>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <Link
+            <LinkRouter
               to="beneficios"
               spy={true}
               smooth={true}
@@ -71,10 +73,10 @@ export default function Navbar({ type }) {
               className="color-white"
             >
               Agentes
-            </Link>
+            </LinkRouter>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <Link
+            <LinkRouter
               to="testimonios"
               spy={true}
               smooth={true}
@@ -83,10 +85,10 @@ export default function Navbar({ type }) {
               className="color-white"
             >
               Clientes
-            </Link>
+            </LinkRouter>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <Link
+            <LinkRouter
               to="beneficios"
               spy={true}
               smooth={true}
@@ -95,7 +97,7 @@ export default function Navbar({ type }) {
               className="color-white"
             >
               Facturación
-            </Link>
+            </LinkRouter>
           </MenuItem>
         </Menu>
       </Wrapper>
