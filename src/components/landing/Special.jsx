@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import gradientImageBg from "../../assets/images/gradient-image-bg-right.png";
-import phone from "../../assets/images/phone.png";
 import { Image } from "react-bootstrap";
 
 export const Special = () => {
@@ -12,10 +10,10 @@ export const Special = () => {
           <div className="col-lg-6 offset-xl-1 order-lg-2 d-flex">
             <Image
               className="gradient_img_bg position-absolute"
-              src={gradientImageBg}
+              src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
               alt="Gradient background element"
             />
-            <Image className="phone_img position-absolute" src={phone} alt="" />
+            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="" />
           </div>
           <div className="col-lg-7 col-xl-6 offset-lg-1 d-flex flex-column justify-content-center align-items-center text-center text-lg-start">
             <h1 className="fw-normal mt-4">Contratación</h1>
@@ -40,10 +38,10 @@ export const Special = () => {
           <div className="col-lg-6 offset-xl-1 order-lg-2 d-flex">
             <Image
               className="gradient_img_bg position-absolute"
-              src={gradientImageBg}
+              src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
               alt="Gradient background element"
             />
-            <Image className="phone_img position-absolute" src={phone} alt="" />
+            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="" />
           </div>
           <div className="d-flex flex-column align-items-center text-center text-lg-start position-absolute special__last-text d-md-none">
             <p className="mb-5 fs-1 fw-light d-md-none">
@@ -84,15 +82,44 @@ const SpecialContainer = styled.section`
     right: 25rem;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width:767px) {
+    height: 170rem;
+    .gradient_img_bg {
+      z-index: 1;
+      height: 56%;
+      width: 90%;
+      top: 25%;
+    }
+
+    .phone_img {
+      z-index: 2;
+      height: 70%;
+      width: auto;
+      top: 20%;
+      left: 32%;
+    }
+
+    .special__title-first {
+      font-size: 42px;
+    }
+
+    .special__title-second {
+      font-size: 44px;
+    }
+
+    .special__last-text {
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
     height: 160rem;
 
     .gradient_img_bg {
       z-index: 1;
       height: 45%;
-      width: 84rem;
+      width: 100%;
       top: 48rem;
-      right: 0rem;
       opacity: 0.9;
     }
 
@@ -100,8 +127,8 @@ const SpecialContainer = styled.section`
       z-index: 2;
       height: 65%;
       width: auto;
-      top: 35rem;
-      left: 12rem;
+      top: 22%;
+      left: 24%;
     }
 
     .special__title-first {
@@ -114,6 +141,12 @@ const SpecialContainer = styled.section`
 
     .special__last-text {
       bottom: 1px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .phone_img {
+      left: 15%;
     }
   }
 `;
