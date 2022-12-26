@@ -6,8 +6,8 @@ export default function Siniestro() {
   return (
     <>
       <Navbar type="productos" />
-      {/* <HeroSiniestro />
-      <DevolucionDeducible /> */}
+      <HeroSiniestro />
+      {/* <DevolucionDeducible /> */}
       <Footer />
     </>
   );
