@@ -206,13 +206,13 @@ const CharacteristicSection = styled.section`
   }
 
   @media (max-width: 767px) {
-    height: 194rem;
+    height: 84rem;
     .card {
       width: auto;
       height: 20rem;
 
       .icon-height {
-        width: auto;
+        width: 10rem;
       }
 
       .card-body {

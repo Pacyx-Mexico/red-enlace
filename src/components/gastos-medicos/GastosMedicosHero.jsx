@@ -29,9 +29,8 @@ export const GastosMedicosHero = () => {
           <div onClick={scrollTop}>
             <Link
               to="/cotizador-deducible-gastos-medicos"
-              className="headerTitle__btn"
-            >
-              <Button text="Contratar" />
+              className="headerTitle__btn">
+              <Button text="Contratar" /> 
             </Link>
           </div>
         </div>
@@ -114,7 +113,8 @@ const HeroContainer = styled.section`
     margin-left: 0rem;
   }
 
-  @media (min-width: 576px) {
+  @media (max-width: 576px) {
+    height: 95rem;
     .gradient_img_bg_sm {
       width: 100%;
       height: 100%;
@@ -122,7 +122,7 @@ const HeroContainer = styled.section`
   }
 
   @media (max-width: 768px) {
-    height: 178rem;
+    height: 180rem;
     .gradient_img_bg_sm {
       width: 70rem;
       height: 100%;
