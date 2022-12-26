@@ -4,9 +4,7 @@ import heroGM from "../../assets/images/hero-gastos-medicos.png";
 import heroGMMobile from "../../assets/images/Gastos-medicos-mb.png";
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import phone from "../../assets/images/phone.png";
 import { Image } from "react-bootstrap";
-import { RedEnlaceBg } from "../../assets/backgrounds";
 
 export const GastosMedicosHero = () => {
   const scrollTop = () => {
