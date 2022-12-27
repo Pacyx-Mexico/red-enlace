@@ -149,7 +149,7 @@ export const Toppings = () => {
 };
 
 const CharacteristicSection = styled.section`
-  height: 80rem;
+  height: 81.7rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -205,8 +205,14 @@ const CharacteristicSection = styled.section`
     padding-bottom: 10rem;
   }
 
+  @media (max-width: 576px) {
+    .swiper {
+      height: 48rem;
+    }
+  }
+
   @media (max-width: 767px) {
-    height: 84rem;
+    height: 101rem;
     .card {
       width: auto;
       height: 20rem;
@@ -218,6 +224,10 @@ const CharacteristicSection = styled.section`
       .card-body {
         width: 86%;
       }
+    }
+
+    .swiper {
+      height: 48rem;
     }
   }
 `;

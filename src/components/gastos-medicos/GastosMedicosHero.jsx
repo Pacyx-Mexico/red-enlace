@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import "../../styles/productos/HeaderVideo.css";
-import heroGM from "../../assets/images/hero-gastos-medicos.png";
-import heroGMMobile from "../../assets/images/Gastos-medicos-mb.png";
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import { Image } from "react-bootstrap";
@@ -14,7 +12,7 @@ export const GastosMedicosHero = () => {
     <HeroContainer className="home position-relative" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
-        src={heroGM}
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png"}
         alt="Gradient background element"
       />
       <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
@@ -35,15 +33,14 @@ export const GastosMedicosHero = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
+      <div className="container-fluid d-flex flex-column w-100 h-100 d-md-none">
         <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
-          Devolución de deducible <br /> 
-          <span className="fst-italic"> Gastos Médicos</span>
+          Devolución de deducible <br /><span className="fst-italic"> Gastos Médicos</span>
         </h2>
         <div className="d-flex justify-content-center px-5 mx-5">
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
-            src={heroGMMobile}
+            src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Gastos-medicos-mb.png"}
             alt="Gradient background element"
           />
         </div>
@@ -64,7 +61,7 @@ export const GastosMedicosHero = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 100rem;
+  height: 120rem;
   .gradient_img_bg {
     z-index: 1;
     height: 90%;
@@ -86,9 +83,14 @@ const HeroContainer = styled.section`
   }
 
   .img-fluid {
-    max-width: 100%;
-    height: auto;
+    width: auto;
+    height: 60rem;
   }
+
+  .gradient_img_bg_sm {
+    margin-top: 7rem;
+  }
+
   .w-85 {
     width: 85%;
   }
@@ -113,18 +115,23 @@ const HeroContainer = styled.section`
     margin-left: 0rem;
   }
 
-  @media (max-width: 576px) {
-    height: 95rem;
+  .primary_title {
+      margin-top: 20rem;
+  }
+
+  @media (min-width: 576px) {
+    height: 160rem;
     .gradient_img_bg_sm {
-      width: 100%;
-      height: 100%;
+      width: auto;
+      height: 90rem;
+      margin-top: 10rem;
     }
   }
 
-  @media (max-width: 768px) {
-    height: 180rem;
+  @media (min-width: 768px) {
+    height: 94rem;
     .gradient_img_bg_sm {
-      width: 70rem;
+      width: 70%;
       height: 100%;
     }
 
@@ -133,8 +140,8 @@ const HeroContainer = styled.section`
     }
 
     .primary_title {
-      font-size: 25px;
-      margin-bottom: 10rem;
+      font-size: 20px;
+      padding: 0 4rem;
     }
 
     .primary_subtitle {

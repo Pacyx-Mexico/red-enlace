@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import descriptionImg from "../../assets/images/description-image.png"
-import descriptionImg_mb from "../../assets/images/description-mobile.png";
 
 export const Description = () => {
   return (
-    <DescriptionSection className="container-fluid">
+    <DescriptionSection className="container-fluid px-0">
       <div className="d-flex flex-column d-none d-md-block">
         <div className="row mt-5 pt-5">
           <div className="col-md-5">
-            <img className="img-fluid h-100 position-relative" src={descriptionImg} alt="" />
+            <img className="img-fluid h-100 position-relative" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/description-image.png"} alt="" />
           </div>
           <div className="col-md-7 col-xl-7 d-flex flex-column justify-content-center align-items-start text-start text-lg-start ml-5 pl-5">
             <div className="d-flex flex-column mx-auto">
@@ -41,7 +39,7 @@ export const Description = () => {
             </div>
           </div>
           <div className="my-5 pt-5">
-            <img className="position-relative w-100 description_mb" src={descriptionImg_mb} alt="" />
+            <img className="position-relative w-100 description_mb" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/description-mobile.png"} alt="" />
           </div>
           <div className="px-4">
             <p className="mt-3 mb-0 fs-20 fw-light text-center">
@@ -102,6 +100,6 @@ const DescriptionSection = styled.section`
     .description_mb {
     right: 30%;
     width: 100%;
-  }
+    }
   }
 `

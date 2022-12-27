@@ -1,13 +1,9 @@
 import styled from "styled-components";
 import "../../styles/productos/HeaderVideo.css";
-import heroSI from "../../assets/images/siniestro-hero-image.png";
-import heroGMMobile from "../../assets/images/Gastos-medicos-mb.png";
 import heroSMobile from '../../assets/images/hero-siniestro-mobile.png';
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import phone from "../../assets/images/phone.png";
 import { Image } from "react-bootstrap";
-import { RedEnlaceBg } from "../../assets/backgrounds";
 
 export const HeroSiniestro = () => {
   const scrollTop = () => {
@@ -17,7 +13,7 @@ export const HeroSiniestro = () => {
     <HeroContainer className="home position-relative mb-5 pb-5" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={heroSI}
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/siniestro-hero-image.png"}
         alt="Gradient background element"
       />
       <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
@@ -47,7 +43,7 @@ export const HeroSiniestro = () => {
         <div className="d-flex justify-content-center px-5 mx-5">
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
-            src={heroSMobile}
+            src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-siniestro-mobile.png"}
             alt="Gradient background element"
           />
         </div>
