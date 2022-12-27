@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HospitalIcon, ComputerIcon, MuerteIcon } from "../../assets/icons";
+import { CrystalIcon, KeysIcon, PlatformsIcon } from "../../assets/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 
@@ -21,7 +21,7 @@ export const Cobertura = () => {
           <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
-                <MuerteIcon />
+                <KeysIcon />
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
@@ -41,7 +41,7 @@ export const Cobertura = () => {
           <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
-                <MuerteIcon />
+                <CrystalIcon />
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
@@ -60,8 +60,8 @@ export const Cobertura = () => {
           </div>
           <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-              <div className="icon-height">
-                <MuerteIcon />
+              <div className="icon-height-platform_icon mx-auto">
+                <PlatformsIcon />
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
@@ -101,7 +101,7 @@ export const Cobertura = () => {
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
               <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height">
-                  <MuerteIcon />
+                  <CrystalIcon />
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
@@ -123,7 +123,7 @@ export const Cobertura = () => {
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
               <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height">
-                  <MuerteIcon />
+                  <KeysIcon />
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
@@ -145,7 +145,7 @@ export const Cobertura = () => {
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
               <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height">
-                  <MuerteIcon />
+                  <PlatformsIcon />
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
@@ -167,24 +167,29 @@ export const Cobertura = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <hr className="border border-5 border-lile mt-5 mt-xxl-5" />
+      <div className="d-block text-center fs-2 height-lile">
+        <p className="mt-5 mt-xxl-5 text-dark fst-italic py-2">
+          Resolvemos tus dudas
+        </p>
+      </div>
+
+      <div className="container-fluid mx-auto position-relative">
+          <div className="">
+
+          </div>
+      </div>
     </CoberturaSection>
   );
 };
 
 const CoberturaSection = styled.section`
-  height: 80rem;
+  height: 145rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
-  hr {
-    margin-top: 10rem !important;
-  }
-
-  .text-lile,
-  .border-lile {
-    color: #6983d6;
-    border: 10px solid #6983d6 !important;
+  .height-lile {
+    height: auto;
+    background: #f1f6f8;
   }
 
   .icon svg {
@@ -209,6 +214,11 @@ const CoberturaSection = styled.section`
 
     .icon-height {
       height: 15rem;
+    }
+
+    .icon-height-platform_icon {
+      height: auto;
+      width: 9rem;
     }
   }
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { PersonIcon, ReportIcon, ChatIcon, IdeaIcon } from "../../assets/icons";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -21,8 +20,8 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Básico</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-4">
-                <p className="fs-1 mt-2">$690.00</p>
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-25">
+                <p className="fs-1 mb-0">$690.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic fs-4 lh-sm my-4 text-primary">
@@ -46,8 +45,8 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Standar</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-4">
-                <p className="fs-1 mt-2">$1,297.00</p>
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50">
+                <p className="fs-1 mb-0">$1,297.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic fs-4 lh-sm my-4 text-primary">
@@ -71,8 +70,8 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Premium</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-4">
-                <p className="fs-1 mt-2">$1,840.00</p>
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-75">
+                <p className="fs-1 mb-0">$1,840.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic fs-4 lh-sm my-4 text-primary">
@@ -96,8 +95,8 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Gold</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-4">
-                <p className="fs-1 mt-2">$2,420.00</p>
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-100">
+                <p className="fs-1 mb-0">$2,420.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic fs-4 lh-sm my-4 text-primary">
@@ -121,8 +120,8 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Black</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-4">
-                <p className="fs-1 mt-2">$2,995.00</p>
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
+                <p className="fs-1 mb-0">$2,995.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic fs-4 lh-sm my-4 text-primary">
