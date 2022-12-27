@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PersonIcon, ReportIcon, ChatIcon, IdeaIcon } from "../../assets/icons";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -379,7 +380,7 @@ const PlansSection = styled.section`
   }
 
   @media (max-width: 991px) {
-    height: 194rem;
+    height: 64rem;
     .card {
       width: auto;
       height: 26rem;

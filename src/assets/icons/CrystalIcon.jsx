@@ -4,8 +4,6 @@ export const CrystalIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="94.879"
-      height="95.507"
       viewBox="0 0 94.879 95.507"
     >
       <g
