@@ -4,8 +4,6 @@ export const PlatformsIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="73.234"
-      height="98.873"
       viewBox="0 0 73.234 98.873"
     >
       <g
@@ -52,3 +50,4 @@ export const PlatformsIcon = () => {
     </svg>
   );
 };
+

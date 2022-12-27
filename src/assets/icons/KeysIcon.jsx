@@ -4,8 +4,6 @@ export const KeysIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="89.463"
-      height="88.776"
       viewBox="0 0 89.463 88.776"
     >
       <g
