@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import "../../styles/productos/HeaderVideo.css";
-import heroDesktop from '../../assets/images/Enlace-hero.png';
-import heroMobile from '../../assets/images/enlace-hero-mobile.png';
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import { Image } from "react-bootstrap";
@@ -14,7 +12,7 @@ export const EnlaceHero = () => {
     <HeroContainer className="home position-relative mb-5 pb-5" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={ heroDesktop }
+        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/Enlace-hero.png" }
         alt="Gradient background element"
       />
       <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
@@ -42,7 +40,7 @@ export const EnlaceHero = () => {
         <div className="d-flex justify-content-center px-5 mx-5">
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
-            src={ heroMobile }
+            src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png" }
             alt="Gradient background element"
           />
         </div>
