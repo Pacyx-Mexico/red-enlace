@@ -13,4 +13,7 @@ export * from './ComputerIcon';
 export * from './KeysIcon';
 export * from './CrystalIcon';
 export * from './PlatformsIcon';
+export * from './MoneyIcon';
+export * from './SeventyTwoHoursIcon';
+export * from './MoneyTwoIcon'
 // export * from './RedLogo';
