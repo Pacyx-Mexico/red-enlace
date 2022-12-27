@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { CrystalIcon, KeysIcon, PlatformsIcon } from "../../assets/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import DocumentIcon from '../../assets/images/document-icon.png';
 
 export const Cobertura = () => {
   return (
@@ -173,9 +174,13 @@ export const Cobertura = () => {
         </p>
       </div>
 
-      <div className="container-fluid mx-auto position-relative">
-          <div className="">
-
+      <div className="container-fluid mx-auto position-relative dudas__container">
+          <div className="h-100 w-auto d-flex justify-content-center align-items-center">
+            <p className="text-center dudas__text fw-normal">
+              En caso de robo total o daños materiales, nosotros te <br />devolveremos el deducible de tu poliza de auto de acuerdo con la <br />asistencia que hayas elegido
+            </p>
+            <img src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png" }
+            alt="Icon Document"  className="document-icon opacity-50"/>
           </div>
       </div>
     </CoberturaSection>
@@ -183,7 +188,7 @@ export const Cobertura = () => {
 };
 
 const CoberturaSection = styled.section`
-  height: 145rem;
+  height: 135rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -239,10 +244,25 @@ const CoberturaSection = styled.section`
     padding-bottom: 10rem;
   }
 
+  .dudas__container {
+    height: 45rem;
+  }
+
+  .dudas__text {
+    font-size: 17px;
+    line-height: 4.5rem;
+    position: absolute;
+    z-index: 5;
+  }
+
+  .document-icon {
+    position:absolute;
+    height: 20rem;
+  }
+
   @media (max-width: 767px) {
-    height: 194rem;
     .card {
-      width: auto;
+      width: 20rem;
       height: 20rem;
 
       .icon-height {
@@ -252,6 +272,12 @@ const CoberturaSection = styled.section`
       .card-body {
         width: 86%;
       }
+    }
+
+    .dudas__text {
+      font-size: 13px;
+      line-height: 3rem;
+      padding: 0 3rem;
     }
   }
 `;
