@@ -10,4 +10,7 @@ export * from './StarIcon';
 export * from './MuerteIcon';
 export * from './HospitalIcon';
 export * from './ComputerIcon';
+export * from './KeysIcon';
+export * from './CrystalIcon';
+export * from './PlatformsIcon';
 // export * from './RedLogo';
