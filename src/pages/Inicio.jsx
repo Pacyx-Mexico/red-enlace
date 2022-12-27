@@ -7,10 +7,10 @@ import {
   Characteristics,
   Testimonies,
   Contact,
-  NewCharacteristics
+  NewCharacteristics,
 } from "../components/landing";
 
-export default function Inicio() {
+export const Inicio = () => {
   return (
     <>
       <Navbar type="inicio" />
@@ -24,4 +24,4 @@ export default function Inicio() {
       <Footer />
     </>
   );
-}
+};

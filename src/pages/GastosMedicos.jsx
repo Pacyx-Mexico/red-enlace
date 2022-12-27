@@ -3,7 +3,7 @@ import HeaderVideo from "../components/productos/HeaderVideo";
 import { GastosMedicosHero, Description, Toppings } from '../components/gastos-medicos';
 import Footer from "../components/Footer";
 
-export default function GastosMedicos() {
+export const GastosMedicos = () => {
   return (
     <>
       <Navbar type="productos" />
@@ -13,5 +13,5 @@ export default function GastosMedicos() {
       <Toppings />
       <Footer />
     </>
-  );
+  )
 }

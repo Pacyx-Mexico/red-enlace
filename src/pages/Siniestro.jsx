@@ -1,9 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { HeroSiniestro, DevolucionDeducible, Plans, Cobertura } from "../components/siniestro";
+import {
+  HeroSiniestro,
+  DevolucionDeducible,
+  Plans,
+  Cobertura,
+} from "../components/siniestro";
 import HeaderVideo from "../components/productos/HeaderVideo";
 
-export default function Siniestro() {
+export const Siniestro = () => {
   return (
     <>
       <Navbar type="productos" />
@@ -15,4 +20,4 @@ export default function Siniestro() {
       <Footer />
     </>
   );
-}
+};
