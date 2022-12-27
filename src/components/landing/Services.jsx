@@ -72,7 +72,7 @@ export const Services = () => {
             </Link>
           </div>
           <div className="col-auto mb-5 pb-5">
-            <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100 text-decoration-none">
+            <Link onClick={ scrollTop } to="/siniestro" className="w-100 text-decoration-none">
               <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png" alt="hombre auto" className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"/>
@@ -87,7 +87,7 @@ export const Services = () => {
             </Link>
           </div>
           <div className="col-auto mb-5 pb-5">
-            <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100 text-decoration-none">
+            <Link onClick={ scrollTop } to="/enlace" className="w-100 text-decoration-none">
               <div className="card border border-4 border-fourth rounded-5 text-center opacity-75 position-relative card-hover_third">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png" alt="hombre auto" className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"/>
