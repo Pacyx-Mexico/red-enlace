@@ -28,7 +28,7 @@ export const Beneficios = () => {
               </p>
             </div>
           </div>
-          <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
+          <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
                 <SeventyTwoHoursIcon />
@@ -41,7 +41,7 @@ export const Beneficios = () => {
               </p>
             </div>
           </div>
-          <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
+          <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
                 <HospitalIcon />
@@ -53,7 +53,7 @@ export const Beneficios = () => {
               </p>
             </div>
           </div>
-          <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
+          <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
                 <MoneyTwoIcon />
@@ -85,9 +85,9 @@ export const Beneficios = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-                <div className="icon-height">
+            <div className="col-auto d-flex flex-column justify-content-center align-items-center">
+              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+                <div className="icon-height d-flex align-items-center justify-content-center">
                   <MoneyIcon />
                 </div>
               </div>
@@ -107,9 +107,9 @@ export const Beneficios = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-                <div className="icon-height">
+            <div className="col-auto d-flex flex-column justify-content-center align-items-center">
+              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+                <div className="icon-height d-flex align-items-center justify-content-center">
                   <SeventyTwoHoursIcon />
                 </div>
               </div>
@@ -129,9 +129,9 @@ export const Beneficios = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-                <div className="icon-height">
+            <div className="col-auto d-flex flex-column justify-content-center align-items-center">
+              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+                <div className="icon-height d-flex align-items-center">
                   <HospitalIcon />
                 </div>
               </div>
@@ -173,6 +173,10 @@ const BeneficiosSection = styled.section`
     height: 30px;
   }
 
+  .swiper {
+    height: 60rem;
+  }
+
   .card-title {
     margin-bottom: 0rem;
   }
@@ -184,12 +188,13 @@ const BeneficiosSection = styled.section`
   }
 
   .card {
-    width: 18rem;
-    height: 18rem;
+    width: 35rem;
+    height: 37rem;
     background-color: #79c789;
 
     .icon-height {
-      height: 15rem;
+      height: auto;
+      width: 21rem;
     }
 
     .icon-height-platform_icon {
@@ -215,10 +220,10 @@ const BeneficiosSection = styled.section`
     padding-bottom: 10rem;
   }
 
-  @media (max-width: 767px) {
-    height: 194rem;
+  @media (min-width: 767px) {
+    height: 145rem;
     .card {
-      width: auto;
+      width: 19rem;
       height: 20rem;
 
       .icon-height {
