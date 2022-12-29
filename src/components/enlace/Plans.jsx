@@ -19,7 +19,7 @@ export const Plans = () => {
         </p>
       </div>
       <div className="container py-3 d-none d-lg-block">
-        <div className="row d-flex justify-content-center gap-5">
+        <div className="row d-flex justify-content-around gap-5">
           <div className="col-auto">
             <div className="card bg-white border border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
