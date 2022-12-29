@@ -10,23 +10,29 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<Inicio />} />
-          <Route path="/" element={<Inicio />} />
-          <Route path="/deducible-gastos-medicos" element={<GastosMedicos />} />
-          <Route path="/enlace" element={<Enlace />} />
-          <Route
-            path="/cotizador-deducible-autos"
-            element={<CotizadorDeducibleAutos />}
-          />
-          <Route
-            path="/cotizador-deducible-gastos-medicos"
-            element={<CotizadorGastosMedicos />}
-          />
-          <Route path="/siniestro" element={<Siniestro />} />
-          <Route
-            path="/reclamacion-de-siniestro"
-            element={<ReclamacionSiniestro />}
-          />
+          {/* <Route path="*" element={<Inicio />} /> */}
+          <Route path="/">
+            <Route path="*" element={<Inicio />} />
+            <Route index element={<Inicio />} />
+            <Route
+              path="deducible-gastos-medicos"
+              element={<GastosMedicos />}
+            />
+            <Route path="enlace" element={<Enlace />} />
+            <Route
+              path="cotizador-deducible-autos"
+              element={<CotizadorDeducibleAutos />}
+            />
+            <Route
+              path="cotizador-deducible-gastos-medicos"
+              element={<CotizadorGastosMedicos />}
+            />
+            <Route path="siniestro" element={<Siniestro />} />
+            <Route
+              path="reclamacion-de-siniestro"
+              element={<ReclamacionSiniestro />}
+            />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
