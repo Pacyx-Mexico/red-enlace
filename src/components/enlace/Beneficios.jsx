@@ -154,21 +154,12 @@ export const Beneficios = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="d-block text-center fs-2 height-lile">
-        <p className="mt-5 mt-xxl-5 text-dark fst-italic py-2">
-          Resolvemos tus dudas
-        </p>
-      </div>
-
-      <div className="container-fluid mx-auto position-relative">
-        <div className=""></div>
-      </div>
     </BeneficiosSection>
   );
 };
 
 const BeneficiosSection = styled.section`
-  height: 145rem;
+  height: 85rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 

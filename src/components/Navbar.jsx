@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Twirl as Hamburger } from "hamburger-react";
-import { Link as LinkRouter } from "react-router-dom";
+import { Link as     LinkRouter } from "react-router-dom";
 import {
   ContainerNav,
   LogoContainer,
