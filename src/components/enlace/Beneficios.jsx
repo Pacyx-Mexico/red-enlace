@@ -221,7 +221,7 @@ const BeneficiosSection = styled.section`
   }
 
   @media (min-width: 767px) {
-    height: 145rem;
+    height: 80rem;
     .card {
       width: 19rem;
       height: 20rem;
