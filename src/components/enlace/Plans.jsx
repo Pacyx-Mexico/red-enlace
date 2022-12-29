@@ -10,68 +10,62 @@ export const Plans = () => {
   };
   return (
     <PlansSection>
-      <div className="services-title container text-center">
-        <h5 className="text-dark fs-1 fw-semi-bold text-center pt-4 fst-italic">
+      <div className="services-title container text-center d-none d-md-block">
+        <h5 className="text-dark fs-25 fw-semi-bold text-center pt-4 fst-italic">
           Asistencia a tu medida
         </h5>
-        <p className="fw-light fs-1">
+        <p className="fs-20 fw-light">
           Ahorra en el pago de tu póliza de Gastos Médicos
         </p>
       </div>
-      <div className="container py-3 d-none d-lg-block">
-        <div className="row d-flex justify-content-around gap-5">
+      <div className="container py-3 d-none d-md-block">
+        <div className="row d-flex justify-content-around">
           <div className="col-auto">
-            <div className="card bg-white border border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
-              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
-                <p className="fs-2 fw-normal mb-0">Enlace Max</p>
+            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center p-5">
+                <p className="fs-1 mb-0">Enlace Max</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic fs-5 lh-sm mt-4 green-text">
-                  Aumentamos el deducible <br />
-                </p>
-                <p className="card-title fw-normal text-primary fs-5">
-                  de tu póliza actual para <br />
-                  bajar el costo y, en caso de <br />
-                  siniestro, Red Enlace cubre <br />
-                  esa diferencia para que tu <br />
+              <div className="d-flex flex-column card-body align-items-center justify-content-center px-2 pb-0">
+                <p className="card-title fst-italic fs-4 lh-sm my-4 text-primary">
+                  <span className="fw-bold green-text">Aumentamos el deducible</span> <br />
+                  de tu póliza actual para 
+                  bajar el costo y, en caso de 
+                  siniestro, Red Enlace cubre 
+                  esa diferencia para que tu 
                   no pagues ni un peso.
                 </p>
               </div>
             </div>
           </div>
           <div className="col-auto">
-            <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
-              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
-                <p className="fs-2 fw-normal mb-0">Enlace Total</p>
+            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center opacity-100 p-5">
+                <p className="fs-1 mb-0">Enlace Total</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic fs-5 lh-sm mt-4 green-text">
-                  Aumentamos el coaseguro <br />
-                </p>
-                <p className="card-title fw-normal text-primary fs-5">
-                  de tu póliza actual para <br />
-                  bajar el costo y, en caso de <br />
-                  siniestro, Red Enlace cubre <br />
-                  esa diferencia para que tu <br />
+              <div className="card-body d-flex flex-column card-body align-items-center justify-content-center px-2 pb-0">
+                <p className="card-title fst-italic fs-4 lh-sm my-4 text-primary">
+                  <span className="fw-bold green-text">Aumentamos el coaseguro</span> <br />
+                  de tu póliza actual para 
+                  bajar el costo y, en caso de 
+                  siniestro, Red Enlace cubre 
+                  esa diferencia para que tu 
                   no pagues ni un peso.
                 </p>
               </div>
             </div>
           </div>
           <div className="col-auto">
-            <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
-              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
-                <p className="fs-2 fw-normal mb-0">Enlace Max Total</p>
+            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center p-5">
+                <p className="fs-1 mb-0">Enlace Max Total</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic fs-5 lh-sm mt-4 green-text">
-                  Aumentamos el deducible y coaseguro de tu póliza actual
-                </p>
-                <p className="card-title fw-normal text-primary fs-5">
-                  para bajar el costo y, <br />
-                  en caso de siniestro, Red <br />
-                  Enlace cubre esa diferencia <br />
-                  para que tu no pagues ni un <br />
+              <div className="card-body d-flex flex-column card-body align-items-center justify-content-center px-2 pb-0">
+                <p className="card-title fst-italic fs-4 lh-sm my-4 text-primary">
+                  <span className="fw-bold green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> 
+                  para bajar el costo y, 
+                  en caso de siniestro, Red 
+                  Enlace cubre esa diferencia 
+                  para que tu no pagues ni un 
                   peso.
                 </p>
               </div>
@@ -80,7 +74,15 @@ export const Plans = () => {
         </div>
       </div>
 
-      <div className="container py-3 position-relative d-lg-none">
+      <div className="container py-3 position-relative d-md-none">
+        <div className="services-title container text-center">
+          <h5 className="text-dark fs-25 fw-semi-bold text-center pt-4 fst-italic">
+            Asistencia a tu medida
+          </h5>
+          <p className="fs-20 fw-light mt-5">
+            Ahorra en el pago de tu póliza de<br />Gastos Médicos
+          </p>
+        </div>
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -95,16 +97,16 @@ export const Plans = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="col-auto">
-              <div className="card bg-white border border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
-                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
-                  <p className="fs-2 fw-normal mb-0">Enlace Max</p>
+            <div className="w-100 h-50rem">
+              <div className="card bg-white border border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none mx-auto">
+                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
+                  <p className="fw-normal my-auto me-5">Enlace Max</p>
                 </div>
                 <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-bold fst-italic fs-5 lh-sm mt-4 green-text">
+                  <p className="card-title fw-normal text-primary">
+                    <span className="fw-bold green-text">
                     Aumentamos el deducible <br />
-                  </p>
-                  <p className="card-title fw-normal text-primary fs-5">
+                    </span>
                     de tu póliza actual para <br />
                     bajar el costo y, en caso de <br />
                     siniestro, Red Enlace cubre <br />
@@ -116,16 +118,16 @@ export const Plans = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="col-auto">
-              <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
-                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
-                  <p className="fs-2 fw-normal mb-0">Enlace Total</p>
+            <div className="w-100 h-50rem">
+              <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none mx-auto">
+                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
+                  <p className="fw-normal my-auto me-5">Enlace Total</p>
                 </div>
                 <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-bold fst-italic fs-5 lh-sm mt-4 green-text">
-                    Aumentamos el coaseguro <br />
-                  </p>
-                  <p className="card-title fw-normal text-primary fs-5">
+                  <p className="card-title fw-normal text-primary">
+                    <span className="fw-bold green-text">
+                      Aumentamos el coaseguro <br />
+                    </span>
                     de tu póliza actual para <br />
                     bajar el costo y, en caso de <br />
                     siniestro, Red Enlace cubre <br />
@@ -137,17 +139,16 @@ export const Plans = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="col-auto">
-              <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none">
-                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center">
-                  <p className="fs-2 fw-normal mb-0">Enlace Max Total</p>
+            <div className="w-100 h-50rem">
+              <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none mx-auto">
+                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
+                  <p className="fw-normal my-auto me-5">Enlace Max Total</p>
                 </div>
                 <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-bold fst-italic fs-5 lh-sm mt-4 green-text">
-                    Aumentamos el deducible y coaseguro de tu póliza actual
+                  <p className="card-title fw-bold fst-italic lh-sm mt-4 green-text">
                   </p>
-                  <p className="card-title fw-normal text-primary fs-5">
-                    para bajar el costo y, <br />
+                  <p className="card-title fw-normal text-primary">
+                    <span className="fw-bold green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> para bajar el costo y, <br />
                     en caso de siniestro, Red <br />
                     Enlace cubre esa diferencia <br />
                     para que tu no pagues ni un <br />
@@ -159,7 +160,7 @@ export const Plans = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="w-100 position-absolute RE_img_bg">
+      <div className="w-100 position-absolute RE_img_bg d-none d-md-block">
         <GreenCityBg />
       </div>
     </PlansSection>
@@ -167,7 +168,7 @@ export const Plans = () => {
 };
 
 const PlansSection = styled.section`
-  height: 80rem;
+  height: 115rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
   position: relative;
@@ -207,16 +208,17 @@ const PlansSection = styled.section`
   }
 
   .card-price {
-    width: 25rem;
-    height: 5rem;
+    width: 40rem;
+    height: 8.5rem;
     background-color: #79c789;
     color: white;
-    margin-left: -3rem;
+    margin-left: -10rem;
+    font-size: 14px;
   }
 
   .card {
-    width: 26rem;
-    height: 31rem;
+    width: 40rem;
+    height: 50rem;
     background-color: #ffffff;
 
     .icon-height {
@@ -224,8 +226,12 @@ const PlansSection = styled.section`
     }
 
     .card-body .card-title {
-      font-size: 14px;
+      font-size: 11px;
     }
+  }
+
+  .h-50rem {
+    height: 60rem;
   }
 
   .btn-first {
@@ -245,11 +251,28 @@ const PlansSection = styled.section`
     padding-bottom: 10rem;
   }
 
-  @media (max-width: 991px) {
-    height: 194rem;
+  .fs-25 {
+    font-size: 20px;
+  }
+
+  .fs-20 {
+      font-size: 18px;
+  }
+
+  @media (min-width: 576px) {
+
+  }
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 991px) {
+    height: 80rem;
     .card {
-      width: auto;
-      height: 26rem;
+      width: 28rem;
+      height: 34rem;
+      background-color: #ffffff;
 
       .icon-height {
         width: auto;
@@ -258,6 +281,22 @@ const PlansSection = styled.section`
       .card-body {
         width: 86%;
       }
+
+      .card-price {
+        width: 30rem;
+        height: 6.5rem;
+        background-color: #79c789;
+        color: #FFFFFF;
+        margin-left: -8rem;
+      }
+    }
+
+    .fs-25 {
+      font-size: 25px;
+    }
+
+    .fs-20 {
+      font-size: 20px;
     }
   }
 `;
