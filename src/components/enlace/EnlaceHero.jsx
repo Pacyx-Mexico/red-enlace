@@ -15,7 +15,7 @@ export const EnlaceHero = () => {
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/Enlace-hero.png" }
         alt="Gradient background element"
       />
-      <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
+      <div className="d-flex align-items-center position-absolute w-50 h-100 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
           <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark text-start">
             Enlaces
@@ -34,12 +34,12 @@ export const EnlaceHero = () => {
         </div>
       </div>
       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
-        <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
+        <h2 className="fw-normal fw-medium text-dark fst-italic h2-title primary_title py-5">
         Enlaces
         </h2>
         <div className="d-flex justify-content-center px-5 mx-5">
           <Image
-            className="gradient_img_bg_sm img-fluid px-5 d-md-none"
+            className="gradient_img_bg_sm px-5 d-md-none"
             src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png" }
             alt="Gradient background element"
           />
@@ -61,7 +61,7 @@ export const EnlaceHero = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 100rem;
+  height: 133rem;
   .gradient_img_bg {
     z-index: 1;
     height: 90%;
@@ -70,6 +70,12 @@ const HeroContainer = styled.section`
     right: 0;
     opacity: 0.9;
   }
+
+  .h2-title {
+    margin-top: 20rem;
+    margin-bottom: 12rem;
+  }
+
   .man_img-bg {
     z-index: 2;
     height: 90%;
@@ -110,6 +116,11 @@ const HeroContainer = styled.section`
     margin-left: 0rem;
   }
 
+  .gradient_img_bg_sm {
+      width: 70rem;
+      height: 100%;
+  }
+
   @media (min-width: 576px) {
     .gradient_img_bg_sm {
       width: 100%;
@@ -117,11 +128,13 @@ const HeroContainer = styled.section`
     }
   }
 
-  @media (max-width: 768px) {
-    height: 178rem;
-    .gradient_img_bg_sm {
-      width: 70rem;
-      height: 100%;
+  @media (min-width: 768px) {
+    height: 80rem;
+
+    .gradient_img_bg {
+      height: 90%;
+      width: auto;
+      top: 10rem;
     }
 
     .RE_img_bg {
