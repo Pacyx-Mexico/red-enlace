@@ -212,7 +212,7 @@ export const Cobertura = () => {
           <SwiperSlide>
             <div className="container-fluid mx-auto position-relative dudas__container">
               <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-                <p className="text-center dudas__text fw-normal">
+                <p className="text-center dudas__text fw-normal mx-5 px-5">
                   En caso de robo total o daños materiales, nosotros te <br />
                   devolveremos el deducible de tu poliza de auto de acuerdo con
                   la <br />
@@ -232,10 +232,7 @@ export const Cobertura = () => {
             <div className="container-fluid mx-auto position-relative dudas__container">
               <div className="h-100 w-auto d-flex justify-content-center align-items-center">
                 <p className="text-center dudas__text fw-normal">
-                  En caso de robo total o daños materiales, nosotros te <br />
-                  devolveremos el deducible de tu poliza de auto de acuerdo con
-                  la <br />
-                  asistencia que hayas elegido
+                  Operamos con cualquier compañía <br /> aseguradora dentro del territorio<br /> nacional
                 </p>
                 <img
                   src={
@@ -250,11 +247,11 @@ export const Cobertura = () => {
           <SwiperSlide>
             <div className="container-fluid mx-auto position-relative dudas__container">
               <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-                <p className="text-center dudas__text fw-normal">
-                  En caso de robo total o daños materiales, nosotros te <br />
-                  devolveremos el deducible de tu poliza de auto de acuerdo con
-                  la <br />
-                  asistencia que hayas elegido
+                <p className="text-center dudas__text fw-normal mx-5 px-5">
+                Se pagará el deducible hasta que<br />
+                se agote la suma del plan<br />
+                contratado, sin importar el número<br />
+                de eventos.
                 </p>
                 <img
                   src={
@@ -273,7 +270,7 @@ export const Cobertura = () => {
 };
 
 const CoberturaSection = styled.section`
-  height: 155rem;
+  height: 182rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -299,6 +296,10 @@ const CoberturaSection = styled.section`
 
   .swiper-slide {
     height: 62rem;
+  }
+
+  .swiper-slide-h-50 {
+    height: 50rem;
   }
 
   .fs-11 {
@@ -342,11 +343,11 @@ const CoberturaSection = styled.section`
   }
 
   .dudas__container {
-    height: 45rem;
+    height: 100%;
   }
 
   .dudas__text {
-    font-size: 17px;
+    font-size: 14px;
     line-height: 4.5rem;
     position: absolute;
     z-index: 5;
@@ -358,9 +359,13 @@ const CoberturaSection = styled.section`
   }
 
   @media (min-width: 576px) {
-    height: 170rem;
+    height: 198rem;
     .swiper {
       height: 74rem;
+    }
+
+    .dudas__container {
+      height: 100%;
     }
   }
 
@@ -377,6 +382,10 @@ const CoberturaSection = styled.section`
       .card-body {
         width: 86%;
       }
+    }
+
+    .dudas__container {
+      height: 45rem;
     }
 
     .dudas__text {
