@@ -3,7 +3,6 @@ import {
   MedicineIcon,
   MedicalExpensesIcon,
   CarIcon,
-  UserPolicyMontain,
 } from "../../assets/icons";
 import { Link } from "react-router-dom";
 
@@ -40,32 +39,39 @@ export const Services = () => {
   return (
     <ServicesContainer>
       {/* {map.services(service => console.log(service))} */}
-      <div className="services-title container-fluid text-center d-none d-md-block">
+      <div className="services-title container-fluid text-center d-none d-lg-block">
         <h3 className="pb-2 fw-semi-bold text-dark mt-5">
           <span className="text-lile">Protege</span> a los que más quieres y
           <br />
           <span className="text-lile">ahorra</span> en el proceso
         </h3>
       </div>
-      <div className="services-title-mb container-fluid text-start sm-text-start d-md-none">
-        <h3 className="fw-semi-bold text-dark">
-          <span className="text-lile fw-bold">Protege</span> a los que más
-          quieres y <span className="text-lile fw-bold">ahorra</span> en el
-          proceso
-        </h3>
+      <div className="services-title-mb container-fluid text-center d-lg-none">
+        <h4 className="fw-semi-bold text-dar mb-5 pb-5">
+          Conoce nuestros productos
+        </h4>
       </div>
-      <div className="container-fluid py-3 position-relative d-none d-md-block">
+      <div className="container-fluid py-3 position-relative d-none d-lg-block">
         <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
           <div className="col-auto mb-5 pb-5">
-            <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100 text-decoration-none">
+            <Link
+              onClick={scrollTop}
+              to="/deducible-gastos-medicos"
+              className="w-100 text-decoration-none"
+            >
               <div className="card border border-4 border-first rounded-5 text-center opacity-75 position-relative card-hover_first">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png" alt="Gastos medicos hombre" className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"/>
+                  <img
+                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
+                    alt="Gastos medicos hombre"
+                    className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
+                  />
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
                 <p className="card-title fw-normal lh-sm text-center fs-2">
-                  Devolución de deducible<br />
+                  Devolución de deducible
+                  <br />
                   Gastos Médicos
                 </p>
               </div>
@@ -75,12 +81,17 @@ export const Services = () => {
             <Link onClick={ scrollTop } to="/siniestro" className="w-100 text-decoration-none">
               <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png" alt="hombre auto" className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"/>
+                  <img
+                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
+                    alt="hombre auto"
+                    className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
+                  />
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
                 <p className="card-title fw-normal lh-sm text-center fs-2">
-                  Devolución de deducible<br />
+                  Devolución de deducible
+                  <br />
                   Autos
                 </p>
               </div>
@@ -90,7 +101,11 @@ export const Services = () => {
             <Link onClick={ scrollTop } to="/enlace" className="w-100 text-decoration-none">
               <div className="card border border-4 border-fourth rounded-5 text-center opacity-75 position-relative card-hover_third">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png" alt="hombre auto" className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"/>
+                  <img
+                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
+                    alt="hombre auto"
+                    className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
+                  />
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
@@ -103,68 +118,77 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="container-fluid py-3 position-relative d-md-none">
-        <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-between">
-          <div className="d-flex justify-content-center gap-10 px-5">
-            <div className="col-auto mb-5 pb-5">
-              <div className="card border d-flex justify-content-center align-items-center border-4 border-second rounded-5 py-5 px-5 text-center opacity-75">
-                <div className="icon-width">
-                  <MedicineIcon />
-                </div>
-                <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-normal lh-sm text-first fs-2">
-                    Devolución de <br />
-                    deducible Gastos
-                    <br /> Médicos
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 d-flex w-100">
-                <Link to="/deducible-gastos-medicos" className="w-100">
-                  <button className="btn btn-lg btn-first rounded-pill fw-bold mx-auto w-100 text-white opacity-75 fs-1">
-                    Cotizar
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className="col-auto">
-              <div className="card border border-4 border-second rounded-5 py-5 px-5 text-center opacity-75 d-flex justify-content-center align-items-center">
-                <div className="icon-width car-mt">
-                  <CarIcon />
-                </div>
-                <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-normal car-text lh-sm text-second fs-2">
-                    Devolución de <br />
-                    deducible Autos
-                  </p>
+      <div className="container-fluid py-3 position-relative d-lg-none">
+        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
+          <div className="col-auto mb-5 pb-5 w-75">
+            <Link
+              onClick={scrollTop}
+              to="/deducible-gastos-medicos"
+              className="w-100 text-decoration-none"
+            >
+              <div className="card border border-4 border-first rounded-5 text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
+                  <img
+                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
+                    alt="Gastos medicos hombre"
+                    className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
+                  />
                 </div>
               </div>
-              <div className="mt-5 d-flex w-100">
-                <button className="btn btn-lg btn-second rounded-pill fw-bold mx-auto w-100 text-white opacity-75 fs-1">
-                  Cotizar
-                </button>
+              <div className="mt-5 d-flex justify-content-center">
+                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                  Devolución de deducible
+                  <br />
+                  Gastos Médicos
+                </p>
               </div>
-            </div>
+            </Link>
           </div>
-
-          <div className="d-flex justify-content-center gap-10 px-5">
-            <div className="col-auto">
-              <div className="card border border-4 border-fourth rounded-5 py-5 px-5 text-center opacity-75 d-flex justify-content-center align-items-center">
-                <div className="icon-width">
-                  <MedicalExpensesIcon />
-                </div>
-                <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-normal lh-sm text-fourth fs-2">
-                    Gastos Médicos
-                  </p>
+          <div className="col-auto mb-5 pb-5 w-75">
+            <Link
+              onClick={scrollTop}
+              to="/deducible-gastos-medicos"
+              className="w-100 text-decoration-none"
+            >
+              <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
+                  <img
+                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
+                    alt="Gastos medicos hombre"
+                    className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
+                  />
                 </div>
               </div>
-              <div className="mt-5 d-flex w-100">
-                <button className="btn btn-lg btn-fourth rounded-pill fw-bold mx-auto w-100 text-white opacity-75 fs-1">
-                  Cotizar
-                </button>
+              <div className="mt-5 d-flex justify-content-center">
+                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                  Devolución de deducible
+                  <br />
+                  Autos
+                </p>
               </div>
-            </div>
+            </Link>
+          </div>
+          <div className="col-auto mb-5 pb-5 w-75">
+            <Link
+              onClick={scrollTop}
+              to="/deducible-gastos-medicos"
+              className="w-100 text-decoration-none"
+            >
+              <div className="card border border-4 border-third rounded-5 text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
+                  <img
+                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
+                    alt="Gastos medicos hombre"
+                    className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
+                  />
+                </div>
+              </div>
+              <div className="mt-5 d-flex justify-content-center">
+                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                  Enlaces
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -186,7 +210,6 @@ const ServicesContainer = styled.section`
 
   .card-title {
     margin-bottom: 0rem;
-    width: 25.95rem;
     color: #000000;
   }
 
@@ -218,44 +241,41 @@ const ServicesContainer = styled.section`
   }
 
   .card {
-    width: 35rem;
-    height: 45rem;
-
-    .card_img-width {
-      width: 35.2rem;
-    }
+    width: 41rem;
+    height: 41rem;
   }
 
   .card_img-width_first {
-    top: -7.8rem;
-    right: 1rem;
-
+    width: 31rem;
+    top: -2.4rem;
+    right: 0;
   }
 
   .card_img-width_second {
-    top: -1.8rem;
-    right: 0.8rem;
+    width: 32rem;
+    top: 0rem;
+    right: 4.9rem;
   }
 
   .card_img-width_third {
-    width: 37.2rem !important;
-    top: -7.3rem;
-    right: 4rem;
+    width: 33.9rem;
+    top: -2.9rem;
+    right: 2rem;
   }
 
   .card-hover_first:hover {
     box-shadow: 0 0 15px #5674d1;
-    transition: box-shadow .2s;
+    transition: box-shadow 0.2s;
   }
 
   .card-hover_second:hover {
     box-shadow: 0 0 15px #538fa8;
-    transition: box-shadow .2s;
+    transition: box-shadow 0.2s;
   }
 
   .card-hover_third:hover {
     box-shadow: 0 0 15px #1da939;
-    transition: box-shadow .2s;
+    transition: box-shadow 0.2s;
   }
 
   .rounded-5 {
@@ -322,14 +342,26 @@ const ServicesContainer = styled.section`
     gap: 10rem;
   }
 
-  @media (max-width: 900px) {
+  @media (min-width: 576px) {
     .card {
-      width: 36rem;
-      height: 33rem;
+      width: 41rem;
+      height: 41rem;
+    }
+
+    .card-body {
+      margin-top: 1.8rem;
+    }
+
+    .car-text {
+      margin-top: 2rem;
+    }
+
+    .gap-10 {
+      gap: 9rem;
     }
   }
 
-  @media (max-width: 764px) {
+  @media (min-width: 768px) {
     padding-top: 20rem;
     padding-bottom: 20rem;
 
@@ -339,12 +371,26 @@ const ServicesContainer = styled.section`
     }
 
     .card {
-      width: 38rem;
-      height: 40rem;
+      width: 50rem;
+      height: 58rem;
     }
 
-    .card .icon-width {
-      width: 20rem;
+    .card_img-width_first {
+      width: 44rem;
+      top: -3.6rem;
+      right: 0rem;
+    }
+
+    .card_img-width_second {
+      width: 44rem;
+      top: 0.9rem;
+      right: 3.3rem;
+    }
+
+    .card_img-width_third {
+      width: 49.1rem;
+      top: -5rem;
+      right: 2.5rem;
     }
 
     .car-text {
@@ -359,26 +405,29 @@ const ServicesContainer = styled.section`
       gap: 25rem;
     }
   }
-  @media (max-width: 600px) {
+
+  @media (min-width: 992px) {
     .card {
-      width: 30rem;
-      height: 30rem;
+      width: 36rem;
+      height: 42rem;
     }
 
-    .card-body {
-      margin-top: 1.8rem;
+    .card_img-width_first {
+      width: 31rem;
+      top: -4.5rem;
+      left: 2rem;
     }
 
-    .card .icon-width {
-      width: 17rem;
+    .card_img-width_second {
+      width: 32.3rem;
+      top: -0.7rem;
+      right: 0.9rem;
     }
 
-    .car-text {
-      margin-top: 2rem;
-    }
-
-    .gap-10 {
-      gap: 9rem;
+    .card_img-width_third {
+      width: 35.9rem;
+      top: -8.4rem;
+      right: 3rem;
     }
   }
 `;
