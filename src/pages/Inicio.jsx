@@ -18,8 +18,8 @@ export const Inicio = () => {
       <Hero />
       <Services />
       <Special />
-      <Characteristics />
-      {/* <NewCharacteristics/> */}
+{/* <Characteristics /> */}
+      <NewCharacteristics/>
       <Testimonies />
       <Partners />
       <Contact />
