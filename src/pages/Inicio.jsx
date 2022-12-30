@@ -8,6 +8,7 @@ import {
   Testimonies,
   Contact,
   NewCharacteristics,
+  Partners
 } from "../components/landing";
 
 export const Inicio = () => {
@@ -20,6 +21,7 @@ export const Inicio = () => {
       <Characteristics />
       {/* <NewCharacteristics/> */}
       <Testimonies />
+      <Partners />
       <Contact />
       <Footer />
     </>
