@@ -18,12 +18,12 @@ export const Plans = () => {
           Ahorra en el pago de tu póliza de Gastos Médicos
         </p>
       </div>
-      <div className="container py-3 d-none d-md-block">
+      <div className="container py-3 d-none d-lg-block">
         <div className="row d-flex justify-content-around">
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center p-5">
-                <p className="fs-1 mb-0">Enlace Max</p>
+                <p className="fs-2 mb-0">Enlace Max</p>
               </div>
               <div className="d-flex flex-column card-body align-items-center justify-content-center px-2 pb-0">
                 <p className="card-title fst-italic fs-4 lh-sm my-4 text-primary">
@@ -40,7 +40,7 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center opacity-100 p-5">
-                <p className="fs-1 mb-0">Enlace Total</p>
+                <p className="fs-2 mb-0">Enlace Total</p>
               </div>
               <div className="card-body d-flex flex-column card-body align-items-center justify-content-center px-2 pb-0">
                 <p className="card-title fst-italic fs-4 lh-sm my-4 text-primary">
@@ -57,7 +57,7 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center p-5">
-                <p className="fs-1 mb-0">Enlace Max Total</p>
+                <p className="fs-2 mb-0">Enlace Max Total</p>
               </div>
               <div className="card-body d-flex flex-column card-body align-items-center justify-content-center px-2 pb-0">
                 <p className="card-title fst-italic fs-4 lh-sm my-4 text-primary">
@@ -74,7 +74,7 @@ export const Plans = () => {
         </div>
       </div>
 
-      <div className="container py-3 position-relative d-md-none">
+      <div className="container py-3 position-relative d-lg-none">
         <div className="services-title container text-center">
           <h5 className="text-dark fs-25 fw-semi-bold text-center pt-4 fst-italic">
             Asistencia a tu medida
@@ -260,7 +260,14 @@ const PlansSection = styled.section`
   }
 
   @media (min-width: 576px) {
+    .card {
+      width: 50%;
+      height: 52rem;
+    }
 
+    .swiper {
+      height: 65rem;
+    }
   }
 
   @media (min-width: 768px) {

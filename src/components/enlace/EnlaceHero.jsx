@@ -122,9 +122,10 @@ const HeroContainer = styled.section`
   }
 
   @media (min-width: 576px) {
+    height: 150rem;
     .gradient_img_bg_sm {
-      width: 100%;
-      height: 100%;
+      width: 70rem;
+      height: auto;
     }
   }
 
