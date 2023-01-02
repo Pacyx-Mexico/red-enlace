@@ -230,6 +230,11 @@ const PlansSection = styled.section`
     }
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
+  } 
+
   .h-50rem {
     height: 60rem;
   }

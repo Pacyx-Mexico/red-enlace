@@ -203,6 +203,11 @@ const BeneficiosSection = styled.section`
     }
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
+  } 
+
   .btn-first {
     background-color: #6983d6;
     border: 3px solid #6983d6 !important;
@@ -235,4 +240,4 @@ const BeneficiosSection = styled.section`
       }
     }
   }
-`;
+`

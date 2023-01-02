@@ -177,6 +177,11 @@ const CharacteristicSection = styled.section`
     color: #ffffff !important;
     border-color: #5c77cc !important;
   }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
+  } 
 
   .card {
     width: 18rem;

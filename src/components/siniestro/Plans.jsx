@@ -327,6 +327,11 @@ const PlansSection = styled.section`
     color: #6983d6;
     border: 10px solid #6983d6 !important;
   }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
+  } 
 
   .icon svg {
     width: 30px;
@@ -416,3 +421,4 @@ const PlansSection = styled.section`
     }
   }
 `;
+
