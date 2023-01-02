@@ -152,16 +152,16 @@ export const Testimonies = () => {
         </div>
         
         <div className="testimonials__carousel-bg card border-none shadow-lg position-relative text-dark p-3 mx-5 my-5">
-          <div className="testimonials__user-info my-4 py-4 d-flex flex-column px-5">
-            <div className="flex-column ps-1 align-items-start justify-content-start flex-shrink-0">
+          <div className="testimonials__user-info my-4 py-4 d-flex flex-row px-5">
+            <div className="ps-1 align-items-start justify-content-start flex-shrink-0">
               <div className="text-start">
-                <h5 className="mb-1 text-start fw-semibold">
+                <h5 className="mt-2 text-start fw-semibold">
                   Diana
-                  <span className="ms-5 fs-1 fst-italic fw-medium">California</span>
                 </h5>
               </div>
             </div>
-            <div className="mt-4 ps-1">
+            <div className="ps-1 ms-5 d-flex justify-content-start flex-column">
+              <span className="fs-1 fst-italic fw-medium mb-3">California</span>
               <p className="mb-0 fs-2 lh-1">
                 Me gusta la facilidad para cotizar y< br></br>contratar.
               </p>
@@ -170,36 +170,36 @@ export const Testimonies = () => {
         </div>
 
         <div className="testimonials__carousel-bg card border-none shadow-lg position-relative text-dark p-3 mx-5 my-5">
-          <div className="testimonials__user-info my-4 py-4 d-flex flex-column px-5">
-            <div className="flex-column ps-1 align-items-start justify-content-start flex-shrink-0">
+          <div className="testimonials__user-info my-4 py-4 d-flex flex-row px-5">
+            <div className="ps-1 align-items-start justify-content-start flex-shrink-0">
               <div className="text-start">
-                <h5 className="mb-1 text-start fw-semibold">
-                  Diana
-                  <span className="ms-5 fs-1 fst-italic fw-medium">California</span>
+                <h5 className="mt-2 text-start fw-semibold">
+                  Carla
                 </h5>
               </div>
             </div>
-            <div className="mt-4 ps-1">
+            <div className="ps-1 ms-5 d-flex justify-content-start flex-column">
+              <span className="fs-1 fst-italic fw-medium mb-3">CDMX</span>
               <p className="mb-0 fs-2 lh-1">
-                Me gusta la facilidad para cotizar y< br></br>contratar.
+                Con el Red Enlace pude renovar mi póliza de<br />gastos médicos a menor costo
               </p>
             </div>
           </div>
         </div>
 
         <div className="testimonials__carousel-bg card border-none shadow-lg position-relative text-dark p-3 mx-5 my-5">
-          <div className="testimonials__user-info my-4 py-4 d-flex flex-column px-5">
-            <div className="flex-column ps-1 align-items-start justify-content-start flex-shrink-0">
+          <div className="testimonials__user-info my-4 py-4 d-flex flex-row px-5">
+            <div className="ps-1 align-items-start justify-content-start flex-shrink-0">
               <div className="text-start">
-                <h5 className="mb-1 text-start fw-semibold">
-                  Diana
-                  <span className="ms-5 fs-1 fst-italic fw-medium">California</span>
+                <h5 className="mt-2 text-start fw-semibold">
+                  Raúl
                 </h5>
               </div>
             </div>
-            <div className="mt-4 ps-1">
+            <div className="ps-1 ms-5 d-flex justify-content-start flex-column">
+              <span className="fs-1 fst-italic fw-medium mb-3">Guadalajara</span>
               <p className="mb-0 fs-2 lh-1">
-                Me gusta la facilidad para cotizar y< br></br>contratar.
+                Cuando lo necesite estuvieron siempre al<br />pendiente de mi.
               </p>
             </div>
           </div>
@@ -219,6 +219,11 @@ const TestimonialsSection = styled.section`
     border-radius: 30px;
     border: none;
   }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
+  } 
 
   .testimonials__user-info p {
     font-size: 1.1875rem;
@@ -229,7 +234,7 @@ const TestimonialsSection = styled.section`
 
   .testimonials__user-info span {
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 500;
     opacity: 0.85;
   }
 
