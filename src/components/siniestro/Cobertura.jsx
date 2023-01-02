@@ -171,7 +171,7 @@ export const Cobertura = () => {
         </Swiper>
       </div>
 
-      <div className="d-block text-center fs-2 height-lile">
+      <div className="d-block text-center fs-2 height-lile d-none d-md-block">
         <p className="mt-5 mt-xxl-5 text-dark fst-italic py-2">
           Resolvemos tus dudas
         </p>
@@ -179,7 +179,7 @@ export const Cobertura = () => {
 
       <div className="container-fluid mx-auto position-relative dudas__container d-none d-md-block">
         <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-          <p className="text-center dudas__text fw-normal">
+          <p className="text-center dudas__text position-relative fw-normal">
             En caso de robo total o daños materiales, nosotros te <br />
             devolveremos el deducible de tu poliza de auto de acuerdo con la{" "}
             <br />
@@ -195,82 +195,71 @@ export const Cobertura = () => {
         </div>
       </div>
 
-      <div className="container py-3 position-relative d-md-none">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={10}
-          slidesPerGroup={1}
-          loop={true}
-          loopFillGroupWithBlank={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="container-fluid mx-auto position-relative dudas__container">
-              <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-                <p className="text-center dudas__text fw-normal mx-5 px-5">
-                  En caso de robo total o daños materiales, nosotros te <br />
-                  devolveremos el deducible de tu poliza de auto de acuerdo con
-                  la <br />
-                  asistencia que hayas elegido
-                </p>
-                <img
-                  src={
-                    "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-                  }
-                  alt="Icon Document"
-                  className="document-icon opacity-50"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container-fluid mx-auto position-relative dudas__container">
-              <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-                <p className="text-center dudas__text fw-normal">
-                  Operamos con cualquier compañía <br /> aseguradora dentro del territorio<br /> nacional
-                </p>
-                <img
-                  src={
-                    "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-                  }
-                  alt="Icon Document"
-                  className="document-icon opacity-50"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container-fluid mx-auto position-relative dudas__container">
-              <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-                <p className="text-center dudas__text fw-normal mx-5 px-5">
-                Se pagará el deducible hasta que<br />
-                se agote la suma del plan<br />
-                contratado, sin importar el número<br />
-                de eventos.
-                </p>
-                <img
-                  src={
-                    "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-                  }
-                  alt="Icon Document"
-                  className="document-icon opacity-50"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+      <div className="container h-75 py-3 d-md-none">
+        <div className="mx-5 dudas__container gap-5">
+          <div>
+            <h4 className="fst-italic text-center my-5 py-5">
+              Resolvemos tus dudas
+            </h4>
+          </div>
+          <div className="w-auto d-flex justify-content-between align-items-center gap-5 mb-5 pb-5">
+            <img
+              src={
+                "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
+              }
+              alt="Icon Document"
+              className="document-icon rounded-5 opacity-50 d-md-none"
+            />
+            <p className="text-start dudas__text fw-normal">
+              En caso de robo total, perdida total<br />
+              o daños materiales, nosotros te<br />
+              devolveremos el deducible de tu<br />
+              poliza de tu auto de acuerdo con la<br />
+              asistencia que hayas elegido<br />
+            </p>
+          </div>
+
+          <div className="w-auto d-flex justify-content-between align-items-center gap-5 my-5 py-5">
+            <img
+              src={
+                "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
+              }
+              alt="Icon Document"
+              className="document-icon rounded-5 opacity-50 d-md-none"
+            />
+            <p className="text-start dudas__text fw-normal">
+              En caso de robo total, perdida total<br />
+              o daños materiales, nosotros te<br />
+              devolveremos el deducible de tu<br />
+              poliza de tu auto de acuerdo con la<br />
+              asistencia que hayas elegido<br />
+            </p>
+          </div>
+
+          <div className="w-auto d-flex justify-content-between align-items-center gap-5 mt-5 pt-5">
+            <img
+              src={
+                "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
+              }
+              alt="Icon Document"
+              className="document-icon rounded-5 opacity-50 d-md-none"
+            />
+            <p className="text-start dudas__text fw-normal">
+              En caso de robo total, perdida total<br />
+              o daños materiales, nosotros te<br />
+              devolveremos el deducible de tu<br />
+              poliza de tu auto de acuerdo con la<br />
+              asistencia que hayas elegido<br />
+            </p>
+          </div>
+        </div>
       </div>
     </CoberturaSection>
   );
 };
 
 const CoberturaSection = styled.section`
-  height: 182rem;
+  height: 230rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -338,24 +327,31 @@ const CoberturaSection = styled.section`
     }
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
+  } 
+
   .services-title {
     padding-bottom: 10rem;
   }
 
   .dudas__container {
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .dudas__text {
     font-size: 14px;
     line-height: 4.5rem;
-    position: absolute;
-    z-index: 5;
   }
 
   .document-icon {
-    position: absolute;
-    height: 20rem;
+    height: auto;
+    width: 15rem;
+    padding: 1rem 3rem;
+    background-color: #eaeef9;
   }
 
   @media (min-width: 576px) {
@@ -392,6 +388,12 @@ const CoberturaSection = styled.section`
       font-size: 13px;
       line-height: 3rem;
       padding: 0 3rem;
+    }
+
+    .document-icon {
+      position: absolute;
+      width: 22rem;
+      background: transparent;
     }
 
     .icon-height-platform_icon {
