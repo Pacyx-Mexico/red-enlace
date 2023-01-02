@@ -16,32 +16,40 @@ export const NewCharacteristics = () => {
           <span className="text-dark fw-normal">Complementamos<br/> <span className="text-dark fw-bold bold-fs">tu protección</span></span>
         </h3>
       </div>
-      <div className="mt-5 pt-5 w-100 mx-5 px-5 d-none d-md-block">
+      <div className="mt-5 pt-5 w-100 d-none d-md-block">
         <div className="services-position">
-          <ul className="d-flex flex-row justify-content-around">
-            <li className="services_text">
-              Procesos eficientes
+          <ul className="d-flex flex-row justify-content-around mx-auto">
+            <li>
+              <p className="services__title">
+                Procesos eficientes
+              </p>
               <p className="services-hover text-center">
               El proceso para contratar cualquiera de <br />
               nuestros productos es fácil y sencillo.
               </p>
             </li>
-            <li className="services_text ">
-              Productos a la medida
+            <li>
+              <p className="services__title">
+                Productos a la medida
+              </p>
               <p className="services-hover">
               Productos que se adaptan a <br />
               tus necesidades.
               </p>
             </li>
-            <li className="services_text">
-              Atención personalizada
+            <li>
+              <p className="services__title">
+                Atención personalizada
+              </p>
               <p className="services-hover">
               Siempre podrás hablar con<br />
               alguien para resolver tus dudas.
               </p>
             </li>
-            <li className="services_text">
-              innovación
+            <li>
+              <p className="services__title">
+                innovación 
+              </p>
               <p className="services-hover">
               Nos adaptamos a nuevas<br />
               formas de comunicación para<br />
@@ -143,18 +151,20 @@ const CharacteristicsSection = styled.section`
     z-index: 5;
   }
 
-  .services_text {
+  .services__title {
     font-size: 2rem;
-    transition: visibility 2s, opacity 0.5s linear;
+    transition: visibility 2s, opacity 0.5s linear, font-weight .15s;
 
-    &:hover> .services-hover {
-      visibility: visible;
+    &:hover {
+      font-weight: 700;
+    }
+
+    &:hover>.services-hover {
       opacity: 1;
     }
   }
 
   .services-hover {
-    visibility: hidden;
     opacity: 0;
   }
 
@@ -233,5 +243,4 @@ const CharacteristicsSection = styled.section`
       }
     }
   }
-
 `;
