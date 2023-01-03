@@ -43,7 +43,16 @@ export default function Navbar({ type }) {
         </LogoContainer>
 
         <Menu open={showMobileMenu}>
+        <MenuItem onClick={inicio}>
+            <LinkRouter to="/deducible-gastos-medicos">Médicos</LinkRouter>
+          </MenuItem>
           <MenuItem onClick={inicio}>
+            <LinkRouter to="/siniestro">Autos</LinkRouter>
+          </MenuItem>
+          <MenuItem onClick={inicio}>
+            <LinkRouter to="/enlace">Enlace</LinkRouter>
+          </MenuItem>
+          {/* <MenuItem onClick={inicio}>
             <LinkRouter to="/">Inicio</LinkRouter>
           </MenuItem>
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -86,7 +95,7 @@ export default function Navbar({ type }) {
             >
               Clientes
             </LinkRouter>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <LinkRouter
               to="beneficios"
