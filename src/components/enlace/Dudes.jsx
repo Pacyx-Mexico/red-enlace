@@ -19,45 +19,45 @@ export const Dudes = () => {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> Si contrato
-                Red Enlace, ¿Se pierde cobertura de mi póliza actual?
+                <span className="secondary-color3 me-4">&#8226; </span> ¿Qué condiciones de mi póliza actual pierdo si contrato Red Enlace?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="fw-normal fs-3">
-                Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat
-                occaecat ut occaecat consequat est minim minim esse tempor
-                laborum consequat esse adipisicing eu reprehenderit enim.
+              Ninguna, incluso se te aumentan beneficios de forma inmediata y se quedan las mismas condiciones de tu póliza actual.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Cuándo puedo
-                hacer uso de los beneficios adicionales que contrate?
+                <span className="secondary-color3 me-4">&#8226; </span> ¿Cuáles son los beneficios extras sin costo que obtengo al contratar un endoso de Red Enlace?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="fw-normal fs-3">
-                In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-                nostrud velit in irure cillum tempor laboris sed adipisicing eu
-                esse duis nulla non.
+                Los beneficios se activan desde el primer minuto en el que contratas el endoso.
+              </p>
+              <p className="fw-normal fs-3">
+                - En caso de siniestro te damos una ayuda hospitalaria de $1,000 pesos diarios (topado a 30 días), depositado directamente a tu cuenta, esto aplica únicamente en caso de enfermedades graves (politraumatismo, derrame cerebral o transplante de órganos).
+              </p>
+              <p className="fw-normal fs-3">
+                - El 100% de tu deducible es cubierto por Red Enlace.
+              </p>
+              <p className="fw-normal fs-3">
+                - El pago de siniestros lo realizamos en máximo 72 horas.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Esta
-                asistencia funciona con todas las pólizas de gastos médicos?
+                <span className="secondary-color3 me-4">&#8226; </span> ¿Esta asistencia funciona con todas las pólizas de gastos médicos?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-3">
-                In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-                nostrud velit in irure cillum tempor laboris sed adipisicing eu
-                esse duis nulla non.
+              <p className="fw-normal fs-3 text-left">
+                Si, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
@@ -75,6 +75,10 @@ const DudesSection = styled.section`
 
   .accordion__button:before {
     display: none;
+  }
+
+  .accordion__panel {
+    text-align: left;
   }
 
   .secondary-color3 {
