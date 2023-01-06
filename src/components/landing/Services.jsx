@@ -78,7 +78,7 @@ export const Services = () => {
             </Link>
           </div>
           <div className="col-auto mb-5 pb-5">
-            <NavLink onClick={ scrollTop } to="/siniestro" className="w-100 text-decoration-none">
+            <NavLink onClick={ scrollTop } to="/deducible-autos" className="w-100 text-decoration-none">
               <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
@@ -147,7 +147,7 @@ export const Services = () => {
           <div className="col-auto mb-5 pb-5 w-75">
             <NavLink
               onClick={scrollTop}
-              to="/deducible-gastos-medicos"
+              to="/deducible-autos"
               className="w-100 text-decoration-none"
             >
               <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
@@ -171,7 +171,7 @@ export const Services = () => {
           <div className="col-auto mb-5 pb-5 w-75">
             <NavLink
               onClick={scrollTop}
-              to="/deducible-gastos-medicos"
+              to="/enlace"
               className="w-100 text-decoration-none"
             >
               <div className="card border border-4 border-third rounded-5 text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg">
