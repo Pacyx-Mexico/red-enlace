@@ -47,10 +47,13 @@ export default function Navbar({ type }) {
             <LinkRouter to="/deducible-gastos-medicos">Médicos</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/siniestro">Autos</LinkRouter>
+            <LinkRouter to="/deducible-autos">Autos</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
             <LinkRouter to="/enlace">Enlace</LinkRouter>
+          </MenuItem>
+          <MenuItem onClick={inicio}>
+            <LinkRouter to="/reclamacion-de-siniestro">Siniestro</LinkRouter>
           </MenuItem>
           {/* <MenuItem onClick={inicio}>
             <LinkRouter to="/">Inicio</LinkRouter>
