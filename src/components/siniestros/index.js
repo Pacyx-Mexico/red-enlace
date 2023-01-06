@@ -1,0 +1,5 @@
+export * from './HeroSiniestros'
+export * from './SiniestroSteps'
+export * from './SelectSiniestro'
+export * from './SiniestroGM'
+export * from './SiniestroAuto'

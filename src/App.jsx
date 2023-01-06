@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import { Inicio, GastosMedicos, Siniestro, Enlace } from "./pages";
+import { Inicio, GastosMedicos, Siniestro, Enlace, Autos } from "./pages";
 import CotizadorGastosMedicos from "./pages/forms/CotizadorGastosMedicos";
 import CotizadorDeducibleAutos from "./pages/forms/CotizadorDeducibleAutos";
-import ReclamacionSiniestro from "./pages/forms/ReclamacionSiniestro";
+import { SelectSiniestro, SiniestroGM, SiniestroAuto } from "./components/siniestros";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
               element={<GastosMedicos />}
             />
             <Route path="enlace" element={<Enlace />} />
+            <Route path="deducible-autos" element={<Autos />} />
             <Route
               path="cotizador-deducible-autos"
               element={<CotizadorDeducibleAutos />}
@@ -27,11 +28,10 @@ function App() {
               path="cotizador-deducible-gastos-medicos"
               element={<CotizadorGastosMedicos />}
             />
-            <Route path="siniestro" element={<Siniestro />} />
-            <Route
-              path="reclamacion-de-siniestro"
-              element={<ReclamacionSiniestro />}
-            />
+            <Route path="select-siniestro" element={<SelectSiniestro />} />
+            <Route path="siniestro-gm" element={<SiniestroGM />} />
+            <Route path="siniestro-auto" element={<SiniestroAuto />} />
+            <Route path="reclamacion-de-siniestro" element={<Siniestro />} />
           </Route>
         </Routes>
       </BrowserRouter>

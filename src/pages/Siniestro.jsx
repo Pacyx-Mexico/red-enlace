@@ -1,22 +1,16 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
-  HeroSiniestro,
-  DevolucionDeducible,
-  Plans,
-  Cobertura,
-} from "../components/siniestro";
-import HeaderVideo from "../components/productos/HeaderVideo";
+  HeroSiniestros,
+  SiniestroSteps
+} from "../components/siniestros";
 
 export const Siniestro = () => {
   return (
     <>
       <Navbar type="productos" />
-      <HeroSiniestro />
-      <HeaderVideo video={true} title="Siniestro" />
-      {/* <DevolucionDeducible /> */}
-      <Plans />
-      <Cobertura />
+      <HeroSiniestros />
+      <SiniestroSteps />
       <Footer />
     </>
   );
