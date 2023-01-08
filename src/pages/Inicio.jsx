@@ -21,7 +21,7 @@ export const Inicio = () => {
 {/* <Characteristics /> */}
       <NewCharacteristics/>
       <Testimonies />
-      <Partners />
+      {/* <Partners /> */}
       <Contact />
       <Footer />
     </>
