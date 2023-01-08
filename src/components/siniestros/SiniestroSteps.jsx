@@ -24,25 +24,25 @@ export const SiniestroSteps = () => {
       <div className="container-fluid py-3 position-relative d-none d-lg-block">
         <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
           <div className="col-auto mb-5 pb-5">
-            <div className=" text-center opacity-75 card-hover_first">
+            <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center justify-content-center">
                 <h2 className="number-fs">1</h2>
               </div>
             </div>
             <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-2">
+              <p className="card-title fw-normal lh-sm text-center fs-1">
                 Selecciona el producto
               </p>
             </div>
           </div>
           <div className="col-auto mb-5 pb-5">
-            <div className=" text-center opacity-75 card-hover_first">
+            <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center justify-content-center">
                 <h2 className="number-fs">2</h2>
               </div>
             </div>
             <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-2">
+              <p className="card-title fw-normal lh-sm text-center fs-1">
                 Descarga y requisita los <br />
                 formatos correspondientes, <br />
                 no olvides firmarlos
@@ -50,13 +50,13 @@ export const SiniestroSteps = () => {
             </div>
           </div>
           <div className="col-auto mb-5 pb-5">
-            <div className=" text-center opacity-75 card-hover_first">
+            <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center justify-content-center">
                 <h2 className="number-fs">3</h2>
               </div>
             </div>
             <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-2">
+              <p className="card-title fw-normal lh-sm text-center fs-1">
                 Completa tu información y <br />
                 adjunta la documentación <br />
                 solicitada
