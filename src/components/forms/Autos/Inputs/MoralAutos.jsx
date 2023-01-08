@@ -13,8 +13,8 @@ function MoralAutos(props) {
   }, []);
 
   return (
-    <FormMoralAutos>
-      <div>
+    <>
+      <div className="container">
         <InputText
           type="text"
           placeholder="Razón Social *"
@@ -30,69 +30,71 @@ function MoralAutos(props) {
           textNull="Ingresa la razón social"
         />
       </div>
-      <div>
-        <InputText
-          type="text"
-          placeholder="RFC *"
-          name="rfc"
-          value={props.state.rfc}
-          onChange={props.handleChange}
-          validation={props.validationRFC}
-          errorFX={props.error.errorFX__rfc}
-        />
-        <ErrorInput
-          errorFX={props.error.errorFX__rfc}
-          errorNull={props.error.errorNull__rfc}
-          errorTest={props.error.errorTest__rfc}
-          textError="El RFC no es valido"
-          textNull="Ingresa el RFC"
-        />
-      </div>
-      <div>
-        <InputText
-          type="email"
-          placeholder="Correo Electrónico *"
-          name="correo"
-          value={props.state.correo}
-          onChange={props.handleChange}
-          validation={props.validationCorreo}
-          errorFX={props.error.errorFX__correo}
-        />
-        <ErrorInput
-          errorFX={props.error.errorFX__correo}
-          errorNull={props.error.errorNull__correo}
-          errorTest={props.error.errorTest__correo}
-          textError="El correo electrónico no es valido"
-          textNull="Ingresa un correo electrónico"
-        />
-      </div>
-      <div>
-        <InputText
-          type="number"
-          placeholder="Teléfono *"
-          name="tel"
-          value={props.state.tel}
-          onChange={props.handleChange}
-          validation={props.validationTel}
-          errorFX={props.error.errorFX__tel}
-        />
-        <ErrorInput
-          errorFX={props.error.errorFX__tel}
-          errorNull={props.error.errorNull__tel}
-          errorTest={props.error.errorTest__tel}
-          textError="El número telefónico es muy corto"
-          textNull="Ingresa el número telefónico"
-        />
-      </div>
-    </FormMoralAutos>
+      <FormMoralAutos>
+        <div>
+          <InputText
+            type="text"
+            placeholder="RFC *"
+            name="rfc"
+            value={props.state.rfc}
+            onChange={props.handleChange}
+            validation={props.validationRFC}
+            errorFX={props.error.errorFX__rfc}
+          />
+          <ErrorInput
+            errorFX={props.error.errorFX__rfc}
+            errorNull={props.error.errorNull__rfc}
+            errorTest={props.error.errorTest__rfc}
+            textError="El RFC no es valido"
+            textNull="Ingresa el RFC"
+          />
+        </div>
+        <div>
+          <InputText
+            type="email"
+            placeholder="Correo Electrónico *"
+            name="correo"
+            value={props.state.correo}
+            onChange={props.handleChange}
+            validation={props.validationCorreo}
+            errorFX={props.error.errorFX__correo}
+          />
+          <ErrorInput
+            errorFX={props.error.errorFX__correo}
+            errorNull={props.error.errorNull__correo}
+            errorTest={props.error.errorTest__correo}
+            textError="El correo electrónico no es valido"
+            textNull="Ingresa un correo electrónico"
+          />
+        </div>
+        <div>
+          <InputText
+            type="number"
+            placeholder="Teléfono *"
+            name="tel"
+            value={props.state.tel}
+            onChange={props.handleChange}
+            validation={props.validationTel}
+            errorFX={props.error.errorFX__tel}
+          />
+          <ErrorInput
+            errorFX={props.error.errorFX__tel}
+            errorNull={props.error.errorNull__tel}
+            errorTest={props.error.errorTest__tel}
+            textError="El número telefónico es muy corto"
+            textNull="Ingresa el número telefónico"
+          />
+        </div>
+      </FormMoralAutos>
+    </>
   );
 }
 
 const FormMoralAutos = styled.form`
   display: grid;
-  width: 70%;
+  width: 87%;
   margin: 0 auto;
-  grid-template-columns: 48% 48%;
+  grid-template-columns: 32% 32% 32%;
   justify-content: space-between;
   margin-top: 4rem;
 
