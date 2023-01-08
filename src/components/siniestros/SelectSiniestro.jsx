@@ -17,14 +17,14 @@ export const SelectSiniestro= () => {
           </h3>
         </div>
         <div className="container-fluid py-3 position-relative d-none d-lg-block">
-          <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
+          <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-center gap-10">
             <div className="col-auto mb-5 pb-5">
               <Link
                 onClick={scrollTop}
                 to="/siniestro-gm"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-first rounded-5 text-center opacity-75 position-relative card-hover_first">
+                <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -44,7 +44,7 @@ export const SelectSiniestro= () => {
             </div>
             <div className="col-auto mb-5 pb-5">
               <NavLink onClick={ scrollTop } to="/siniestro-auto" className="w-100 text-decoration-none">
-                <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second">
+                <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
@@ -335,7 +335,7 @@ const SelectSiniestroContainer = styled.section`
   @media (min-width: 992px) {
     .card {
       width: 36rem;
-      height: 42rem;
+      height: 59rem;
     }
 
     .card_img-width_first {
@@ -357,3 +357,4 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
+
