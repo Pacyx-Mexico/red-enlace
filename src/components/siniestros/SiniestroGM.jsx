@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import styled from "styled-components";
 import Button from "../Button";
+import { MedicineIcon } from '../../assets/icons'
 
 export const SiniestroGM = () => {
 
@@ -12,7 +13,9 @@ export const SiniestroGM = () => {
         <div className="container-fluid mt-5">
           <div className="d-flex row h-100">
             <div className="col-md-3 icon-cruz d-flex justify-content-center flex-column align-items-center">
-              icon
+              <div className="w-50 mb-5">
+                <MedicineIcon />
+              </div>
               <p className="text-white fs-1 text-center">Devolución de <br />
               deducible Gastos <br />
               Médicos</p>
