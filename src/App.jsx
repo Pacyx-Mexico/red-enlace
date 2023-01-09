@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Inicio, GastosMedicos, Siniestro, Enlace, Autos } from "./pages";
 import CotizadorGastosMedicos from "./pages/forms/CotizadorGastosMedicos";
 import CotizadorDeducibleAutos from "./pages/forms/CotizadorDeducibleAutos";
-import { SelectSiniestro, SiniestroGM, SiniestroAuto } from "./components/siniestros";
+import { SelectSiniestro, SiniestroGM, SiniestroAuto, MainSiniestroAuto, MainSiniestroGM } from "./components/siniestros";
 
 function App() {
   return (
@@ -32,6 +32,8 @@ function App() {
             <Route path="siniestro-gm" element={<SiniestroGM />} />
             <Route path="siniestro-auto" element={<SiniestroAuto />} />
             <Route path="reclamacion-de-siniestro" element={<Siniestro />} />
+            <Route path="reclamacion-de-siniestro-auto" element={<MainSiniestroAuto />} />
+            <Route path="reclamacion-de-siniestro-gm" element={<MainSiniestroGM />} />
           </Route>
         </Routes>
       </BrowserRouter>
