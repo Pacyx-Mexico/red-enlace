@@ -2,24 +2,56 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import { Form, Card } from "react-bootstrap";
 import validator from "validator";
+import { Form, Card /* , Button */ } from "react-bootstrap";
 
 export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
+  const submitFormData = (e) => {
+    e.preventDefault();
+    nextStep();
+
+    // checking if value of first name and last name is empty show error else take to step 2
+    /* if (
+      validator.isEmpty(values.firstName) ||
+      validator.isEmpty(values.lastName)
+    ) {
+      setError(true);
+    } else {
+      nextStep();
+    } */
+  };
   return (
     <>
       <SiniestroAContainer>
-        Step1Siniestro
-        <Link
-          to="/reclamacion-de-siniestro-auto"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={400}
-        >
-          <Button text="Siguiente" />
-        </Link>
+        <div>
+          <Card style={{ marginTop: 100 }}>
+            <Card.Body>
+              <Form onSubmit={submitFormData}>
+                <Form.Group className="mb-3">
+                  <Form.Label># Contrato</Form.Label>
+                  <Form.Control
+                    style={{ border: error ? "2px solid red" : "" }}
+                    name="noContrato"
+                    defaultValue={values.noContrato}
+                    type="text"
+                    placeholder="# Contrato"
+                    onChange={handleFormData("noContrato")}
+                  />
+                  {error ? (
+                    <Form.Text style={{ color: "red" }}>
+                      This is a required field
+                    </Form.Text>
+                  ) : (
+                    ""
+                  )}
+                </Form.Group>
+                <Button variant="primary" type="submit" text="Buscar">
+                </Button>
+              </Form>
+            </Card.Body>
+          </Card>
+        </div>
       </SiniestroAContainer>
     </>
   );

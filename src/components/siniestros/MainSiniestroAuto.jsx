@@ -1,7 +1,7 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { useState } from "react";
-import { Step1SiniestroA, Step2SiniestroA } from "./";
+import { Step1SiniestroA, Step2SiniestroA, Step3SiniestroA, Step4SiniestroA, FinalSiniestroPage } from "./";
 import { Container, Row, Col } from "react-bootstrap";
 
 export const MainSiniestroAuto = () => {
@@ -11,6 +11,7 @@ export const MainSiniestroAuto = () => {
     noContrato: "",
     asegurados: [],
     nombreSiniestro: "",
+    date: "",
     documentacion: {
       solicitud: "",
       identificación: "",
@@ -62,6 +63,7 @@ export const MainSiniestroAuto = () => {
     case 2:
       return (
         <div className="App">
+          <Navbar type="productos" />
           <Container>
             <Row>
               <Col md={{ span: 6, offset: 3 }} className="custom-margin">
@@ -74,11 +76,13 @@ export const MainSiniestroAuto = () => {
               </Col>
             </Row>
           </Container>
+          <Footer />
         </div>
       );
     case 3:
       return (
         <div className="App">
+          <Navbar type="productos" />
           <Container>
             <Row>
               <Col md={{ span: 6, offset: 3 }} className="custom-margin">
@@ -91,11 +95,13 @@ export const MainSiniestroAuto = () => {
               </Col>
             </Row>
           </Container>
+          <Footer />
         </div>
       );
     case 4:
       return (
         <div className="App">
+          <Navbar type="productos" />
           <Container>
             <Row>
               <Col md={{ span: 6, offset: 3 }} className="custom-margin">
@@ -108,11 +114,13 @@ export const MainSiniestroAuto = () => {
               </Col>
             </Row>
           </Container>
+          <Footer />
         </div>
       );
       case 5:
         return (
           <div className="App">
+            <Navbar type="productos" />
             <Container>
               <Row>
                 <Col md={{ span: 6, offset: 3 }} className="custom-margin">
@@ -120,6 +128,7 @@ export const MainSiniestroAuto = () => {
                 </Col>
               </Row>
             </Container>
+            <Footer />
           </div>
         );
     default:
