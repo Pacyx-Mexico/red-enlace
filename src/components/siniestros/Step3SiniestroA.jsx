@@ -26,7 +26,9 @@ export const Step3SiniestroA = ({ nextStep, handleFormData, values }) => {
       <SiniestroAContainer>
         <div>
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">PASO 3/4</h1>
+            <h1 className="fst-italic fs-1 fw-bold mt-5">
+              PASO 3/4
+            </h1>
             <p className="text-center fs-2 fw-normal mt-5">
               Proporciona el nombre y fecha del siniestro.
             </p>
@@ -34,54 +36,49 @@ export const Step3SiniestroA = ({ nextStep, handleFormData, values }) => {
 
           <Card style={{ marginTop: 100 }}>
             <Card.Body className="container mx-auto d-flex flex-column justify-content-center align-items-center">
-              <Form
-                onSubmit={submitFormData}
-                className="d-flex justify-content-center align-items-center gap-5 w-100 gx-5"
-              >
-                <Form.Group className="mb-3">
-                  <Form.Control
+              <Form onSubmit={submitFormData} className="d-flex justify-content-center align-items-center gap-5 w-100 flex-column">
+                <div className="d-flex justify-content-center gap-5">
+                  <Form.Group className="mb-3">
+                    <Form.Control
                     /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="nombreSiniestro"
-                    defaultValue={values.nombreSiniestro}
-                    type="text"
-                    placeholder="nombre del siniestro/ padecimiento"
-                    onChange={handleFormData("nombreSiniestro")}
-                    className="input-text"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Control
+                      style={{ border: error ? "2px solid red" : "" }}
+                      name="nombreSiniestro"
+                      defaultValue={values.nombreSiniestro}
+                      type="text"
+                      placeholder="nombre del siniestro/ padecimiento"
+                      onChange={handleFormData("nombreSiniestro")}
+                      className="input-text"
+                    />
+                    {error ? (
+                      <Form.Text style={{ color: "red" }}>
+                        This is a required field
+                      </Form.Text>
+                    ) : (
+                      ""
+                    )}
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
                     /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="text"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="input-text"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                </Form.Group>
+                      style={{ border: error ? "2px solid red" : "" }}
+                      name="date"
+                      defaultValue={values.date}
+                      type="text"
+                      placeholder="Fecha"
+                      onChange={handleFormData("date")}
+                      className="input-text"
+                    />
+                    {error ? (
+                      <Form.Text style={{ color: "red" }}>
+                        This is a required field
+                      </Form.Text>
+                    ) : (
+                      ""
+                    )}
+                  </Form.Group>
+                </div>
                 <div className="d-flex justify-content-center mt-5 pt-5">
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    text="Siguiente"
-                  ></Button>
+                  <Button variant="primary" type="submit" text="Siguiente"></Button>
                 </div>
               </Form>
             </Card.Body>
@@ -98,6 +95,7 @@ const SiniestroAContainer = styled.section`
 
   @media (min-width: 992px) {
     height: 90vh;
+    width: 100%; 
     .card {
       border: none;
     }
