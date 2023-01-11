@@ -175,6 +175,7 @@ const SelectSiniestroContainer = styled.section`
     width: 31rem;
     top: -2.4rem;
     right: 0;
+    border-radius: 50rem;
   }
 
   .card_img-width_second {
@@ -339,15 +340,16 @@ const SelectSiniestroContainer = styled.section`
     }
 
     .card_img-width_first {
-      width: 31rem;
-      top: -4.5rem;
-      left: 2rem;
+      width: 36rem;
+      top: 5rem;
+      left: -0.5rem;
     }
 
     .card_img-width_second {
-      width: 32.3rem;
-      top: -0.7rem;
-      right: 0.9rem;
+      border-radius: 0 21rem 21rem;
+      width: 35.9rem;
+      top: 11.2rem;
+      right: 0.6rem;
     }
 
     .card_img-width_third {
