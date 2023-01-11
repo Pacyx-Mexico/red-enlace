@@ -17,25 +17,31 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
       validator.isEmpty(values.lastName)
     ) {
       setError(true);
-    } else {
-      nextStep();
     } */
   };
   return (
     <>
       <SiniestroAContainer>
         <div>
-          <Card style={{ marginTop: 100 }}>
+          <div className="d-flex justify-content-center flex-column">
+            <h1 className="fst-italic fs-1 fw-bold mt-5">
+              PASO 1/4:
+            </h1>
+            <p className="text-center fs-2 fw-normal mt-5">
+              Proporciona tu número de contrato.
+            </p>
+          </div>
+          
+          <Card style={{ marginTop: 60 }}>
             <Card.Body>
-              <Form onSubmit={submitFormData}>
-                <Form.Group className="mb-3">
-                  <Form.Label># Contrato</Form.Label>
+              <Form onSubmit={submitFormData} className>
+                <Form.Group className="mb-3 d-flex gap-5">
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
                     name="noContrato"
                     defaultValue={values.noContrato}
                     type="text"
-                    placeholder="# Contrato"
+                    placeholder="# de Contrato*"
                     onChange={handleFormData("noContrato")}
                   />
                   {error ? (
@@ -45,9 +51,10 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
                   ) : (
                     ""
                   )}
+
+                  <Button variant="primary" type="submit" text="Buscar">
+                  </Button>
                 </Form.Group>
-                <Button variant="primary" type="submit" text="Buscar">
-                </Button>
               </Form>
             </Card.Body>
           </Card>
@@ -60,4 +67,31 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
 const SiniestroAContainer = styled.section`
   height: 50rem;
   margin-top: 15rem;
+
+  @media (min-width: 992px) {
+    height: 90vh;
+    .form-control {
+      width: 70%;
+      background: #f2f5fc;
+      border: none;
+      border-radius: 1.5rem;
+      padding-left: 3rem;
+      font-size: 10px;
+
+      &::placeholder {
+        color: #000;
+        font-size: 10px;
+      }
+    }
+
+    .card {
+      border: none; 
+    }
+
+    .bBlzVr {
+      color: #fff;
+      border-radius: 1.5rem;
+      background: #8296de;
+    }
+  }
 `;
