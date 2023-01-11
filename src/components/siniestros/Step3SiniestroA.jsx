@@ -77,7 +77,11 @@ export const Step3SiniestroA = ({ nextStep, handleFormData, values }) => {
                   )}
                 </Form.Group>
                 <div className="d-flex justify-content-center mt-5 pt-5">
-                  <Button variant="primary" type="submit" text="Siguiente" />
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    text="Siguiente"
+                  ></Button>
                 </div>
               </Form>
             </Card.Body>
