@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 import validator from "validator";
 import { Form, Card /* , Button */ } from "react-bootstrap";
-
+import { FiUpload } from "react-icons/fi";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
   const submitFormData = (e) => {
@@ -25,7 +28,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
     <>
       <SiniestroAContainer>
         <div>
-        <div className="d-flex justify-content-center flex-column">
+          <div className="d-flex justify-content-center flex-column">
             <h1 className="fst-italic fs-1 fw-bold mt-5">
               PASO 4/4
             </h1>
@@ -33,175 +36,81 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
               Adjuntar documentación.
             </p>
           </div>
-          <Card style={{ marginTop: 100 }}>
-            <Card.Body className="d-flex flex-wrap w-100">
-              <Form onSubmit={submitFormData} className="w-100 row">
-                <Form.Group className="mb-3 col-12 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="nombreSiniestro"
-                    defaultValue={values.nombreSiniestro}
-                    type="file"
-                    placeholder="nombreSiniestro"
-                    onChange={handleFormData("nombreSiniestro")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-
-                  <Form.Label>Formato solicitud de reembolso*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Identificación oficial vigente con fotografía*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Carátula de la póliza primaria*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Carta de la aseguradora*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Facturas/ comprobantes de gastos*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Copia de estado de cuenta vigente*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Finiquito de la aseguradora*</Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3 input-custom">
-                  <Form.Control
-                  /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="date"
-                    defaultValue={values.date}
-                    type="file"
-                    placeholder="Fecha"
-                    onChange={handleFormData("date")}
-                    className="w-25"
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                  <Form.Label>Corte de caja*</Form.Label>
-                </Form.Group>
-                <Button variant="primary" type="submit" text="Siguiente">
-                </Button>
-              </Form>
-            </Card.Body>
-          </Card>
+          <Container onSubmit={submitFormData} className="mt-5 pt-5">
+            <Row className="mt-5">
+              <Col className="d-flex mx-auto">
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Formato solicitud de reembolso*</p>
+                </div>
+              </Col>
+              <Col>
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Carta de aseguradora*</p>
+                </div>
+              </Col>
+              <Col>
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Finiquito de la aseguradora*</p>
+                </div>
+              </Col>
+            </Row>
+            <Row className="mt-5 pt-5">
+              <Col className="d-flex mx-auto">
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Identificación oficial vigente con<br />fotografía*</p>
+                </div>
+              </Col>
+              <Col>
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Facturas/ comprobantes de gastos*</p>
+                </div>
+              </Col>
+              <Col>
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Corte de caja*</p>
+                </div>
+              </Col>
+            </Row>
+            <Row className="mt-5 pt-5">
+              <Col className="d-flex mx-auto">
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Carátula de la póliza primaria*</p>
+                </div>
+              </Col>
+              <Col md ={8}>
+                <div className="d-flex align-items-center">
+                  <Link className="bg-blue rounded-lg ">
+                    < FiUpload className="icon-width"/>
+                  </Link>
+                  <p className="my-auto ms-5 ps-5 fs-2">Copia de estado de cuenta vigente*</p>
+                </div>
+              </Col>
+            </Row>
+            <div className="d-flex justify-content-center mt-5 pt-5">
+                  <Button variant="primary" type="submit" text="Siguiente"></Button>
+            </div>
+          </Container>
         </div>
       </SiniestroAContainer>
     </>
@@ -210,13 +119,30 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
 
 const SiniestroAContainer = styled.section`
   /* height: 70vh; */
-  height: 110vh;
+  height: 120vh;
   margin-top: 15rem;
 
   @media (min-width: 992px) {
+    width: 100%;
     .input-custom {
       display: flex;
       justify-content: around;
+    }
+
+    .card {
+      border: none;
+    }
+
+    .bg-blue {
+      background: #6099b2;
+      padding: .5rem 2rem;
+      color: #FFF;
+      border-radius: 1.5rem;
+    }
+
+    .icon-width {
+      width: 3.5rem;
+      height: auto;
     }
   }
 `;
