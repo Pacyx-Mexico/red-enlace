@@ -411,26 +411,29 @@ const ServicesContainer = styled.section`
   @media (min-width: 992px) {
     .card {
       width: 36rem;
-      height: 52rem;
-      border-radius: 5.7rem;
+      height: 59rem;
+      border-radius: 50rem;
     }
 
     .card_img-width_first {
-      width: 33rem;
-      top: 2.6rem;
-      left: 1.6rem;
+      width: 37rem;
+      top: 3.5rem;
+      left: -1.2rem;
+      border-radius: 22rem;
     }
 
     .card_img-width_second {
-      width: 35.3rem;
-      top: 5.2rem;
-      right: 0.9rem;
+      border-radius: 0 21rem 21rem;
+      width: 35.9rem;
+      top: 11.2rem;
+      right: 0.6rem;
     }
 
     .card_img-width_third {
       width: 38.9rem;
-      top: -2.5rem;
-      right: 3rem;
+      top: 4.2rem;
+      right: 2.4rem;
+      border-radius: 20rem;
     }
   }
 `;
