@@ -39,7 +39,37 @@ export const Services = () => {
   return (
     <ServicesContainer>
       {/* {map.services(service => console.log(service))} */}
-      <div className="services-title container-fluid text-center d-none d-lg-block">
+      <div className="d-flex justify-content-center flex-column mb-5 pb-5 d-none d-lg-block">
+        <div className="text-center mt-5 position-relative">
+          <div className="">
+            <h2 className="fs-10 mb-5 pb-5">¿Qué nos hace únicos?</h2>
+            <p className="fs-10 mb-5 mt-5 pt-5">
+              Devolución <br />
+              <span className="fw-bold">de deducible</span>
+            </p>
+            <p className="fs-2 fw-normal mb-5 pb-5">
+            Es una asistencia que en caso de que te<br />
+            hospitalicen, te reembolsa un porcentaje fijo del<br />
+            deducible  de tu  póliza de gastos médicos mayores.
+            </p>
+            <p className="fs-2">
+              Con nosotros, tú eliges el porcentaje: 
+              <br />
+              <span className="fw-bold">
+                30, 50, 80 o hasta 100%
+              </span>
+            </p>
+          </div>
+
+          <div className="position-relative">
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png" alt="" className="hand hand-right position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
+          </div>
+        </div>
+      </div>
+
+      <div className="services-title container-fluid text-center d-none d-lg-block mt-5 pt-5">
         <h3 className="pb-2 fw-semi-bold text-dark mt-5">
           <span className="text-lile">Protege</span> a los que más quieres y
           <br />
@@ -199,6 +229,7 @@ export const Services = () => {
 const ServicesContainer = styled.section`
   padding-top: 10rem;
   padding-bottom: 10rem;
+  overflow-x: hidden;
   .text-lile {
     color: #6983d6;
   }
@@ -409,6 +440,7 @@ const ServicesContainer = styled.section`
   }
 
   @media (min-width: 992px) {
+    height: 200rem;
     .card {
       width: 36rem;
       height: 59rem;
@@ -434,6 +466,43 @@ const ServicesContainer = styled.section`
       top: 4.2rem;
       right: 2.4rem;
       border-radius: 20rem;
+    }
+
+    .services-title {
+      padding-top: 68rem;
+      padding-bottom: 0;
+    }
+
+    .fs-10 {
+      font-size: 30px;
+    }
+
+    .bg-gradient {
+      width: 110%;
+      height: 184rem;
+      top: -68rem;
+      left: -10rem;
+      z-index: -1;
+    }
+    
+    .hand {
+      z-index: -1;
+      width: auto;
+      height: 55rem;
+    }
+
+    .hand-left {
+      left: 70%;
+      bottom: 2rem;
+      width: auto;
+      height: 55rem;
+    }
+
+    .hand-right {
+      right: 74%;
+      bottom: -17rem;
+      width: auto;
+      height: 35rem;
     }
   }
 `;
