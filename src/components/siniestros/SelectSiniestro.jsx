@@ -64,7 +64,7 @@ export const SelectSiniestro= () => {
             </div>
           </div>
         </div>
-        <div className="container-fluid py-3 position-relative d-lg-none">
+        <div className="container-fluid pb-3 pt-5 mt-5 position-relative d-lg-none">
           <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
             <div className="col-auto mb-5 pb-5 w-75">
               <NavLink
@@ -72,7 +72,7 @@ export const SelectSiniestro= () => {
                 to="/siniestro-gm"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-first rounded-5 text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -96,7 +96,7 @@ export const SelectSiniestro= () => {
                 to="/siniestro-auto"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
@@ -123,6 +123,7 @@ export const SelectSiniestro= () => {
 };
 
 const SelectSiniestroContainer = styled.section`
+  height: 180rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
   .text-lile {
@@ -168,20 +169,21 @@ const SelectSiniestroContainer = styled.section`
 
   .card {
     width: 41rem;
-    height: 41rem;
+    height: 64rem;
   }
 
   .card_img-width_first {
-    width: 31rem;
-    top: -2.4rem;
+    width: 37rem;
+    top: 4.9rem;
     right: 0;
     border-radius: 50rem;
   }
 
   .card_img-width_second {
-    width: 32rem;
-    top: 0rem;
-    right: 4.9rem;
+    width: 41.1rem;
+    top: 5.1rem;
+    right: 0;
+    border-radius: 0 21rem 21rem;
   }
 
   .card_img-width_third {
@@ -269,10 +271,11 @@ const SelectSiniestroContainer = styled.section`
     gap: 10rem;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 570px) {
+    height: 180rem;
     .card {
       width: 41rem;
-      height: 41rem;
+      height: 63.8rem;
     }
 
     .card-body {
@@ -289,6 +292,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
+    height: 225rem;
     padding-top: 20rem;
     padding-bottom: 20rem;
 
@@ -299,19 +303,19 @@ const SelectSiniestroContainer = styled.section`
 
     .card {
       width: 50rem;
-      height: 58rem;
+      height: 80rem;
     }
 
     .card_img-width_first {
-      width: 44rem;
-      top: -3.6rem;
+      width: 47rem;
+      top: 5.7rem;
       right: 0rem;
     }
 
     .card_img-width_second {
-      width: 44rem;
-      top: 0.9rem;
-      right: 3.3rem;
+      width: 50rem;
+      top: 7.4rem;
+      right: 0.1rem;
     }
 
     .card_img-width_third {
@@ -334,6 +338,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 992px) {
+    height: 130vh;
     .card {
       width: 36rem;
       height: 59rem;
