@@ -34,7 +34,7 @@ export const SiniestroAuto = () => {
                 duration={400}
                 /* onClick={accept} */
               >
-                <Button text="Siguientes" />
+                <Button text="Siguiente" />
               </Link>
             </div>
           </div>
