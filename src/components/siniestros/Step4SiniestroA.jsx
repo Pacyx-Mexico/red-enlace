@@ -37,79 +37,81 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
             </p>
           </div>
           <Container onSubmit={submitFormData} className="mt-5 pt-5">
-            <Row className="mt-5">
-              <Col className="d-flex mx-auto">
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Formato solicitud de reembolso*</p>
-                </div>
-              </Col>
-              <Col>
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Carta de aseguradora*</p>
-                </div>
-              </Col>
-              <Col>
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Finiquito de la aseguradora*</p>
-                </div>
-              </Col>
-            </Row>
-            <Row className="mt-5 pt-5">
-              <Col className="d-flex mx-auto">
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Identificación oficial vigente con<br />fotografía*</p>
-                </div>
-              </Col>
-              <Col>
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Facturas/ comprobantes de gastos*</p>
-                </div>
-              </Col>
-              <Col>
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Corte de caja*</p>
-                </div>
-              </Col>
-            </Row>
-            <Row className="mt-5 pt-5">
-              <Col className="d-flex mx-auto">
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Carátula de la póliza primaria*</p>
-                </div>
-              </Col>
-              <Col md ={8}>
-                <div className="d-flex align-items-center">
-                  <Link className="bg-blue rounded-lg ">
-                    < FiUpload className="icon-width"/>
-                  </Link>
-                  <p className="my-auto ms-5 ps-5 fs-2">Copia de estado de cuenta vigente*</p>
-                </div>
-              </Col>
-            </Row>
-            <div className="d-flex justify-content-center mt-5 pt-5">
-                  <Button variant="primary" type="submit" text="Siguiente"></Button>
-            </div>
+            <Form onSubmit={submitFormData}>
+              <Row className="mt-5">
+                <Col className="d-flex mx-auto">
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Formato solicitud de reembolso*</p>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Carta de aseguradora*</p>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Finiquito de la aseguradora*</p>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="mt-5 pt-5">
+                <Col className="d-flex mx-auto">
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Identificación oficial vigente con<br />fotografía*</p>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Facturas/ comprobantes de gastos*</p>
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Corte de caja*</p>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="mt-5 pt-5">
+                <Col className="d-flex mx-auto">
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Carátula de la póliza primaria*</p>
+                  </div>
+                </Col>
+                <Col md ={8}>
+                  <div className="d-flex align-items-center">
+                    <Link className="bg-blue rounded-lg ">
+                      < FiUpload className="icon-width"/>
+                    </Link>
+                    <p className="my-auto ms-5 ps-5 fs-2">Copia de estado de cuenta vigente*</p>
+                  </div>
+                </Col>
+              </Row>
+              <div className="d-flex justify-content-center mt-5 pt-5">
+                    <Button variant="primary" type="submit" text="Siguiente"></Button>
+              </div>
+            </Form>
           </Container>
         </div>
       </SiniestroAContainer>
