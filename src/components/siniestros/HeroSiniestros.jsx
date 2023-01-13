@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import { Image } from "react-bootstrap";
-import siniestroGd from "../../assets/images/Siniestro-gd.png";
+import gradientEnlace from '../../assets/images/gradient-enlace.png';
 
 export const HeroSiniestros = () => {
-  const scrollTop = () => {
-    scroll.scrollToTop();
-  };
   return (
     <HeroContainer className="home position-relative" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={siniestroGd}
+        src={gradientEnlace}
         alt="Gradient background element"
       />
       <div className="align-items-center position-absolute top-50 w-100 d-none d-md-block">
