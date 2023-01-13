@@ -52,7 +52,7 @@ const SiniestroAutoContainer = styled.section`
 
   @media (min-width: 992px) {
     .icon-cruz {
-      background: #647dd7;
+      background: #5F93A9;
       height: 80rem;
     }
 

@@ -136,7 +136,7 @@ const SiniestroAContainer = styled.section`
     }
 
     .bg-blue {
-      background: #6099b2;
+      background: #6580D5;
       padding: .5rem 2rem;
       color: #FFF;
       border-radius: 1.5rem;
