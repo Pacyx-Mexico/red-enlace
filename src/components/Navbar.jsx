@@ -55,6 +55,9 @@ export default function Navbar({ type }) {
           <MenuItem onClick={inicio}>
             <LinkRouter to="/reclamacion-de-siniestro">Siniestro</LinkRouter>
           </MenuItem>
+          <MenuItem onClick={inicio}>
+            <LinkRouter to="/facturacion">Facturación</LinkRouter>
+          </MenuItem>
           {/* <MenuItem onClick={inicio}>
             <LinkRouter to="/">Inicio</LinkRouter>
           </MenuItem>
@@ -99,7 +102,7 @@ export default function Navbar({ type }) {
               Clientes
             </LinkRouter>
           </MenuItem> */}
-          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
+          {/* <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <LinkRouter
               to="beneficios"
               spy={true}
@@ -110,7 +113,7 @@ export default function Navbar({ type }) {
             >
               Facturación
             </LinkRouter>
-          </MenuItem>
+          </MenuItem> */}
         </Menu>
       </Wrapper>
     </ContainerNav>
