@@ -76,9 +76,9 @@ export const SiniestroSteps = () => {
 
       <div className="container-fluid py-3 position-relative d-lg-none">
         <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-          <div className="d-flex flex-column justify-content-center w-100">
+          <div className="d-flex flex-column justify-content-center w-76">
             <div className="d-flex align-items-center justify-content-center gap-5">
-              <div className="d-flex flex-row align-items-center gap-5 me-4 pe-3">
+              <div className="d-flex flex-row align-items-center gap-5 me-5 pe-5">
                 <div className="d-flex flex-column jsutify-content-center align-items-center gap-5">
                   <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
                     <div className="d-flex align-items-center justify-content-center">
@@ -100,7 +100,7 @@ export const SiniestroSteps = () => {
             </div>
           </div>
 
-          <div className="d-flex flex-column justify-content-center w-100">
+          <div className="d-flex flex-column justify-content-center w-76">
             <div className="d-flex align-items-center justify-content-center gap-5">
               <div className="d-flex flex-row align-items-center gap-5 me-4">
                 <div className="d-flex flex-column jsutify-content-center align-items-center gap-5">
@@ -132,7 +132,7 @@ export const SiniestroSteps = () => {
               to="/deducible-gastos-medicos"
               className="w-100 text-dark text-decoration-none"
             >
-              <div className="d-flex flex-column justify-content-center w-100">
+              <div className="d-flex flex-column justify-content-center w-76">
                 <div className="d-flex align-items-center justify-content-center gap-5">
                   <div className="d-flex flex-row align-items-center gap-5 me-4">
                     <div className="d-flex flex-column jsutify-content-center align-items-center gap-5">
@@ -146,7 +146,7 @@ export const SiniestroSteps = () => {
                     </div>
                     <div className="d-flex justify-content-center">
                       <p className="card-title fw-normal lh-sm w-100">
-                        Completa tu información y
+                        Completa tu información y <br />
                         adjunta la documentación <br />
                         solicitada
                       </p>
@@ -294,6 +294,10 @@ const ServicesContainer = styled.section`
     }
   }
 
+  .w-76 {
+    width: 76rem;
+  }
+
   .btn-fourth {
     background-color: #1da939;
     border: 3px solid #1da939 !important;
@@ -336,6 +340,14 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 9rem;
     }
+
+    .card-title {
+      font-size: 3.5rem; 
+    }
+
+    .w-76 {
+      width: 76rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -376,8 +388,17 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 25rem;
     }
+
+    .card-title {
+      font-size: 4rem;
+    }
+    
+    .w-76 {
+      width: 153rem;
+    }
   }
 
+  
   @media (min-width: 992px) {
     .card {
       width: 36rem;
