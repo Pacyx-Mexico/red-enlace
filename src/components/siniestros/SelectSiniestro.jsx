@@ -3,17 +3,17 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { NavLink, Link } from "react-router-dom";
 
-export const SelectSiniestro= () => {
+export const SelectSiniestro = () => {
   const scrollTop = () => {
     scroll.scrollToTop();
   };
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <SelectSiniestroContainer>
         <div className="services-title container-fluid text-center d-none d-lg-block">
           <h3 className="pb-2 fw-semi-bold text-dark mt-5">
-          Selecciona el producto
+            Selecciona el producto
           </h3>
         </div>
         <div className="container-fluid py-3 position-relative d-none d-lg-block">
@@ -42,7 +42,10 @@ export const SelectSiniestro= () => {
               </Link>
             </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-              <Link to="/reclamacion-siniestros/autos" className="w-100 text-decoration-none">
+              <Link
+                to="/reclamacion-siniestros/autos"
+                className="w-100 text-decoration-none"
+              >
                 <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
@@ -65,6 +68,11 @@ export const SelectSiniestro= () => {
         </div>
         <div className="container-fluid pb-3 pt-5 mt-5 position-relative d-lg-none">
           <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
+            <div className="services-title container-fluid text-center">
+              <h3 className="pb-2 fw-semi-bold text-dark mt-5">
+                Selecciona el producto
+              </h3>
+            </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
               <Link
                 to="/reclamacion-siniestros/gastos-medicos"
@@ -120,7 +128,7 @@ export const SelectSiniestro= () => {
 };
 
 const SelectSiniestroContainer = styled.section`
-  height: 180rem;
+  height: 210rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
   .text-lile {
@@ -269,7 +277,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 570px) {
-    height: 180rem;
+    height: 210rem;
     .card {
       width: 41rem;
       height: 63.8rem;
@@ -289,7 +297,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 225rem;
+    height: 260rem;
     padding-top: 20rem;
     padding-bottom: 20rem;
 
@@ -335,7 +343,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 992px) {
-    height: 130vh;
+    height: 100vh;
     .card {
       width: 36rem;
       height: 59rem;
@@ -361,4 +369,3 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
-

@@ -78,10 +78,6 @@ const FinalSiniestroAContainer = styled.section`
     gap: 10rem;
   }
 
-  @media (min-width: 576px) {
-
-  }
-
   @media (min-width: 768px) {
     .RedLogo-width {
       width: 15rem;

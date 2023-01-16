@@ -313,7 +313,7 @@ const ServicesContainer = styled.section`
   }
 
   .btn-first {
-    background-color: #1d45c2;
+    background-color: #1D45C2;
     border: 3px solid #1d45c2 !important;
 
     &.text-white:hover {
@@ -326,11 +326,11 @@ const ServicesContainer = styled.section`
   }
 
   .btn-second {
-    background-color: #1a6a8b;
-    border: 3px solid #1a6a8b !important;
+    background-color: #6F87D2;
+    border: 3px solid #6F87D2 !important;
 
     &.text-white:hover {
-      color: #1a6a8b !important;
+      color: #6F87D2 !important;
     }
 
     &:hover {
@@ -339,11 +339,11 @@ const ServicesContainer = styled.section`
   }
 
   .btn-third {
-    background-color: #1b8e5c;
-    border: 3px solid #1b8e5c !important;
+    background-color: #409E75;
+    border: 3px solid #409E75 !important;
 
     &.text-white:hover {
-      color: #1b8e5c !important;
+      color: #409E75 !important;
     }
 
     &:hover {
