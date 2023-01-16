@@ -9,7 +9,7 @@ import {
 import HeaderVideo from "../components/productos/HeaderVideo";
 
 export const Autos = () => {
-  const videoAutos = "https://elementos-red-enlace.s3.amazonaws.com/EXPLICATIVO+AUTOS2.mp4"
+  const videoAutos = "https://elementos-red-enlace.s3.amazonaws.com/FINAL+AUTOS.mp4"
   return (
     <>
       <Navbar type="productos" />
