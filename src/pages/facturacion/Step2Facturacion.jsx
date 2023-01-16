@@ -40,7 +40,6 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
                 <div className="d-flex justify-content-center gap-5">
                   <Form.Group className="mb-3">
                     <Form.Control
-                    /* Cambiar por dropDown */
                       style={{ border: error ? "2px solid red" : "" }}
                       name="nombres"
                       defaultValue={values.nombres}
