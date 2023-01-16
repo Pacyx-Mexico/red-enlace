@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { EnlaceHero, Plans, Beneficios, Dudes } from "../components/enlace";
+import { EnlaceHero, Plans, Beneficios, Dudes, InfoForm } from "../components/enlace";
 
 export const Enlace = () => {
   return (
@@ -9,6 +9,7 @@ export const Enlace = () => {
       <EnlaceHero />
       <Plans />
       <Beneficios />
+      <InfoForm />
       <Dudes />
       <Footer />
     </>
