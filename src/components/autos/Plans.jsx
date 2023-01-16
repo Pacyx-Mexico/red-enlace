@@ -35,8 +35,8 @@ export const Plans = () => {
                 <p className="fs-3 fw-bold">$10,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 text-white fs-3">
                   Contratar
                 </button>
@@ -60,8 +60,8 @@ export const Plans = () => {
                 <p className="fs-3 fw-bold">$20,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 text-white fs-3">
                   Contratar
                 </button>
@@ -85,8 +85,8 @@ export const Plans = () => {
                 <p className="fs-3 fw-bold">$30,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop }  className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 text-white fs-3">
                   Contratar
                 </button>
@@ -110,8 +110,8 @@ export const Plans = () => {
                 <p className="fs-3 fw-bold">$40,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 text-white fs-3">
                   Contratar
                 </button>
@@ -135,8 +135,8 @@ export const Plans = () => {
                 <p className="fs-3 fw-bold">$50,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 text-white fs-3">
                   Contratar
                 </button>
@@ -178,8 +178,8 @@ export const Plans = () => {
                 <p className="fw-bold">$10,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 text-white fs-3">
                   Contratar
                 </button>
@@ -205,8 +205,8 @@ export const Plans = () => {
                 <p className="fw-bold">$20,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 text-white fs-3">
                   Contratar
                 </button>
@@ -232,8 +232,8 @@ export const Plans = () => {
                 <p className="fw-bold">$30,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 text-white fs-3">
                   Contratar
                 </button>
@@ -259,8 +259,8 @@ export const Plans = () => {
                 <p className="fw-bold">$40,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 text-white fs-3">
                   Contratar
                 </button>
@@ -286,8 +286,8 @@ export const Plans = () => {
                 <p className="fw-bold">$50,000.00</p>
               </div>
             </div>
-            <div className="mt-5 d-flex w-100 text-center">
-              <Link onClick={ scrollTop } to="/deducible-gastos-medicos" className="w-100">
+            <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
+              <Link to="/deducible-gastos-medicos" className="w-100">
                 <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 text-white fs-3">
                   Contratar
                 </button>

@@ -27,7 +27,7 @@ export const SiniestroAuto = () => {
                 <span className="fw-bold">No sea un golpe en tu cartera</span>
               </p>
               <Link
-                to="/reclamacion-de-siniestro-auto"
+                to="/reclamacion-siniestros/auto-form"
                 spy={true}
                 smooth={true}
                 offset={-70}

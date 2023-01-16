@@ -1,9 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import { Inicio, GastosMedicos, Siniestro, Enlace, Autos, Facturacion } from "./pages";
+import {
+  Inicio,
+  GastosMedicos,
+  Siniestro,
+  Enlace,
+  Autos,
+  Facturacion,
+} from "./pages";
 import CotizadorGastosMedicos from "./pages/forms/CotizadorGastosMedicos";
 import CotizadorDeducibleAutos from "./pages/forms/CotizadorDeducibleAutos";
-import { SelectSiniestro, SiniestroGM, SiniestroAuto, MainSiniestroAuto, MainSiniestroGM } from "./components/siniestros";
+import {
+  SelectSiniestro,
+  SiniestroGM,
+  SiniestroAuto,
+  MainSiniestroAuto,
+  MainSiniestroGM,
+} from "./components/siniestros";
 
 function App() {
   return (
@@ -28,12 +41,14 @@ function App() {
               path="cotizador-deducible-gastos-medicos"
               element={<CotizadorGastosMedicos />}
             />
-            <Route path="select-siniestro" element={<SelectSiniestro />} />
-            <Route path="siniestro-gm" element={<SiniestroGM />} />
-            <Route path="siniestro-auto" element={<SiniestroAuto />} />
-            <Route path="reclamacion-de-siniestro" element={<Siniestro />} />
-            <Route path="reclamacion-de-siniestro-auto" element={<MainSiniestroAuto />} />
-            <Route path="reclamacion-de-siniestro-gm" element={<MainSiniestroGM />} />
+            <Route path="reclamacion-siniestros">
+              <Route index element={<Siniestro />} />
+              <Route path="select" element={<SelectSiniestro />} />
+              <Route path="gastos-medicos" element={<SiniestroGM />} />
+              <Route path="autos" element={<SiniestroAuto />} />
+              <Route path="auto-form" element={<MainSiniestroAuto />} />
+              <Route path="gastos-medicos-form" element={<MainSiniestroGM />} />
+            </Route>
             <Route path="facturacion" element={<Facturacion />} />
           </Route>
         </Routes>

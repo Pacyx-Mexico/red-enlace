@@ -18,10 +18,9 @@ export const SelectSiniestro= () => {
         </div>
         <div className="container-fluid py-3 position-relative d-none d-lg-block">
           <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-center gap-10">
-            <div className="col-auto mb-5 pb-5">
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
               <Link
-                onClick={scrollTop}
-                to="/siniestro-gm"
+                to="/reclamacion-siniestros/gastos-medicos"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first">
@@ -42,8 +41,8 @@ export const SelectSiniestro= () => {
                 </div>
               </Link>
             </div>
-            <div className="col-auto mb-5 pb-5">
-              <NavLink onClick={ scrollTop } to="/siniestro-auto" className="w-100 text-decoration-none">
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+              <Link to="/reclamacion-siniestros/autos" className="w-100 text-decoration-none">
                 <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
@@ -60,16 +59,15 @@ export const SelectSiniestro= () => {
                     Autos
                   </p>
                 </div>
-              </NavLink>
+              </Link>
             </div>
           </div>
         </div>
         <div className="container-fluid pb-3 pt-5 mt-5 position-relative d-lg-none">
           <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-            <div className="col-auto mb-5 pb-5 w-75">
-              <NavLink
-                onClick={scrollTop}
-                to="/siniestro-gm"
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+              <Link
+                to="/reclamacion-siniestros/gastos-medicos"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
@@ -88,12 +86,11 @@ export const SelectSiniestro= () => {
                     Gastos Médicos
                   </p>
                 </div>
-              </NavLink>
+              </Link>
             </div>
-            <div className="col-auto mb-5 pb-5 w-75">
-              <NavLink
-                onClick={scrollTop}
-                to="/siniestro-auto"
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+              <Link
+                to="/reclamacion-siniestros/autos"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
@@ -112,7 +109,7 @@ export const SelectSiniestro= () => {
                     Autos
                   </p>
                 </div>
-              </NavLink>
+              </Link>
             </div>
           </div>
         </div>

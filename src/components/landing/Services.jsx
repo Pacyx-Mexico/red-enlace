@@ -4,7 +4,7 @@ import {
   MedicalExpensesIcon,
   CarIcon,
 } from "../../assets/icons";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Services = () => {
   let services = [
@@ -83,9 +83,8 @@ export const Services = () => {
       </div>
       <div className="container-fluid py-3 position-relative d-none d-lg-block">
         <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
-          <div className="col-auto mb-5 pb-5">
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5">
             <Link
-              onClick={scrollTop}
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
@@ -107,8 +106,8 @@ export const Services = () => {
               </div>
             </Link>
           </div>
-          <div className="col-auto mb-5 pb-5">
-            <NavLink onClick={ scrollTop } to="/deducible-autos" className="w-100 text-decoration-none">
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+            <Link to="/deducible-autos" className="w-100 text-decoration-none">
               <div className="card border border-4 border-second text-center opacity-75 position-relative card-hover_second">
                 <div className="position-absolute d-flex align-items-center justify-content-center">
                   <img
@@ -125,10 +124,10 @@ export const Services = () => {
                   Autos
                 </p>
               </div>
-            </NavLink>
+            </Link>
           </div>
-          <div className="col-auto mb-5 pb-5">
-            <NavLink onClick={ scrollTop } to="/enlace" className="w-100 text-decoration-none">
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+            <Link to="/enlace" className="w-100 text-decoration-none">
               <div className="card border border-4 border-fourth text-center opacity-75 position-relative card-hover_third">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
@@ -143,16 +142,15 @@ export const Services = () => {
                   Enlaces
                 </p>
               </div>
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>
 
       <div className="container-fluid py-3 position-relative d-lg-none">
         <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-          <div className="col-auto mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+            <Link
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
@@ -172,11 +170,10 @@ export const Services = () => {
                   Gastos Médicos
                 </p>
               </div>
-            </NavLink>
+            </Link>
           </div>
-          <div className="col-auto mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+            <Link
               to="/deducible-autos"
               className="w-100 text-decoration-none"
             >
@@ -196,11 +193,10 @@ export const Services = () => {
                   Autos
                 </p>
               </div>
-            </NavLink>
+            </Link>
           </div>
-          <div className="col-auto mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+            <Link
               to="/enlace"
               className="w-100 text-decoration-none"
             >
@@ -218,7 +214,7 @@ export const Services = () => {
                   Enlaces
                 </p>
               </div>
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>

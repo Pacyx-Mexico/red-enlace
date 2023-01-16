@@ -28,7 +28,7 @@ export const SiniestroGM = () => {
                 la que te preocupes <span className="fw-bold">sea la tuya</span>
               </p>
               <Link
-                to="/reclamacion-de-siniestro-gm"
+                to="/reclamacion-siniestros/gastos-medicos-form"
                 spy={true}
                 smooth={true}
                 offset={-70}

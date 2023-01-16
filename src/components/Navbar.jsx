@@ -53,7 +53,7 @@ export default function Navbar({ type }) {
             <LinkRouter to="/enlace">Enlace</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/reclamacion-de-siniestro">Siniestro</LinkRouter>
+            <LinkRouter to="/reclamacion-siniestros">Siniestro</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
             <LinkRouter to="/facturacion">Facturación</LinkRouter>

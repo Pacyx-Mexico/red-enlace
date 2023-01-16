@@ -66,7 +66,7 @@ export const SiniestroSteps = () => {
           </div>
           <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
-              <Link to="/select-siniestro" className="headerTitle__btn">
+              <Link to="/reclamacion-siniestros/select" className="headerTitle__btn">
                 <Button text="Reclamar siniestro" />
               </Link>
             </div>
@@ -158,7 +158,7 @@ export const SiniestroSteps = () => {
           </div>
           <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
-              <Link to="/select-siniestro" className="headerTitle__btn">
+              <Link to="/reclamacion-siniestros/select" className="headerTitle__btn">
                 <Button text="Reclamar siniestro" />
               </Link>
             </div>
