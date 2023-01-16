@@ -83,7 +83,7 @@ export const MainSiniestroAuto = () => {
       return (
         <div className="App">
           <Navbar type="productos" />
-          <Container>
+          <div>
             <Row className="w-100">
               <Col className="d-flex justify-content-center">
                 <Step3SiniestroA
@@ -94,7 +94,7 @@ export const MainSiniestroAuto = () => {
                 />
               </Col>
             </Row>
-          </Container>
+          </div>
           <Footer />
         </div>
       );
@@ -123,7 +123,7 @@ export const MainSiniestroAuto = () => {
             <Navbar type="productos" />
             <Container>
               <Row>
-                <Col md={{ span: 6, offset: 3 }} className="custom-margin">
+                <Col className="custom-margin">
                   <FinalSiniestroPage />
                 </Col>
               </Row>
@@ -135,4 +135,3 @@ export const MainSiniestroAuto = () => {
       return <div className="App"></div>;
   }
 };
-

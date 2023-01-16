@@ -24,7 +24,7 @@ export const Step3SiniestroGM = ({ nextStep, handleFormData, values }) => {
   return (
     <>
       <SiniestroAContainer>
-        <div>
+      <div className="d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
             <h1 className="fst-italic fs-1 fw-bold mt-5">
               PASO 3/4
@@ -34,10 +34,71 @@ export const Step3SiniestroGM = ({ nextStep, handleFormData, values }) => {
             </p>
           </div>
 
-          <Card style={{ marginTop: 100 }}>
+          <Card style={{ marginTop: 80 }}>
             <Card.Body className="container mx-auto d-flex flex-column justify-content-center align-items-center">
               <Form onSubmit={submitFormData} className="d-flex justify-content-center align-items-center gap-5 w-100 flex-column">
                 <div className="d-flex justify-content-center gap-5">
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                    /* Cambiar por dropDown */
+                      style={{ border: error ? "2px solid red" : "" }}
+                      name="nombreSiniestro"
+                      defaultValue={values.nombreSiniestro}
+                      type="text"
+                      placeholder="nombre del siniestro/ padecimiento"
+                      onChange={handleFormData("nombreSiniestro")}
+                      className="input-text"
+                    />
+                    {error ? (
+                      <Form.Text style={{ color: "red" }}>
+                        This is a required field
+                      </Form.Text>
+                    ) : (
+                      ""
+                    )}
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                    /* Cambiar por dropDown */
+                      style={{ border: error ? "2px solid red" : "" }}
+                      name="date"
+                      defaultValue={values.date}
+                      type="text"
+                      placeholder="Fecha del siniestro"
+                      onChange={handleFormData("date")}
+                      className="input-text"
+                    />
+                    {error ? (
+                      <Form.Text style={{ color: "red" }}>
+                        This is a required field
+                      </Form.Text>
+                    ) : (
+                      ""
+                    )}
+                  </Form.Group>
+                </div>
+                <div className="d-flex justify-content-center mt-5 pt-5">
+                  <Button variant="primary" type="submit" text="Siguiente"></Button>
+                </div>
+              </Form>
+            </Card.Body>
+          </Card>
+        </div>
+
+        <div className="d-lg-none">
+          <div className="d-flex justify-content-center flex-column">
+            <h1 className="fst-italic fs-20 fw-bold mt-5">
+              PASO 3/4
+            </h1>
+            <p className="text-center fs-35 text-secondary fw-normal mt-5">
+              Proporciona el nombre y fecha del siniestro.
+            </p>
+          </div>
+
+          <Card style={{ marginTop: 60 }} className="w-100 px-5">
+            <Card.Body className="container mx-auto d-flex flex-column justify-content-center align-items-center">
+              <Form onSubmit={submitFormData} className="d-flex justify-content-center align-items-center gap-5 w-100 flex-column">
+                <div className="d-flex flex-column justify-content-center w-100 gap-5">
                   <Form.Group className="mb-3">
                     <Form.Control
                     /* Cambiar por dropDown */
@@ -90,8 +151,34 @@ export const Step3SiniestroGM = ({ nextStep, handleFormData, values }) => {
 };
 
 const SiniestroAContainer = styled.section`
-  height: 50rem;
+  height: 89vh;
   margin-top: 15rem;
+  .card {
+      border: none;
+  }
+
+  .fs-20 {
+    font-size: 20px;
+  }
+
+  .fs-35 {
+    font-size: 3.5rem;
+  }
+
+  .form-control {
+    background: red; 
+    border: none;
+    height: 10.5rem;
+    border-radius: 2.5rem;
+    background: #f2f5fc;
+    padding: 0 2.5rem;
+    font-size: 3rem;
+
+    &::placeholder {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
 
   @media (min-width: 992px) {
     height: 90vh;
@@ -115,6 +202,20 @@ const SiniestroAContainer = styled.section`
       &::placeholder {
         color: #25282c;
       }
+    }
+
+    .form-control {
+      background: red; 
+      border: none;
+      height: 6rem;
+      border-radius: 1.5rem;
+      background: #f2f5fc;
+      padding: 0 6rem;
+      font-size: 2.5rem;
+
+      &::placeholder {
+      font-size: 2.5rem;
+    }
     }
   }
 `;

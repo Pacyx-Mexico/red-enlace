@@ -89,7 +89,7 @@ export const MainSiniestroGM = () => {
       return (
         <div className="App">
           <Navbar type="productos" />
-          <Container>
+          <div>
             <Row className="w-100">
               <Col className="d-flex justify-content-center">
                 <Step3SiniestroGM
@@ -100,7 +100,7 @@ export const MainSiniestroGM = () => {
                 />
               </Col>
             </Row>
-          </Container>
+          </div>
           <Footer />
         </div>
       );
@@ -129,7 +129,7 @@ export const MainSiniestroGM = () => {
           <Navbar type="productos" />
           <Container>
             <Row>
-              <Col md={{ span: 6, offset: 3 }} className="custom-margin">
+              <Col className="custom-margin">
                 <FinalSiniestroPage />
               </Col>
             </Row>

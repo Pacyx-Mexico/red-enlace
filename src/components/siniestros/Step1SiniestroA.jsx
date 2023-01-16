@@ -34,7 +34,7 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
           
           <Card style={{ marginTop: 60 }}>
             <Card.Body>
-              <Form onSubmit={submitFormData} className>
+              <Form onSubmit={submitFormData}>
                 <Form.Group className="mb-3 d-flex gap-5">
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
@@ -69,11 +69,10 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
               Proporciona tu número de contrato.
             </p>
           </div>
-
           <Card style={{ marginTop: 40 }}>
             <Card.Body>
               <Form onSubmit={submitFormData} className>
-                <Form.Group className="mb-3 d-flex flex-column gap-15 mx-3">
+                <Form.Group className="mb-3 d-flex align-items-center flex-column gap-15 mx-3">
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
                     name="noContrato"
@@ -89,7 +88,6 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
                   ) : (
                     ""
                   )}
-
                   <Button variant="primary" type="submit" text="Buscar">
                   </Button>
                 </Form.Group>
@@ -135,7 +133,7 @@ const SiniestroAContainer = styled.section`
   }
 
   .gap-15 {
-   gap: 15rem;  
+   gap: 10rem;  
   }
 
   .bBlzVr {

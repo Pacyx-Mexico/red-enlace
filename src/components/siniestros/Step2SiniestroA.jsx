@@ -58,16 +58,18 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
                 <Dropdown className="w-100 d-flex justify-content-center">
                   <Dropdown.Toggle variant="success" id="dropdown-basic" className="mt-4">
                     <span className="fw-bold mx-5">Asegurados:</span>
-                    <span className="opacity-75 fs-10 me-4">Elige que asegurado tuvo el siniestro</span>
+                    <span className="opacity-75 fs-10 me-4">Elige qué asegurado tuvo el siniestro</span>
                   </Dropdown.Toggle>
-
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">Asegurado 1</Dropdown.Item>
                     <Dropdown.Item href="#/action-2">
-                      Another action
+                      Asegurado 2
                     </Dropdown.Item>
                     <Dropdown.Item href="#/action-3">
-                      Something else
+                      Asegurado 3
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      Asegurado 4
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
@@ -103,6 +105,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
                     type="text"
                     onChange={handleFormData("asegurados")}
                     className="w-50"
+                    placeholder={values.noContrato}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>

@@ -23,7 +23,7 @@ export const Step3SiniestroA = ({ nextStep, handleFormData, values }) => {
   };
   return (
     <>
-      <SiniestroAContainer>
+      <SiniestroAContainer className="w-100">
         <div className="d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
             <h1 className="fst-italic fs-1 fw-bold mt-5">
@@ -64,7 +64,7 @@ export const Step3SiniestroA = ({ nextStep, handleFormData, values }) => {
                       name="date"
                       defaultValue={values.date}
                       type="text"
-                      placeholder="Fecha"
+                      placeholder="Fecha del siniestro"
                       onChange={handleFormData("date")}
                       className="input-text"
                     />
@@ -90,15 +90,15 @@ export const Step3SiniestroA = ({ nextStep, handleFormData, values }) => {
             <h1 className="fst-italic fs-20 fw-bold mt-5">
               PASO 3/4
             </h1>
-            <p className="text-center fs-15 fw-normal mt-5">
+            <p className="text-center fs-35 text-secondary fw-normal mt-5">
               Proporciona el nombre y fecha del siniestro.
             </p>
           </div>
 
-          <Card style={{ marginTop: 60 }}>
+          <Card style={{ marginTop: 60 }} className="w-100 px-5">
             <Card.Body className="container mx-auto d-flex flex-column justify-content-center align-items-center">
               <Form onSubmit={submitFormData} className="d-flex justify-content-center align-items-center gap-5 w-100 flex-column">
-                <div className="d-flex justify-content-center gap-5">
+                <div className="d-flex flex-column justify-content-center w-100 gap-5">
                   <Form.Group className="mb-3">
                     <Form.Control
                     /* Cambiar por dropDown */
@@ -161,22 +161,22 @@ const SiniestroAContainer = styled.section`
     font-size: 20px;
   }
 
-  .fs-15 {
-    font-size: 15px;
-    color: #6f6f6f;
+  .fs-35 {
+    font-size: 3.5rem;
   }
 
   .form-control {
     background: red; 
     border: none;
-    height: 6rem;
-    border-radius: 1.5rem;
+    height: 10.5rem;
+    border-radius: 2.5rem;
     background: #f2f5fc;
-    padding: 0 6rem;
-    font-size: 2.5rem;
+    padding: 0 2.5rem;
+    font-size: 3rem;
 
     &::placeholder {
-      font-size: 2.5rem;
+      font-size: 15px;
+      text-align: center;
     }
   }
 
@@ -202,6 +202,20 @@ const SiniestroAContainer = styled.section`
       &::placeholder {
         color: #25282c;
       }
+    }
+
+    .form-control {
+      background: red; 
+      border: none;
+      height: 6rem;
+      border-radius: 1.5rem;
+      background: #f2f5fc;
+      padding: 0 6rem;
+      font-size: 2.5rem;
+
+      &::placeholder {
+      font-size: 2.5rem;
+    }
     }
   }
 `;
