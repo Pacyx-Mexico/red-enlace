@@ -13,7 +13,7 @@ export const HeroAutos = () => {
     <HeroContainer className="home position-relative mb-5 pb-5" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/siniestro-hero-image.png"}
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Group+711.png"}
         alt="Gradient background element"
       />
       <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">

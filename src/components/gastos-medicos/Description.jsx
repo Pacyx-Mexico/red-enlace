@@ -6,7 +6,7 @@ export const Description = () => {
       <div className="d-flex flex-column d-none d-md-block">
         <div className="row mt-5 pt-5">
           <div className="col-md-5">
-            <img className="img-fluid h-100 position-relative" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/description-image.png"} alt="" />
+            <img className="img-fluid h-100 position-relative" src={"https://elementos-red-enlace.s3.amazonaws.com/Group+710.png"} alt="" />
           </div>
           <div className="col-md-7 col-xl-7 d-flex flex-column justify-content-center align-items-start text-start text-lg-start ml-5 pl-5">
             <div className="d-flex flex-column mx-auto">
