@@ -45,6 +45,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
                     type="text"
                     onChange={handleFormData("asegurados")}
                     className="w-25"
+                    placeholder={values.noContrato}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
