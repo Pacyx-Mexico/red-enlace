@@ -156,7 +156,7 @@ export const Services = () => {
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-first text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
+              <div className="card border border-4 border-first text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -180,7 +180,7 @@ export const Services = () => {
               to="/deducible-autos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-second text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
+              <div className="card border border-4 border-second text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
@@ -204,7 +204,7 @@ export const Services = () => {
               to="/enlace"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-third text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg">
+              <div className="card border border-4 border-third text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
@@ -272,27 +272,29 @@ const ServicesContainer = styled.section`
   }
 
   .card {
-    width: 41.3rem;
-    height: 50rem;
-    border-radius: 5.7rem;
+    width: 41rem;
+    height: 64rem;
   }
 
   .card_img-width_first {
-    width: 31rem;
-    top: 2.4rem;
+    width: 39.2rem;
+    top: 3rem;
     right: 0;
+    border-radius: 41.5%;
   }
 
   .card_img-width_second {
-    width: 32rem;
-    top: 4rem;
-    right: 4.9rem;
+    width: 41.1rem;
+    top: 5.1rem;
+    right: 0;
+    border-radius: 0 21rem 21rem;
   }
 
   .card_img-width_third {
-    width: 33.9rem;
-    top: 2.9rem;
-    right: 2rem;
+    width: 42.9rem;
+    top: 2.3rem;
+    right: 0.4rem;
+    border-radius: 31rem;
   }
 
   .card-hover_first:hover {
@@ -377,7 +379,7 @@ const ServicesContainer = styled.section`
   @media (min-width: 576px) {
     .card {
       width: 41rem;
-      height: 54rem;
+      height: 63.8rem;
     }
 
     .card-body {
@@ -404,26 +406,25 @@ const ServicesContainer = styled.section`
 
     .card {
       width: 50rem;
-      height: 75rem;
-      border-radius: 5.7rem;
+      height: 80rem;
     }
 
     .card_img-width_first {
-      width: 44rem;
-      top: 3.6rem;
+      width: 47rem;
+      top: 5.7rem;
       right: 0rem;
     }
 
     .card_img-width_second {
-      width: 44rem;
-      top: 5.9rem;
-      right: 3.3rem;
+      width: 50rem;
+      top: 7.4rem;
+      right: 0.1rem;
     }
 
     .card_img-width_third {
-      width: 49.1rem;
-      top: 2rem;
-      right: 2.5rem;
+      width: 56rem;
+      top: 1.3rem;
+      right: 0.5rem;
     }
 
     .car-text {
