@@ -343,7 +343,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 992px) {
-    height: 100vh;
+    height: 130vh;
     .card {
       width: 36rem;
       height: 59rem;
@@ -369,3 +369,5 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
+
+

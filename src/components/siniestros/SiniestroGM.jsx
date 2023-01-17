@@ -77,7 +77,7 @@ export const SiniestroGM = () => {
 };
 
 const SiniestroGMContainer = styled.section`
-  height: 100vh;
+  height: 125vh;
   padding-top: 8.5rem;
   padding-bottom: 10rem;
 
