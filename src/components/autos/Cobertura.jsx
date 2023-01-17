@@ -1,24 +1,23 @@
 import styled from "styled-components";
-import { CrystalIcon, KeysIcon, PlatformsIcon } from "../../assets/icons";
+import { CrystalIcon, KeysIcon, PlatformsIcon, HandSecure, DocumentIcon, CarCrash } from "../../assets/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import DocumentIcon from "../../assets/images/document-icon.png";
 
 export const Cobertura = () => {
   return (
     <CoberturaSection>
       <div className="services-title container text-center mt-5 pt-5">
         <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-semi-bold fs-2 fst-italic">
+          <span className="text-dark fw-semi-bold fs-35 fst-italic">
             Personaliza tu protección con
           </span>
         </h3>
-        <h5 className="text-dark fw-semi-bold fs-2 fst-italic text-center">
+        <h3 className="text-dark fw-semi-bold fs-35 fst-italic text-center">
           nuestras coberturas adicionales
-        </h5>
+        </h3>
       </div>
       <div className="container py-3 position-relative d-none d-md-block">
-        <div className="row d-flex justify-content-between">
+        <div className="row d-flex justify-content-around">
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
@@ -26,15 +25,15 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-3">
+              <p className="card-title fw-bold lh-sm text-dark fs-25">
                 Llaves perdidas
                 <br />
                 (máximo 1 al año)
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Máxima suma asegurada $5,000
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-5">
+              <p className="card-title fw-bold lh-sm text-dark fs-15">
                 Costo anual: $120.00
               </p>
             </div>
@@ -46,15 +45,15 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-3">
+              <p className="card-title fw-bold lh-sm text-dark fs-25">
                 Cristalazo
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Dev. deducible cristal y
                 <br />
                 $5,000.00 de ayuda por robo
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-5">
+              <p className="card-title fw-bold lh-sm text-dark fs-15">
                 Costo $670.00
               </p>
             </div>
@@ -66,14 +65,14 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-3">
+              <p className="card-title fw-bold lh-sm text-dark fs-25">
                 Plataformas con socios conductores <br />
                 (Cuotas anuales)
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Por pérdida parcial, total o corralón.
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-5">
+              <p className="card-title fw-bold lh-sm text-dark fs-15">
                 $10,000 por 20 días <br />
                 $15,000 por 30 días
                 <br />
@@ -111,7 +110,7 @@ export const Cobertura = () => {
                   <br />
                   (máximo 1 al año)
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+                <p className="card-title fw-normal lh-sm text-dark fs-15 pt-5">
                   Máxima suma asegurada $5,000
                 </p>
                 <p className="card-title fs-11 fw-bold lh-sm text-dark mt-5">
@@ -179,7 +178,7 @@ export const Cobertura = () => {
 
       <div className="container-fluid mx-auto position-relative dudas__container d-none d-md-block">
         <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-          <p className="text-center dudas__text position-relative fw-normal">
+          <p className="text-center dudas__text position-relative fw-normal ">
             En caso de robo total o daños materiales, nosotros te <br />
             devolveremos el deducible de tu poliza de auto de acuerdo con la{" "}
             <br />
@@ -190,7 +189,7 @@ export const Cobertura = () => {
               "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
             }
             alt="Icon Document"
-            className="document-icon opacity-50"
+            className="document-icon"
           />
         </div>
       </div>
@@ -202,14 +201,10 @@ export const Cobertura = () => {
               Resolvemos tus dudas
             </h4>
           </div>
-          <div className="w-auto d-flex justify-content-between align-items-center gap-5 mb-5 pb-5">
-            <img
-              src={
-                "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-              }
-              alt="Icon Document"
-              className="document-icon rounded-5 opacity-50 d-md-none"
-            />
+          <div className="w-auto d-flex justify-content-around align-items-center gap-5 mb-5 pb-5">
+            <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
+              <DocumentIcon />
+            </div>
             <p className="text-start dudas__text fw-normal">
               En caso de robo total, perdida total<br />
               o daños materiales, nosotros te<br />
@@ -219,37 +214,26 @@ export const Cobertura = () => {
             </p>
           </div>
 
-          <div className="w-auto d-flex justify-content-between align-items-center gap-5 my-5 py-5">
-            <img
-              src={
-                "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-              }
-              alt="Icon Document"
-              className="document-icon rounded-5 opacity-50 d-md-none"
-            />
+          <div className="w-auto d-flex justify-content-around align-items-center gap-5 my-5 py-5">
+            <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
+              <HandSecure />
+            </div>
             <p className="text-start dudas__text fw-normal">
-              En caso de robo total, perdida total<br />
-              o daños materiales, nosotros te<br />
-              devolveremos el deducible de tu<br />
-              poliza de tu auto de acuerdo con la<br />
-              asistencia que hayas elegido<br />
+              Operamos con cualquier compañía <br />
+              aseguradora dentro del territorio<br />
+              nacional
             </p>
           </div>
 
-          <div className="w-auto d-flex justify-content-between align-items-center gap-5 mt-5 pt-5">
-            <img
-              src={
-                "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-              }
-              alt="Icon Document"
-              className="document-icon rounded-5 opacity-50 d-md-none"
-            />
+          <div className="w-auto d-flex justify-content-around align-items-center gap-5 mt-5 pt-5">
+            <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
+              <CarCrash />
+            </div>
             <p className="text-start dudas__text fw-normal">
-              En caso de robo total, perdida total<br />
-              o daños materiales, nosotros te<br />
-              devolveremos el deducible de tu<br />
-              poliza de tu auto de acuerdo con la<br />
-              asistencia que hayas elegido<br />
+              Se apagará el deducible hasta que<br />
+              se agote la suma del plan<br />
+              contratado, sin importar el número<br />
+              de eventos<br />
             </p>
           </div>
         </div>
@@ -291,12 +275,16 @@ const CoberturaSection = styled.section`
     height: 50rem;
   }
 
+  .fs-35 {
+    font-size: 4rem;
+  }
+
   .fs-11 {
-    font-size: 11px;
+    font-size: 2.7rem;
   }
 
   .fs-15 {
-    font-size: 15px;
+    font-size: 3rem;
   }
 
   .card {
@@ -343,19 +331,19 @@ const CoberturaSection = styled.section`
   }
 
   .dudas__text {
-    font-size: 14px;
+    font-size: 2.5rem;
     line-height: 4.5rem;
   }
 
   .document-icon {
-    height: auto;
-    width: 15rem;
-    padding: 1rem 3rem;
+    height: 20rem;
+    width: 20rem;
+    padding: 1rem 5rem;
     background-color: #eaeef9;
   }
 
   @media (min-width: 576px) {
-    height: 198rem;
+    height: 251rem;
     .swiper {
       height: 74rem;
     }
@@ -363,10 +351,19 @@ const CoberturaSection = styled.section`
     .dudas__container {
       height: 100%;
     }
+
+    .dudas__text {
+      font-size: 3rem;
+    }
+
+    .document-icon {
+      height: 25rem;
+      width: 25rem;
+    }
   }
 
   @media (min-width: 768px) {
-    height: 130rem;
+    height: 138rem;
     .card {
       width: 20rem;
       height: 20rem;
@@ -385,19 +382,34 @@ const CoberturaSection = styled.section`
     }
 
     .dudas__text {
-      font-size: 13px;
+      font-size: 2.5rem;
       line-height: 3rem;
       padding: 0 3rem;
     }
 
     .document-icon {
       position: absolute;
+      height: auto;
       width: 22rem;
       background: transparent;
+      z-index: -1;
+      opacity: .6;
     }
 
     .icon-height-platform_icon {
       width: 10rem !important;
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
+    }
+
+    .fs-15 {
+      font-size: 2rem;
     }
   }
 `;
