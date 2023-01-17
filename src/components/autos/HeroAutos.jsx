@@ -38,7 +38,7 @@ export const HeroAutos = () => {
       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
         <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
           Devolución de deducible <br /> 
-          <span className="fst-italic"> Gastos Médicos</span>
+          <span className="fst-italic">Autos</span>
         </h2>
         <div className="d-flex justify-content-center px-5 mx-5">
           <Image
@@ -106,7 +106,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
