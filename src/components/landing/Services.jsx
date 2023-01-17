@@ -40,31 +40,30 @@ export const Services = () => {
     <ServicesContainer>
       {/* {map.services(service => console.log(service))} */}
       <div className="d-flex justify-content-center flex-column mb-5 pb-5 d-none d-lg-block">
-        <div className="text-center mt-5 position-relative">
-          <div className="">
-            <h2 className="fs-10 mb-5 pb-5">¿Qué nos hace únicos?</h2>
+        <div className="text-center mt-5 pt-5 position-relative">
+          <div className="position-relative">
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png" alt="" className="hand hand-right position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
+          </div>
+          <div className="primary-title-h pt-5 mt-5">
+            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5">¿Qué nos hace únicos?</h2>
             <p className="fs-10 mb-5 mt-5 pt-5">
               Devolución <br />
               <span className="fw-bold">de deducible</span>
             </p>
-            <p className="fs-2 fw-normal mb-5 pb-5">
+            <p className="fs-25 fw-normal mb-5 pb-5">
             Es una asistencia que en caso de que te<br />
             hospitalicen, te reembolsa un porcentaje fijo del<br />
             deducible  de tu  póliza de gastos médicos mayores.
             </p>
-            <p className="fs-2">
+            <p className="fs-25">
               Con nosotros, tú eliges el porcentaje: 
               <br />
               <span className="fw-bold">
                 30, 50, 80 o hasta 100%
               </span>
             </p>
-          </div>
-
-          <div className="position-relative">
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png" alt="" className="hand hand-right position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
           </div>
         </div>
       </div>
@@ -77,7 +76,7 @@ export const Services = () => {
         </h3>
       </div>
       <div className="services-title-mb container-fluid text-center d-lg-none">
-        <h4 className="fw-semi-bold text-dar mb-5 pb-5">
+        <h4 className="fw-semi-bold fs-35 text-dar mb-5 pb-5">
           Conoce nuestros productos
         </h4>
       </div>
@@ -98,7 +97,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title fw-normal lh-sm text-center fs-2">
+                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-2">
                   Devolución de deducible
                   <br />
                   Gastos Médicos
@@ -118,7 +117,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title fw-normal lh-sm text-center fs-2">
+                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-2">
                   Devolución de deducible
                   <br />
                   Autos
@@ -138,7 +137,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title fw-normal lh-sm text-center fs-2">
+                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-2">
                   Enlaces
                 </p>
               </div>
@@ -164,7 +163,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                <p className="card-title fw-normal lh-sm text-center fs-20 w-100">
                   Devolución de deducible
                   <br />
                   Gastos Médicos
@@ -187,7 +186,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                <p className="card-title fw-normal lh-sm text-center fs-20 w-100">
                   Devolución de deducible
                   <br />
                   Autos
@@ -210,7 +209,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                <p className="card-title fw-normal lh-sm text-center fs-20 w-100">
                   Enlaces
                 </p>
               </div>
@@ -223,6 +222,7 @@ export const Services = () => {
 };
 
 const ServicesContainer = styled.section`
+  overflow-y: hidden;
   padding-top: 10rem;
   padding-bottom: 10rem;
   overflow-x: hidden;
@@ -370,6 +370,14 @@ const ServicesContainer = styled.section`
 
   .gap-10 {
     gap: 10rem;
+  }  
+  
+  .fs-35 {
+    font-size: 5rem;
+  }
+
+  .fs-20 {
+    font-size: 20px;
   }
 
   @media (min-width: 576px) {
@@ -446,22 +454,22 @@ const ServicesContainer = styled.section`
 
     .card_img-width_first {
       width: 37rem;
-      top: 3.5rem;
-      left: -1.2rem;
+      top: 3.9rem;
+      left: -0.9rem;
       border-radius: 22rem;
     }
 
     .card_img-width_second {
       border-radius: 0 21rem 21rem;
       width: 35.9rem;
-      top: 11.2rem;
+      top: 11.7rem;
       right: 0.6rem;
     }
 
     .card_img-width_third {
       width: 38.9rem;
-      top: 4.2rem;
-      right: 2.4rem;
+      top: 4.5rem;
+      right: 2rem;
       border-radius: 20rem;
     }
 
@@ -471,15 +479,19 @@ const ServicesContainer = styled.section`
     }
 
     .fs-10 {
-      font-size: 30px;
+      font-size: 5rem;
     }
 
     .bg-gradient {
-      width: 110%;
-      height: 184rem;
-      top: -68rem;
-      left: -10rem;
+      width: 100%;
+      height: 230rem;
+      top: 0;
+      left: 0;
       z-index: -1;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
     }
     
     .hand {
@@ -490,16 +502,20 @@ const ServicesContainer = styled.section`
 
     .hand-left {
       left: 70%;
-      bottom: 2rem;
+      top: 10rem;
       width: auto;
       height: 55rem;
     }
 
     .hand-right {
       right: 74%;
-      bottom: -17rem;
+      top: 50rem;
       width: auto;
       height: 35rem;
+    }
+
+    .card-title-lg {
+      
     }
   }
 `;

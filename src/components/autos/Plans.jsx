@@ -11,8 +11,13 @@ export const Plans = () => {
   };
   return (
     <PlansSection>
-      <div className="services-title container text-center">
-        <h5 className="text-dark fs-1 fw-semi-bold text-center pt-4 fst-italic">
+      <div className="services-title container text-center d-none d-md-block">
+        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4 fst-italic">
+          Descubre nuestros paquetes disponibles
+        </h5>
+      </div>
+      <div className="services-title container text-center d-md-none">
+        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4 fst-italic">
           Descubre nuestros paquetes disponibles
         </h5>
       </div>
@@ -20,7 +25,7 @@ export const Plans = () => {
         <div className="row d-flex justify-content-between">
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Básico</p>
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Básico</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-25 p-5">
                 <p className="fs-1 mb-0">$690.00</p>
               </div>
@@ -45,7 +50,7 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Standar</p>
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Standar</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
                 <p className="fs-1 mb-0">$1,297.00</p>
               </div>
@@ -70,7 +75,7 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Premium</p>
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Premium</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-75 p-5">
                 <p className="fs-1 mb-0">$1,840.00</p>
               </div>
@@ -95,7 +100,7 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Gold</p>
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Gold</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-100 p-5">
                 <p className="fs-1 mb-0">$2,420.00</p>
               </div>
@@ -120,7 +125,7 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-2">Black</p>
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Black</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center p-5">
                 <p className="fs-1 mb-0">$2,995.00</p>
               </div>
@@ -338,6 +343,10 @@ const PlansSection = styled.section`
     height: 30px;
   }
 
+  .fs-35 {
+    font-size: 4rem;
+  }
+
   .RE_img_bg {
     z-index: 1;
     top: 85%;
@@ -418,6 +427,14 @@ const PlansSection = styled.section`
     .RE_img_bg {
       z-index: 1;
       top: 60%;
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem; 
     }
   }
 `;

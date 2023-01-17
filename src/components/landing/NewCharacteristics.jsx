@@ -209,12 +209,12 @@ export const NewCharacteristics = () => {
 };
 
 const CharacteristicsSection = styled.section`
-  height: 90rem;
+  height: 70rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
   .green_stain_bg {
-    z-index: -1;
+    z-index: -10;
     height: auto;
     width: 100%;
     bottom: 0;
