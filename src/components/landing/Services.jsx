@@ -97,7 +97,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-2">
+                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
                   Devolución de deducible
                   <br />
                   Gastos Médicos
@@ -117,7 +117,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-2">
+                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
                   Devolución de deducible
                   <br />
                   Autos
@@ -137,7 +137,7 @@ export const Services = () => {
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-2">
+                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
                   Enlaces
                 </p>
               </div>
