@@ -15,7 +15,7 @@ export const Toppings = () => {
         </h3>
       </div>
       <div className="container py-3 position-relative d-none d-md-block">
-        <div className="row d-flex justify-content-between">
+        <div className="d-flex justify-content-around">
           <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">

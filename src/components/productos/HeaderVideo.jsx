@@ -17,7 +17,7 @@ function HeaderVideo({ video, title, url }) {
   return (
     <>
       {video ? (
-        <section>
+        <section className="pt-5">
           <h4 className="videoTitle mt-5 pt-5">¿Cómo funciona?</h4>
           <div className="productVideo">
             <h4 className="productVideo__videoTitle">¿Cómo funciona?</h4>
@@ -27,7 +27,7 @@ function HeaderVideo({ video, title, url }) {
                 type="video/mp4"
               />
             </video>
-            <h5 className="productVideo__subtitle">
+            <h5 className="productVideo__subtitle fw-normal">
               *Personaliza tu protección con coberturas adicionales
             </h5>
             <div onClick={scrollTop} className="d-none d-md-block">
