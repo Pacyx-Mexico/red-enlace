@@ -69,7 +69,7 @@ const HeroContainer = styled.section`
   height: 100rem;
   .gradient_img_bg {
     z-index: 1;
-    height: 90%;
+    height: 85%;
     width: auto;
     top: 16rem;
     right: -2.5%;
