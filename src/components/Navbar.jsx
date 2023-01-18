@@ -50,7 +50,7 @@ export default function Navbar({ type }) {
             <LinkRouter to="/deducible-autos">Autos</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/enlace">Enlace</LinkRouter>
+            <LinkRouter to="/enlace">Enlaces</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
             <LinkRouter to="/reclamacion-siniestros">Siniestro</LinkRouter>
