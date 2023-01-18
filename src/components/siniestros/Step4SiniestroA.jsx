@@ -44,7 +44,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Formato solicitud de reembolso*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Formato solicitud de reembolso*</p>
                   </div>
                 </Col>
                 <Col>
@@ -52,7 +52,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Carta de aseguradora*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Carta de aseguradora*</p>
                   </div>
                 </Col>
                 <Col>
@@ -60,7 +60,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Finiquito de la aseguradora*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Finiquito de la aseguradora*</p>
                   </div>
                 </Col>
               </Row>
@@ -70,7 +70,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Identificación oficial vigente con<br />fotografía*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Identificación oficial vigente con<br />fotografía*</p>
                   </div>
                 </Col>
                 <Col>
@@ -78,7 +78,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Facturas/ comprobantes de gastos*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Facturas/ comprobantes de gastos*</p>
                   </div>
                 </Col>
                 <Col>
@@ -86,7 +86,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Corte de caja*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Corte de caja*</p>
                   </div>
                 </Col>
               </Row>
@@ -96,7 +96,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Carátula de la póliza primaria*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Carátula de la póliza primaria*</p>
                   </div>
                 </Col>
                 <Col md ={8}>
@@ -104,7 +104,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-20">Copia de estado de cuenta vigente*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Copia de estado de cuenta vigente*</p>
                   </div>
                 </Col>
               </Row>

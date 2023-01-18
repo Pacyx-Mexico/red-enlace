@@ -62,12 +62,15 @@ export const Step2SiniestroGM = ({ nextStep, handleFormData, values }) => {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1" >Asegurado 1</Dropdown.Item>
                     <Dropdown.Item href="#/action-2">
-                      Another action
+                      Asegurado 2
                     </Dropdown.Item>
                     <Dropdown.Item href="#/action-3">
-                      Something else
+                      Asegurado 3
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      Asegurado 4
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
@@ -255,10 +258,15 @@ const SiniestroAContainer = styled.section`
       border: none; 
     }
 
+    .dropdown-item {
+      font-size: 1.5rem;
+    }
+
     .btn-success {
       background: #f2f5fa;
       border: none;
       color: #000000;
+      height: 6rem;
       font-size: 15px;
       border-radius: 1rem;
 

@@ -6,12 +6,12 @@ export const HeroSiniestros = () => {
     <HeroContainer className="home position-relative" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-enlace.png"}
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+733.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center position-absolute top-50 w-100 d-none d-md-block">
-        <div className="home__info d-flex flex-column justify-content-center text-center align-items-center">
-          <h2 className="mb-4 pr-xxl-5 fw-medium z-index  h2-heading text-black">
+      <div className="align-items-center position-absolute top-50 w-100 d-none d-md-flex ms-5 ps-5">
+        <div className="home__info d-flex flex-column justify-content-center text-start align-items-start">
+          <h2 className="mb-4 pr-xxl-5 fw-medium z-index text-start h2-heading text-black">
             ¿Qué hacer en <br />
             caso de siniestro?
           </h2>
@@ -41,6 +41,7 @@ export const HeroSiniestros = () => {
 
 const HeroContainer = styled.section`
   height: 48rem;
+  z-index: 2;
   .gradient_img_bg_sm {
     left: 0;
     bottom: 0;
@@ -91,18 +92,14 @@ const HeroContainer = styled.section`
     left: 0;
     z-index: 15;
   }
-  
-  @media (min-width: 570px) {
-
-  }
 
   @media (min-width: 768px) {
     height: 80rem;
     .gradient_img_bg {
-      z-index: 1;
-      height: auto;
+      z-index: -1;
+      height: 221rem;
       width: 35%;
-      top: 16rem;
+      top: 0;
       right: 0;
       opacity: 0.9;
     }

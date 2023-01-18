@@ -215,10 +215,10 @@ const SiniestroAContainer = styled.section`
       border-radius: 1.5rem;
       background: #f2f5fc;
       padding: 0 6rem;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
 
       &::placeholder {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     }
   }

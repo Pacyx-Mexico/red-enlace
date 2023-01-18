@@ -44,7 +44,7 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
                       name="nombres"
                       defaultValue={values.nombres}
                       type="text"
-                      placeholder="nombre(s)*"
+                      placeholder="Nombre (s)*"
                       onChange={handleFormData("nombres")}
                       className="input-text"
                     />
@@ -427,10 +427,14 @@ const FacturacionContainer = styled.section`
       background: #f2f5fc;
       border: none;
       width: 100%;
-      font-size: 2.5rem;
+      font-size: 2rem;
+      height: 6rem;
+      padding-left: 2rem;
 
       &::placeholder {
         color: #25282c;
+        text-align: center;
+        opacity: .8;
       }
     }
 

@@ -176,11 +176,11 @@ const SiniestroAContainer = styled.section`
       border: none;
       border-radius: 1.5rem;
       padding-left: 3rem;
-      font-size: 10px;
+      font-size: 2rem;
 
       &::placeholder {
         color: #000;
-        font-size: 10px;
+        font-size: 2rem;
       }
     }
 
@@ -200,6 +200,10 @@ const SiniestroAContainer = styled.section`
       color: #fff;
       border-radius: 1.5rem;
       background: #8296de;
+    }
+
+    .kkwtUg {
+      min-width: 15rem;
     }
   }
 `;

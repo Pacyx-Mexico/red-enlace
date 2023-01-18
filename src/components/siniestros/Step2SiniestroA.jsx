@@ -256,10 +256,15 @@ const SiniestroAContainer = styled.section`
       border: none; 
     }
 
+    .dropdown-item {
+      font-size: 1.5rem;
+    }
+
     .btn-success {
       background: #f2f5fa;
       border: none;
       color: #000000;
+      height: 6rem;
       font-size: 15px;
       border-radius: 1rem;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MedicineIcon, MedicalExpensesIcon, CarIcon } from "../../assets/icons";
+import { Point } from "../../assets/icons";
 import { NavLink, Link } from "react-router-dom";
 import Button from "../Button";
 import { IoIosArrowDown } from "react-icons/io";
@@ -9,7 +9,7 @@ export const SiniestroSteps = () => {
     scroll.scrollToTop();
   };
   return (
-    <ServicesContainer>
+    <ServicesContainer className="position-relative">
       {/* {map.services(service => console.log(service))} */}
       <div className="services-title container-fluid text-center d-none d-lg-block">
         <h3 className="pb-2 fw-normal text-dark mt-5">
@@ -23,55 +23,57 @@ export const SiniestroSteps = () => {
         </h4>
       </div>
       <div className="container-fluid py-3 position-relative d-none d-lg-block">
-        <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
-          <div className="col-auto mb-5 pb-5">
+        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex w-50 justify-content-start gap-5">
+          <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
-              <div className="icon-width d-flex align-items-center justify-content-center">
-                <h2 className="number-fs">1</h2>
+              <div className="icon-width d-flex align-items-center">
+                < Point />
+                <h2 className="ms-5 number-fs fst-italic">Paso 1</h2>
               </div>
             </div>
-            <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-1">
+            <div className="ms-5 ps-3 d-flex w-100">
+              <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
                 Selecciona el producto
               </p>
             </div>
+            <hr className="custom-hr"/>
           </div>
-          <div className="col-auto mb-5 pb-5">
+          <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
-              <div className="icon-width d-flex align-items-center justify-content-center">
-                <h2 className="number-fs">2</h2>
+              <div className="icon-width d-flex align-items-center">
+                < Point />
+                <h2 className="ms-5 number-fs fst-italic">Paso 2</h2>
               </div>
             </div>
-            <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-1">
-                Descarga y requisita los <br />
-                formatos correspondientes, <br />
-                no olvides firmarlos
+            <div className="ms-5 ps-3 d-flex w-100">
+              <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                Descarga y requisita los formatos correspondientes, no olvides firmarlos
               </p>
             </div>
+            <hr className="custom-hr"/>
           </div>
-          <div className="col-auto mb-5 pb-5">
+          <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
-              <div className="icon-width d-flex align-items-center justify-content-center">
-                <h2 className="number-fs">3</h2>
+              <div className="icon-width d-flex align-items-center">
+                < Point />
+                <h2 className="ms-5 number-fs fst-italic">Paso 3</h2>
               </div>
             </div>
-            <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-1">
-                Completa tu información y <br />
-                adjunta la documentación <br />
-                solicitada
+            <div className="ms-5 ps-3 d-flex w-100">
+              <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                Completa tu información y adjunta la documentación solicitada
               </p>
             </div>
+            <hr className="custom-hr"/>
           </div>
-          <div className="d-flex justify-content-center w-100 mt-5 pt-5">
+        </div>
+        <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
               <Link to="/reclamacion-siniestros/select" className="headerTitle__btn">
                 <Button text="Reclamar siniestro" />
               </Link>
             </div>
           </div>
-        </div>
       </div>
 
       <div className="container-fluid py-3 position-relative d-lg-none">
@@ -172,6 +174,7 @@ export const SiniestroSteps = () => {
 const ServicesContainer = styled.section`
   padding-top: 10rem;
   padding-bottom: 10rem;
+  z-index: 2;
   .text-lile {
     color: #6983d6;
   }
@@ -188,7 +191,7 @@ const ServicesContainer = styled.section`
   }
 
   .number-fs {
-    font-size: 19rem;
+    font-size: 3.5rem;
   }
 
   .text-,
@@ -351,6 +354,7 @@ const ServicesContainer = styled.section`
   }
 
   @media (min-width: 768px) {
+    z-index: 2;
     padding-top: 20rem;
     padding-bottom: 20rem;
 
@@ -390,7 +394,7 @@ const ServicesContainer = styled.section`
     }
 
     .card-title {
-      font-size: 4rem;
+      font-size: 2rem;
     }
     
     .w-76 {
@@ -403,6 +407,15 @@ const ServicesContainer = styled.section`
     .card {
       width: 36rem;
       height: 42rem;
+    }
+
+    .custom-hr {
+      height: .5rem;
+      background: #c5e3d6;  
+      border-top: none;
+      opacity: 1;
+      border-radius: 20rem;
+      margin: 0;
     }
 
     .card_img-width_first {
