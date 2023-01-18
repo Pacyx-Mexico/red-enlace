@@ -22,7 +22,7 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
   return (
     <>
       <FacturacionContainer>
-        <div>
+        <div className="d-none d-md-block">
           <div className="d-flex justify-content-center flex-column">
             <h1 className="fst-italic fs-1 fw-bold mt-5">
               PASO 1/2:
@@ -59,14 +59,95 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
             </Card.Body>
           </Card>
         </div>
+
+
+        <div className="d-md-none">
+          <div className="d-flex justify-content-center flex-column">
+            <h1 className="fst-italic primary-title-mb fw-bold mt-5">
+              PASO 1/2:
+            </h1>
+            <p className="text-center text-secondary primary-subtitle-mb fw-normal pt-5 mt-5">
+              Proporciona tu número de contrato.
+            </p>
+          </div>
+          
+          <Card style={{ marginTop: 30 }}>
+            <Card.Body>
+              <Form onSubmit={submitFormData} className="mx-3">
+                <Form.Group className="mb-5 pb-5 d-flex flex-column gap-5">
+                  <Form.Control
+                    style={{ border: error ? "2px solid red" : "" }}
+                    name="noContrato"
+                    defaultValue={values.noContrato}
+                    type="text"
+                    placeholder="# de Contrato*"
+                    onChange={handleFormData("noContrato")}
+                  />
+                  {error ? (
+                    <Form.Text style={{ color: "red" }}>
+                      This is a required field
+                    </Form.Text>
+                  ) : (
+                    ""
+                  )}
+                  <div className="d-flex justify-content-center mt-5 pt-5">
+                    <Button variant="primary" type="submit" text="Buscar">
+                    </Button>
+                  </div>
+                </Form.Group>
+              </Form>
+            </Card.Body>
+          </Card>
+        </div>
       </FacturacionContainer>
     </>
   );
 };
 
 const FacturacionContainer = styled.section`
-  height: 50rem;
+  height: 90vh;
   margin-top: 15rem;
+
+  .primary-title-mb {
+    font-size: 4rem;
+  }
+
+  .primary-subtitle-mb {
+    font-size: 3rem;
+  }
+
+  .form-control {
+    border: none;
+    height: 6rem;
+    border-radius: 1.5rem;
+    background: #f2f5fc;
+    padding: 0 6rem;
+    font-size: 2.5rem;
+  }
+
+  .card {
+    border: none; 
+  }
+
+  @media (min-width: 576px) {
+
+    .primary-title-mb {
+      font-size: 6rem;
+    }
+
+    .primary-subtitle-mb {
+      font-size: rem;
+    }
+
+    .form-control {
+      font-size: 3rem;
+      height: 7rem;
+
+      &::placeholder {
+        font-size: 3rem;
+      }
+    }
+  }
 
   @media (min-width: 992px) {
     height: 90vh;

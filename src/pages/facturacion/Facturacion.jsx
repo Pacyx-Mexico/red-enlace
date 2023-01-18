@@ -59,9 +59,9 @@ export const Facturacion = () => {
       return (
         <div className="App">
           <Navbar type="productos" />
-          <Container>
-            <Row>
-              <Col md={{ span: 6, offset: 3 }} className="custom-margin">
+          <div className="d-flex w-100">
+            <Row className="w-100">
+              <Col className="custom-margin w-100">
                 <Step2Facturacion
                   nextStep={nextStep}
                   prevStep={prevStep}
@@ -70,7 +70,7 @@ export const Facturacion = () => {
                 />
               </Col>
             </Row>
-          </Container>
+          </div>
           <Footer />
         </div>
       );
