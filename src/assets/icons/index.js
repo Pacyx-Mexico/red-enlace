@@ -19,4 +19,5 @@ export * from './MoneyTwoIcon'
 export * from './HandSecure'
 export * from './DocumentIcon'
 export * from './CarCrash'
+export * from './Point'
 // export * from './RedLogo';
