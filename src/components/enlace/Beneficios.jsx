@@ -8,7 +8,7 @@ export const Beneficios = () => {
     <BeneficiosSection>
       <div className="services-title container text-center mt-5 pt-5">
         <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-semi-bold fs-1 fst-italic">
+          <span className="text-dark fw-semi-bold fs-35 fst-italic">
             Beneficios de ser parte de la comunidad Red Enlace
           </span>
         </h3>
@@ -22,7 +22,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5">
                 Ahorro garantizado,
                 <br /> hasta 35%
               </p>
@@ -35,7 +35,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5">
                 Pago de siniestros en
                 <br /> menos de 72 horas
               </p>
@@ -48,7 +48,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5">
                 Ayuda diaria por <br /> hospitalización
               </p>
             </div>
@@ -60,7 +60,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5">
                 En caso de enfermedades <br />
                 graves nosotros pagamos <br />
                 tu deducible
@@ -238,6 +238,14 @@ const BeneficiosSection = styled.section`
       .card-body {
         width: 86%;
       }
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .card-title {
+      font-size: 2.5rem;
     }
   }
 `

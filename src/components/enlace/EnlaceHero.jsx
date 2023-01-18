@@ -109,7 +109,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
