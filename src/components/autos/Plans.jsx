@@ -12,12 +12,12 @@ export const Plans = () => {
   return (
     <PlansSection>
       <div className="services-title container text-center d-none d-md-block">
-        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4 fst-italic">
+        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4">
           Descubre nuestros paquetes disponibles
         </h5>
       </div>
       <div className="services-title container text-center d-md-none">
-        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4 fst-italic">
+        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4">
           Descubre nuestros paquetes disponibles
         </h5>
       </div>
@@ -26,8 +26,8 @@ export const Plans = () => {
           <div className="col-auto">
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Básico</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-25 p-5">
-                <p className="fs-1 mb-0">$690.00</p>
+              <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
+                <p className="fs-1 mb-0 ps-5">$690.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic fs-25 lh-sm my-4 text-primary">
@@ -42,7 +42,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -52,7 +52,7 @@ export const Plans = () => {
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Standar</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
-                <p className="fs-1 mb-0">$1,297.00</p>
+                <p className="fs-1 mb-0 ps-5">$1,297.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
@@ -67,7 +67,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -77,7 +77,7 @@ export const Plans = () => {
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Premium</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-75 p-5">
-                <p className="fs-1 mb-0">$1,840.00</p>
+                <p className="fs-1 mb-0 ps-5">$1,840.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
@@ -92,7 +92,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop }  className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -102,7 +102,7 @@ export const Plans = () => {
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Gold</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-100 p-5">
-                <p className="fs-1 mb-0">$2,420.00</p>
+                <p className="fs-1 mb-0 ps-5">$2,420.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
@@ -117,7 +117,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -127,7 +127,7 @@ export const Plans = () => {
             <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Black</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center p-5">
-                <p className="fs-1 mb-0">$2,995.00</p>
+                <p className="fs-1 mb-0 ps-5">$2,995.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
@@ -142,7 +142,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-75 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -185,7 +185,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-25">
                   Contratar
                 </button>
               </Link>
@@ -212,7 +212,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-3">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-25">
                   Contratar
                 </button>
               </Link>
@@ -347,6 +347,10 @@ const PlansSection = styled.section`
     font-size: 4rem;
   }
 
+  .fs-15 {
+    font-size: 2rem;
+  }
+
   .RE_img_bg {
     z-index: -11;
     top: 85%;
@@ -360,6 +364,10 @@ const PlansSection = styled.section`
   .border-primary {
     color: black !important;
     border-color: #f9fafd !important;
+  }
+
+  .w-60 {
+    width: 60%;
   }
 
   .card-price {
@@ -389,16 +397,15 @@ const PlansSection = styled.section`
   }
 
   .btn-first {
-    background-color: #ffffff;
-    border: 3px solid #6983d6 !important;
+    background-color: #6983d6;
+    color: #FFF;
     padding: 1rem 0rem;
-
-    &.text-white:hover {
-      color: #6983d6 !important;
-    }
+    border: none !important;
 
     &:hover {
-      background-color: #6983d6;
+      background-color: #ffffff;
+      border: 3px solid #6983d6 !important;
+      color: #6983d6; 
     }
   }
 

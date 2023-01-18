@@ -10,15 +10,15 @@ export const HeroAutos = () => {
     scroll.scrollToTop();
   };
   return (
-    <HeroContainer className="home position-relative mb-5 pb-5" id="home">
+    <HeroContainer className="home d-flex mb-5 pb-5 w-100" id="home">
       <Image
-        className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={"https://elementos-red-enlace.s3.amazonaws.com/Group+711.png"}
+        className="gradient_img_bg position-absolute h-auto d-none d-md-block"
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+731.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
-        <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark text-start">
+      <div className="align-items-center w-50 d-none d-md-flex">
+        <div className="hero-title d-flex flex-column justify-content-start text-center align-items-start">
+          <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark fs-65 text-start">
             Devolución de deducible <br />
             <span className="fst-italic">Autos</span>
           </h2>
@@ -65,14 +65,14 @@ export const HeroAutos = () => {
 const HeroContainer = styled.section`
   background-color: #fff;
   overflow-x: hidden;
-  overflow-y: hidden;
   height: 100rem;
   .gradient_img_bg {
     z-index: 1;
     height: 85%;
     width: auto;
     top: 16rem;
-    right: -2.5%;
+    right: 0;
+    width: 40%;
     opacity: 0.9;
   }
   .man_img-bg {
@@ -85,6 +85,10 @@ const HeroContainer = styled.section`
 
   .hero-title {
     margin-left: 10rem;
+  }
+
+  .fs-65 {
+    font-size: 6rem;
   }
 
   .img-fluid {
@@ -113,6 +117,7 @@ const HeroContainer = styled.section`
     line-height: 2rem;
     z-index: 2;
     margin-left: 0rem;
+    text-align: start;
   }
 
   @media (min-width: 576px) {
@@ -123,6 +128,7 @@ const HeroContainer = styled.section`
   }
 
   @media (max-width: 768px) {
+    overflow-x: hidden;
     height: 178rem;
     .gradient_img_bg_sm {
       width: 70rem;
