@@ -39,7 +39,7 @@ export const Services = () => {
   return (
     <ServicesContainer>
       {/* {map.services(service => console.log(service))} */}
-      <div className="d-flex justify-content-center flex-column mb-5 pb-5 d-none d-lg-block">
+      <div className="d-flex justify-content-center flex-column mb-lg pb-5 d-none d-lg-block">
         <div className="text-center mt-5 pt-5 position-relative">
           <div className="position-relative">
             <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
@@ -47,15 +47,15 @@ export const Services = () => {
             <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
           </div>
           <div className="primary-title-h pt-5 mt-5">
-            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5">¿Qué nos hace únicos?</h2>
-            <p className="fs-10 mb-5 mt-5 pt-5">
+            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">¿Qué nos hace únicos?</h2>
+            <p className="fs-11 mb-5 mt-5 pt-5 fw-normal">
               Devolución <br />
-              <span className="fw-bold">de deducible</span>
+              <span className="fw-bold fs-10-">de deducible</span>
             </p>
-            <p className="fs-25 fw-normal mb-5 pb-5">
-            Es una asistencia que en caso de que te<br />
-            hospitalicen, te reembolsa un porcentaje fijo del<br />
-            deducible  de tu  póliza de gastos médicos mayores.
+            <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5">
+            Es una asistencia que en caso de que te hospitalicen,<br />
+            te reembolsa un porcentaje fijo del deducible  de<br />
+            tu  póliza de gastos médicos mayores.
             </p>
             <p className="fs-25">
               Con nosotros, tú eliges el porcentaje: 
@@ -70,15 +70,8 @@ export const Services = () => {
 
       <div className="services-title container-fluid text-center d-none d-lg-block my-5 py-5">
         <h3 className="pb-5 mb-5 fw-semi-bold text-dark mt-5">
-          <span className="text-lile">Protege</span> a los que más quieres y
-          <br />
-          <span className="text-lile">ahorra</span> en el proceso
+        Conoce nuestros productos
         </h3>
-      </div>
-      <div className="services-title-mb container-fluid text-center d-lg-none">
-        <h4 className="fw-semi-bold fs-35 text-dar mb-5 pb-5">
-          Conoce nuestros productos
-        </h4>
       </div>
       <div className="container-fluid py-3 px-5 position-relative d-none d-lg-block">
         <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
@@ -147,6 +140,39 @@ export const Services = () => {
       </div>
 
       <div className="container-fluid py-3 position-relative d-lg-none">
+      <div className="d-flex justify-content-center flex-column mb-lg pb-5">
+        <div className="text-center mt-5 pt-5 position-relative">
+          <div className="">
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png" alt="" className="hand hand-right position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
+          </div>
+          <div className="primary-title-h pt-5 mt-5">
+            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">¿Qué nos hace únicos?</h2>
+            <p className="fs-11 mb-5 mt-5 pt-5 fw-normal">
+              Devolución <br />
+              <span className="fw-bold fs-10-">de deducible</span>
+            </p>
+            <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5">
+            Es una asistencia que en caso de que te hospitalicen,<br />
+            te reembolsa un porcentaje fijo del deducible  de<br />
+            tu  póliza de gastos médicos mayores.
+            </p>
+            <p className="fs-25">
+              Con nosotros, tú eliges el porcentaje: 
+              <br />
+              <span className="fw-bold">
+                30, 50, 80 o hasta 100%
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+        <div className="services-title-mb container-fluid text-center d-lg-none">
+          <h4 className="fw-semi-bold fs-35 text-dar mb-5 pb-5">
+            Conoce nuestros productos
+          </h4>
+        </div>
         <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
           <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
             <Link
@@ -238,6 +264,19 @@ const ServicesContainer = styled.section`
   .card-title {
     margin-bottom: 0rem;
     color: #000000;
+    font-size: 3.5rem;
+  }
+
+  .primary-title-h {
+    margin-top: 10rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 5rem !important;
+  }
+
+  .mb-lg {
+    margin-bottom: 15rem;
   }
 
   .text-,
@@ -368,16 +407,51 @@ const ServicesContainer = styled.section`
     padding-bottom: 20rem;
   }
 
+  .bg-gradient {
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .hand {
+    z-index: -1;
+    width: auto;
+    height: 55rem;
+  }
+
+  .hand-left {
+    right: -11%;
+    top: 3rem;
+    width: auto;
+    height: 30rem;
+  }
+
+  .hand-right {
+    left: -47px;
+    top: 30rem;
+    width: auto;
+    height: 20rem;
+  }
+
   .gap-10 {
     gap: 10rem;
   }  
+
+  .fs-11 {
+    font-size: 7.5rem;
+    line-height: 9rem;
+  }
+
+  .fs-10 {
+    font-size: 5rem;
+  }
   
   .fs-35 {
     font-size: 5rem;
   }
 
-  .fs-20 {
-    font-size: 20px;
+  .fs-25 {
+    font-size: 2.5rem;
   }
 
   @media (min-width: 576px) {
@@ -396,6 +470,20 @@ const ServicesContainer = styled.section`
 
     .gap-10 {
       gap: 9rem;
+    }
+
+    .hand-left {
+      right: -8%;
+      top: 0rem;
+      width: auto;
+      height: 36rem;
+    }
+
+    .hand-right {
+      left: -56px;
+      top: 30rem;
+      width: auto;
+      height: 23rem;
     }
   }
 
@@ -444,14 +532,29 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 25rem;
     }
+    
+    .hand-right {
+      left: -71px;
+      top: 51rem;
+      width: auto;
+      height: 40rem;
+    }
+
+    .hand-left {
+      right: -8%;
+      top: 17rem;
+      width: auto;
+      height: 63rem;
+    }
   }
 
   @media (min-width: 992px) {
-    height: 200rem;
+    height: 245rem;
     .card {
       width: 34rem;
       height: 53.5rem;
       border-radius: 50rem;
+      opacity: .9;
     }
 
     .card_img-width_first {
@@ -459,6 +562,28 @@ const ServicesContainer = styled.section`
       top: 0.3rem;
       right: 1.6rem;
       border-radius: 19rem;
+    }
+
+    .primary-title-h {
+      margin-top: 10rem !important;
+    }
+
+    .mb-5 {
+      margin-bottom: 5rem !important;
+    }
+
+    .mb-lg {
+      margin-bottom: 15rem;
+    }
+
+
+    .fs-11 {
+      font-size: 12rem;
+      line-height: 9rem;
+    }
+
+    .fs-10- {
+      font-size: 10rem;
     }
 
     .card_img-width_second {
@@ -481,12 +606,12 @@ const ServicesContainer = styled.section`
     }
 
     .fs-10 {
-      font-size: 5rem;
+      font-size: 6rem;
     }
 
     .bg-gradient {
       width: 100%;
-      height: 230rem;
+      height: 300rem;
       top: 0;
       left: 0;
       z-index: -1;
@@ -504,14 +629,14 @@ const ServicesContainer = styled.section`
 
     .hand-left {
       left: 70%;
-      top: 10rem;
+      top: 20rem;
       width: auto;
       height: 55rem;
     }
 
     .hand-right {
-      right: 74%;
-      top: 50rem;
+      left: -10%;
+      top: 80rem;
       width: auto;
       height: 35rem;
     }

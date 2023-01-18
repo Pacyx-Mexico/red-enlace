@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { RedEnlaceBg } from "../../assets/backgrounds";
 import { Image, Form, Button } from "react-bootstrap";
 
 export const InfoForm = () => {

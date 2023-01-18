@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import "../../styles/productos/HeaderVideo.css";
-import heroSMobile from '../../assets/images/hero-siniestro-mobile.png';
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import { Image } from "react-bootstrap";
@@ -12,8 +11,8 @@ export const HeroAutos = () => {
   return (
     <HeroContainer className="home d-flex mb-5 pb-5 w-100" id="home">
       <Image
-        className="gradient_img_bg position-absolute h-auto d-none d-md-block"
-        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+731.png"}
+        className="gradient_img_bg position-absolute d-none d-md-block"
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+732.png"}
         alt="Gradient background element"
       />
       <div className="align-items-center w-50 d-none d-md-flex">
@@ -68,11 +67,10 @@ const HeroContainer = styled.section`
   height: 100rem;
   .gradient_img_bg {
     z-index: 1;
-    height: 85%;
+    height: 60%;
     width: auto;
     top: 16rem;
     right: 0;
-    width: 40%;
     opacity: 0.9;
   }
   .man_img-bg {
