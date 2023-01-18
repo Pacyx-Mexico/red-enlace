@@ -66,7 +66,7 @@ export const Contact = () => {
 };
 
 const ContactSection = styled.section`
-  height: 70rem;
+  height: 60rem;
 
   .contact-form {
     z-index: 5;
