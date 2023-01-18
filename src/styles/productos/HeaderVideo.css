@@ -41,7 +41,7 @@
 }
 .productVideo__videoContainer {
   width: 90rem;
-  height: 60rem;
+  height: 55rem;
   margin-top: -20rem;
   border-radius: 4rem;
 
@@ -50,7 +50,8 @@
 }
 .productVideo__subtitle {
   margin-bottom: 6rem;
-  margin-top: 6rem;
+  margin-top: 10rem;
+  font-size: 2.5rem;
 }
 .headerText__imgContainer {
   height: 52rem;
