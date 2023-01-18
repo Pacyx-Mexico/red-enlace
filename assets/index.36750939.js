@@ -1034,7 +1034,7 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
     z-index: 15;
     }
   }
-`,LF=()=>{const e=()=>{scroll.scrollToTop()};return u(BF,{children:[o("div",{className:"d-flex justify-content-center flex-column mb-5 pb-5 d-none d-lg-block",children:u("div",{className:"text-center mt-5 pt-5 position-relative",children:[u("div",{className:"position-relative",children:[o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png",alt:"Fondo azul",className:"bg-gradient position-absolute"}),o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png",alt:"",className:"hand hand-right position-absolute"}),o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png",alt:"",className:"hand hand-left position-absolute"})]}),u("div",{className:"primary-title-h pt-5 mt-5",children:[o("h2",{className:"fs-10 mb-5 pb-5 pt-5 mt-5",children:"\xBFQu\xE9 nos hace \xFAnicos?"}),u("p",{className:"fs-10 mb-5 mt-5 pt-5",children:["Devoluci\xF3n ",o("br",{}),o("span",{className:"fw-bold",children:"de deducible"})]}),u("p",{className:"fs-25 fw-normal mb-5 pb-5",children:["Es una asistencia que en caso de que te",o("br",{}),"hospitalicen, te reembolsa un porcentaje fijo del",o("br",{}),"deducible  de tu  p\xF3liza de gastos m\xE9dicos mayores."]}),u("p",{className:"fs-25",children:["Con nosotros, t\xFA eliges el porcentaje:",o("br",{}),o("span",{className:"fw-bold",children:"30, 50, 80 o hasta 100%"})]})]})]})}),o("div",{className:"services-title container-fluid text-center d-none d-lg-block my-5 py-5",children:u("h3",{className:"pb-5 mb-5 fw-semi-bold text-dark mt-5",children:[o("span",{className:"text-lile",children:"Protege"})," a los que m\xE1s quieres y",o("br",{}),o("span",{className:"text-lile",children:"ahorra"})," en el proceso"]})}),o("div",{className:"services-title-mb container-fluid text-center d-lg-none",children:o("h4",{className:"fw-semi-bold fs-35 text-dar mb-5 pb-5",children:"Conoce nuestros productos"})}),o("div",{className:"container-fluid py-3 px-5 position-relative d-none d-lg-block",children:u("div",{className:"row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5",children:[o("div",{onClick:e,className:"col-auto mb-5 pb-5",children:u(K,{to:"/deducible-gastos-medicos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-first text-center position-relative card-hover_first",children:o("div",{className:"position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_first position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center w-100",children:u("p",{className:"card-title card-title-lg fw-normal lh-sm text-center fs-25",children:["Devoluci\xF3n de deducible",o("br",{}),"Gastos M\xE9dicos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5",children:u(K,{to:"/deducible-autos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-second text-center position-relative card-hover_second",children:o("div",{className:"position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png",alt:"hombre auto",className:"card_img-width card_img-width_second position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center w-100",children:u("p",{className:"card-title card-title-lg fw-normal lh-sm text-center fs-25",children:["Devoluci\xF3n de deducible",o("br",{}),"Autos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5",children:u(K,{to:"/enlace",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-fourth text-center position-relative card-hover_third",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png",alt:"hombre auto",className:"card_img-width card_img-width_third position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center w-100",children:o("p",{className:"card-title card-title-lg fw-normal lh-sm text-center fs-25",children:"Enlaces"})})]})})]})}),o("div",{className:"container-fluid py-3 position-relative d-lg-none",children:u("div",{className:"flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5",children:[o("div",{onClick:e,className:"col-auto mb-5 pb-5 w-75",children:u(K,{to:"/deducible-gastos-medicos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-first text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_first position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center",children:u("p",{className:"card-title fw-normal lh-sm text-center fs-20 w-100",children:["Devoluci\xF3n de deducible",o("br",{}),"Gastos M\xE9dicos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5 w-75",children:u(K,{to:"/deducible-autos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-second text-center position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_second position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center",children:u("p",{className:"card-title fw-normal lh-sm text-center fs-20 w-100",children:["Devoluci\xF3n de deducible",o("br",{}),"Autos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5 w-75",children:u(K,{to:"/enlace",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-third text-center position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_third position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center",children:o("p",{className:"card-title fw-normal lh-sm text-center fs-20 w-100",children:"Enlaces"})})]})})]})})]})},BF=X.section`
+`,LF=()=>{const e=()=>{scroll.scrollToTop()};return u(BF,{children:[o("div",{className:"d-flex justify-content-center flex-column mb-lg pb-5 d-none d-lg-block",children:u("div",{className:"text-center mt-5 pt-5 position-relative",children:[u("div",{className:"position-relative",children:[o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png",alt:"Fondo azul",className:"bg-gradient position-absolute"}),o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png",alt:"",className:"hand hand-right position-absolute"}),o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png",alt:"",className:"hand hand-left position-absolute"})]}),u("div",{className:"primary-title-h pt-5 mt-5",children:[o("h2",{className:"fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal",children:"\xBFQu\xE9 nos hace \xFAnicos?"}),u("p",{className:"fs-11 mb-5 mt-5 pt-5 fw-normal",children:["Devoluci\xF3n ",o("br",{}),o("span",{className:"fw-bold fs-10-",children:"de deducible"})]}),u("p",{className:"fs-25 fw-normal mb-5 pb-5 pt-5 mt-5",children:["Es una asistencia que en caso de que te hospitalicen,",o("br",{}),"te reembolsa un porcentaje fijo del deducible  de",o("br",{}),"tu  p\xF3liza de gastos m\xE9dicos mayores."]}),u("p",{className:"fs-25",children:["Con nosotros, t\xFA eliges el porcentaje:",o("br",{}),o("span",{className:"fw-bold",children:"30, 50, 80 o hasta 100%"})]})]})]})}),o("div",{className:"services-title container-fluid text-center d-none d-lg-block my-5 py-5",children:o("h3",{className:"pb-5 mb-5 fw-semi-bold text-dark mt-5",children:"Conoce nuestros productos"})}),o("div",{className:"services-title-mb container-fluid text-center d-lg-none",children:o("h4",{className:"fw-semi-bold fs-35 text-dar mb-5 pb-5",children:"Conoce nuestros productos"})}),o("div",{className:"container-fluid py-3 px-5 position-relative d-none d-lg-block",children:u("div",{className:"row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5",children:[o("div",{onClick:e,className:"col-auto mb-5 pb-5",children:u(K,{to:"/deducible-gastos-medicos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-first text-center position-relative card-hover_first",children:o("div",{className:"position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_first position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center w-100",children:u("p",{className:"card-title card-title-lg fw-normal lh-sm text-center fs-25",children:["Devoluci\xF3n de deducible",o("br",{}),"Gastos M\xE9dicos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5",children:u(K,{to:"/deducible-autos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-second text-center position-relative card-hover_second",children:o("div",{className:"position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png",alt:"hombre auto",className:"card_img-width card_img-width_second position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center w-100",children:u("p",{className:"card-title card-title-lg fw-normal lh-sm text-center fs-25",children:["Devoluci\xF3n de deducible",o("br",{}),"Autos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5",children:u(K,{to:"/enlace",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-fourth text-center position-relative card-hover_third",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png",alt:"hombre auto",className:"card_img-width card_img-width_third position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center w-100",children:o("p",{className:"card-title card-title-lg fw-normal lh-sm text-center fs-25",children:"Enlaces"})})]})})]})}),o("div",{className:"container-fluid py-3 position-relative d-lg-none",children:u("div",{className:"flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5",children:[o("div",{onClick:e,className:"col-auto mb-5 pb-5 w-75",children:u(K,{to:"/deducible-gastos-medicos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-first text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_first position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center",children:u("p",{className:"card-title fw-normal lh-sm text-center fs-20 w-100",children:["Devoluci\xF3n de deducible",o("br",{}),"Gastos M\xE9dicos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5 w-75",children:u(K,{to:"/deducible-autos",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-second text-center position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_second position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center",children:u("p",{className:"card-title fw-normal lh-sm text-center fs-20 w-100",children:["Devoluci\xF3n de deducible",o("br",{}),"Autos"]})})]})}),o("div",{onClick:e,className:"col-auto mb-5 pb-5 w-75",children:u(K,{to:"/enlace",className:"w-100 text-decoration-none",children:[o("div",{className:"card border border-4 border-third text-center position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill",children:o("div",{className:"icon-width position-absolute d-flex align-items-center justify-content-center",children:o("img",{src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png",alt:"Gastos medicos hombre",className:"card_img-width card_img-width_third position-relative bottom-0 mx-auto"})})}),o("div",{className:"mt-5 d-flex justify-content-center",children:o("p",{className:"card-title fw-normal lh-sm text-center fs-20 w-100",children:"Enlaces"})})]})})]})})]})},BF=X.section`
   overflow-y: hidden;
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -1051,6 +1051,18 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
   .card-title {
     margin-bottom: 0rem;
     color: #000000;
+  }
+
+  .primary-title-h {
+    margin-top: 10rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 5rem !important;
+  }
+
+  .mb-lg {
+    margin-bottom: 15rem;
   }
 
   .text-,
@@ -1184,6 +1196,15 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
   .gap-10 {
     gap: 10rem;
   }  
+
+  .fs-11 {
+    font-size: 12rem;
+    line-height: 9rem;
+  }
+
+  .fs-10- {
+    font-size: 10rem;
+  }
   
   .fs-35 {
     font-size: 5rem;
@@ -1260,7 +1281,7 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
   }
 
   @media (min-width: 992px) {
-    height: 200rem;
+    height: 245rem;
     .card {
       width: 34rem;
       height: 53.5rem;
@@ -1294,12 +1315,12 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
     }
 
     .fs-10 {
-      font-size: 5rem;
+      font-size: 6rem;
     }
 
     .bg-gradient {
       width: 100%;
-      height: 230rem;
+      height: 300rem;
       top: 0;
       left: 0;
       z-index: -1;
@@ -1317,14 +1338,14 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
 
     .hand-left {
       left: 70%;
-      top: 10rem;
+      top: 20rem;
       width: auto;
       height: 55rem;
     }
 
     .hand-right {
       right: 74%;
-      top: 50rem;
+      top: 80rem;
       width: auto;
       height: 35rem;
     }
