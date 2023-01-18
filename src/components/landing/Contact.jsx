@@ -1,15 +1,11 @@
 import styled from "styled-components";
-import { RedEnlaceBg } from "../../assets/backgrounds";
 import { Image, Form, Button } from "react-bootstrap";
 
 export const Contact = () => {
   return (
     <ContactSection className="position-relative">
-      <div className=" container w-50 position-absolute RE_img_bg d-none d-md-block">
-        <RedEnlaceBg />
-      </div>
       <div className="container d-none d-md-block">
-        <h3 className="fw-normal text-start mb-5">¡Contáctanos, <span className="fw-bold">queremos<br />protegerte!</span></h3>
+        <h4 className="fw-normal text-start mb-5 pb-5">¡Contáctanos!</h4>
         <div className="container card contact-form round rounded-5 contact-form d-flex">
           <Form className="p-5 my-auto mx-5">
             <div className="row d-flex justify-content-between">
@@ -70,18 +66,7 @@ export const Contact = () => {
 };
 
 const ContactSection = styled.section`
-  height: 77rem;
-  padding-top: 10rem; 
-  padding-bottom: 10rem;
-
-  .RE_img_bg {
-    z-index: 1;
-    height: 40% !important;
-    width: auto;
-    top: 0rem;
-    right: 0;
-    opacity: 0.2;
-  }
+  height: 70rem;
 
   .contact-form {
     z-index: 5;

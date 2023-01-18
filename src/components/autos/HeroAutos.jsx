@@ -64,13 +64,15 @@ export const HeroAutos = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100rem;
   .gradient_img_bg {
     z-index: 1;
     height: 90%;
     width: auto;
     top: 16rem;
-    right: 0;
+    right: -2.5%;
     opacity: 0.9;
   }
   .man_img-bg {
@@ -106,7 +108,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;

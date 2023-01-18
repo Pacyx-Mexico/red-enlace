@@ -7,14 +7,12 @@ export const Toppings = () => {
   return (
     <CharacteristicSection>
       <div className="services-title container text-center mt-5 pt-5">
-        <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-semi-bold fs-2 fst-italic">
-            Personaliza tu protección con nuestras coberturas adicionales
+        <h3 className="pb-2 fw-semi-bold fs-35 text-dark">
+          Personaliza tu protección con nuestras coberturas adicionales <br />
+          <span className="text-dark fw-semi-bold fst-italic text-center">
+            Trabajamos para superar tus expectativas con:
           </span>
         </h3>
-        <h5 className="text-dark fw-semi-bold fs-2 fst-italic text-center">
-          Trabajamos para superar tus expectativas con:
-        </h5>
       </div>
       <div className="container py-3 position-relative d-none d-md-block">
         <div className="row d-flex justify-content-between">
@@ -25,10 +23,10 @@ export const Toppings = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-3">
+              <p className="card-title fw-bold lh-sm text-dark fs-25">
                 Indemnización diaria por hospitalización
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-5 mt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5">
                 Ayuda diaria de hasta $10,000 MN
                 <br />
                 Ayuda diaria de hasta $20,000MN
@@ -42,10 +40,10 @@ export const Toppings = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-3">
+              <p className="card-title fw-bold lh-sm text-dark fs-25">
                 Aumento de tabulador
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-5 mt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5">
                 Te regresamos un porcentaje para los gastos <br />
                 de consulta y honorarios de médico principal
               </p>
@@ -58,10 +56,10 @@ export const Toppings = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-3">
+              <p className="card-title fw-bold lh-sm text-dark fs-25">
                 Ayuda diaria para gastos extra de hospital
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-5 mt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5">
                 Con un tope de hasta $10,000MN
                 <br />
                 Con un tope de hasta $20,000MN
@@ -93,10 +91,10 @@ export const Toppings = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-3">
+                <p className="card-title fw-bold lh-sm text-dark fs-35">
                   Indemnización diaria por hospitalización
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-5 mt-5">
+                <p className="card-title fw-normal lh-sm text-dark fs-35 mt-5">
                   Ayuda diaria de hasta $10,000 MN
                   <br />
                   Ayuda diaria de hasta $20,000MN
@@ -112,10 +110,10 @@ export const Toppings = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-3">
+                <p className="card-title fw-bold lh-sm text-dark fs-35">
                   Aumento de tabulador
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-5 mt-5">
+                <p className="card-title fw-normal lh-sm text-dark fs-35 mt-5">
                   Te regresamos un porcentaje para los gastos <br />
                   de consulta y honorarios de médico principal
                 </p>
@@ -130,10 +128,10 @@ export const Toppings = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-3">
+                <p className="card-title fw-bold lh-sm text-dark fs-35">
                   Ayuda diaria para gastos extra de hospital
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-5 mt-5">
+                <p className="card-title fw-normal lh-sm text-dark fs-35 mt-5">
                   Con un tope de hasta $10,000MN
                   <br />
                   Con un tope de hasta $20,000MN
@@ -143,7 +141,6 @@ export const Toppings = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <hr className="border border-5 border-lile mt-5 mt-xxl-5" />
     </CharacteristicSection>
   );
 };
@@ -183,9 +180,17 @@ const CharacteristicSection = styled.section`
     color: #707070;
   } 
 
+  .fs-35 {
+    font-size: 3rem;
+  }
+
+  .fs-25 {
+    font-size: 2.13rem;
+  }
+
   .card {
-    width: 18rem;
-    height: 18rem;
+    width: 19rem;
+    height: 19rem;
     background-color: #5c77cc;
 
     .icon-height {

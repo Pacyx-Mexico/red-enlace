@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { RedEnlaceBg } from "../../assets/backgrounds";
 import { Pagination, Navigation } from "swiper";
 
 export const Testimonies = () => {
@@ -26,12 +27,18 @@ export const Testimonies = () => {
     },
   ];
   return (
-    <TestimonialsSection>
+    <TestimonialsSection>      
+      <div className=" container position-absolute RE_img_bg d-none d-md-block">
+        <RedEnlaceBg />
+      </div>
+      <div className=" container position-absolute RE_img_bg-2 d-none d-md-block">
+        <RedEnlaceBg />
+      </div>
       <div className="container position-relative d-none d-md-block">
-        <div className="testimonials__title my-4">
-          <h2 className="text-center fw-normal lh-sm text-dark">
+        <div className="testimonials__title">
+          <h3 className="text-center fw-normal text-dark">
             Testimoniales
-          </h2>
+          </h3>
           <div className="d-flex flex-row justify-content-center">
             <div className="m-4">
               <StarIcon />
@@ -71,12 +78,12 @@ export const Testimonies = () => {
                     <div className="text-start text-lg-start">
                       <h5 className="mb-1 text-start">
                         Carla
-                        <span className="d-block fs-1">CDMX</span>
+                        <span className="d-block">CDMX</span>
                       </h5>
                     </div>
                   </div>
                   <div className="mt-4 mt-md-0 mb-3 mb-md-0 px-sm-1 px-xl-2">
-                    <p className="text-center text-sm-start mb-0 fs-2 lh-1">
+                    <p className="text-center text-sm-start mb-0 lh-1">
                       Con Red Enlace pude renovar mi póliza de gastos médicos a
                       menor costo.
                     </p>
@@ -92,12 +99,12 @@ export const Testimonies = () => {
                   <div className="text-start text-lg-start">
                     <h5 className="mb-1 text-start">
                       Raúl
-                      <span className="d-block fs-1">Guadalajara</span>
+                      <span className="d-block">Guadalajara</span>
                     </h5>
                   </div>
                 </div>
                 <div className="mt-4 mt-md-0 mb-3 mb-md-0 px-sm-1 px-xl-2">
-                  <p className="text-center text-sm-start mb-0 fs-2 lh-1">
+                  <p className="text-center text-sm-start mb-0 lh-1">
                     Cuando lo necesité estuvieron siempre al pendiente de mi
                     siniestro.
                   </p>
@@ -112,12 +119,12 @@ export const Testimonies = () => {
                   <div className="text-start text-lg-start">
                     <h5 className="mb-1 text-start">
                       Diana
-                      <span className="d-block fs-1">California</span>
+                      <span className="d-block">California</span>
                     </h5>
                   </div>
                 </div>
                 <div className="mt-4 mt-md-0 mb-3 mb-md-0 px-sm-1 px-xl-2">
-                  <p className="text-center text-sm-start mb-0 fs-2 lh-1">
+                  <p className="text-center text-sm-start mb-0 lh-1">
                     Me gusta la facilidad para cotizar y contratar.
                   </p>
                 </div>
@@ -214,6 +221,21 @@ const TestimonialsSection = styled.section`
   padding-top: 10rem;
   padding-bottom: 10rem;
 
+  .RE_img_bg {
+    z-index: -1;
+    width: 50%;
+    height: 40% !important;
+    opacity: 0.1;
+    left: 0;
+  }
+
+  .RE_img_bg-2 {
+    width: 50%;
+    height: 40% !important;
+    opacity: 0.1;
+    right: 0;
+  }
+
   .testimonials__carousel-bg {
     box-shadow: rgba(255, 255, 255);
     border-radius: 30px;
@@ -226,14 +248,14 @@ const TestimonialsSection = styled.section`
   } 
 
   .testimonials__user-info p {
-    font-size: 1.1875rem;
+    font-size: 2rem;
     opacity: 0.9;
     font-weight: 400;
     line-height: 1.875rem;
   }
 
   .testimonials__user-info span {
-    font-size: 1.125rem;
+    font-size: 2.5rem;
     font-weight: 500;
     opacity: 0.85;
   }

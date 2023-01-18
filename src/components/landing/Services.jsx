@@ -68,8 +68,8 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="services-title container-fluid text-center d-none d-lg-block mt-5 pt-5">
-        <h3 className="pb-2 fw-semi-bold text-dark mt-5">
+      <div className="services-title container-fluid text-center d-none d-lg-block my-5 py-5">
+        <h3 className="pb-5 mb-5 fw-semi-bold text-dark mt-5">
           <span className="text-lile">Protege</span> a los que más quieres y
           <br />
           <span className="text-lile">ahorra</span> en el proceso
@@ -80,14 +80,14 @@ export const Services = () => {
           Conoce nuestros productos
         </h4>
       </div>
-      <div className="container-fluid py-3 position-relative d-none d-lg-block">
+      <div className="container-fluid py-3 px-5 position-relative d-none d-lg-block">
         <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
           <div onClick={scrollTop} className="col-auto mb-5 pb-5">
             <Link
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-first text-center opacity-75 position-relative card-hover_first">
+              <div className="card border border-4 border-first text-center position-relative card-hover_first">
                 <div className="position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -107,7 +107,7 @@ export const Services = () => {
           </div>
           <div onClick={scrollTop} className="col-auto mb-5 pb-5">
             <Link to="/deducible-autos" className="w-100 text-decoration-none">
-              <div className="card border border-4 border-second text-center opacity-75 position-relative card-hover_second">
+              <div className="card border border-4 border-second text-center position-relative card-hover_second">
                 <div className="position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
@@ -127,7 +127,7 @@ export const Services = () => {
           </div>
           <div onClick={scrollTop} className="col-auto mb-5 pb-5">
             <Link to="/enlace" className="w-100 text-decoration-none">
-              <div className="card border border-4 border-fourth text-center opacity-75 position-relative card-hover_third">
+              <div className="card border border-4 border-fourth text-center position-relative card-hover_third">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
@@ -153,7 +153,7 @@ export const Services = () => {
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-first text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
+              <div className="card border border-4 border-first text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -176,7 +176,7 @@ export const Services = () => {
               to="/deducible-autos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-second text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
+              <div className="card border border-4 border-second text-center position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
@@ -199,7 +199,7 @@ export const Services = () => {
               to="/enlace"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-third text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
+              <div className="card border border-4 border-third text-center position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
@@ -409,26 +409,28 @@ const ServicesContainer = styled.section`
     }
 
     .card {
-      width: 50rem;
-      height: 80rem;
+      width: 34rem;
+      height: 54rem;
     }
 
     .card_img-width_first {
-      width: 47rem;
-      top: 5.7rem;
+      width: 35.5rem;
+      top: 0.7rem;
       right: 0rem;
+      border-radius: 25rem;
     }
 
     .card_img-width_second {
-      width: 50rem;
-      top: 7.4rem;
+      width: 33.6rem;
+      top: 5.1rem;
       right: 0.1rem;
     }
 
     .card_img-width_third {
-      width: 56rem;
-      top: 1.3rem;
-      right: 0.5rem;
+      width: 38rem;
+      top: 0.8rem;
+      right: 0.3rem;
+      border-radius: 21rem;
     }
 
     .car-text {
@@ -447,30 +449,30 @@ const ServicesContainer = styled.section`
   @media (min-width: 992px) {
     height: 200rem;
     .card {
-      width: 36rem;
-      height: 59rem;
+      width: 34rem;
+      height: 53.5rem;
       border-radius: 50rem;
     }
 
     .card_img-width_first {
-      width: 37rem;
-      top: 3.9rem;
-      left: -0.9rem;
-      border-radius: 22rem;
+      width: 35.5rem;
+      top: 0.3rem;
+      right: 1.6rem;
+      border-radius: 19rem;
     }
 
     .card_img-width_second {
       border-radius: 0 21rem 21rem;
-      width: 35.9rem;
-      top: 11.7rem;
+      width: 34rem;
+      top: 8.4rem;
       right: 0.6rem;
     }
 
     .card_img-width_third {
-      width: 38.9rem;
-      top: 4.5rem;
-      right: 2rem;
-      border-radius: 20rem;
+      width: 37rem;
+      top: 1.5rem;
+      right: 2.4rem;
+      border-radius: 42rem;
     }
 
     .services-title {
@@ -512,10 +514,6 @@ const ServicesContainer = styled.section`
       top: 50rem;
       width: auto;
       height: 35rem;
-    }
-
-    .card-title-lg {
-      
     }
   }
 `;

@@ -129,7 +129,7 @@ export const NewCharacteristics = () => {
       <div className="container py-3 position-relative d-md-none">
         <div className="row d-flex justify-content-between mx-5 px-5 gap-5">
           <div className="col-12">
-            <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center d-flex row align-items-center justify-content-center">
+            <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center d-flex row align-items-center justify-content-around">
               <div className="icon-height d-flex align-items-center">
                 <PersonIcon />
               </div>
@@ -146,7 +146,7 @@ export const NewCharacteristics = () => {
           </div>
           <div className="col-12">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center d-flex row align-items-center justify-content-center">
-              <div className="icon-height d-flex align-items-center">
+              <div className="icon-height d-flex ms-5 align-items-center">
                 <ReportIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
@@ -162,7 +162,7 @@ export const NewCharacteristics = () => {
           </div>
           <div className="col-12">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center d-flex row align-items-center justify-content-center">
-              <div className="icon-height d-flex align-items-center">
+              <div className="icon-height d-flex ms-5 align-items-center">
                 <ChatIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
@@ -178,7 +178,7 @@ export const NewCharacteristics = () => {
           </div>
           <div className="col-12">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center d-flex row align-items-center justify-content-center">
-              <div className="icon-height d-flex align-items-center">
+              <div className="icon-height d-flex ms-5 align-items-center">
                 <IdeaIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
@@ -209,7 +209,7 @@ export const NewCharacteristics = () => {
 };
 
 const CharacteristicsSection = styled.section`
-  height: 70rem;
+  height: 120rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -217,9 +217,9 @@ const CharacteristicsSection = styled.section`
     z-index: -10;
     height: auto;
     width: 100%;
-    bottom: 0;
+    bottom: -117px;
     position: absolute;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 
   .services-title,
@@ -275,16 +275,17 @@ const CharacteristicsSection = styled.section`
   }
 
   .card {
-    width: 28rem;
-    height: 40rem;
+    width: auto;
+    height: 26rem;
     background-color: #78bc9e;
 
     .icon-height {
-      height: 15rem;
+      height: 100%;
+      width: 15%;
     }
 
-    .card-body .card-title {
-      font-size: 14px;
+    .card-body {
+      width: 86%;
     }
   }
 
@@ -305,19 +306,18 @@ const CharacteristicsSection = styled.section`
     padding-bottom: 10rem;
   }
 
-  @media (max-width: 991px) {
-    height: 140rem;
+  @media (min-width: 768px) {
+    height: 60rem;
+  }
+
+  @media (min-width: 992px) {
     .card {
-      width: auto;
-      height: 26rem;
+    width: 28rem;
+    height: 40rem;
 
-      .icon-height {
-        width: auto;
-      }
-
-      .card-body {
-        width: 86%;
-      }
+    .card-body .card-title {
+      font-size: 14px;
+    }
     }
   }
 `;

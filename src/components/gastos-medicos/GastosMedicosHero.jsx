@@ -9,15 +9,15 @@ export const GastosMedicosHero = () => {
     scroll.scrollToTop();
   };
   return (
-    <HeroContainer className="home position-relative" id="home">
+    <HeroContainer className="home d-flex" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
+      <div className="align-items-center position-relative top-25 w-50 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark text-start">
+          <h2 className="mb-4 fs-65 fw-normal z-index text-dark text-start">
             Devolución de deducible <br />
             <span className="fst-italic">Gastos Médicos</span>
           </h2>
@@ -64,7 +64,7 @@ const HeroContainer = styled.section`
   height: 120rem;
   .gradient_img_bg {
     z-index: 1;
-    height: 90%;
+    height: 65%;
     width: auto;
     top: 16rem;
     right: 0;
@@ -108,11 +108,12 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
     margin-left: 0rem;
+    text-align: start;
   }
 
   .primary_title {
@@ -170,6 +171,11 @@ const HeroContainer = styled.section`
       left: 0;
       z-index: 15;
     }
+
+    .fs-65 {
+      font-size: 6rem;
+    }
   }
 `;
+
 
