@@ -23,7 +23,7 @@ export const SelectSiniestro = () => {
                 to="/reclamacion-siniestros/gastos-medicos"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first">
+                <div className="card border border-4 border-first rounded-pill text-center position-relative card-hover_first">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -33,7 +33,7 @@ export const SelectSiniestro = () => {
                   </div>
                 </div>
                 <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title fw-normal lh-sm text-center fs-2">
+                  <p className="card-title fw-normal lh-sm text-center fs-25">
                     Devolución de deducible
                     <br />
                     Gastos Médicos
@@ -46,7 +46,7 @@ export const SelectSiniestro = () => {
                 to="/reclamacion-siniestros/autos"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second">
+                <div className="card border border-4 border-second rounded-pill text-center position-relative card-hover_second">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
@@ -56,7 +56,7 @@ export const SelectSiniestro = () => {
                   </div>
                 </div>
                 <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title fw-normal lh-sm text-center fs-2">
+                  <p className="card-title fw-normal lh-sm text-center fs-25">
                     Devolución de deducible
                     <br />
                     Autos
@@ -177,6 +177,10 @@ const SelectSiniestroContainer = styled.section`
     height: 64rem;
   }
 
+  .fs-25 {
+    font-size: 2.5rem;
+  }
+
   .card_img-width_first {
     width: 37rem;
     top: 4.9rem;
@@ -269,7 +273,7 @@ const SelectSiniestroContainer = styled.section`
   }
 
   .services-title {
-    padding-bottom: 20rem;
+    padding-bottom: 5rem;
   }
 
   .gap-10 {

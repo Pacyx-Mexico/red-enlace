@@ -24,10 +24,10 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
       <SiniestroAContainer>
         <div className="d-none d-md-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">
+            <h1 className="fst-italic fs-35 fw-bold mt-5">
               PASO 1/4:
             </h1>
-            <p className="text-center fs-2 fw-normal mt-5">
+            <p className="text-center fs-25 fw-normal mt-5">
               Proporciona tu número de contrato.
             </p>
           </div>
@@ -182,6 +182,14 @@ const SiniestroAContainer = styled.section`
         color: #000;
         font-size: 10px;
       }
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
     }
 
     .card {

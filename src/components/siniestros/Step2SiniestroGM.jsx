@@ -27,7 +27,7 @@ export const Step2SiniestroGM = ({ nextStep, handleFormData, values }) => {
       <SiniestroAContainer>
       <div className="d-flex flex-column d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">
+            <h1 className="fst-italic fs-35 fw-bold mt-5">
               PASO 2/4:
             </h1>
           </div>
@@ -245,6 +245,10 @@ const SiniestroAContainer = styled.section`
 
     .fs-10 {
       font-size: 10px;
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
     }
 
     .card {

@@ -29,10 +29,10 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
       <SiniestroAContainer>
         <div className="d-none d-md-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">
+            <h1 className="fst-italic fs-35 fw-bold mt-5">
               PASO 4/4
             </h1>
-            <p className="text-center fs-2 fw-normal mt-5">
+            <p className="text-center fs-25 fw-normal mt-5">
               Adjuntar documentación.
             </p>
           </div>
@@ -44,7 +44,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Formato solicitud de reembolso*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Formato solicitud de reembolso*</p>
                   </div>
                 </Col>
                 <Col>
@@ -52,7 +52,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Carta de aseguradora*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Carta de aseguradora*</p>
                   </div>
                 </Col>
                 <Col>
@@ -60,7 +60,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Finiquito de la aseguradora*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Finiquito de la aseguradora*</p>
                   </div>
                 </Col>
               </Row>
@@ -70,7 +70,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Identificación oficial vigente con<br />fotografía*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Identificación oficial vigente con<br />fotografía*</p>
                   </div>
                 </Col>
                 <Col>
@@ -78,7 +78,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Facturas/ comprobantes de gastos*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Facturas/ comprobantes de gastos*</p>
                   </div>
                 </Col>
                 <Col>
@@ -86,7 +86,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Corte de caja*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Corte de caja*</p>
                   </div>
                 </Col>
               </Row>
@@ -96,7 +96,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Carátula de la póliza primaria*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Carátula de la póliza primaria*</p>
                   </div>
                 </Col>
                 <Col md ={8}>
@@ -104,7 +104,7 @@ export const Step4SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     <Link className="bg-blue rounded-lg ">
                       < FiUpload className="icon-width"/>
                     </Link>
-                    <p className="my-auto ms-5 ps-5 fs-2">Copia de estado de cuenta vigente*</p>
+                    <p className="my-auto ms-5 ps-5 fs-20">Copia de estado de cuenta vigente*</p>
                   </div>
                 </Col>
               </Row>
@@ -226,6 +226,18 @@ const SiniestroAContainer = styled.section`
     .input-custom {
       display: flex;
       justify-content: around;
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
+    }
+
+    .fs-20 {
+      font-size: 2rem;
     }
 
     .card {
