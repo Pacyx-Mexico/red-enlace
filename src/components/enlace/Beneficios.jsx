@@ -22,20 +22,20 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
                 Ahorro garantizado,
                 <br /> hasta 35%
               </p>
             </div>
           </div>
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-            <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+            <div className="card d-flex justify-content-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
                 <SeventyTwoHoursIcon />
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
                 Pago de siniestros en
                 <br /> menos de 72 horas
               </p>
@@ -48,7 +48,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
                 Ayuda diaria por <br /> hospitalización
               </p>
             </div>
@@ -60,7 +60,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5">
+              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
                 En caso de enfermedades <br />
                 graves nosotros pagamos <br />
                 tu deducible
@@ -100,7 +100,7 @@ export const Beneficios = () => {
                 <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
                   Máxima suma asegurada $5,000
                 </p>
-                <p className="card-title fw-bold lh-sm text-dark fs-5">
+                <p className="card-title fw-bold lh-sm text-dark fs-25">
                   Costo anual: $120.00
                 </p>
               </div>
@@ -122,7 +122,7 @@ export const Beneficios = () => {
                   <br />
                   $5,000.00 de ayuda por robo
                 </p>
-                <p className="card-title fw-bold lh-sm text-dark fs-5">
+                <p className="card-title fw-bold lh-sm text-dark fs-25">
                   Costo $670.00
                 </p>
               </div>
@@ -143,7 +143,7 @@ export const Beneficios = () => {
                 <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
                   Por pérdida parcial, total o corralón.
                 </p>
-                <p className="card-title fw-bold lh-sm text-dark fs-5">
+                <p className="card-title fw-bold lh-sm text-dark fs-25">
                   $10,000 por 20 días <br />
                   $15,000 por 30 días
                   <br />
@@ -159,7 +159,7 @@ export const Beneficios = () => {
 };
 
 const BeneficiosSection = styled.section`
-  height: 85rem;
+  height: 71vh;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -207,6 +207,10 @@ const BeneficiosSection = styled.section`
   .swiper-button-prev {
     color: #707070;
   } 
+
+  .fs-25 {
+    font-size: 2rem;
+  }
 
   .btn-first {
     background-color: #6983d6;

@@ -4,9 +4,9 @@ import { Image, Form, Button } from "react-bootstrap";
 
 export const InfoForm = () => {
   return (
-    <InfoFormSection className="position-relative">
+    <InfoFormSection className="d-flex justify-content-center align-items-center">
       <div className="container d-none d-md-block">
-        <p className="fw-normal fs-1 text-center mb-5 ">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario<br /> y nos contactaremos contigo a la brevedad.</p>
+        <p className="fw-normal fs-25 text-center my-5 pb-5">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario<br /> y nos contactaremos contigo a la brevedad.</p>
         <div className="container card contact-form round rounded-5 contact-form d-flex">
           <Form className="p-5 my-auto mx-5">
             <div className="row d-flex justify-content-between">
@@ -40,8 +40,8 @@ export const InfoForm = () => {
         </div>
       </div>
 
-      <div className="container d-md-none px-5">
-      <p className="fw-normal fs-1 text-center mb-5 px-5 pt-5 mt-5">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario y nos contactaremos contigo a la brevedad.</p>
+      <div className="container d-flex alig-items-center flex-column d-md-none px-5">
+      <p className="fw-normal fs-1 text-center mb-5 px-5">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario y nos contactaremos contigo a la brevedad.</p>
         <div className="container card contact-form round rounded-5 contact-form d-flex shadow-lg pt-5 mt-5">
           <Form className="p-5 my-4 mx-5">
             <div className="flex-column d-flex justify-content-between">
@@ -77,9 +77,9 @@ export const InfoForm = () => {
 };
 
 const InfoFormSection = styled.section`
-  height: 60rem;
-  padding-top: 0rem; 
-  padding-bottom: 10rem;
+  height: 50vh;
+  padding-top: 0; 
+  padding-bottom: 0;
 
   .RE_img_bg {
     z-index: 1;
@@ -115,9 +115,12 @@ const InfoFormSection = styled.section`
     border: none;
   }
 
+  .fs-25 {
+    font-size: 2.5rem;
+  }
+
   @media (max-width: 768px) {
-    padding-top: 10rem;
-    height: 130rem;
+    height: 81vh;
 
     .contact-form {
       height: auto;

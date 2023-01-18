@@ -63,7 +63,6 @@ export const Dudes = () => {
           </AccordionItem>
         </Accordion>
       </div>
-      <button className="btn btn-primary rounded-pill btn-lg fs-3 fs-md-2 bg-white border border-secondary border-2 text-dark px-5 opacity-50">Ver más</button>
     </DudesSection>
   );
 };
