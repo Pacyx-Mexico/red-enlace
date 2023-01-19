@@ -153,7 +153,7 @@ const SpecialContainer = styled.section`
       height: 65%;
       width: 60%;
       top: 10%;
-      right: 0rem;
+      right: 9.5rem;
       opacity: 0.9;
     }
 
