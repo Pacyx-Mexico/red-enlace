@@ -9,18 +9,20 @@ const Btn = styled.button`
   min-width: 20rem;
   border-radius: 5rem;
   padding: 0 2rem;
-  border: none;
+  border: 2px solid var(--primary-color2);
   font-size: 2.3rem;
   font-weight: 500;
   text-decoration: none;
+  padding-top: 0.25rem;
   color: #fff;
   box-shadow: 2px 2px 3px var(--shadow-color);
   background-color: var(--primary-color2); 
   transition: all ease 0.3s;
 
   &:hover {
-    background-color: var(--secondary-color2);
+    background-color: #FFFFFF;
     transition: all ease 0.3s;
+    color: var(--primary-color2);
   }
 `;
 
