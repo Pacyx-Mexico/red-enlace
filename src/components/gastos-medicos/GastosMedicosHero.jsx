@@ -17,11 +17,11 @@ export const GastosMedicosHero = () => {
       />
       <div className="align-items-center position-relative top-25 w-50 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 fs-65 fw-normal z-index text-dark text-start">
+          <h2 className="mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start">
             Devolución de deducible <br />
-            <span className="fst-italic">Gastos Médicos</span>
+            <span>Gastos Médicos</span>
           </h2>
-          <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
+          <p className="text-secondary mb-4 lh-sm hero_subtitle fw-light">
             Te cuidamos. Te devolvemos tu deducible de manera garantizada
           </p>
           <div onClick={scrollTop}>
@@ -62,9 +62,14 @@ export const GastosMedicosHero = () => {
 const HeroContainer = styled.section`
   background-color: #fff;
   height: 120rem;
+
+  .ihjuak {
+    background:  #FFF !important;
+    color: #5872c4;
+  }
   .gradient_img_bg {
     z-index: 1;
-    height: 65%;
+    height: 85%;
     width: auto;
     top: 16rem;
     right: 0;
@@ -108,7 +113,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.5rem;
+    font-size: 2.79rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
@@ -130,7 +135,7 @@ const HeroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 94rem;
+    height:100vh;
     .gradient_img_bg_sm {
       width: 70%;
       height: 100%;
@@ -173,9 +178,9 @@ const HeroContainer = styled.section`
     }
 
     .fs-65 {
-      font-size: 6rem;
+      font-size: 7.5rem;
+      margin-top: 14rem;
     }
   }
 `;
-
 

@@ -219,7 +219,7 @@ const CharacteristicsSection = styled.section`
     width: 100%;
     bottom: -117px;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   .services-title,
@@ -307,7 +307,10 @@ const CharacteristicsSection = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 60rem;
+    height: 75rem;
+    .services-title {
+      padding-bottom: 15rem;
+    }
   }
 
   @media (min-width: 992px) {
@@ -321,3 +324,4 @@ const CharacteristicsSection = styled.section`
     }
   }
 `;
+

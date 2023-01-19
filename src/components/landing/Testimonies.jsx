@@ -27,32 +27,31 @@ export const Testimonies = () => {
     },
   ];
   return (
-    <TestimonialsSection>      
-      <div className=" container position-absolute RE_img_bg d-none d-md-block">
-        <RedEnlaceBg />
-      </div>
-      <div className=" container position-absolute RE_img_bg-2 d-none d-md-block">
-        <RedEnlaceBg />
-      </div>
+    <TestimonialsSection className="d-flex align-items-center">   
+      <div className="postion-relative">
+        <div className=" container position-absolute RE_img_bg d-none d-md-block">
+          <RedEnlaceBg />
+        </div>
+      </div>   
       <div className="container position-relative d-none d-md-block">
-        <div className="testimonials__title">
+        <div className="testimonials__title mb-5 pb-5">
           <h3 className="text-center fw-normal text-dark">
             Testimoniales
           </h3>
           <div className="d-flex flex-row justify-content-center">
-            <div className="m-4">
+            <div className="m-3">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-3">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-3">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-3">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-3">
               <StarIcon />
             </div>
           </div>
@@ -140,19 +139,19 @@ export const Testimonies = () => {
             Testimoniales
           </h2>
           <div className="d-flex flex-row justify-content-center">
-            <div className="m-4">
+            <div className="m-2">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-2">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-2">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-2">
               <StarIcon />
             </div>
-            <div className="m-4">
+            <div className="m-2">
               <StarIcon />
             </div>
           </div>
@@ -218,15 +217,16 @@ export const Testimonies = () => {
 };
 
 const TestimonialsSection = styled.section`
-  padding-top: 10rem;
+  height: 80vh;
+  padding-top: 5rem;
   padding-bottom: 10rem;
 
   .RE_img_bg {
     z-index: -1;
-    width: 50%;
+    width: 100%;
     height: 40% !important;
-    opacity: 0.1;
-    left: 0;
+    opacity: 1;
+    left: 6.5%;
   }
 
   .RE_img_bg-2 {
@@ -246,6 +246,11 @@ const TestimonialsSection = styled.section`
   .swiper-button-prev {
     color: #707070;
   } 
+
+  .swiper-button-next:after, 
+  .swiper-button-prev:after {
+    font-size: 5rem;
+  }
 
   .testimonials__user-info p {
     font-size: 2rem;

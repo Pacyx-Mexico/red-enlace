@@ -11,13 +11,13 @@ export const Contact = () => {
             <div className="row d-flex justify-content-between">
               <div className="col-5 align-middle ">
                 <Form.Group className="mb-5" controlId="formBasicEmail">
-                  <Form.Control type="text" className="rounded-pill fs-3 p-4 border-none shadow" placeholder="Nombre:" />
+                  <Form.Control type="text" className="rounded-pill fs-35 p-4 border-none shadow" placeholder="Nombre:" />
                 </Form.Group>
                 <Form.Group className="mb-5" controlId="formBasicPassword">
-                  <Form.Control type="email" className="rounded-pill fs-3 p-4 border-none shadow" placeholder="Correo electrónico:" />
+                  <Form.Control type="email" className="rounded-pill fs-35 p-4 border-none shadow" placeholder="Correo electrónico:" />
                 </Form.Group>
                 <Form.Group className="mb-5" controlId="formBasicPassword">
-                  <Form.Control type="phone"  className="rounded-pill fs-3 p-4 border-none shadow" placeholder="Teléfono:" />
+                  <Form.Control type="phone"  className="rounded-pill fs-35 p-4 border-none shadow" placeholder="Teléfono:" />
                 </Form.Group>
               </div>
               <div className="col-5">
@@ -87,6 +87,10 @@ const ContactSection = styled.section`
   .form-rounded {
     border-radius: 2rem;
     border: none;
+  }
+
+  .fs-35, textarea {
+    font-size: 2.3rem;
   }
 
   .border-none {

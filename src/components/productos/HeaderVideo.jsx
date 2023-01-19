@@ -32,7 +32,7 @@ function HeaderVideo({ video, title, url }) {
             </h5>
             <div onClick={scrollTop} className="d-none d-md-block">
               <Link to="/cotizador-deducible-gastos-medicos">
-                <Button text="Contratar" />
+                <button className="button-video rounded-pill pt-1">Conoce más</button>
               </Link>
             </div>
 

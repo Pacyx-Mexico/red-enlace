@@ -23,7 +23,20 @@
 .headerTitle__subtitle span {
   font-weight: 600;
 }
-
+.button-video {
+  height: 5.8rem;
+  min-width: 20rem;
+  background: #FFF;
+  color: #5872c4;
+  border: 2px solid #5872c4;
+  font-size: 2.3rem;
+  font-weight: 500;
+  transition:all ease 0.3s;
+} 
+.button-video:hover {
+  background-color: #5872c4;
+  color: #FFF;  
+}
 .videoTitle {
   margin-bottom: 24rem;
   font-style: italic;
@@ -40,8 +53,8 @@
   flex-direction: column;
 }
 .productVideo__videoContainer {
-  width: 90rem;
-  height: 50rem;
+  width: 80rem;
+  height: 54rem;
   margin-top: -20rem;
   border-radius: 4rem;
 
@@ -112,3 +125,4 @@
     height: 70%;
   }
 }
+
