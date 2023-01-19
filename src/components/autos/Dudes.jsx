@@ -10,53 +10,41 @@ import {
 export const Dudes = () => {
   return (
     <DudesSection className="container d-block text-center fs-2">
-      <h4 className="mt-5 mt-xxl-5 text-dark pb-5">
-        Resolvemos tus dudas
-      </h4>
       <div className="container my-5">
         <Accordion allowZeroExpanded className="border-none">
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Qué condiciones de mi póliza actual pierdo si contrato Red Enlace?
+                <span className="secondary-color3 me-4">&#8226; </span> ¿Cómo funciona?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="fw-normal fs-1">
-                Ninguna, incluso se te aumentan beneficios de forma inmediata y se quedan las mismas condiciones de tu póliza actual.
+              En caso de robo total, pérdida total o daños materiales, nosotros te devolveremos el deducible de tu póliza auto de acuerdo con la asistencia que hayas elegido.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Cuáles son los beneficios extras sin costo que obtengo al contratar un endoso de Red Enlace?
+                <span className="secondary-color3 me-4">&#8226; </span> ¿Puedo cotizarlo con cualquier póliza?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="fw-normal fs-1">
-                Los beneficios se activan desde el primer minuto en el que contratas el endoso.
-              </p>
-              <p className="fw-normal fs-1">
-                - En caso de siniestro te damos una ayuda hospitalaria de $1,000 pesos diarios (topado a 30 días), depositado directamente a tu cuenta, esto aplica únicamente en caso de enfermedades graves (politraumatismo, derrame cerebral o transplante de órganos).
-              </p>
-              <p className="fw-normal fs-1">
-                - El 100% de tu deducible es cubierto por Red Enlace.
-              </p>
-              <p className="fw-normal fs-1">
-                - El pago de siniestros lo realizamos en máximo 72 horas.
+                Operamos con cualquier compañía aseguradora dentro del territorio nacional.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Esta asistencia funciona con todas las pólizas de gastos médicos?
+                <span className="secondary-color3 me-4">&#8226; </span> ¿Hay un límite de eventos?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="fw-normal fs-1 text-left">
-                Si, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
+                Se pagará el deducible hasta que se agote la suma del plan contratado, sin importar el número de eventos.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
@@ -80,7 +68,7 @@ const DudesSection = styled.section`
   }
 
   .secondary-color3 {
-    color: var(--secondary-color3);
+    color: #5F93A9;
   }
 
   .accordion__button[aria-expanded="true"]::after,
@@ -101,8 +89,8 @@ const DudesSection = styled.section`
     height: 10px;
     width: 10px;
     margin-left: 6%;
-    border-bottom: 4px solid #409e75;
-    border-right: 4px solid #409e75;
+    border-bottom: 4px solid #5F93A9;
+    border-right: 4px solid #5F93A9;
     transform: rotate(-45deg);
   }
 `;

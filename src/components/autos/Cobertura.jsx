@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { CrystalIcon, KeysIcon, PlatformsIcon, HandSecure, DocumentIcon, CarCrash } from "../../assets/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import { Dudes } from './Dudes'
 
 export const Cobertura = () => {
   return (
@@ -170,28 +171,11 @@ export const Cobertura = () => {
         </Swiper>
       </div>
 
-      <div className="d-block text-center fs-2 height-lile d-none d-md-block">
-        <p className="mt-5 mt-xxl-5 text-dark fst-italic py-2">
-          Resolvemos tus dudas
-        </p>
-      </div>
-
-      <div className="container-fluid mx-auto position-relative dudas__container d-none d-md-block">
-        <div className="h-100 w-auto d-flex justify-content-center align-items-center">
-          <p className="text-center dudas__text position-relative fw-normal ">
-            En caso de robo total o daños materiales, nosotros te <br />
-            devolveremos el deducible de tu poliza de auto de acuerdo con la{" "}
-            <br />
-            asistencia que hayas elegido
-          </p>
-          <img
-            src={
-              "https://elementos-red-enlace.s3.amazonaws.com/Landing/document-icon.png"
-            }
-            alt="Icon Document"
-            className="document-icon"
-          />
-        </div>
+      <div className="container-fluid mx-auto position-relative dudas__container d-none d-md-block mt-5 pt-5">
+        <h4 className="mt-5 mt-xxl-5 text-dark height-lile fw-normal py-4">
+          Preguntas frecuentes
+        </h4>
+        <Dudes />
       </div>
 
       <div className="container h-75 py-3 d-md-none">
@@ -363,7 +347,7 @@ const CoberturaSection = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 138rem;
+    height: 160rem;
     .card {
       width: 20rem;
       height: 20rem;
