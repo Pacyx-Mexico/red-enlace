@@ -5,8 +5,8 @@ import { Pagination, Navigation } from "swiper";
 
 export const Toppings = () => {
   return (
-    <CharacteristicSection>
-      <div className="services-title container text-center mt-5 pt-5">
+    <CharacteristicSection className="d-flex justify-content-center flex-column">
+      <div className="services-title container text-center">
         <h3 className="pb-2 fw-semi-bold fs-35 text-dark">
           Personaliza tu protección con nuestras coberturas adicionales <br />
           <span className="text-dark fw-semi-bold fst-italic text-center">
@@ -146,9 +146,7 @@ export const Toppings = () => {
 };
 
 const CharacteristicSection = styled.section`
-  height: 81.7rem;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  height: 61vh;
 
   hr {
     margin-top: 10rem !important;

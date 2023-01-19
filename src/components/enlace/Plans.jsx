@@ -10,7 +10,7 @@ export const Plans = () => {
   };
   return (
     <PlansSection>
-      <div className="services-title container text-center d-none d--block">
+      <div className="services-title container text-center d-none d-lg-block">
         <h5 className="text-dark fs-25 fw-semi-bold text-center pt-4 fst-italic">
           Asistencia a tu medida
         </h5>

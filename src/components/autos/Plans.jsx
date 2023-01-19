@@ -12,137 +12,137 @@ export const Plans = () => {
   return (
     <PlansSection>
       <div className="services-title container text-center d-none d-md-block">
-        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4">
+        <h5 className="text-dark fs-45 text-center pt-4">
           Descubre nuestros paquetes disponibles
         </h5>
       </div>
       <div className="services-title container text-center d-md-none">
-        <h5 className="text-dark fs-35 fw-semi-bold text-center pt-4">
+        <h5 className="text-dark fs-40 fw-semi-bold text-center pt-4">
           Descubre nuestros paquetes disponibles
         </h5>
       </div>
       <div className="container py-3 d-none d-lg-block">
         <div className="row d-flex justify-content-between">
           <div className="col-auto">
-            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Básico</p>
+            <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Básico</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
-                <p className="fs-1 mb-0 ps-5">$690.00</p>
+                <p className="fs-40 fst-italic mb-0 ps-5">$750.00</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic fs-25 lh-sm my-4 text-primary">
+              <div className="card-body w-100 px-2 pb-0">
+                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary my-3">
-                Te devolvemos tu deducible 
+                <p className="card-subtitle fw-normal lh-sm text-primary my-3">
+                  Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fs-3 fw-bold">$10,000.00</p>
+                <p className="fs-3 fw-semibold">$10,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
             </div>
           </div>
           <div className="col-auto">
-            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Standar</p>
+            <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Standar</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
-                <p className="fs-1 mb-0 ps-5">$1,297.00</p>
+                <p className="fs-40 fst-italic mb-0 ps-5">$1,400.00</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
+              <div className="card-body w-100 px-2 pb-0">
+                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary my-3">
+                <p className="card-subtitle fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fs-3 fw-bold">$20,000.00</p>
+                <p className="fs-3 fw-semibold">$20,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
             </div>
           </div>
           <div className="col-auto">
-            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Premium</p>
+            <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Premium</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-75 p-5">
-                <p className="fs-1 mb-0 ps-5">$1,840.00</p>
+                <p className="fs-40 fst-italic mb-0 ps-5">$2,000.00</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
+              <div className="card-body w-100 px-2 pb-0">
+                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary my-3">
+                <p className="card-subtitle fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fs-3 fw-bold">$30,000.00</p>
+                <p className="fs-3 fw-semibold">$30,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop }  className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
             </div>
           </div>
           <div className="col-auto">
-            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Gold</p>
+            <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Gold</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-100 p-5">
-                <p className="fs-1 mb-0 ps-5">$2,420.00</p>
+                <p className="fs-40 fst-italic mb-0 ps-5">$2,650.00</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
+              <div className="card-body w-100 px-2 pb-0">
+                <p className="card-title  fst-italic lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary my-3">
+                <p className="card-subtitle fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fs-3 fw-bold">$40,000.00</p>
+                <p className="fs-3 fw-semibold">$40,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
             </div>
           </div>
           <div className="col-auto">
-            <div className="card bg-white border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-25">Black</p>
+            <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
+              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Black</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center p-5">
-                <p className="fs-1 mb-0 ps-5">$2,995.00</p>
+                <p className="fs-40 fst-italic mb-0 ps-5">$3,350.00</p>
               </div>
-              <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold fst-italic lh-sm my-4 text-primary">
+              <div className="card-body w-100 px-2 pb-0">
+                <p className="card-title fst-italic lh-sm my-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary my-3">
+                <p className="card-subtitle fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fs-3 fw-bold">$50,000.00</p>
+                <p className="fs-3 fw-semibold">$50,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-60 fs-15">
+                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -302,7 +302,7 @@ export const Plans = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="w-100 position-absolute RE_img_bg">
+      <div className="position-absolute RE_img_bg">
         <CityBackground />
       </div>
     </PlansSection>
@@ -314,6 +314,7 @@ const PlansSection = styled.section`
   padding-top: 10rem;
   padding-bottom: 10rem;
   position: relative;
+  overflow-x: hidden;
 
   hr {
     margin-top: 10rem !important;
@@ -344,7 +345,16 @@ const PlansSection = styled.section`
   }
 
   .fs-35 {
+    font-size: 3.5rem;
+  }
+
+  .fs-40 {
     font-size: 4rem;
+  }
+
+  .fs-45 {
+    font-size: 4.5rem;
+    font-weight: 500;
   }
 
   .fs-15 {
@@ -364,10 +374,6 @@ const PlansSection = styled.section`
   .border-primary {
     color: black !important;
     border-color: #f9fafd !important;
-  }
-
-  .w-60 {
-    width: 60%;
   }
 
   .card-price {
@@ -414,10 +420,11 @@ const PlansSection = styled.section`
   }
 
   @media (min-width: 992px) {
-    height: 64rem;
+    height: 100vh;
+    padding-bottom: 0rem;
     .card {
-      width: auto;
-      height: 33rem;
+      width: 30rem;
+      height: auto;
 
       .icon-height {
         width: auto;
@@ -442,15 +449,29 @@ const PlansSection = styled.section`
 
     .RE_img_bg {
       z-index: -11;
-      top: 60%;
+      top: 58%;
+      width: 100%;
     }
 
     .fs-35 {
       font-size: 3.5rem;
     }
 
+    .card-price {
+      width: 32rem;
+      height: 7.5rem;
+    }
+
     .fs-25 {
       font-size: 2.5rem; 
+    }
+
+    .card .card-body .card-title {
+      font-size: 2.5rem;
+    }
+
+    .card-subtitle {
+      font-size: 1.8rem;
     }
   }
 `;

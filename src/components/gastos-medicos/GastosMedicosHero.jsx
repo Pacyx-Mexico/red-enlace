@@ -17,7 +17,7 @@ export const GastosMedicosHero = () => {
       />
       <div className="align-items-center position-relative top-25 w-50 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start">
+          <h2 className="mb-4 pt-5 fs-65 fw-500 z-index text-dark text-start">
             Devolución de deducible <br />
             <span>Gastos Médicos</span>
           </h2>

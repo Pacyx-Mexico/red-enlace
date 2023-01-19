@@ -19,7 +19,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1">
+              <p className="fw-normal fs-1 ps-5">
               En caso de robo total, pérdida total o daños materiales, nosotros te devolveremos el deducible de tu póliza auto de acuerdo con la asistencia que hayas elegido.
               </p>
             </AccordionItemPanel>
@@ -31,7 +31,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1">
+              <p className="fw-normal fs-1ps-5">
                 Operamos con cualquier compañía aseguradora dentro del territorio nacional.
               </p>
             </AccordionItemPanel>
@@ -43,7 +43,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1 text-left">
+              <p className="fw-normal fs-1 ps-5">
                 Se pagará el deducible hasta que se agote la suma del plan contratado, sin importar el número de eventos.
               </p>
             </AccordionItemPanel>

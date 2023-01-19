@@ -15,19 +15,13 @@ export const Description = () => {
             />
           </div>
           <div className="col-md-7 col-xl-7 d-flex flex-column justify-content-center align-items-start text-start text-lg-start ml-5 pl-5">
-            <div className="d-flex flex-column mx-auto">
-              <h1 className="fw-normal mt-5 pt-5 text-start">Devolución</h1>
-              <h1 className="fw-bold text-start">de deducible</h1>
-              <p className="text-secondary mt-2 mb-5 fs-25 fw-light">
-                Es una asistencia que en caso de que te <br />
-                hospitalicen, te reembolsa un porcentaje fijo del <br />
-                deducible de tu póliza de gastos médicos mayores. <br />
+            <div className="d-flex flex-column mx-auto w-custom">
+              <h1 className="fw-normal mt-5 pt-5 text-start">Devolución <span className="fw-bold">de deducible</span></h1>
+              <p className="mt-2 mb-5 fs-25 fw-light">
+                Es una asistencia que en caso de que te hospitalicen, te reembolsa un porcentaje fijo del deducible de tu póliza de gastos médicos mayores.
               </p>
-              <p className="text-secondary mt-3 fs-25 fw-light">
-                Con nosotros, tú eliges el porcentaje:
-              </p>
-              <p className="text-dark mt-3 mb-5 fs-25 fw-bold">
-                30, 50, 80 o hasta 100%
+              <p className="mt-3 fs-25 fw-light">
+                Con nosotros, tú eliges el porcentaje: <span className="text-dark mt-3 mb-5 fs-25 fw-bold"> 30, 50, 80 o hasta 100%</span>
               </p>
             </div>
           </div>
@@ -77,7 +71,7 @@ export const Description = () => {
 };
 
 const DescriptionSection = styled.section`
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
   .text-lile,
   .border-lile {
@@ -86,7 +80,12 @@ const DescriptionSection = styled.section`
   }
 
   .col-md-5 .img-fluid {
-    left: 10%;
+    left: -5.5%;
+  }
+
+  .w-custom {
+    width: 84.9%;
+    margin-bottom: 15rem;
   }
 
   .fs-15 {
@@ -94,7 +93,7 @@ const DescriptionSection = styled.section`
   }
 
   .fs-25 {
-    font-size: 2.5rem;
+    font-size: 2.85rem;
   }
 
   .fs-30 {
@@ -117,6 +116,7 @@ const DescriptionSection = styled.section`
   }
 
   @media (max-width: 768px) {
+    height: auto;
     .description_mb {
       right: 30%;
       width: 100%;

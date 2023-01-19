@@ -16,7 +16,7 @@ export const Hero = () => {
         alt="Gradient background element"
       />
       <Image className="man_img-bg position-absolute d-none d-md-block" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre.png" } alt="" />
-      <div className=" container w-50 position-absolute RE_img_bg d-none d-md-block">
+      <div className="container position-absolute RE_img_bg d-none d-md-block">
         <RedEnlaceBg />
       </div>
       <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
@@ -24,7 +24,7 @@ export const Hero = () => {
           <h2 className="mb-4 pr-xxl-5 fw-bold pt-5 mt-5 z-index text-primary h2-heading">
             Ahorro &nbsp;<span className="text-white"> fácil y seguro</span>
           </h2>
-          <p className="text-white mb-4 mb-lg-5 hero_subtitle">
+          <p className="text-white mb-4 mb-md-5 hero_subtitle">
             te regresamos tu deducible
           </p>
         </div>
@@ -39,15 +39,15 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center z-index-2 position-absolute w-100 h-100">
-        <Image className="man_img-mb img-fluid d-md-none position-relative" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png" } alt="" />
+      <div className="d-flex justify-content-center z-index-2 position-absolute w-100 h-100  d-md-none">
+        <Image className="man_img-mb position-relative" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png" } alt="" />
         <Image
-        className="gradient_img_bg_sm img-fluid position-absolute d-md-none"
+        className="gradient_img_bg_sm position-absolute d-md-none"
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg.png" }
         alt="Gradient background element"
         />
         <Image
-        className="redlogo img-fluid position-absolute d-m-none"
+        className="redlogo position-absolute d-m-none"
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/RedLogo.png" }
         alt="Gradient background element"
         />
@@ -58,9 +58,9 @@ export const Hero = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 100rem;
+  height: 100vh;
   .gradient_img_bg {
-    z-index: 1;
+    z-index: 2;
     height: 90%;
     width: 75%;
     top: 16rem;
@@ -88,10 +88,10 @@ const HeroContainer = styled.section`
   }
   .RE_img_bg {
     z-index: 1;
-    height: 40% !important;
-    top: 30%;
+    width: 47% !important;
+    top: 24%;
+    opacity: .3;
     right: 0;
-    opacity: 0.2;
   }
   .hero_subtitle {
     font-size: 3.4rem;

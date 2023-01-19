@@ -5,10 +5,10 @@ import { Pagination, Navigation } from "swiper";
 
 export const Beneficios = () => {
   return (
-    <BeneficiosSection>
+    <BeneficiosSection className="d-flex align-items-center justify-content-center flex-column">
       <div className="services-title container text-center mt-5 pt-5">
         <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-semi-bold fs-35 fst-italic">
+          <span className="text-dark fw-semi-bold fs-35">
             Beneficios de ser parte de la comunidad Red Enlace
           </span>
         </h3>
@@ -22,9 +22,10 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
-                Ahorro garantizado,
-                <br /> hasta 35%
+              <p className="card-title lh-sm text-dark pt-5 fst-italic">
+                Ahorro <br />
+                garantizado, hasta <br />
+                35%
               </p>
             </div>
           </div>
@@ -35,7 +36,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5 fst-italic">
                 Pago de siniestros en
                 <br /> menos de 72 horas
               </p>
@@ -48,7 +49,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5 fst-italic">
                 Ayuda diaria por <br /> hospitalización
               </p>
             </div>
@@ -60,7 +61,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-normal lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5 fst-italic">
                 En caso de enfermedades <br />
                 graves nosotros pagamos <br />
                 tu deducible
@@ -230,10 +231,11 @@ const BeneficiosSection = styled.section`
   }
 
   @media (min-width: 767px) {
-    height: 80rem;
+    height: 100vh;
+    padding-bottom: 0rem;  
     .card {
-      width: 19rem;
-      height: 20rem;
+      width: 25rem;
+      height: 25rem;
 
       .icon-height {
         width: auto;
@@ -245,7 +247,7 @@ const BeneficiosSection = styled.section`
     }
 
     .fs-35 {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
     }
 
     .card-title {

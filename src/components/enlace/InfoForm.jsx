@@ -6,8 +6,8 @@ export const InfoForm = () => {
     <InfoFormSection className="d-flex justify-content-center align-items-center">
       <div className="container d-none d-md-block">
         <p className="fw-normal fs-25 text-center my-5 pb-5">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario<br /> y nos contactaremos contigo a la brevedad.</p>
-        <div className="container card contact-form round rounded-5 contact-form d-flex">
-          <Form className="p-5 my-auto mx-5">
+        <div className="container card contact-form round rounded-5 contact-form d-flex mb-5">
+          <Form className="p-15">
             <div className="row d-flex justify-content-between">
               <div className="col-5 align-middle ">
                 <Form.Group className="mb-5" controlId="formBasicEmail">
@@ -34,8 +34,8 @@ export const InfoForm = () => {
             </div>
           </Form>
         </div>
-        <div className="mt-5 d-flex justify-content-center">
-          <button varianr="primary" class="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
+        <div className="mt-5 pt-5 d-flex justify-content-center">
+          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
         </div>
       </div>
 
@@ -76,7 +76,7 @@ export const InfoForm = () => {
 };
 
 const InfoFormSection = styled.section`
-  height: 50vh;
+  height: 60vh;
   padding-top: 0; 
   padding-bottom: 0;
 
@@ -89,9 +89,13 @@ const InfoFormSection = styled.section`
     opacity: 0.2;
   }
 
+  .p-15 {
+    padding: 8rem;
+  }
+
   .contact-form {
     z-index: 5;
-    height: 35rem;
+    height: 100%;
     background-color: white;
     border: none;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);;
@@ -115,11 +119,11 @@ const InfoFormSection = styled.section`
   }
 
   .fs-25 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 768px) {
-    height: 81vh;
+    height: 100vh;
 
     .contact-form {
       height: auto;

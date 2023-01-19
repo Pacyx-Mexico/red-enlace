@@ -22,14 +22,14 @@ export const Contact = () => {
               </div>
               <div className="col-5">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Control as="textarea" type="text" placeholder="Mensaje:" className="pill fs-3 p-5 form-rounded shadow" style={{ height: '22rem' }}/>
+                  <Form.Control as="textarea" type="text" placeholder="Mensaje:" className="pill fs-35 p-5 form-rounded shadow" style={{ height: '26rem' }}/>
                 </Form.Group>
               </div>
             </div>
           </Form>
         </div>
         <div className="mt-5 d-flex justify-content-center">
-          <button varianr="primary" class="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
+          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ export const Contact = () => {
           </Form>
         </div>
         <div className="container mt-5 d-flex justify-content-center">
-          <button varianr="primary" class="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
+          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
         </div>
       </div>
     </ContactSection>
