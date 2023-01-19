@@ -17,7 +17,7 @@ export const EnlaceHero = () => {
       />
       <div className="d-flex align-items-center position-absolute w-50 h-100 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark text-start">
+          <h2 className="mb-4 pr-xxl-5 fw-normal fs-65 z-index text-dark text-start">
             Enlaces
           </h2>
           <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
@@ -109,7 +109,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.5rem;
+    font-size: 2.79rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
@@ -130,7 +130,7 @@ const HeroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 80rem;
+    height: 100vh;
 
     .gradient_img_bg {
       height: 90%;
@@ -154,6 +154,10 @@ const HeroContainer = styled.section`
     .home__info-mb {
       position: absolute;
       top: 20rem;
+    }
+
+    .fs-65 {
+      font-size: 7.5rem;;
     }
 
     .man_img-mb {

@@ -19,7 +19,7 @@ export const HeroAutos = () => {
         <div className="hero-title d-flex flex-column justify-content-start text-center align-items-start">
           <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark fs-65 text-start">
             Devolución de deducible <br />
-            <span className="fst-italic">Autos</span>
+            Autos
           </h2>
           <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
             Te cuidamos. Te devolvemos tu deducible de manera garantizada
@@ -67,7 +67,7 @@ const HeroContainer = styled.section`
   height: 100rem;
   .gradient_img_bg {
     z-index: 1;
-    height: 60%;
+    height: 83%;
     width: auto;
     top: 16rem;
     right: 0;
@@ -86,7 +86,8 @@ const HeroContainer = styled.section`
   }
 
   .fs-65 {
-    font-size: 6rem;
+    font-size: 7.5rem;
+    margin-top:14rem;
   }
 
   .img-fluid {
@@ -110,7 +111,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.5rem;
+    font-size: 2.79rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
