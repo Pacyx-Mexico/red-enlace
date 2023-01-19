@@ -39,102 +39,99 @@ export const Services = () => {
   return (
     <ServicesContainer>
       {/* {map.services(service => console.log(service))} */}
-      <div className="d-flex justify-content-center flex-column mb-lg pb-5 d-none d-lg-block">
+      <div className="d-flex justify-content-center flex-column d-none d-lg-block">
         <div className="text-center mt-5 pt-5 position-relative">
           <div className="position-relative">
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png" alt="" className="hand hand-right position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png" alt="" className="hand hand-right position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND1.png" alt="" className="hand hand-left position-absolute"/>
           </div>
-          <div className="primary-title-h pt-5 mt-5">
+          <div className="primary-title-hdesk py-5 mt-5">
             <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">¿Qué nos hace únicos?</h2>
-            <p className="fs-11 mb-5 mt-5 pt-5 fw-normal">
-              Devolución <br />
-              <span className="fw-bold fs-10-">de deducible</span>
-            </p>
-            <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5">
-            Es una asistencia que en caso de que te hospitalicen,<br />
-            te reembolsa un porcentaje fijo del deducible  de<br />
-            tu  póliza de gastos médicos mayores.
-            </p>
-            <p className="fs-25">
-              Con nosotros, tú eliges el porcentaje: 
-              <br />
-              <span className="fw-bold">
-                30, 50, 80 o hasta 100%
-              </span>
-            </p>
+            <div className="d-flex py-5 flex-column bg-blue">
+              <p className="fs-11 mt-5 pt-5 fw-normal text-white">
+                Devolución <span className="fw-semibold">de deducible</span>
+              </p>
+              <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5 text-white">
+              Somos la empresa pionera en la creación de asistencias <br />
+              pensadas 100% en las necesitas en las necesidades de nuestros clientes. <br />
+              Reescribimos la historia de las asistencias de seguros <br />
+              para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente<br />
+              en tu auto, de enfermedad o en caso de ser hospitalizado.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="services-title container-fluid text-center d-none d-lg-block my-5 py-5">
-        <h3 className="pb-5 mb-5 fw-semi-bold text-dark mt-5">
-        Conoce nuestros productos
-        </h3>
-      </div>
-      <div className="container-fluid py-3 px-5 position-relative d-none d-lg-block">
-        <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
-          <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-            <Link
-              to="/deducible-gastos-medicos"
-              className="w-100 text-decoration-none"
-            >
-              <div className="card border border-4 border-first text-center position-relative card-hover_first">
-                <div className="position-absolute d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                    alt="Gastos medicos hombre"
-                    className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
-                  />
+      <div className="bg-gradient-blue mt-5 pt-5">
+        <div className="services-title container-fluid text-center d-none d-lg-block pt-1 pb-5">
+          <h3 className="mb-5 fw-semi-bold text-dark">
+          Conoce nuestros productos
+          </h3>
+        </div>
+        <div className="container-fluid px-5 vh-100 position-relative d-none d-lg-block">
+          <div className="row px-5 mb-5 mr-5 ml-5 d-flex justify-content-around gap-5">
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+              <Link
+                to="/deducible-gastos-medicos"
+                className="w-100 text-decoration-none"
+              >
+                <div className="card border border-4 border-first text-center position-relative card-hover_first">
+                  <div className="position-absolute d-flex align-items-center justify-content-center">
+                    <img
+                      src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
+                      alt="Gastos medicos hombre"
+                      className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
-                  Devolución de deducible
-                  <br />
-                  Gastos Médicos
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-            <Link to="/deducible-autos" className="w-100 text-decoration-none">
-              <div className="card border border-4 border-second text-center position-relative card-hover_second">
-                <div className="position-absolute d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                    alt="hombre auto"
-                    className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
-                  />
+                <div className="mt-5 d-flex justify-content-center w-100">
+                  <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                    Devolución de deducible
+                    <br />
+                    Gastos Médicos
+                  </p>
                 </div>
-              </div>
-              <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
-                  Devolución de deducible
-                  <br />
-                  Autos
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-            <Link to="/enlace" className="w-100 text-decoration-none">
-              <div className="card border border-4 border-fourth text-center position-relative card-hover_third">
-                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
-                    alt="hombre auto"
-                    className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
-                  />
+              </Link>
+            </div>
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+              <Link to="/deducible-autos" className="w-100 text-decoration-none">
+                <div className="card border border-4 border-second text-center position-relative card-hover_second">
+                  <div className="position-absolute d-flex align-items-center justify-content-center">
+                    <img
+                      src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
+                      alt="hombre auto"
+                      className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
-                  Enlaces
-                </p>
-              </div>
-            </Link>
+                <div className="mt-5 d-flex justify-content-center w-100">
+                  <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                    Devolución de deducible
+                    <br />
+                    Autos
+                  </p>
+                </div>
+              </Link>
+            </div>
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+              <Link to="/enlace" className="w-100 text-decoration-none">
+                <div className="card border border-4 border-fourth text-center position-relative card-hover_third">
+                  <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
+                    <img
+                      src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
+                      alt="hombre auto"
+                      className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
+                    />
+                  </div>
+                </div>
+                <div className="mt-5 d-flex justify-content-center w-100">
+                  <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                    Enlaces
+                  </p>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -143,28 +140,22 @@ export const Services = () => {
       <div className="d-flex justify-content-center flex-column mb-lg pb-5">
         <div className="text-center mt-5 pt-5 position-relative">
           <div className="">
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/gradiente+azul.png" alt="Fondo azul" className="bg-gradient position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/left-hand.png" alt="" className="hand hand-right position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/right-hand.png" alt="" className="hand hand-left position-absolute"/>
+            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png" alt="" className="hand hand-right position-absolute"/>
           </div>
           <div className="primary-title-h pt-5 mt-5">
             <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">¿Qué nos hace únicos?</h2>
-            <p className="fs-11 mb-5 mt-5 pt-5 fw-normal">
-              Devolución <br />
-              <span className="fw-bold fs-10-">de deducible</span>
-            </p>
-            <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5">
-            Es una asistencia que en caso de que te hospitalicen,<br />
-            te reembolsa un porcentaje fijo del deducible  de<br />
-            tu  póliza de gastos médicos mayores.
-            </p>
-            <p className="fs-25">
-              Con nosotros, tú eliges el porcentaje: 
-              <br />
-              <span className="fw-bold">
-                30, 50, 80 o hasta 100%
-              </span>
-            </p>
+            <div className="d-flex py-5 flex-column bg-blue">
+              <p className="fs-11 mt-5 pt-5 fw-normal text-white">
+                Devolución <span className="fw-semibold">de deducible</span>
+              </p>
+              <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5 text-white">
+              Somos la empresa pionera en la creación de asistencias <br />
+              pensadas 100% en las necesitas en las necesidades de nuestros clientes. <br />
+              Reescribimos la historia de las asistencias de seguros <br />
+              para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente<br />
+              en tu auto, de enfermedad o en caso de ser hospitalizado.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -256,6 +247,13 @@ const ServicesContainer = styled.section`
     color: #6983d6;
   }
 
+  .bg-blue {
+    background: #5371d1;
+    position: relative;
+    z-index: -1;
+    margin: 0 5%;
+  }
+
   .icon svg {
     width: 30px;
     height: 30px;
@@ -273,10 +271,6 @@ const ServicesContainer = styled.section`
 
   .mb-5 {
     margin-bottom: 5rem !important;
-  }
-
-  .mb-lg {
-    margin-bottom: 15rem;
   }
 
   .text-,
@@ -451,7 +445,7 @@ const ServicesContainer = styled.section`
   }
 
   .fs-25 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   @media (min-width: 576px) {
@@ -472,14 +466,9 @@ const ServicesContainer = styled.section`
       gap: 9rem;
     }
 
-    .hand-left {
-      right: -8%;
-      top: 0rem;
-      width: auto;
-      height: 36rem;
-    }
 
     .hand-right {
+      z-index: 1;
       left: -56px;
       top: 30rem;
       width: auto;
@@ -488,12 +477,16 @@ const ServicesContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     .services-title-mb h3 {
       padding: 0 3rem 15rem;
       text-align: start;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
     }
 
     .card {
@@ -534,10 +527,10 @@ const ServicesContainer = styled.section`
     }
     
     .hand-right {
-      left: -71px;
-      top: 51rem;
+      left: 65.8%;
+      top: 87%;
       width: auto;
-      height: 40rem;
+      height: 20.6%;
     }
 
     .hand-left {
@@ -546,10 +539,18 @@ const ServicesContainer = styled.section`
       width: auto;
       height: 63rem;
     }
+
+    
+    .primary-title-hdesk {
+      height: 100vh;    
+      padding: 4.6%;
+    }
   }
 
   @media (min-width: 992px) {
-    height: 245rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 210vh;
     .card {
       width: 34rem;
       height: 53.5rem;
@@ -576,9 +577,21 @@ const ServicesContainer = styled.section`
       margin-bottom: 15rem;
     }
 
+    .bg-blue {
+      background: #5371d1;
+      position: relative;
+      z-index: -1;
+    }
+
+    .bg-gradient-blue {
+      background-image: linear-gradient(#fff, #bec9eb);
+      padding:0 10rem;
+      margin:0 10rem;
+      height: 90vh;
+    }
 
     .fs-11 {
-      font-size: 12rem;
+      font-size: 7.5rem;
       line-height: 9rem;
     }
 
@@ -606,7 +619,7 @@ const ServicesContainer = styled.section`
     }
 
     .fs-10 {
-      font-size: 6rem;
+      font-size: 5.5rem;
     }
 
     .bg-gradient {
@@ -618,27 +631,28 @@ const ServicesContainer = styled.section`
     }
 
     .fs-25 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
+      line-height: 3.4rem;
     }
     
     .hand {
-      z-index: -1;
+      z-index: 1;
       width: auto;
       height: 55rem;
     }
 
     .hand-left {
-      left: 70%;
+      right: 64.3%;
       top: 20rem;
-      width: auto;
-      height: 55rem;
+      width: 31.1%;
+      height: auto;
     }
 
     .hand-right {
-      left: -10%;
-      top: 80rem;
-      width: auto;
-      height: 35rem;
+      left: 65.4%;
+      top: 62rem;
+      width: 30%;
+      height: auto;
     }
   }
 `;
