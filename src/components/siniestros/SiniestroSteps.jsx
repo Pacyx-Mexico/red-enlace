@@ -12,9 +12,8 @@ export const SiniestroSteps = () => {
     <ServicesContainer className="position-relative">
       {/* {map.services(service => console.log(service))} */}
       <div className="services-title container-fluid text-center d-none d-lg-block">
-        <h3 className="pb-2 fw-normal text-dark mt-5">
-          Sigue estos
-          <span className="text-black fw-bold"> 3 sencillos pasos</span>
+        <h3 className="pb-2 fw-normal fs-40 text-dark mt-5">
+          Sigue estos 3 sencillos pasos
         </h3>
       </div>
       <div className="container-fluid text-center d-lg-none">
@@ -22,12 +21,12 @@ export const SiniestroSteps = () => {
           Conoce nuestros productos
         </h4>
       </div>
-      <div className="container-fluid py-3 position-relative d-none d-lg-block">
-        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex w-50 justify-content-start gap-5">
+      <div className="container-fluid position-relative d-none d-lg-block ms-10">
+        <div className="flex-column d-flex w-50 justify-content-start gap-5">
           <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">
-                < Point />
+                <Point />
                 <h2 className="ms-5 number-fs fst-italic">Paso 1</h2>
               </div>
             </div>
@@ -36,26 +35,27 @@ export const SiniestroSteps = () => {
                 Selecciona el producto
               </p>
             </div>
-            <hr className="custom-hr"/>
+            <hr className="custom-hr" />
           </div>
           <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">
-                < Point />
+                <Point />
                 <h2 className="ms-5 number-fs fst-italic">Paso 2</h2>
               </div>
             </div>
             <div className="ms-5 ps-3 d-flex w-100">
               <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
-                Descarga y requisita los formatos correspondientes, no olvides firmarlos
+                Descarga y requisita los formatos correspondientes, no olvides
+                firmarlos
               </p>
             </div>
-            <hr className="custom-hr"/>
+            <hr className="custom-hr" />
           </div>
           <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">
-                < Point />
+                <Point />
                 <h2 className="ms-5 number-fs fst-italic">Paso 3</h2>
               </div>
             </div>
@@ -64,16 +64,20 @@ export const SiniestroSteps = () => {
                 Completa tu información y adjunta la documentación solicitada
               </p>
             </div>
-            <hr className="custom-hr"/>
+            <hr className="custom-hr" />
           </div>
         </div>
-        <div className="d-flex justify-content-center w-100 mt-5 pt-5">
-            <div onClick={scrollTop}>
-              <Link to="/reclamacion-siniestros/select" className="headerTitle__btn">
-                <Button text="Reclamar siniestro" />
-              </Link>
-            </div>
-          </div>
+      </div>
+
+      <div className="justify-content-center w-100 mt-5 pt-5 d-none d-lg-flex">
+        <div onClick={scrollTop}>
+          <Link
+            to="/reclamacion-siniestros/select"
+            className="headerTitle__btn"
+          >
+            <Button text="Reclamar siniestro" />
+          </Link>
+        </div>
       </div>
 
       <div className="container-fluid py-3 position-relative d-lg-none">
@@ -160,7 +164,10 @@ export const SiniestroSteps = () => {
           </div>
           <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
-              <Link to="/reclamacion-siniestros/select" className="headerTitle__btn">
+              <Link
+                to="/reclamacion-siniestros/select"
+                className="headerTitle__btn"
+              >
                 <Button text="Reclamar siniestro" />
               </Link>
             </div>
@@ -345,7 +352,7 @@ const ServicesContainer = styled.section`
     }
 
     .card-title {
-      font-size: 3.5rem; 
+      font-size: 3.5rem;
     }
 
     .w-76 {
@@ -394,15 +401,14 @@ const ServicesContainer = styled.section`
     }
 
     .card-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
-    
+
     .w-76 {
       width: 153rem;
     }
   }
 
-  
   @media (min-width: 992px) {
     .card {
       width: 36rem;
@@ -410,8 +416,8 @@ const ServicesContainer = styled.section`
     }
 
     .custom-hr {
-      height: .5rem;
-      background: #c5e3d6;  
+      height: 0.5rem;
+      background: #c5e3d6;
       border-top: none;
       opacity: 1;
       border-radius: 20rem;
@@ -430,10 +436,18 @@ const ServicesContainer = styled.section`
       right: 0.9rem;
     }
 
+    .ms-10 {
+      margin-left: 13rem;
+    }
+
     .card_img-width_third {
       width: 35.9rem;
       top: -8.4rem;
       right: 3rem;
+    }
+
+    .fs-40 {
+      font-size: 4rem;
     }
   }
 `;

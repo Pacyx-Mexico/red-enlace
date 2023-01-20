@@ -8,13 +8,12 @@ export const Cobertura = () => {
   return (
     <CoberturaSection>
       <div className="services-title container text-center mt-5 pt-5">
-        <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-semi-bold fs-35 fst-italic">
-            Personaliza tu protección con
-          </span>
+        <h3 className="pb-2 fw-normal fs-35 text-dark">
+            Personaliza tu protección con <br />
+            nuestras coberturas adicionales
         </h3>
         <h3 className="text-dark fw-semi-bold fs-35 fst-italic text-center">
-          nuestras coberturas adicionales
+          
         </h3>
       </div>
       <div className="container py-3 position-relative d-none d-md-block">
@@ -181,7 +180,7 @@ export const Cobertura = () => {
       <div className="container h-75 py-3 d-md-none">
         <div className="mx-5 dudas__container gap-5">
           <div>
-            <h4 className="fst-italic text-center my-5 py-5">
+            <h4 className="fst-italic  text-center my-5 py-5">
               Resolvemos tus dudas
             </h4>
           </div>
@@ -385,7 +384,7 @@ const CoberturaSection = styled.section`
     }
 
     .fs-35 {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
     }
 
     .fs-25 {

@@ -48,7 +48,7 @@ export const Testimonies = () => {
       </div>
       <div className="container position-relative d-none d-md-block">
         <div className="testimonials__title mb-5 pb-5">
-          <h3 className="text-center fw-normal text-dark">Testimoniales</h3>
+          <h3 className="text-center fw-normal fs-55 text-dark">Testimoniales</h3>
           <div className="d-flex flex-row justify-content-center">
             <div className="m-3">
               <StarIcon />
@@ -68,7 +68,7 @@ export const Testimonies = () => {
           </div>
         </div>
         <div className="container" key={key}>
-          {/* <animated.div style={scrolling}> */}
+          <animated.div style={scrolling}>
             <div className="d-flex flex-row">
               <div className="d-flex">
                 <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark p-3 pt-xxl-5 px-md-5 mx-5 my-5">
@@ -126,7 +126,7 @@ export const Testimonies = () => {
                 </div>
               </div>
             </div>
-          {/* </animated.div> */}
+          </animated.div>
         </div>
       </div>
 
@@ -216,6 +216,7 @@ const TestimonialsSection = styled.section`
   height: 80vh;
   padding-top: 5rem;
   padding-bottom: 10rem;
+  overflow: hidden;
 
   .RE_img_bg {
     z-index: -1;
@@ -236,12 +237,16 @@ const TestimonialsSection = styled.section`
     box-shadow: rgba(255, 255, 255);
     border-radius: 30px;
     border: none;
-    width: 30% !important;
+    width: 30%;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     color: #707070;
+  }
+
+  .fs-55 {
+    font-size: 5.5rem;
   }
 
   .swiper-button-next:after,
@@ -264,7 +269,8 @@ const TestimonialsSection = styled.section`
 
   @media (max-width: 768px) {
     .testimonials__carousel-bg {
-      border-radius: 4rem;
+      border-radius: 4rem; 
+      width: 95%;
     }
   }
 `;

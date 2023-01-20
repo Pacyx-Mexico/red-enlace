@@ -11,11 +11,11 @@ export const Dudes = () => {
   return (
     <DudesSection className="container d-block text-center fs-2">
       <div className="container my-5">
-        <Accordion allowZeroExpanded className="border-none">
+        <Accordion allowZeroExpanded className="border-none d-flex flex-column gap-5">
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Cómo funciona?
+                <span className="secondary-color3 me-4 mb-5 pb-5">&#8226; </span> ¿Cómo funciona?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
@@ -31,7 +31,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1ps-5">
+              <p className="fw-normal fs-1 ps-5">
                 Operamos con cualquier compañía aseguradora dentro del territorio nacional.
               </p>
             </AccordionItemPanel>

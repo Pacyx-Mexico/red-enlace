@@ -17,11 +17,11 @@ export const GastosMedicosHero = () => {
       />
       <div className="align-items-center position-relative top-25 w-50 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pt-5 fs-65 fw-500 z-index text-dark text-start">
+          <h2 className="mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start">
             Devolución de deducible <br />
             <span>Gastos Médicos</span>
           </h2>
-          <p className="text-secondary mb-4 lh-sm hero_subtitle fw-light">
+          <p className="text-secondary mb-4 lh-md hero_subtitle fw-light">
             Te cuidamos. Te devolvemos tu deducible de manera garantizada
           </p>
           <div onClick={scrollTop}>
@@ -85,6 +85,7 @@ const HeroContainer = styled.section`
 
   .hero-title {
     margin-left: 10rem;
+    margin-bottom: 7.5rem;
   }
 
   .img-fluid {
@@ -178,7 +179,7 @@ const HeroContainer = styled.section`
     }
 
     .fs-65 {
-      font-size: 7.5rem;
+      font-size: 7rem;
       margin-top: 14rem;
     }
   }

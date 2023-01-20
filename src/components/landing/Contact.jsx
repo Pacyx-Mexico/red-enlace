@@ -5,7 +5,7 @@ export const Contact = () => {
   return (
     <ContactSection className="position-relative">
       <div className="container d-none d-md-block">
-        <h4 className="fw-normal text-start mb-5 pb-5">¡Contáctanos!</h4>
+        <h4 className="fw-normal fs-55 text-start mb-5 pb-5">¡Contáctanos!</h4>
         <div className="container card contact-form round rounded-5 contact-form d-flex">
           <Form className="p-5 my-auto mx-5">
             <div className="row d-flex justify-content-between">
@@ -87,6 +87,10 @@ const ContactSection = styled.section`
   .form-rounded {
     border-radius: 2rem;
     border: none;
+  }
+
+  .fs-55 {
+    font-size: 5.5rem;
   }
 
   .fs-35, textarea {

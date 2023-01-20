@@ -63,9 +63,9 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-blue mt-5 pt-5">
-        <div className="services-title container-fluid text-center d-none d-lg-block pt-1 pb-5">
-          <h3 className="mb-5 fw-semi-bold text-dark">
+      <div className="bg-gradient-blue mt-5 pt-5 d-none d-lg-block">
+        <div className="services-title container-fluid text-center pt-1 pb-5">
+          <h3 className="mb-5 fs-10 fw-normal text-dark">
           Conoce nuestros productos
           </h3>
         </div>
@@ -139,32 +139,26 @@ export const Services = () => {
       <div className="container-fluid py-3 position-relative d-lg-none">
       <div className="d-flex justify-content-center flex-column mb-lg pb-5">
         <div className="text-center mt-5 pt-5 position-relative">
-          <div className="">
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png" alt="" className="hand hand-right position-absolute"/>
-          </div>
-          <div className="primary-title-h pt-5 mt-5">
-            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">¿Qué nos hace únicos?</h2>
+          <div className="primary-title-h">
+            <h2 className="fs-11 mb-5 pb-5 fw-bold">¿Qué nos hace únicos?</h2>
             <div className="d-flex py-5 flex-column bg-blue">
-              <p className="fs-11 mt-5 pt-5 fw-normal text-white">
+              <p className="fs-35 mt-5 pt-5 fw-normal text-white">
                 Devolución <span className="fw-semibold">de deducible</span>
               </p>
-              <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5 text-white">
-              Somos la empresa pionera en la creación de asistencias <br />
-              pensadas 100% en las necesitas en las necesidades de nuestros clientes. <br />
-              Reescribimos la historia de las asistencias de seguros <br />
-              para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente<br />
-              en tu auto, de enfermedad o en caso de ser hospitalizado.
+              <p className="fs-1 fw-normal mb-5 py-5 px-5 mx-5 mt-5 text-white">
+              Somos la empresa pionera en la creación de asistencias pensadas 100% en las necesitas en las necesidades de nuestros clientes.
+              Reescribimos la historia de las asistencias de seguros para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente en tu auto, de enfermedad o en caso de ser hospitalizado.
               </p>
             </div>
           </div>
         </div>
       </div>
         <div className="services-title-mb container-fluid text-center d-lg-none">
-          <h4 className="fw-semi-bold fs-35 text-dar mb-5 pb-5">
+          <h4 className="fw-semi-bold fs-11 text-dar mb-5 pb-5 mt-5 pt-5">
             Conoce nuestros productos
           </h4>
         </div>
-        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
+        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5 bg-gradient-blue">
           <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
             <Link
               to="/deducible-gastos-medicos"
@@ -303,6 +297,13 @@ const ServicesContainer = styled.section`
   .card {
     width: 41rem;
     height: 64rem;
+  }
+
+  .bg-gradient-blue {
+    background-image: linear-gradient(#fff,#bec9eb);
+    padding: 0 10rem;
+    margin: 0 10rem;
+    height: 100%;
   }
 
   .card_img-width_first {
@@ -445,7 +446,7 @@ const ServicesContainer = styled.section`
   }
 
   .fs-25 {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   @media (min-width: 576px) {
@@ -466,14 +467,17 @@ const ServicesContainer = styled.section`
       gap: 9rem;
     }
 
+    .fs-25 {
+      font-size: 2.5rem;
+    }
 
     .hand-right {
       z-index: 1;
-      left: -56px;
-      top: 30rem;
-      width: auto;
-      height: 23rem;
-    }
+    left: 54.8%;
+    top: 87%;
+    width: auto;
+    height: 20rem;
+}
   }
 
   @media (min-width: 768px) {
@@ -543,7 +547,6 @@ const ServicesContainer = styled.section`
     
     .primary-title-hdesk {
       height: 100vh;    
-      padding: 4.6%;
     }
   }
 
@@ -642,14 +645,14 @@ const ServicesContainer = styled.section`
     }
 
     .hand-left {
-      right: 64.3%;
+      right: 63.9%;
       top: 20rem;
       width: 31.1%;
       height: auto;
     }
 
     .hand-right {
-      left: 65.4%;
+      left: 65%;
       top: 62rem;
       width: 30%;
       height: auto;

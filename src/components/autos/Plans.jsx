@@ -12,13 +12,14 @@ export const Plans = () => {
   return (
     <PlansSection>
       <div className="services-title container text-center d-none d-md-block">
-        <h5 className="text-dark fs-45 text-center pt-4">
+        <h5 className="text-dark fs-45 fw-normal text-center pt-4">
           Descubre nuestros paquetes disponibles
         </h5>
       </div>
       <div className="services-title container text-center d-md-none">
-        <h5 className="text-dark fs-40 fw-semi-bold text-center pt-4">
-          Descubre nuestros paquetes disponibles
+        <h5 className="text-dark fs-40 fst-italic fw-semi-bold text-center pt-4">
+          Descubre nuestros <br />
+          paquetes disponibles
         </h5>
       </div>
       <div className="container py-3 d-none d-lg-block">
@@ -314,7 +315,7 @@ const PlansSection = styled.section`
   padding-top: 10rem;
   padding-bottom: 10rem;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   hr {
     margin-top: 10rem !important;

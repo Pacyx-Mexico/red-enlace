@@ -89,7 +89,7 @@ const HeroContainer = styled.section`
   .RE_img_bg {
     z-index: 1;
     width: 47% !important;
-    top: 24%;
+    top: 30%;
     opacity: .3;
     right: 0;
   }

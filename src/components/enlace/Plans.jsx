@@ -11,12 +11,11 @@ export const Plans = () => {
   return (
     <PlansSection>
       <div className="services-title container text-center d-none d-lg-block">
-        <h5 className="text-dark fs-25 fw-semi-bold text-center pt-4 fst-italic">
-          Asistencia a tu medida
+        <h5 className="text-dark fs-45 fw-normal text-center pt-4">
+          Asistencia a tu medida <br />
+          <span className="fw-light fs-40">
+          Ahorra en el pago de tu póliza de Gastos Médicos </span>
         </h5>
-        <p className="fs-20 fw-light">
-          Ahorra en el pago de tu póliza de Gastos Médicos
-        </p>
       </div>
       <div className="container py-3 d-none d-lg-block">
         <div className="row d-flex justify-content-around">
@@ -26,7 +25,7 @@ export const Plans = () => {
                 <p className="fs-25 mb-0">Enlace Max</p>
               </div>
               <div className="d-flex flex-column card-body align-items-center justify-content-center pb-0">
-                <p className="card-title fst-italic lh-sm text-primary">
+                <p className="card-title lh-sm text-primary">
                   <span className="fw-bold green-text">Aumentamos el deducible</span> <br />
                   de tu póliza actual para 
                   bajar el costo y, en caso de 
@@ -43,7 +42,7 @@ export const Plans = () => {
                 <p className="fs-25 mb-0">Enlace Total</p>
               </div>
               <div className="card-body d-flex flex-column card-body align-items-center justify-content-center pb-0">
-                <p className="card-title fst-italic lh-sm text-primary">
+                <p className="card-title lh-sm text-primary">
                   <span className="fw-bold green-text">Aumentamos el coaseguro</span> <br />
                   de tu póliza actual para 
                   bajar el costo y, en caso de 
@@ -60,7 +59,7 @@ export const Plans = () => {
                 <p className="fs-25 mb-0">Enlace Max Total</p>
               </div>
               <div className="card-body d-flex flex-column card-body align-items-center justify-content-center pb-0">
-                <p className="card-title fst-italic lh-sm text-primary">
+                <p className="card-title lh-sm text-primary">
                   <span className="fw-bold green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> 
                   para bajar el costo y, 
                   en caso de siniestro, Red 
@@ -263,6 +262,14 @@ const PlansSection = styled.section`
 
   .fs-20 {
       font-size: 18px;
+  }
+
+  .fs-40 {
+    font-size: 4rem;
+  }
+
+  .fs-45 {
+    font-size: 4.5rem;
   }
 
   @media (min-width: 576px) {

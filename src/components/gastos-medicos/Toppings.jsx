@@ -7,11 +7,9 @@ export const Toppings = () => {
   return (
     <CharacteristicSection className="d-flex justify-content-center flex-column">
       <div className="services-title container text-center">
-        <h3 className="pb-2 fw-semi-bold fs-35 text-dark">
-          Personaliza tu protección con nuestras coberturas adicionales <br />
-          <span className="text-dark fw-semi-bold fst-italic text-center">
-            Trabajamos para superar tus expectativas con:
-          </span>
+        <h3 className="pb-2 fw-normal fs-55 text-dark">
+          Personaliza tu protección con <br />
+          nuestras coberturas adicionales
         </h3>
       </div>
       <div className="container py-3 position-relative d-none d-md-block">
@@ -186,6 +184,10 @@ const CharacteristicSection = styled.section`
     font-size: 2.13rem;
   }
 
+  .fs-55 {
+    font-size: 4rem;
+  }
+
   .card {
     width: 19rem;
     height: 19rem;
@@ -210,7 +212,7 @@ const CharacteristicSection = styled.section`
   }
 
   .services-title {
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   @media (max-width: 576px) {

@@ -157,7 +157,7 @@ const HeroContainer = styled.section`
     }
 
     .fs-65 {
-      font-size: 7.5rem;;
+      font-size: 7rem;;
     }
 
     .man_img-mb {

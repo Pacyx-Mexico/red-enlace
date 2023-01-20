@@ -8,7 +8,7 @@ export const Beneficios = () => {
     <BeneficiosSection className="d-flex align-items-center justify-content-center flex-column">
       <div className="services-title container text-center mt-5 pt-5">
         <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-semi-bold fs-35">
+          <span className="text-dark fw-normal fs-40">
             Beneficios de ser parte de la comunidad Red Enlace
           </span>
         </h3>
@@ -246,7 +246,7 @@ const BeneficiosSection = styled.section`
       }
     }
 
-    .fs-35 {
+    .fs-40 {
       font-size: 4.5rem;
     }
 
