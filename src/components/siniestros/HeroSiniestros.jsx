@@ -9,7 +9,7 @@ export const HeroSiniestros = () => {
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+733.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center position-absolute top-50 w-100 d-none d-md-flex ms-5 ps-5">
+      <div className="align-items-center position-absolute top-50 w-100 d-none d-md-flex ms-10">
         <div className="home__info d-flex flex-column justify-content-center text-start align-items-start">
           <h2 className="mb-4 pr-xxl-5 fw-medium z-index text-start h2-heading text-black">
             ¿Qué hacer en <br />

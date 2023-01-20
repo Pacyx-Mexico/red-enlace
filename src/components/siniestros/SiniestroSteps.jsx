@@ -22,8 +22,8 @@ export const SiniestroSteps = () => {
           Conoce nuestros productos
         </h4>
       </div>
-      <div className="container-fluid py-3 position-relative d-none d-lg-block">
-        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex w-50 justify-content-start gap-5">
+      <div className="container-fluid position-relative d-none d-lg-block ms-10">
+        <div className="flex-column d-flex w-50 justify-content-start gap-5">
           <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">

@@ -31,7 +31,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1ps-5">
+              <p className="fw-normal fs-1 ps-5">
                 Operamos con cualquier compañía aseguradora dentro del territorio nacional.
               </p>
             </AccordionItemPanel>

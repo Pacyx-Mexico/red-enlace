@@ -216,6 +216,7 @@ const TestimonialsSection = styled.section`
   height: 80vh;
   padding-top: 5rem;
   padding-bottom: 10rem;
+  overflow: hidden;
 
   .RE_img_bg {
     z-index: -1;
@@ -236,7 +237,7 @@ const TestimonialsSection = styled.section`
     box-shadow: rgba(255, 255, 255);
     border-radius: 30px;
     border: none;
-    width: 30% !important;
+    width: 30%;
   }
 
   .swiper-button-next,
@@ -264,7 +265,8 @@ const TestimonialsSection = styled.section`
 
   @media (max-width: 768px) {
     .testimonials__carousel-bg {
-      border-radius: 4rem;
+      border-radius: 4rem; 
+      width: 95%;
     }
   }
 `;
