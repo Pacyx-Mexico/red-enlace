@@ -1038,7 +1038,7 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
   height: 100vh;
   .gradient_img_bg {
     z-index: 2;
-    height: 85%;
+    height: 78.5%;
     width: 66%;
     bottom: 0rem;
     opacity: 0.9;
