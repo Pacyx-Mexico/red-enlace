@@ -77,7 +77,52 @@ export const SiniestroSteps = () => {
 
       <div className="container-fluid py-3 position-relative d-lg-none">
         <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-          <div className="d-flex flex-column justify-content-center w-76">
+          <div className="flex-column d-flex w-100 justify-content-start gap-5">
+            <div className="col-auto mb-5">
+              <div className=" text-center card-hover_first">
+                <div className="icon-width d-flex align-items-center">
+                  <Point />
+                  <h2 className="ms-5 number-fs  ">Paso 1</h2>
+                </div>
+              </div>
+              <div className="ms-5 ps-3 d-flex w-100">
+                <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                  Selecciona el producto
+                </p>
+              </div>
+              <hr className="custom-hr" />
+            </div>
+            <div className="col-auto mb-5">
+              <div className=" text-center card-hover_first">
+                <div className="icon-width d-flex align-items-center">
+                  <Point />
+                  <h2 className="ms-5 number-fs  ">Paso 2</h2>
+                </div>
+              </div>
+              <div className="ms-5 ps-3 d-flex w-100">
+                <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                  Descarga y requisita los formatos correspondientes, no olvides
+                  firmarlos
+                </p>
+              </div>
+              <hr className="custom-hr" />
+            </div>
+            <div className="col-auto mb-5">
+              <div className=" text-center card-hover_first">
+                <div className="icon-width d-flex align-items-center">
+                  <Point />
+                  <h2 className="ms-5 number-fs  ">Paso 3</h2>
+                </div>
+              </div>
+              <div className="ms-5 ps-3 d-flex w-100">
+                <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                  Completa tu información y adjunta la documentación solicitada
+                </p>
+              </div>
+              <hr className="custom-hr" />
+            </div>
+          </div>
+          {/* <div className="d-flex flex-column justify-content-center w-76">
             <div className="d-flex align-items-center justify-content-center gap-5">
               <div className="d-flex flex-row align-items-center gap-5 me-5 pe-5">
                 <div className="d-flex flex-column justify-content-center align-items-center gap-5">
@@ -156,7 +201,7 @@ export const SiniestroSteps = () => {
                 </div>
               </div>
             </NavLink>
-          </div>
+          </div> */}
           <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
               <Link

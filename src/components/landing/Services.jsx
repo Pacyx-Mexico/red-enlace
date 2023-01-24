@@ -75,7 +75,7 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-blue mt-5 pt-5 d-none d-lg-block">
+      <div className="bg-gradient-blue d-none d-lg-block">
         <div className="services-title container-fluid text-center pt-1 pb-5">
           <h3 className="fs-10 fw-normal text-dark">
             Conoce nuestros productos

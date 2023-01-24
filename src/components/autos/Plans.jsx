@@ -186,7 +186,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-25">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-3">
                   Contratar
                 </button>
               </Link>
@@ -213,7 +213,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-25">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-3">
                   Contratar
                 </button>
               </Link>

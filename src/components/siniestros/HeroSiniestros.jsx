@@ -29,8 +29,8 @@ export const HeroSiniestros = () => {
             ¿Qué hacer en caso de <br />
             <span className="primary_title fw-normal">siniestro?</span>
           </h2>
-          <p className="mb-4 mb-lg-5 hero_subtitle w-100 px-5 mt-5">
-            Ponemos a tu disposición todo lo necesario <br />
+          <p className="mb-4 mb-lg-5 hero_subtitle w-100 px-5 mt-5 lh-5">
+            Ponemos a tu disposición todo lo necesario
             para la reclamación de un siniestro.
           </p>
         </div>

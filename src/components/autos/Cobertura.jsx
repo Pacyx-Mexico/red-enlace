@@ -132,7 +132,7 @@ export const Cobertura = () => {
                 <p className="card-title fw-medium lh-sm text-dark fs-30">
                   <span className="fw-500 fs">Cristalazo</span>
                 </p>
-                <p className="card-title fw-500 lh-sm text-dark fs-3 mt-5 pt-5">
+                <p className="card-title fw-500 lh-sm text-dark fs-30 mt-5 pt-5">
                   Dev. deducible cristal y
                   <br />
                   $5,000.00 de ayuda por robo
@@ -152,12 +152,12 @@ export const Cobertura = () => {
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
                 <p className="card-title fw-500 lh-sm text-dark fs-30">
-                  <span  className="fw-500 fs">Plataformas con <br />
+                  <span  className="fw-500 fs-30">Plataformas con <br />
                   socios conductores </span>
                   <br />
                   <span>(Cuotas anuales)</span>
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-3 my-3">
+                <p className="card-title fw-normal lh-sm text-dark fs-30 my-3">
                   Por pérdida parcial, total o corralón.
                 </p>
                 <p className="card-title fs-11 fw-500 lh-sm text-dark">
