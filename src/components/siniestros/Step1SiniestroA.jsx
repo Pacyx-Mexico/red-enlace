@@ -24,7 +24,7 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
       <SiniestroAContainer>
         <div className="d-none d-md-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-35 fw-bold mt-5">
+            <h1 className="  fs-35 fw-500 mt-5">
               PASO 1/4:
             </h1>
             <p className="text-center fs-25 fw-normal mt-5">
@@ -62,7 +62,7 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
 
         <div className="d-md-none">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="primary-title-mb fw-bold">
+            <h1 className="primary-title-mb fw-500">
               PASO 1/4:
             </h1>
             <p className="text-center primary-subtitle-mb text-secondary fw-normal pt-5 mt-5">

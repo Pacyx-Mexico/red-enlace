@@ -12,7 +12,7 @@ export const Cobertura = () => {
             Personaliza tu protección con <br />
             nuestras coberturas adicionales
         </h3>
-        <h3 className="pb-2 fw-medium fs-50 fst-italic text-dark d-md-none">
+        <h3 className="pb-2 fw-medium fs-50 text-dark d-md-none">
             Personaliza tu protección  <br />
             con nuestras coberturas <br />
             adicionales
@@ -27,7 +27,7 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-25">
+              <p className="card-title fw-500 lh-sm text-dark fs-25">
                 Llaves perdidas
                 <br />
                 (máximo 1 al año)
@@ -35,7 +35,7 @@ export const Cobertura = () => {
               <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Máxima suma asegurada $5,000
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-30">
+              <p className="card-title fw-500 lh-sm text-dark fs-30">
                 Costo anual: $120.00
               </p>
             </div>
@@ -47,7 +47,7 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-25">
+              <p className="card-title fw-500 lh-sm text-dark fs-25">
                 Cristalazo
               </p>
               <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
@@ -55,7 +55,7 @@ export const Cobertura = () => {
                 <br />
                 $5,000.00 de ayuda por robo
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-30">
+              <p className="card-title fw-500 lh-sm text-dark fs-30">
                 Costo $670.00
               </p>
             </div>
@@ -67,14 +67,14 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-25">
+              <p className="card-title fw-500 lh-sm text-dark fs-25">
                 Plataformas con socios conductores <br />
                 (Cuotas anuales)
               </p>
               <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Por pérdida parcial, total o corralón.
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-30">
+              <p className="card-title fw-500 lh-sm text-dark fs-30">
                 $10,000 por 20 días <br />
                 $15,000 por 30 días
                 <br />
@@ -107,15 +107,15 @@ export const Cobertura = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 fst-italic lh-sm text-dark fs-30">
-                  <span className="fw-bold fs-30">Llaves perdidas</span>
+                <p className="card-title fw-500 lh-sm text-dark fs-30">
+                  <span className="fw-500 fs-30">Llaves perdidas</span>
                   <br />
                   (máximo 1 al año)
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-30 pt-5">
                   Máxima suma asegurada $5,000
                 </p>
-                <p className="card-title fs-11 fw-bold lh-sm text-dark mt-5">
+                <p className="card-title fs-11 fw-500 lh-sm text-dark mt-5">
                   Costo anual: $120.00
                 </p>
               </div>
@@ -129,15 +129,15 @@ export const Cobertura = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-medium fst-italic lh-sm text-dark fs-30">
-                  <span className="fw-bold fs">Cristalazo</span>
+                <p className="card-title fw-medium lh-sm text-dark fs-30">
+                  <span className="fw-500 fs">Cristalazo</span>
                 </p>
                 <p className="card-title fw-500 lh-sm text-dark fs-3 mt-5 pt-5">
                   Dev. deducible cristal y
                   <br />
                   $5,000.00 de ayuda por robo
                 </p>
-                <p className="card-title fs-11 fw-bold lh-sm text-dark mt-5">
+                <p className="card-title fs-11 fw-500 lh-sm text-dark mt-5">
                   Costo $670.00
                 </p>
               </div>
@@ -151,8 +151,8 @@ export const Cobertura = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 fst-italic lh-sm text-dark fs-30 fst-italic">
-                  <span  className="fw-bold fs">Plataformas con <br />
+                <p className="card-title fw-500 lh-sm text-dark fs-30">
+                  <span  className="fw-500 fs">Plataformas con <br />
                   socios conductores </span>
                   <br />
                   <span>(Cuotas anuales)</span>
@@ -160,7 +160,7 @@ export const Cobertura = () => {
                 <p className="card-title fw-normal lh-sm text-dark fs-3 my-3">
                   Por pérdida parcial, total o corralón.
                 </p>
-                <p className="card-title fs-11 fw-bold lh-sm text-dark">
+                <p className="card-title fs-11 fw-500 lh-sm text-dark">
                   $10,000 por 20 días <br />
                   $15,000 por 30 días
                   <br />
@@ -182,31 +182,25 @@ export const Cobertura = () => {
       <div className="container h-auto py-3 d-md-none">
         <div className="mx-5 dudas__container gap-5">
           <div>
-            <h4 className="fst-italic  text-center my-5 py-5">
-              Resolvemos tus dudas
+            <h4 className="text-center my-5 py-5">
+              Preguntas frecuentes
             </h4>
           </div>
           <div className="w-auto d-flex justify-content-around align-items-center gap-5 mb-5 pb-5">
             <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
               <DocumentIcon />
             </div>
-            <p className="text-start dudas__text fw-normal">
-              En caso de robo total, perdida total<br />
-              o daños materiales, nosotros te<br />
-              devolveremos el deducible de tu<br />
-              poliza de tu auto de acuerdo con la<br />
-              asistencia que hayas elegido<br />
-            </p>
+            <p className="text-start dudas__text w-60 fw-normal">
+              En caso de robo total, perdida total o daños materiales, nosotros te devolveremos el deducible de tu poliza de tu auto de acuerdo con la asistencia que hayas elegido
+              </p>
           </div>
 
           <div className="w-auto d-flex justify-content-around align-items-center gap-5 my-5 py-5">
             <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
               <HandSecure />
             </div>
-            <p className="text-start dudas__text fw-normal">
-              Operamos con cualquier compañía <br />
-              aseguradora dentro del territorio<br />
-              nacional
+            <p className="text-start dudas__text fw-normal w-60">
+              Operamos con cualquier compañía aseguradora dentro del territorio nacional
             </p>
           </div>
 
@@ -214,12 +208,8 @@ export const Cobertura = () => {
             <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
               <CarCrash />
             </div>
-            <p className="text-start dudas__text fw-normal">
-              Se apagará el deducible hasta que<br />
-              se agote la suma del plan<br />
-              contratado, sin importar el número<br />
-              de eventos<br />
-            </p>
+            <p className="text-start dudas__text fw-normal w-60">
+              Se apagará el deducible hasta que se agote la suma del plan contratado, sin importar el número de eventos</p>
           </div>
         </div>
       </div>
@@ -228,7 +218,7 @@ export const Cobertura = () => {
 };
 
 const CoberturaSection = styled.section`
-  height: 200vh;
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -282,6 +272,10 @@ const CoberturaSection = styled.section`
 
   .fs-30 {
     font-size: 3rem;
+  }
+
+  .w-60 {
+    width: 60%;
   }
 
   .card {

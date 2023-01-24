@@ -27,7 +27,7 @@ export const SiniestroSteps = () => {
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">
                 <Point />
-                <h2 className="ms-5 number-fs fst-italic">Paso 1</h2>
+                <h2 className="ms-5 number-fs  ">Paso 1</h2>
               </div>
             </div>
             <div className="ms-5 ps-3 d-flex w-100">
@@ -41,7 +41,7 @@ export const SiniestroSteps = () => {
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">
                 <Point />
-                <h2 className="ms-5 number-fs fst-italic">Paso 2</h2>
+                <h2 className="ms-5 number-fs  ">Paso 2</h2>
               </div>
             </div>
             <div className="ms-5 ps-3 d-flex w-100">
@@ -56,7 +56,7 @@ export const SiniestroSteps = () => {
             <div className=" text-center card-hover_first">
               <div className="icon-width d-flex align-items-center">
                 <Point />
-                <h2 className="ms-5 number-fs fst-italic">Paso 3</h2>
+                <h2 className="ms-5 number-fs  ">Paso 3</h2>
               </div>
             </div>
             <div className="ms-5 ps-3 d-flex w-100">

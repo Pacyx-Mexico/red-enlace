@@ -16,7 +16,7 @@ export const Special = () => {
           </div>
           <div className="col-lg-7 col-xl-6 offset-lg-1 d-flex flex-column justify-content-center align-items-start text-start text-lg-start">
             <h1 className="fw-normal mt-4">Contratación</h1>
-            <h1 className="fw-bold">100% digital.</h1>
+            <h1 className="fw-500">100% digital.</h1>
             <p className="text-secondary mt-2 mb-5 fs-30 fw-light">
               Somos la única opción de contratación <br />
               100% digital de principio a fin.
@@ -31,7 +31,7 @@ export const Special = () => {
               <h1 className="fw-normal mt-4 special__title-first">
                 Contratación
               </h1>
-              <h1 className="fw-bold special__title-second">
+              <h1 className="fw-500 special__title-second">
                 100% digital.
               </h1>
             </div>
@@ -46,7 +46,7 @@ export const Special = () => {
             <div className="d-flex flex-column align-items-center text-center special__last-text">
               <p className="mb-5 fs-30 fw-light">
                 Somos la única opción de contratación <br />
-                <span className="fw-bold fst-italic">
+                <span className="fw-500  ">
                   100% digital de principio a fin.
                 </span>
               </p>
@@ -59,7 +59,7 @@ export const Special = () => {
 };
 
 const SpecialContainer = styled.section`
-  height: 100rem;
+  height: 75vh;
 
   .my-xxl-5 {
     margin-top: 3rem !important;
@@ -69,7 +69,7 @@ const SpecialContainer = styled.section`
   .gradient_img_bg {
     z-index: -2;
     height: 55%;
-    width: 90%;
+    width: 100%;
     top: 25%;
     right: 0;  
   }
@@ -78,12 +78,16 @@ const SpecialContainer = styled.section`
     font-size: 3rem;
   }
 
+  .fs-70 {
+    font-size: 7rem;
+  }
+
   .phone_img {
     z-index: -1;
     height: 67%;
     width: auto;
     top: 21%;
-    left: 27%;
+    left: 20%;
   }
 
   @media (min-width: 570px) {

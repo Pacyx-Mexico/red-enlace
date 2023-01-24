@@ -26,7 +26,7 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
       <FacturacionContainer>
         <div className="d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">
+            <h1 className="  fs-1 fw-500 mt-5">
               PASO 2/2
             </h1>
             <p className="text-center fs-2 fw-normal mt-5">
@@ -204,7 +204,7 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
 
         <div className="d-lg-none">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">
+            <h1 className="  fs-1 fw-500 mt-5">
               PASO 2/2
             </h1>
             <p className="text-center fs-2 fw-normal mt-5">

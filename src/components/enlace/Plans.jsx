@@ -26,7 +26,7 @@ export const Plans = () => {
               </div>
               <div className="d-flex flex-column card-body align-items-center justify-content-center pb-0">
                 <p className="card-title lh-sm text-primary">
-                  <span className="fw-bold green-text">Aumentamos el deducible</span> <br />
+                  <span className="fw-500 green-text">Aumentamos el deducible</span> <br />
                   de tu póliza actual para 
                   bajar el costo y, en caso de 
                   siniestro, Red Enlace cubre 
@@ -43,7 +43,7 @@ export const Plans = () => {
               </div>
               <div className="card-body d-flex flex-column card-body align-items-center justify-content-center pb-0">
                 <p className="card-title lh-sm text-primary">
-                  <span className="fw-bold green-text">Aumentamos el coaseguro</span> <br />
+                  <span className="fw-500 green-text">Aumentamos el coaseguro</span> <br />
                   de tu póliza actual para 
                   bajar el costo y, en caso de 
                   siniestro, Red Enlace cubre 
@@ -60,7 +60,7 @@ export const Plans = () => {
               </div>
               <div className="card-body d-flex flex-column card-body align-items-center justify-content-center pb-0">
                 <p className="card-title lh-sm text-primary">
-                  <span className="fw-bold green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> 
+                  <span className="fw-500 green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> 
                   para bajar el costo y, 
                   en caso de siniestro, Red 
                   Enlace cubre esa diferencia 
@@ -103,7 +103,7 @@ export const Plans = () => {
                 </div>
                 <div className="card-body px-2 pb-0">
                   <p className="card-title fw-normal text-primary">
-                    <span className="fw-bold green-text">
+                    <span className="fw-500 green-text">
                     Aumentamos el deducible <br />
                     </span>
                     de tu póliza actual para <br />
@@ -124,7 +124,7 @@ export const Plans = () => {
                 </div>
                 <div className="card-body px-2 pb-0">
                   <p className="card-title fw-normal text-primary">
-                    <span className="fw-bold green-text">
+                    <span className="fw-500 green-text">
                       Aumentamos el coaseguro <br />
                     </span>
                     de tu póliza actual para <br />
@@ -145,7 +145,7 @@ export const Plans = () => {
                 </div>
                 <div className="card-body px-2 pb-0">
                   <p className="card-title fw-normal text-primary">
-                    <span className="fw-bold green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> para bajar el costo y, <br />
+                    <span className="fw-500 green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> para bajar el costo y, <br />
                     en caso de siniestro, Red <br />
                     Enlace cubre esa diferencia <br />
                     para que tu no pagues ni un <br />
@@ -165,7 +165,7 @@ export const Plans = () => {
 };
 
 const PlansSection = styled.section`
-  height: 90vh;
+  height: auto;
   padding-top: 10rem;
   position: relative;
 

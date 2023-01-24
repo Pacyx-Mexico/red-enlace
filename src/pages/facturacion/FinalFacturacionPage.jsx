@@ -6,7 +6,7 @@ import { RedLogoIcon } from "../../assets/icons/RedLogoIcon";
 export const FinalFacturacionPage = () => {
   return (
     <FinalFacturacionContainer>
-      <div className="fs-45 text-center fw-bold fst-italic mt-5 pt-5">
+      <div className="fs-45 text-center fw-500   mt-5 pt-5">
         <h4>
           Tu factura será enviada al correo:
         </h4>

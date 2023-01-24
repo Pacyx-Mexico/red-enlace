@@ -25,7 +25,7 @@ export const SiniestroGM = () => {
             <div className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
               <p className="fs-35 text-center pb-5 mb-5">
                 Para que la única recuperación por <br />
-                la que te preocupes <span className="fw-bold">sea la tuya</span>
+                la que te preocupes <span className="fw-500">sea la tuya</span>
               </p>
               <Link
                 to="/reclamacion-siniestros/gastos-medicos-form"
@@ -43,7 +43,7 @@ export const SiniestroGM = () => {
         <div className="container-fluid mt-5 d-md-none">
           <div className="d-flex row h-100">
             <div className="icon-cruz d-flex flex-column mt-5 pt-5">
-              <p className="fs-20 fst-italic text-center mb-5 pb-5">
+              <p className="fs-20   text-center mb-5 pb-5">
               Devolución de <br />
                 deducible Gastos <br />
                 Médicos
@@ -55,7 +55,7 @@ export const SiniestroGM = () => {
             <div className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
               <p className="fs-35 text-center pb-5 mb-5 text-secondary mt-5 pt-5">
               Para que la única recuperación por <br />
-                la que te preocupes <span className="fw-bold">sea la tuya</span>
+                la que te preocupes <span className="fw-500">sea la tuya</span>
               </p>
               <Link
                 to="/reclamacion-siniestros/gastos-medicos-form"

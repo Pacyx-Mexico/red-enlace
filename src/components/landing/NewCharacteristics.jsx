@@ -49,7 +49,7 @@ export const NewCharacteristics = () => {
           <span className="text-dark fw-normal">
             Complementamos
             <br />{" "}
-            <span className="text-dark fw-bold bold-fs">tu protección</span>
+            <span className="text-dark fw-500 bold-fs">tu protección</span>
           </span>
         </h3>
       </div>
@@ -140,8 +140,8 @@ export const NewCharacteristics = () => {
               <div className="icon-height d-flex align-items-center">
                 <PersonIcon />
               </div>
-              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
+              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center w-75">
+                <p className="card-title fw-500 lh-sm text-primary   fs-30">
                   Productos a la medida
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5 align-self-center">
@@ -156,13 +156,12 @@ export const NewCharacteristics = () => {
               <div className="icon-height d-flex ms-5 align-items-center">
                 <ReportIcon />
               </div>
-              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
+              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center w-75">
+                <p className="card-title fw-500 lh-sm text-primary fs-30">
                   Procesos eficientes
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5">
-                  El proceso para contratar cualquiera de <br />
-                  nuestros productos es fácil y sencillo.
+                  El proceso para contratar cualquiera de nuestros productos es fácil y sencillo.
                 </p>
               </div>
             </div>
@@ -172,8 +171,8 @@ export const NewCharacteristics = () => {
               <div className="icon-height d-flex ms-5 align-items-center">
                 <ChatIcon />
               </div>
-              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
+              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center w-75">
+                <p className="card-title fw-500 lh-sm text-primary   fs-30">
                   Atención personalizada
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5">
@@ -188,16 +187,12 @@ export const NewCharacteristics = () => {
               <div className="icon-height d-flex ms-5 align-items-center">
                 <IdeaIcon />
               </div>
-              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
+              <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center w-75">
+                <p className="card-title fw-500 lh-sm text-primary fs-30">
                   Innovación
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5">
-                  Nos adaptamos a nuevas formas de
-                  <br />
-                  comunicación, para ofrecer un servicio
-                  <br />
-                  eficiente.
+                  Nos adaptamos a nuevas formas de comunicación, para ofrecer un servicio eficiente.
                 </p>
               </div>
             </div>

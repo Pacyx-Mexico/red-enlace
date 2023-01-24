@@ -29,7 +29,7 @@ export const Contact = () => {
           </Form>
         </div>
         <div className="mt-5 d-flex justify-content-center">
-          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
+          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-500">Enviar</button>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ export const Contact = () => {
           </Form>
         </div>
         <div className="container mt-5 d-flex justify-content-center">
-          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-bold">Enviar</button>
+          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-500">Enviar</button>
         </div>
       </div>
     </ContactSection>

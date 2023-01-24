@@ -21,7 +21,7 @@ export const Toppings = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-25">
+              <p className="card-title fw-500 lh-sm text-dark fs-25">
                 Indemnización diaria por hospitalización
               </p>
               <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5">
@@ -38,7 +38,7 @@ export const Toppings = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-25">
+              <p className="card-title fw-500 lh-sm text-dark fs-25">
                 Aumento de tabulador
               </p>
               <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5">
@@ -54,7 +54,7 @@ export const Toppings = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-bold lh-sm text-dark fs-25">
+              <p className="card-title fw-500 lh-sm text-dark fs-25">
                 Ayuda diaria para gastos extra de hospital
               </p>
               <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5">
@@ -89,7 +89,7 @@ export const Toppings = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-35">
+                <p className="card-title fw-500 lh-sm text-dark fs-35">
                   Indemnización diaria por hospitalización
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-35 mt-5">
@@ -108,7 +108,7 @@ export const Toppings = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-35">
+                <p className="card-title fw-500 lh-sm text-dark fs-35">
                   Aumento de tabulador
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-35 mt-5">
@@ -126,7 +126,7 @@ export const Toppings = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-35">
+                <p className="card-title fw-500 lh-sm text-dark fs-35">
                   Ayuda diaria para gastos extra de hospital
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-35 mt-5">

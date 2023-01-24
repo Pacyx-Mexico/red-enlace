@@ -163,7 +163,7 @@ export const Testimonies = () => {
               </div>
             </div>
             <div className="ps-1 ms-5 d-flex justify-content-start flex-column">
-              <span className="fs-1 fst-italic fw-medium mb-3">California</span>
+              <span className="fs-1   fw-medium mb-3">California</span>
               <p className="mb-0 fs-2 lh-1">
                 Me gusta la facilidad para cotizar y<br></br>contratar.
               </p>
@@ -179,7 +179,7 @@ export const Testimonies = () => {
               </div>
             </div>
             <div className="ps-1 ms-5 d-flex justify-content-start flex-column">
-              <span className="fs-1 fst-italic fw-medium mb-3">CDMX</span>
+              <span className="fs-1   fw-medium mb-3">CDMX</span>
               <p className="mb-0 fs-2 lh-1">
                 Con el Red Enlace pude renovar mi póliza de
                 <br />
@@ -197,7 +197,7 @@ export const Testimonies = () => {
               </div>
             </div>
             <div className="ps-1 ms-5 d-flex justify-content-start flex-column">
-              <span className="fs-1 fst-italic fw-medium mb-3">
+              <span className="fs-1   fw-medium mb-3">
                 Guadalajara
               </span>
               <p className="mb-0 fs-2 lh-1">

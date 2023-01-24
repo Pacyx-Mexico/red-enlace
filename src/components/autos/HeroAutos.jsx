@@ -134,11 +134,6 @@ const HeroContainer = styled.section`
       height: 100%;
     }
 
-    .primary_title {
-      margin-top: 14rem;
-    }
-
-
     .RE_img_bg {
       display: none;
     }

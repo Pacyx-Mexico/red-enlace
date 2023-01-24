@@ -27,7 +27,7 @@ export const HeroSiniestros = () => {
         <div className="home__info-mb d-flex flex-column justify-content-center w-100 align-items-center gap-5">
           <h2 className="pr-xxl-5 z-index fw-medium h2-heading primary_title">
             ¿Qué hacer en caso de <br />
-            <span className="primary_title fw-bold">siniestro?</span>
+            <span className="primary_title fw-500">siniestro?</span>
           </h2>
           <p className="mb-4 mb-lg-5 hero_subtitle w-100 px-5 mt-5">
             Ponemos a tu disposición todo lo necesario <br />

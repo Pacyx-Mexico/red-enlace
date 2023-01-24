@@ -26,12 +26,12 @@ export const Plans = () => {
         <div className="d-flex justify-content-around gap-5">
           <div className="col-auto">
             <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Básico</p>
+              <p className="card-title fw-semi-bold lh-sm text-primary fs-35">Básico</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
-                <p className="fs-40 fst-italic mb-0 ps-5">$750.00</p>
+                <p className="fs-40 mb-0 ps-5">$750.00</p>
               </div>
               <div className="card-body w-100 px-2 pb-0">
-                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
+                <p className="card-title lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-subtitle fw-normal lh-sm text-primary my-3">
@@ -43,7 +43,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -51,12 +51,12 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Standar</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary fs-35">Standar</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-50 p-5">
-                <p className="fs-40 fst-italic mb-0 ps-5">$1,400.00</p>
+                <p className="fs-40   mb-0 ps-5">$1,400.00</p>
               </div>
               <div className="card-body w-100 px-2 pb-0">
-                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
+                <p className="card-title   lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-subtitle fw-normal lh-sm text-primary my-3">
@@ -68,7 +68,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -76,12 +76,12 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Premium</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary fs-35">Premium</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-75 p-5">
-                <p className="fs-40 fst-italic mb-0 ps-5">$2,000.00</p>
+                <p className="fs-40   mb-0 ps-5">$2,000.00</p>
               </div>
               <div className="card-body w-100 px-2 pb-0">
-                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
+                <p className="card-title   lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-subtitle fw-normal lh-sm text-primary my-3">
@@ -93,7 +93,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop }  className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -101,12 +101,12 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Gold</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary fs-35">Gold</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center opacity-100 p-5">
-                <p className="fs-40 fst-italic mb-0 ps-5">$2,650.00</p>
+                <p className="fs-40   mb-0 ps-5">$2,650.00</p>
               </div>
               <div className="card-body w-100 px-2 pb-0">
-                <p className="card-title  fst-italic lh-sm mb-5 pt-5 text-primary">
+                <p className="card-title    lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-subtitle fw-normal lh-sm text-primary my-3">
@@ -118,7 +118,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -126,12 +126,12 @@ export const Plans = () => {
           </div>
           <div className="col-auto">
             <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Black</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary fs-35">Black</p>
               <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-center align-items-center p-5">
-                <p className="fs-40 fst-italic mb-0 ps-5">$3,350.00</p>
+                <p className="fs-40   mb-0 ps-5">$3,350.00</p>
               </div>
               <div className="card-body w-100 px-2 pb-0">
-                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
+                <p className="card-title   lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-subtitle fw-normal lh-sm text-primary my-3">
@@ -143,7 +143,7 @@ export const Plans = () => {
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-50 fs-15">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-50 fs-15">
                   Contratar
                 </button>
               </Link>
@@ -169,24 +169,24 @@ export const Plans = () => {
           <SwiperSlide>
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Básico</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary">Básico</p>
               <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
                 <p className="fs-50 mt-3">$690.00</p>
               </div>
               <div className="card-body px-2 pb-0">
-                <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
+                <p className="card-title   lh-sm my-5 py-3 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fw-bold fs-last">$10,000.00</p>
+                <p className="fw-500 fs-last">$10,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-25">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-25">
                   Contratar
                 </button>
               </Link>
@@ -196,24 +196,24 @@ export const Plans = () => {
           <SwiperSlide>
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Standar</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary">Standar</p>
               <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
                 <p className="fs-50 mt-3">$1,297.00</p>
               </div>
               <div className="card-body px-2 pb-0">
-                <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
+                <p className="card-title   lh-sm my-5 py-3 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fw-bold fs-last">$20,000.00</p>
+                <p className="fw-500 fs-last">$20,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-25">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-25">
                   Contratar
                 </button>
               </Link>
@@ -223,24 +223,24 @@ export const Plans = () => {
           <SwiperSlide>
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Premium</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary">Premium</p>
               <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
                 <p className="fs-50 mt-3">$1,840.00</p>
               </div>
               <div className="card-body px-2 pb-0 cb-mb">
-                <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
+                <p className="card-title   lh-sm my-5 py-3 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fw-bold fs-last">$30,000.00</p>
+                <p className="fw-500 fs-last">$30,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-3">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-3">
                   Contratar
                 </button>
               </Link>
@@ -250,24 +250,24 @@ export const Plans = () => {
           <SwiperSlide>
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Gold</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary">Gold</p>
               <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
                 <p className="fs-50 mt-3">$2,420.00</p>
               </div>
               <div className="card-body px-2 pb-0 cb-mb">
-                <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
+                <p className="card-title   lh-sm my-5 py-3 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fw-bold fs-last">$40,000.00</p>
+                <p className="fw-500 fs-last">$40,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-3">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-3">
                   Contratar
                 </button>
               </Link>
@@ -277,24 +277,24 @@ export const Plans = () => {
           <SwiperSlide>
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
-              <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Black</p>
+              <p className="card-title fw-semi-bold   lh-sm text-primary">Black</p>
               <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
                 <p className="fs-50 mt-3">$2,995.00</p>
               </div>
               <div className="card-body px-2 pb-0 cb-mb">
-                <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
+                <p className="card-title   lh-sm my-5 py-3 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary my-3">
                 Te devolvemos tu deducible 
                   <br /> con un tope máximo de
                 </p>
-                <p className="fw-bold fs-last">$50,000.00</p>
+                <p className="fw-500 fs-last">$50,000.00</p>
               </div>
             </div>
             <div onClick={ scrollTop } className="mt-5 d-flex w-100 text-center">
               <Link to="/deducible-gastos-medicos" className="w-100">
-                <button className="btn btn-first rounded-pill fw-bold mx-auto w-25 fs-3">
+                <button className="btn btn-first rounded-pill fw-500 mx-auto w-25 fs-3">
                   Contratar
                 </button>
               </Link>
@@ -445,7 +445,7 @@ const PlansSection = styled.section`
         font-size: 1.5rem;
       }
 
-      .card-body .fw-bold {
+      .card-body .fw-500 {
         font-size: 2rem;
       }
 

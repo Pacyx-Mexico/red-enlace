@@ -16,12 +16,12 @@ export const Description = () => {
           </div>
           <div className="col-md-7 col-xl-7 d-flex flex-column justify-content-center align-items-start text-start text-lg-start ml-5 pl-5">
             <div className="d-flex flex-column mx-auto w-custom">
-              <h1 className="fw-normal mt-5 pt-5 text-start">Devolución <span className="fw-bold">de deducible</span></h1>
+              <h1 className="fw-normal mt-5 pt-5 text-start">Devolución <span className="fw-500">de deducible</span></h1>
               <p className="mt-2 mb-5 fs-25 fw-light">
                 Es una asistencia que en caso de que te hospitalicen, te reembolsa un porcentaje fijo del deducible de tu póliza de gastos médicos mayores.
               </p>
               <p className="mt-3 fs-25 fw-light">
-                Con nosotros, tú eliges el porcentaje: <span className="text-dark mt-3 mb-5 fs-25 fw-bold"> 30, 50, 80 o hasta 100%</span>
+                Con nosotros, tú eliges el porcentaje: <span className="text-dark mt-3 mb-5 fs-25 fw-500"> 30, 50, 80 o hasta 100%</span>
               </p>
             </div>
           </div>
@@ -34,7 +34,7 @@ export const Description = () => {
           <div className="col-md-7 col-xl-7 d-flex flex-column justify-content-center align-items-start text-start text-lg-start ml-5 pl-5">
             <div className="d-flex flex-column mx-auto">
               <h1 className="fw-normal mt-5 pt-5 fs-42">Devolución</h1>
-              <h1 className="fw-bold">de deducible</h1>
+              <h1 className="fw-500">de deducible</h1>
               <p className="mt-5 pt-5 mb-5 fs-15 text-center">
                 Es una asistencia que en caso de que
                 <br />
@@ -59,7 +59,7 @@ export const Description = () => {
             <p className="mt-3 mb-0 fs-35 text-secondary fw-light text-center">
               Con nosotros, tú eliges el porcentaje:
             </p>
-            <p className="text-dark mb-5 fs-30 fw-bold text-center">
+            <p className="text-dark mb-5 fs-30 fw-500 text-center">
               30, 50, 80 o hasta 100%
             </p>
           </div>

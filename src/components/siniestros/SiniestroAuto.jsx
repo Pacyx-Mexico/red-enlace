@@ -24,7 +24,7 @@ export const SiniestroAuto = () => {
             <div className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
               <p className="fs-35 text-center pb-5 mb-5">
                 Que sea el golpe de tu coche, <br />
-                <span className="fw-bold">No sea un golpe en tu cartera</span>
+                <span className="fw-500">No sea un golpe en tu cartera</span>
               </p>
               <Link
                 to="/reclamacion-siniestros/auto-form"
@@ -43,7 +43,7 @@ export const SiniestroAuto = () => {
         <div className="container-fluid mt-5 d-md-none">
           <div className="d-flex row h-100">
             <div className="icon-cruz d-flex flex-column mt-5 pt-5">
-              <p className="fs-20 fst-italic text-center mb-5 pb-5">
+              <p className="fs-20   text-center mb-5 pb-5">
                 Devolución de <br />
                 deducible Autos <br />
               </p>
@@ -54,7 +54,7 @@ export const SiniestroAuto = () => {
             <div className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
               <p className="fs-35 text-center pb-5 mb-5 text-secondary mt-5 pt-5">
                 Que sea el golpe de tu coche, <br />
-                <span className="fw-bold">No sea un golpe en tu cartera</span>
+                <span className="fw-500">No sea un golpe en tu cartera</span>
               </p>
               <Link
                 to="/reclamacion-siniestros/auto-form"

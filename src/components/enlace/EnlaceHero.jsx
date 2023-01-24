@@ -34,7 +34,7 @@ export const EnlaceHero = () => {
         </div>
       </div>
       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
-        <h2 className="fw-normal fw-medium text-dark fst-italic h2-title primary_title py-5">
+        <h2 className="fw-normal fw-medium text-dark   h2-title primary_title py-5">
         Enlaces
         </h2>
         <div className="d-flex justify-content-center px-5 h-50 mx-5">

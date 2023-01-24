@@ -27,7 +27,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
       <SiniestroAContainer>
         <div className="d-flex flex-column d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-35 fw-bold mt-5">
+            <h1 className="  fs-35 fw-500 mt-5">
               PASO 2/4:
             </h1>
           </div>
@@ -36,7 +36,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
             <Card.Body>
               <Form onSubmit={submitFormData} className="d-flex justify-content-center flex-column h-100">
                 <Form.Group className="mb-3 d-flex justify-content-center align-items-end">
-                  <Form.Label className="fw-bold fst-italic mb-0 fs-17 w-25"># de Contrato:</Form.Label>
+                  <Form.Label className="fw-500   mb-0 fs-17 w-25"># de Contrato:</Form.Label>
                   <Form.Control
                     /* Cambiar por dropDown */
                     style={{ border: error ? "2px solid red" : "" }}
@@ -57,7 +57,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
                 </Form.Group>
                 <Dropdown className="w-100 d-flex justify-content-center">
                   <Dropdown.Toggle variant="success" id="dropdown-basic" className="mt-4">
-                    <span className="fw-bold mx-5">Asegurados:</span>
+                    <span className="fw-500 mx-5">Asegurados:</span>
                     <span className="opacity-75 fs-10 me-4">Elige qué asegurado tuvo el siniestro</span>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
@@ -87,7 +87,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
 
         <div className="d-flex flex-column d-lg-none px-5">
           <div className="d-flex justify-content-center">
-            <h1 className="fst-italic fw-bold mt-5 primary-title-mb">
+            <h1 className="  fw-500 mt-5 primary-title-mb">
               PASO 2/4:
             </h1>
           </div>
@@ -96,7 +96,7 @@ export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
             <Card.Body>
               <Form onSubmit={submitFormData} className="d-flex justify-content-center flex-column h-100">
                 <Form.Group className="mb-3 d-flex flex-row justify-content-center align-items-center gap-5">
-                  <Form.Label className="fw-bold fst-italic mb-0 fs-20"># de Contrato:</Form.Label>
+                  <Form.Label className="fw-500   mb-0 fs-20"># de Contrato:</Form.Label>
                   <Form.Control
                     /* Cambiar por dropDown */
                     style={{ border: error ? "2px solid red" : "" }}
@@ -229,7 +229,7 @@ const SiniestroAContainer = styled.section`
     .fs-35 {
       font-size: 3.5rem;
     }
-      
+
     .dropdown-item {
       font-size: 1.5rem;
     }

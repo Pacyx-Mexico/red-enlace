@@ -24,7 +24,7 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
       <FacturacionContainer>
         <div className="d-none d-md-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic fs-1 fw-bold mt-5">
+            <h1 className="  fs-1 fw-500 mt-5">
               PASO 1/2:
             </h1>
             <p className="text-center fs-2 fw-normal mt-5">
@@ -63,7 +63,7 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
 
         <div className="d-md-none">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="fst-italic primary-title-mb fw-bold mt-5">
+            <h1 className="  primary-title-mb fw-500 mt-5">
               PASO 1/2:
             </h1>
             <p className="text-center text-secondary primary-subtitle-mb fw-normal pt-5 mt-5">

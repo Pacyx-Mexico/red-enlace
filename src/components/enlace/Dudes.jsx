@@ -11,7 +11,7 @@ export const Dudes = () => {
   return (
     <DudesSection className="container d-block text-center  fs-2">
       <h4 className="mt-5 mt-xxl-5 fw-normal fs-50 text-dark pb-5">
-        Resolvemos tus dudas
+        Preguntas frecuentes
       </h4>
       <div className="container my-5">
         <Accordion allowZeroExpanded className="border-none d-flex flex-column gap-5">
@@ -75,7 +75,7 @@ export const Dudes = () => {
 };
 
 const DudesSection = styled.section`
-  height: 100vh;
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
 

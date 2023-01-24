@@ -21,7 +21,7 @@ export const Hero = () => {
       </div>
       <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
         <div className="home__info d-flex flex-column justify-content-center text-center align-items-center">
-          <h2 className="mb-4 pr-xxl-5 fw-bold pt-5 mt-5 z-index text-primary h2-heading">
+          <h2 className="mb-4 pr-xxl-5 fw-500 pt-5 mt-5 z-index text-primary h2-heading">
             Ahorro &nbsp;<span className="text-white"> fácil y seguro</span>
           </h2>
           <p className="text-white mb-4 mb-md-5 hero_subtitle">
@@ -32,10 +32,10 @@ export const Hero = () => {
 
       <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-md-none">
         <div className="home__info-mb d-flex flex-column justify-content-center align-items-center">
-          <h2 className="pr-xxl-5 fw-bold z-index text-primary h1-heading primary_title">
+          <h2 className="pr-xxl-5 fw-500 z-index text-primary h1-heading primary_title">
             Ahorro
           </h2>
-          <span className="text-primary primary_subtitle fw-bold">fácil y seguro</span>
+          <span className="text-primary primary_subtitle fw-500">fácil y seguro</span>
         </div>
       </div>
 

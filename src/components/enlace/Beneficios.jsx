@@ -30,7 +30,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5  ">
                 Ahorro <br />
                 garantizado, hasta <br />
                 35%
@@ -44,7 +44,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5  ">
                 Pago de siniestros en
                 <br /> menos de 72 horas
               </p>
@@ -57,7 +57,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5  ">
                 Ayuda diaria por <br /> hospitalización
               </p>
             </div>
@@ -69,7 +69,7 @@ export const Beneficios = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title lh-sm text-dark pt-5 fst-italic">
+              <p className="card-title lh-sm text-dark pt-5  ">
                 En caso de enfermedades <br />
                 graves nosotros pagamos <br />
                 tu deducible
@@ -101,7 +101,7 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   Ahorro <br />
                   garantizado, hasta <br />
                   35%
@@ -117,7 +117,7 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   Pago de siniestros en <br />
                   menos de 72 horas
                 </p>
@@ -132,7 +132,7 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   Ayuda diaria por <br />
                   hospitalización
                 </p>
@@ -147,7 +147,7 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   En caso de enfermedades <br />
                   graves nosotros pagamos <br />
                   tu deducible
@@ -162,7 +162,8 @@ export const Beneficios = () => {
 };
 
 const BeneficiosSection = styled.section`
-  height: 80vh;
+  height: auto;
+  padding: 5rem 0 15rem;
 
   .height-lile {
     height: auto;
@@ -217,6 +218,10 @@ const BeneficiosSection = styled.section`
   .swiper-button-prev {
     color: #707070;
   } 
+
+  .swiper-pagination-bullets {
+    bottom: 0;
+  }
 
   .fs-25 {
     font-size: 2rem;
