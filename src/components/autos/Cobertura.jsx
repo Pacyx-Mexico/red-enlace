@@ -12,7 +12,7 @@ export const Cobertura = () => {
             Personaliza tu protección con <br />
             nuestras coberturas adicionales
         </h3>
-        <h3 className="pb-2 fw-medium fs-50 text-dark d-md-none">
+        <h3 className="pb-2 fw-normal fs-50 text-dark d-md-none">
             Personaliza tu protección  <br />
             con nuestras coberturas <br />
             adicionales
@@ -85,7 +85,7 @@ export const Cobertura = () => {
         </div>
       </div>
 
-      <div className="container py-3 position-relative d-md-none">
+      <div className="container py-3 position-relative h-70 d-md-none">
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -97,7 +97,7 @@ export const Cobertura = () => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper h-75"
+          className="mySwiper h-100"
         >
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
@@ -172,46 +172,11 @@ export const Cobertura = () => {
         </Swiper>
       </div>
 
-      <div className="container-fluid mx-auto position-relative dudas__container d-none d-md-block mt-5 pt-5">
+      <div className="container-fluid mx-auto position-relative dudas__container mt-5 pt-5">
         <h4 className="mt-5 mt-xxl-5 text-dark height-lile fw-normal py-4">
           Preguntas frecuentes
         </h4>
         <Dudes />
-      </div>
-
-      <div className="container h-auto py-3 d-md-none">
-        <div className="mx-5 dudas__container gap-5">
-          <div>
-            <h4 className="text-center my-5 py-5">
-              Preguntas frecuentes
-            </h4>
-          </div>
-          <div className="w-auto d-flex justify-content-around align-items-center gap-5 mb-5 pb-5">
-            <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
-              <DocumentIcon />
-            </div>
-            <p className="text-start dudas__text w-60 fw-normal">
-              En caso de robo total, perdida total o daños materiales, nosotros te devolveremos el deducible de tu poliza de tu auto de acuerdo con la asistencia que hayas elegido
-              </p>
-          </div>
-
-          <div className="w-auto d-flex justify-content-around align-items-center gap-5 my-5 py-5">
-            <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
-              <HandSecure />
-            </div>
-            <p className="text-start dudas__text fw-normal w-60">
-              Operamos con cualquier compañía aseguradora dentro del territorio nacional
-            </p>
-          </div>
-
-          <div className="w-auto d-flex justify-content-around align-items-center gap-5 mt-5 pt-5">
-            <div className="document-icon rounded-5 d-flex align-items-center justify-content-center d-md-none">
-              <CarCrash />
-            </div>
-            <p className="text-start dudas__text fw-normal w-60">
-              Se apagará el deducible hasta que se agote la suma del plan contratado, sin importar el número de eventos</p>
-          </div>
-        </div>
       </div>
     </CoberturaSection>
   );
@@ -256,6 +221,10 @@ const CoberturaSection = styled.section`
 
   .swiper-slide-h-50 {
     height: 50rem;
+  }
+
+  .h-70 {
+    height: 70rem;
   }
 
   .fs-35 {

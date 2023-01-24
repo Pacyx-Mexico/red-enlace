@@ -17,7 +17,7 @@ export const Plans = () => {
         </h5>
       </div>
       <div className="services-title container text-center d-md-none">
-        <h5 className="text-dark fs-50 fw-semi-bold text-center pt-4">
+        <h5 className="text-dark fs-50 fw-normal text-center pt-4">
           Descubre nuestros <br />
           paquetes disponibles
         </h5>

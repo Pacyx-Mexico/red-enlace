@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {
-  MedicineIcon,
-  MedicalExpensesIcon,
-  CarIcon,
-} from "../../assets/icons";
+import { MedicineIcon, MedicalExpensesIcon, CarIcon } from "../../assets/icons";
 import { Link } from "react-router-dom";
 
 export const Services = () => {
@@ -42,21 +38,37 @@ export const Services = () => {
       <div className="d-flex justify-content-center flex-column d-none d-lg-block">
         <div className="text-center mt-5 pt-5 position-relative">
           <div className="position-relative">
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png" alt="" className="hand hand-right position-absolute"/>
-            <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND1.png" alt="" className="hand hand-left position-absolute"/>
+            <img
+              src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png"
+              alt=""
+              className="hand hand-right position-absolute"
+            />
+            <img
+              src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND1.png"
+              alt=""
+              className="hand hand-left position-absolute"
+            />
           </div>
           <div className="primary-title-hdesk py-5 mt-5">
-            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">¿Qué nos hace únicos?</h2>
+            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">
+              ¿Qué nos hace únicos?
+            </h2>
             <div className="d-flex py-5 flex-column bg-blue">
               <p className="fs-11 mt-5 pt-5 fw-normal text-white">
                 Devolución <span className="fw-semibold">de deducible</span>
               </p>
               <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5 text-white">
-              Somos la empresa pionera en la creación de asistencias <br />
-              pensadas 100% en las necesitas en las necesidades de nuestros clientes. <br />
-              Reescribimos la historia de las asistencias de seguros <br />
-              para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente<br />
-              en tu auto, de enfermedad o en caso de ser hospitalizado.
+                Somos la empresa pionera en la creación de asistencias <br />
+                pensadas 100% en las necesitas en las necesidades de nuestros
+                clientes. <br />
+                Reescribimos la historia de las asistencias de seguros <br />
+                para{" "}
+                <span className="fw-semibold">
+                  reembolsar el pago de deducible
+                </span>{" "}
+                en caso de accidente
+                <br />
+                en tu auto, de enfermedad o en caso de ser hospitalizado.
               </p>
             </div>
           </div>
@@ -65,12 +77,12 @@ export const Services = () => {
 
       <div className="bg-gradient-blue mt-5 pt-5 d-none d-lg-block">
         <div className="services-title container-fluid text-center pt-1 pb-5">
-          <h3 className="mb-5 fs-10 fw-normal text-dark">
-          Conoce nuestros productos
+          <h3 className="fs-10 fw-normal text-dark">
+            Conoce nuestros productos
           </h3>
         </div>
-        <div className="container-fluid px-5 vh-100 position-relative d-none d-lg-block">
-          <div className="row px-5 mb-5 mr-5 ml-5 d-flex justify-content-around gap-5">
+        <div className="container-fluid px-5 h-auto position-relative d-none d-lg-block">
+          <div className="row pt-5 mb-5 mr-5 ml-5 d-flex justify-content-around gap-5">
             <div onClick={scrollTop} className="col-auto mb-5 pb-5">
               <Link
                 to="/deducible-gastos-medicos"
@@ -92,10 +104,23 @@ export const Services = () => {
                     Gastos Médicos
                   </p>
                 </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/deducible-gastos-medicos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
               </Link>
             </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-              <Link to="/deducible-autos" className="w-100 text-decoration-none">
+              <Link
+                to="/deducible-autos"
+                className="w-100 text-decoration-none"
+              >
                 <div className="card border border-4 border-second text-center position-relative card-hover_second">
                   <div className="position-absolute d-flex align-items-center justify-content-center">
                     <img
@@ -111,6 +136,16 @@ export const Services = () => {
                     <br />
                     Autos
                   </p>
+                </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/deducible-autos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -130,29 +165,46 @@ export const Services = () => {
                     Enlaces
                   </p>
                 </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5 pt-5"
+                >
+                  <Link to="/enlace">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-    <div className="container-fluid position-relative d-lg-none">
-      <div className="d-flex justify-content-center flex-column mb-lg pb-5">
-        <div className="text-center position-relative">
-          <div className="primary-title-h">
-            <h2 className="fs-11 mb-5 pb-5 fw-500">¿Qué nos hace únicos?</h2>
-            <div className="d-flex py-5 flex-column bg-blue">
-              <p className="fs-50 mt-5 pt-5 fw-normal text-white">
-                Devolución <span className="fw-semibold">de deducible</span>
-              </p>
-              <p className="fs-35 fw-normal mb-5 py-5 px-5 mx-5 mt-5 text-white">
-              Somos la empresa pionera en la creación de asistencias pensadas 100% en las necesitas en las necesidades de nuestros clientes.
-              Reescribimos la historia de las asistencias de seguros para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente en tu auto, de enfermedad o en caso de ser hospitalizado.
-              </p>
+      <div className="container-fluid position-relative d-lg-none">
+        <div className="d-flex justify-content-center flex-column mb-lg pb-5">
+          <div className="text-center position-relative">
+            <div className="primary-title-h">
+              <h2 className="fs-11 mb-5 pb-5 fw-500">¿Qué nos hace únicos?</h2>
+              <div className="d-flex py-5 flex-column bg-blue">
+                <p className="fs-50 mt-5 pt-5 fw-normal text-white">
+                  Devolución <span className="fw-semibold">de deducible</span>
+                </p>
+                <p className="fs-35 fw-normal mb-5 py-5 px-5 mx-5 mt-5 text-white">
+                  Somos la empresa pionera en la creación de asistencias
+                  pensadas 100% en las necesitas en las necesidades de nuestros
+                  clientes. Reescribimos la historia de las asistencias de
+                  seguros para{" "}
+                  <span className="fw-semibold">
+                    reembolsar el pago de deducible
+                  </span>{" "}
+                  en caso de accidente en tu auto, de enfermedad o en caso de
+                  ser hospitalizado.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <div className="services-title-mb container-fluid text-center d-lg-none">
           <h4 className="fw-500 fs-50 text-dar mb-5 pb-5 mt-5 pt-5">
             Conoce nuestros productos
@@ -180,13 +232,20 @@ export const Services = () => {
                   Gastos Médicos
                 </p>
               </div>
+              <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/deducible-gastos-medicos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
             </Link>
           </div>
           <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
-            <Link
-              to="/deducible-autos"
-              className="w-100 text-decoration-none"
-            >
+            <Link to="/deducible-autos" className="w-100 text-decoration-none">
               <div className="card border border-4 border-second text-center position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
@@ -203,13 +262,20 @@ export const Services = () => {
                   Autos
                 </p>
               </div>
+              <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/deducible-autos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
             </Link>
           </div>
           <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
-            <Link
-              to="/enlace"
-              className="w-100 text-decoration-none"
-            >
+            <Link to="/enlace" className="w-100 text-decoration-none">
               <div className="card border border-4 border-third text-center position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
@@ -224,6 +290,16 @@ export const Services = () => {
                   Enlaces
                 </p>
               </div>
+              <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                <Link to="/enlace">
+                  <button className="button-hero rounded-pill pt-1">
+                    Cotizar
+                  </button>
+                </Link>
+              </div>
             </Link>
           </div>
         </div>
@@ -235,7 +311,7 @@ export const Services = () => {
 const ServicesContainer = styled.section`
   overflow-y: hidden;
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
   overflow-x: hidden;
   .text-lile {
     color: #6983d6;
@@ -272,26 +348,26 @@ const ServicesContainer = styled.section`
     &first {
       color: white !important;
       border: none !important;
-      border-color: rgba(29, 69, 194, .6) !important;
-      background-color: rgba(29, 69, 194, .6) !important;
+      border-color: rgba(29, 69, 194, 0.6) !important;
+      background-color: rgba(29, 69, 194, 0.6) !important;
     }
 
     &second {
       color: white !important;
       border: none !important;
-      background-color: rgba(26, 106, 139, .6) !important;
+      background-color: rgba(26, 106, 139, 0.6) !important;
     }
 
     &third {
       color: white !important;
       border: none !important;
-      background-color: rgba(29, 169, 57, .6) !important;
+      background-color: rgba(29, 169, 57, 0.6) !important;
     }
 
     &fourth {
       color: white !important;
       border: none !important;
-      background-color: rgba(29, 169, 57, .6) !important;
+      background-color: rgba(29, 169, 57, 0.6) !important;
     }
   }
 
@@ -301,7 +377,7 @@ const ServicesContainer = styled.section`
   }
 
   .bg-gradient-blue {
-    background-image: linear-gradient(#fff,#bec9eb);
+    background-image: linear-gradient(#fff, #bec9eb);
     padding: 0 10rem;
     margin: 0 10rem;
     height: 100%;
@@ -348,7 +424,7 @@ const ServicesContainer = styled.section`
   }
 
   .btn-first {
-    background-color: #1D45C2;
+    background-color: #1d45c2;
     border: 3px solid #1d45c2 !important;
 
     &.text-white:hover {
@@ -361,11 +437,11 @@ const ServicesContainer = styled.section`
   }
 
   .btn-second {
-    background-color: #6F87D2;
-    border: 3px solid #6F87D2 !important;
+    background-color: #6f87d2;
+    border: 3px solid #6f87d2 !important;
 
     &.text-white:hover {
-      color: #6F87D2 !important;
+      color: #6f87d2 !important;
     }
 
     &:hover {
@@ -373,12 +449,28 @@ const ServicesContainer = styled.section`
     }
   }
 
+  .button-hero {
+    height: 6rem;
+    min-width: auto;
+    padding: 0 3rem;
+    background: #fff;
+    color: #5872c4;
+    border: 2px solid #5872c4;
+    font-size: 2.3rem;
+    font-weight: 500;
+    transition: all ease 0.3s;
+  }
+  .button-hero:hover {
+    background-color: #5872c4;
+    color: #FFF;  
+  }
+
   .btn-third {
-    background-color: #409E75;
-    border: 3px solid #409E75 !important;
+    background-color: #409e75;
+    border: 3px solid #409e75 !important;
 
     &.text-white:hover {
-      color: #409E75 !important;
+      color: #409e75 !important;
     }
 
     &:hover {
@@ -431,7 +523,7 @@ const ServicesContainer = styled.section`
 
   .gap-10 {
     gap: 10rem;
-  }  
+  }
 
   .fs-11 {
     font-size: 7.5rem;
@@ -445,7 +537,7 @@ const ServicesContainer = styled.section`
   .fs-35 {
     font-size: 3.5rem;
   }
-  
+
   .fs-50 {
     font-size: 5rem;
   }
@@ -478,16 +570,21 @@ const ServicesContainer = styled.section`
 
     .hand-right {
       z-index: 1;
-    left: 54.8%;
-    top: 87%;
-    width: auto;
-    height: 20rem;
-}
+      left: 54.8%;
+      top: 87%;
+      width: auto;
+      height: 20rem;
+    }
   }
 
   @media (min-width: 768px) {
     padding-top: 5rem;
     padding-bottom: 5rem;
+
+    .button-hero:hover {
+      background-color: #5872c4;
+      color: #fff;
+    }
 
     .services-title-mb h3 {
       padding: 0 3rem 15rem;
@@ -534,7 +631,7 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 25rem;
     }
-    
+
     .hand-right {
       left: 65.8%;
       top: 87%;
@@ -549,9 +646,8 @@ const ServicesContainer = styled.section`
       height: 63rem;
     }
 
-    
     .primary-title-hdesk {
-      height: 100vh;    
+      height: 100vh;
     }
   }
 
@@ -563,14 +659,14 @@ const ServicesContainer = styled.section`
       width: 34rem;
       height: 53.5rem;
       border-radius: 50rem;
-      opacity: .9;
+      opacity: 0.9;
     }
 
     .card_img-width_first {
-      width: 35.5rem;
-      top: 0.5rem;
-      right: 1.3rem;
-      border-radius: 19rem;
+    width: 35.5rem;
+    top: 0.9rem;
+    right: 0.8rem;
+    border-radius: 19rem;
     }
 
     .primary-title-h {
@@ -593,9 +689,9 @@ const ServicesContainer = styled.section`
 
     .bg-gradient-blue {
       background-image: linear-gradient(#fff, #bec9eb);
-      padding:0 10rem;
-      margin:0 10rem;
-      height: 90vh;
+      padding: 0 10rem;
+      margin: 0 10rem;
+      height: 95vh;
     }
 
     .fs-11 {
@@ -642,7 +738,7 @@ const ServicesContainer = styled.section`
       font-size: 2.7rem;
       line-height: 3.4rem;
     }
-    
+
     .hand {
       z-index: 1;
       width: auto;

@@ -33,8 +33,8 @@ export const Description = () => {
         <div className="row mt-5 pt-5">
           <div className="col-md-7 col-xl-7 d-flex flex-column justify-content-center align-items-start text-start text-lg-start ml-5 pl-5">
             <div className="d-flex flex-column mx-auto">
-              <h1 className="fw-normal mt-5 pt-5 fs-42">Devolución</h1>
-              <h1 className="fw-500">de deducible</h1>
+              <h1 className="fw-normal mt-5 pt-5 fs-6">Devolución</h1>
+              <h1 className="fw-normal fs-50 fw-bold">de deducible</h1>
               <p className="mt-5 pt-5 mb-5 fs-15 text-center">
                 Es una asistencia que en caso de que
                 <br />
@@ -104,8 +104,12 @@ const DescriptionSection = styled.section`
     font-size: 3.5rem;
   }
 
-  .fs-42 {
-    font-size: 42px;
+  .fs-5 {
+    font-size: 5rem;
+  }
+
+  .fs-6 {
+    font-size: 6rem !important;
   }
 
   @media (max-width: 576px) {

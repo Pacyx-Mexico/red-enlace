@@ -212,7 +212,7 @@ export const NewCharacteristics = () => {
 
 const CharacteristicsSection = styled.section`
   height: auto;
-  padding-top: 10rem;
+  padding-top: 15rem;
   padding-bottom: 10rem;
 
   .green_stain_bg {

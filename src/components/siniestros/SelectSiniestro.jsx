@@ -12,7 +12,7 @@ export const SelectSiniestro = () => {
       <Navbar />
       <SelectSiniestroContainer>
         <div className="services-title container-fluid text-center d-none d-lg-block">
-          <h3 className="pb-2 fw-semi-bold text-dark mt-5">
+          <h3 className="pb-2 fw-normal text-dark mt-5">
             Selecciona el producto
           </h3>
         </div>
@@ -39,6 +39,16 @@ export const SelectSiniestro = () => {
                     Gastos Médicos
                   </p>
                 </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/gastos-medicos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
               </Link>
             </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5">
@@ -56,11 +66,21 @@ export const SelectSiniestro = () => {
                   </div>
                 </div>
                 <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title fw-normal lh-sm text-center fs-25">
+                  <p className="card-title fw-normal lh-sm text-center fs-25 ">
                     Devolución de deducible
                     <br />
                     Autos
                   </p>
+                </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/autos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -69,7 +89,7 @@ export const SelectSiniestro = () => {
         <div className="container-fluid pb-3 pt-5 mt-5 position-relative d-lg-none">
           <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
             <div className="services-title container-fluid text-center">
-              <h3 className="pb-2 fw-semi-bold text-dark mt-5">
+              <h3 className="pb-2 fw-normal text-dark mt-5">
                 Selecciona el producto
               </h3>
             </div>
@@ -94,6 +114,16 @@ export const SelectSiniestro = () => {
                     Gastos Médicos
                   </p>
                 </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/gastos-medicos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
               </Link>
             </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
@@ -117,6 +147,16 @@ export const SelectSiniestro = () => {
                     Autos
                   </p>
                 </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/autos">
+                    <button className="button-hero rounded-pill pt-1">
+                      Cotizar
+                    </button>
+                  </Link>
+                </div>
               </Link>
             </div>
           </div>
@@ -128,7 +168,7 @@ export const SelectSiniestro = () => {
 };
 
 const SelectSiniestroContainer = styled.section`
-  height: 210rem;
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
   .text-lile {
@@ -143,6 +183,21 @@ const SelectSiniestroContainer = styled.section`
   .card-title {
     margin-bottom: 0rem;
     color: #000000;
+  }
+  .button-hero {
+    height: 6rem;
+    min-width: auto;
+    padding: 0 3rem;
+    background: #fff;
+    color: #5872c4;
+    border: 2px solid #5872c4;
+    font-size: 2.3rem;
+    font-weight: 500;
+    transition: all ease 0.3s;
+  }
+  .button-hero:hover {
+    background-color: #5872c4;
+    color: #FFF;  
   }
 
   .text-,
@@ -373,5 +428,6 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
+
 
 

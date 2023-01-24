@@ -9,15 +9,13 @@ export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
   const submitFormData = (e) => {
     e.preventDefault();
-    nextStep();
-
     // checking if value of first name and last name is empty show error else take to step 2
-    /* if (
-      validator.isEmpty(values.firstName) ||
-      validator.isEmpty(values.lastName)
-    ) {
+    if (validator.isEmpty(values.noContrato)) {
+      console.log("Validator noContrato ==> ", validator.isEmpty(values.noContrato))
       setError(true);
-    } */
+    } else {
+      nextStep();
+    }
   };
   return (
     <>
@@ -33,25 +31,26 @@ export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
           </div>
           
           <Card style={{ marginTop: 60 }}>
-            <Card.Body>
+            <Card.Body className="d-flex justify-content-center">
               <Form onSubmit={submitFormData}>
                 <Form.Group className="mb-3 d-flex gap-5">
-                  <Form.Control
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="noContrato"
-                    defaultValue={values.noContrato}
-                    type="text"
-                    placeholder="# de Contrato*"
-                    onChange={handleFormData("noContrato")}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-
+                  <div className="d-flex flex-column">
+                    <Form.Control
+                      style={{ border: error ? "2px solid red" : "" }}
+                      name="noContrato"
+                      defaultValue={values.noContrato}
+                      type="text"
+                      placeholder="# de Contrato*"
+                      onChange={handleFormData("noContrato")}
+                    />
+                    {error ? (
+                      <Form.Text style={{ color: "red" }}>
+                        Ingresa número de un contrato válido
+                      </Form.Text>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                   <Button variant="primary" type="submit" text="Buscar">
                   </Button>
                 </Form.Group>
@@ -111,6 +110,11 @@ const SiniestroAContainer = styled.section`
     font-size:3rem ; 
   }
 
+  .form-text {
+    margin-top: -7.75rem;
+    font-size: 2rem;
+  }
+
   .card {
     border: none;
   }
@@ -118,7 +122,7 @@ const SiniestroAContainer = styled.section`
   .form-control {
     background: red; 
     border: none;
-    height: 6rem;
+    height: 10rem;
     border-radius: 1.5rem;
     background: #f2f5fc;
     padding: 0 6rem;
@@ -140,10 +144,30 @@ const SiniestroAContainer = styled.section`
 
   @media (min-width: 768px) {
     height: 90vh;
+
+    .form-text {
+      margin-top: 0rem;
+      font-size: 2rem;
+    }
+
+    .gjxwFZ,
+    .flvQUx {
+      border-radius: 2rem !important;
+      background:#d9dff4;
+      border: #d9dff4;
+      color: #000;
+    }
+
+    .flvQUx:hover
+    .gjxwFZ:hover {
+      background: #8099db; 
+    }
+
     .form-control {
-      width: 70%;
+      width: 100%;
       background: #f2f5fc;
       border: none;
+      height: 6rem;
       border-radius: 1.5rem;
       padding-left: 3rem;
       font-size: 10px;
@@ -168,7 +192,7 @@ const SiniestroAContainer = styled.section`
   @media (min-width: 992px) {
     height: 90vh;
     .form-control {
-      width: 70%;
+      width: 100%;
       background: #f2f5fc;
       border: none;
       border-radius: 1.5rem;

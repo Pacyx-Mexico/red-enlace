@@ -19,7 +19,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1 ps-5">
+              <p className="fw-normal fs-30 ps-5">
               En caso de robo total, pérdida total o daños materiales, nosotros te devolveremos el deducible de tu póliza auto de acuerdo con la asistencia que hayas elegido.
               </p>
             </AccordionItemPanel>
@@ -31,7 +31,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1 ps-5">
+              <p className="fw-normal fs-30 ps-5">
                 Operamos con cualquier compañía aseguradora dentro del territorio nacional.
               </p>
             </AccordionItemPanel>
@@ -43,7 +43,7 @@ export const Dudes = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1 ps-5">
+              <p className="fw-normal fs-30 ps-5">
                 Se pagará el deducible hasta que se agote la suma del plan contratado, sin importar el número de eventos.
               </p>
             </AccordionItemPanel>
@@ -55,12 +55,16 @@ export const Dudes = () => {
 };
 
 const DudesSection = styled.section`
-  height: 58.8vh;
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
   .accordion__button:before {
     display: none;
+  }
+
+  .fs-30 {
+    font-size: 3rem;
   }
 
   .accordion__panel {

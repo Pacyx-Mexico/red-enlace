@@ -16,11 +16,6 @@ export const SiniestroSteps = () => {
           Sigue estos 3 sencillos pasos
         </h3>
       </div>
-      <div className="container-fluid text-center d-lg-none">
-        <h4 className="fw-semi-bold services-title-mb  text-dark mb-5 pb-5">
-          Conoce nuestros productos
-        </h4>
-      </div>
       <div className="container-fluid position-relative d-none d-lg-block ms-10">
         <div className="flex-column d-flex w-50 justify-content-start gap-5">
           <div className="col-auto mb-5">

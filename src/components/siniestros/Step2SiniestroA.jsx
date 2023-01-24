@@ -8,19 +8,25 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 export const Step2SiniestroA = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
   const submitFormData = (e) => {
     e.preventDefault();
-    nextStep();
-
     // checking if value of first name and last name is empty show error else take to step 2
-    /* if (
-      validator.isEmpty(values.firstName) ||
-      validator.isEmpty(values.lastName)
-    ) {
+    if (validator.isEmpty(values.asegurados)) {
+      console.log(
+        "Validator asegurados ==> ",
+        validator.isEmpty(values.asegurados)
+      );
       setError(true);
     } else {
       nextStep();
-    } */
+    }
+  };
+
+  const [value, setValue] = useState("Selecciona asegurado");
+  const handleSelect = (e) => {
+    console.log(e);
+    setValue(e);
   };
   return (
     <>
