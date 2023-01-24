@@ -24,8 +24,9 @@
   font-weight: 600;
 }
 .button-video {
-  height: 5.8rem;
-  min-width: 17rem;
+  height: 5.5rem;
+  min-width: auto;
+  padding: 0 2rem;
   background: #FFF;
   color: #5872c4;
   border: 2px solid #5872c4;
@@ -52,11 +53,10 @@
   flex-direction: column;
 }
 .productVideo__videoContainer {
-  width: 80rem;
-  height: 54rem;
+  width: 79.5rem;
+  height: 53.1rem;
   margin-top: -20rem;
   border-radius: 4rem;
-
   background-color: #fff;
   box-shadow: 2px 2px 10px var(--shadow-color);
 }
@@ -107,13 +107,14 @@
   .productVideo__videoTitle {
     display: block;
     margin-bottom: 4rem;
+    font-size: 5rem;
   }
   .productVideo {
     padding: 10rem 3rem;
   }
   .productVideo__videoContainer {
-    width: 90%;
-    height: 35rem;
+    width: 89.9%;
+    height: auto;
     margin: 0 auto;
   }
   .headerText__imgContainer {
@@ -126,6 +127,9 @@
   }
   .headerText__imgContainer img {
     height: 70%;
+  }
+  .productVideo__subtitle {
+    font-size: 2.5rem;
   }
 }
 

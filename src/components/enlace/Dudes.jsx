@@ -9,20 +9,23 @@ import {
 
 export const Dudes = () => {
   return (
-    <DudesSection className="container d-block text-center fs-2">
-      <h4 className="mt-5 mt-xxl-5 fw-normal fs-40 text-dark pb-5">
+    <DudesSection className="container d-block text-center  fs-2">
+      <h4 className="mt-5 mt-xxl-5 fw-normal fs-50 text-dark pb-5">
         Resolvemos tus dudas
       </h4>
       <div className="container my-5">
-        <Accordion allowZeroExpanded className="border-none">
+        <Accordion allowZeroExpanded className="border-none d-flex flex-column gap-5">
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Qué condiciones de mi póliza actual pierdo si contrato Red Enlace?
+                <span className="secondary-color3 me-4">&#8226; </span>
+                <span className="fs-35">
+                  ¿Qué condiciones de mi póliza actual pierdo si contrato Red Enlace?
+                </span> 
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1">
+              <p className="fw-normal ms-5 ps-2 fs-35">
                 Ninguna, incluso se te aumentan beneficios de forma inmediata y se quedan las mismas condiciones de tu póliza actual.
               </p>
             </AccordionItemPanel>
@@ -30,32 +33,37 @@ export const Dudes = () => {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Cuáles son los beneficios extras sin costo que obtengo al contratar un endoso de Red Enlace?
+                <span className="secondary-color3 me-4">&#8226; </span>
+                <span className="fs-35">¿Cuáles son los beneficios extras sin costo que obtengo al contratar un endoso de Red Enlace?</span>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1">
-                Los beneficios se activan desde el primer minuto en el que contratas el endoso.
-              </p>
-              <p className="fw-normal fs-1">
-                - En caso de siniestro te damos una ayuda hospitalaria de $1,000 pesos diarios (topado a 30 días), depositado directamente a tu cuenta, esto aplica únicamente en caso de enfermedades graves (politraumatismo, derrame cerebral o transplante de órganos).
-              </p>
-              <p className="fw-normal fs-1">
-                - El 100% de tu deducible es cubierto por Red Enlace.
-              </p>
-              <p className="fw-normal fs-1">
-                - El pago de siniestros lo realizamos en máximo 72 horas.
-              </p>
+              <div className="d-flex flex-column gap-3">
+                <p className="fw-normal ms-5 ps-2 fs-35">
+                  Los beneficios se activan desde el primer minuto en el que contratas el endoso.
+                </p>
+                <p className="fw-normal ms-5 ps-2 fs-35">
+                  - En caso de siniestro te damos una ayuda hospitalaria de $1,000 pesos diarios (topado a 30 días), depositado directamente a tu cuenta, esto aplica únicamente en caso de enfermedades graves (politraumatismo, derrame cerebral o transplante de órganos).
+                </p>
+                <p className="fw-normal ms-5 ps-2 fs-35">
+                  - El 100% de tu deducible es cubierto por Red Enlace.
+                </p>
+                <p className="fw-normal ms-5 ps-2 fs-35">
+                  - El pago de siniestros lo realizamos en máximo 72 horas.
+                </p>
+              </div>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Esta asistencia funciona con todas las pólizas de gastos médicos?
+                <span className="secondary-color3 me-4">&#8226; </span>
+                <span className="fs-35">
+                ¿Esta asistencia funciona con todas las pólizas de gastos médicos?</span>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-1 text-left">
+              <p className="fw-normal ms-5 ps-2 text-left fs-35">
                 Si, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
               </p>
             </AccordionItemPanel>
@@ -67,7 +75,7 @@ export const Dudes = () => {
 };
 
 const DudesSection = styled.section`
-  height: 70vh;
+  height: 100vh;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -81,6 +89,15 @@ const DudesSection = styled.section`
 
   .fs-40 {
     font-size: 4rem;
+  }
+
+  .fs-35 {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+
+  .fs-50 {
+    font-size: 5rem;
   }
 
   .secondary-color3 {

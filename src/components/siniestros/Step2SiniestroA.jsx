@@ -164,6 +164,12 @@ const SiniestroAContainer = styled.section`
     border: none; 
   }
 
+  
+  .dropdown-item {
+      font-size: 3rem !important;
+    }
+
+
   .primary-title-mb {
     font-size: 4rem;
   }
@@ -213,15 +219,19 @@ const SiniestroAContainer = styled.section`
 
   @media (min-width: 768px) {
     .fs-20 {
-    font-size: 20px;
-  }
+      font-size: 20px;
+    }
 
-  .fs-15 {
-    font-size: 15px;
-  }
+    .fs-15 {
+      font-size: 15px;
+    }
 
     .fs-35 {
       font-size: 3.5rem;
+    }
+      
+    .dropdown-item {
+      font-size: 1.5rem;
     }
   }
 
@@ -249,15 +259,11 @@ const SiniestroAContainer = styled.section`
     }
 
     .fs-10 {
-      font-size: 10px;
+      font-size: 15px;
     }
 
     .card {
       border: none; 
-    }
-
-    .dropdown-item {
-      font-size: 1.5rem;
     }
 
     .btn-success {

@@ -192,6 +192,11 @@ const SiniestroAContainer = styled.section`
     }
   }
 
+  
+    .dropdown-item {
+      font-size: 3rem !important;
+    }
+
   .btn-success {
     background: #f2f5fa;
     border: none;
@@ -215,12 +220,16 @@ const SiniestroAContainer = styled.section`
 
   @media (min-width: 768px) {
     .fs-20 {
-    font-size: 20px;
-  }
+      font-size: 20px;
+    }
 
-  .fs-15 {
-    font-size: 15px;
-  }
+    .dropdown-item {
+      font-size: 1.5rem;
+    }
+
+    .fs-15 {
+      font-size: 15px;
+    }
   }
 
   @media (min-width: 992px) {
@@ -247,7 +256,7 @@ const SiniestroAContainer = styled.section`
     }
 
     .fs-10 {
-      font-size: 10px;
+      font-size: 15px;
     }
 
     .fs-35 {
@@ -256,10 +265,6 @@ const SiniestroAContainer = styled.section`
 
     .card {
       border: none; 
-    }
-
-    .dropdown-item {
-      font-size: 1.5rem;
     }
 
     .btn-success {

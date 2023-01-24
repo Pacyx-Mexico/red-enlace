@@ -75,10 +75,10 @@ export const Plans = () => {
 
       <div className="container py-3 position-relative d-lg-none">
         <div className="services-title container text-center">
-          <h5 className="text-dark fs-25 fw-semi-bold text-center pt-4 fst-italic">
+          <h5 className="text-dark fs-50 fw-semi-bold text-center pt-4">
             Asistencia a tu medida
           </h5>
-          <p className="fs-20 fw-light mt-5">
+          <p className="fs-35 fw-light mt-5">
             Ahorra en el pago de tu póliza de<br />Gastos Médicos
           </p>
         </div>
@@ -93,13 +93,13 @@ export const Plans = () => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper d-flex align-items-center"
         >
           <SwiperSlide>
-            <div className="w-100 h-50rem">
+            <div className="w-100 h-100 d-flex flex-column justify-content-center">
               <div className="card bg-white border border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none mx-auto">
-                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
-                  <p className="fw-normal fs-35 my-auto me-5">Enlace Max</p>
+                <div className="card-price top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
+                  <p className="fw-normal fs-45 my-auto me-5">Enlace Max</p>
                 </div>
                 <div className="card-body px-2 pb-0">
                   <p className="card-title fw-normal text-primary">
@@ -117,10 +117,10 @@ export const Plans = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-100 h-50rem">
+            <div className="w-100 h-100 d-flex flex-column justify-content-center">
               <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none mx-auto">
-                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
-                  <p className="fw-normal fs-35 my-auto me-5">Enlace Total</p>
+                <div className="card-price top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
+                  <p className="fw-normal fs-45 my-auto me-5">Enlace Total</p>
                 </div>
                 <div className="card-body px-2 pb-0">
                   <p className="card-title fw-normal text-primary">
@@ -138,14 +138,12 @@ export const Plans = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-100 h-50rem">
+            <div className="w-100 h-100 d-flex flex-column justify-content-center">
               <div className="card border opacity-100 border-0 border-primary rounded-5 py-5 px-2 text-center shadow-lg border-none mx-auto">
-                <div className="card-price rounded-4 top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
-                  <p className="fw-normal fs-35 my-auto me-5">Enlace Max Total</p>
+                <div className="card-price top-20 start-0 mt-4 d-flex justify-content-end align-items-center">
+                  <p className="fw-normal fs-45 my-auto me-5">Enlace Max Total</p>
                 </div>
                 <div className="card-body px-2 pb-0">
-                  <p className="card-title fw-bold fst-italic lh-sm mt-4 green-text">
-                  </p>
                   <p className="card-title fw-normal text-primary">
                     <span className="fw-bold green-text">Aumentamos el deducible y coaseguro de tu póliza actual </span> para bajar el costo y, <br />
                     en caso de siniestro, Red <br />
@@ -167,9 +165,8 @@ export const Plans = () => {
 };
 
 const PlansSection = styled.section`
-  height: 115rem;
+  height: 90vh;
   padding-top: 10rem;
-  padding-bottom: 10rem;
   position: relative;
 
   hr {
@@ -207,17 +204,21 @@ const PlansSection = styled.section`
   }
 
   .card-price {
-    width: 40rem;
-    height: 8.5rem;
+    width: 50rem;
+    height: 12rem;
     background-color: #79c789;
     color: white;
     margin-left: -10rem;
-    font-size: 14px;
+    border-radius: 4rem;
+  }
+
+  .swiper {
+    height: 90rem;
   }
 
   .card {
-    width: 40rem;
-    height: 50rem;
+    width: 50rem;
+    height: 60rem;
     background-color: #ffffff;
 
     .icon-height {
@@ -226,7 +227,7 @@ const PlansSection = styled.section`
 
     .card-body .card-title {
       font-size: 2rem;
-      margin-top: 15%;
+      margin-top: 10%;
     }
   }
 
@@ -235,8 +236,9 @@ const PlansSection = styled.section`
     color: #707070;
   } 
 
-  .h-50rem {
+  .h-50re {
     height: 60rem;
+
   }
 
   .btn-first {
@@ -252,10 +254,6 @@ const PlansSection = styled.section`
     }
   }
 
-  .services-title {
-    padding-bottom: 10rem;
-  }
-
   .fs-25 {
     font-size: 20px;
   }
@@ -264,12 +262,24 @@ const PlansSection = styled.section`
       font-size: 18px;
   }
 
+  .fs-35 {
+    font-size: 3.5rem;
+  }
+
   .fs-40 {
     font-size: 4rem;
   }
 
   .fs-45 {
     font-size: 4.5rem;
+  }
+
+  .fs-50 {
+    font-size: 5rem;
+  }
+
+  .card .card-body .card-title {
+    font-size: 3rem;
   }
 
   @media (min-width: 576px) {

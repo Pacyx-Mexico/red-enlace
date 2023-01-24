@@ -8,12 +8,14 @@ export const Cobertura = () => {
   return (
     <CoberturaSection>
       <div className="services-title container text-center mt-5 pt-5">
-        <h3 className="pb-2 fw-normal fs-35 text-dark">
+        <h3 className="pb-2 fw-normal fs-35 text-dark d-none d-md-block">
             Personaliza tu protección con <br />
             nuestras coberturas adicionales
         </h3>
-        <h3 className="text-dark fw-semi-bold fs-35 fst-italic text-center">
-          
+        <h3 className="pb-2 fw-medium fs-50 fst-italic text-dark d-md-none">
+            Personaliza tu protección  <br />
+            con nuestras coberturas <br />
+            adicionales
         </h3>
       </div>
       <div className="container py-3 position-relative d-none d-md-block">
@@ -33,7 +35,7 @@ export const Cobertura = () => {
               <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Máxima suma asegurada $5,000
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-15">
+              <p className="card-title fw-bold lh-sm text-dark fs-30">
                 Costo anual: $120.00
               </p>
             </div>
@@ -53,7 +55,7 @@ export const Cobertura = () => {
                 <br />
                 $5,000.00 de ayuda por robo
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-15">
+              <p className="card-title fw-bold lh-sm text-dark fs-30">
                 Costo $670.00
               </p>
             </div>
@@ -72,7 +74,7 @@ export const Cobertura = () => {
               <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
                 Por pérdida parcial, total o corralón.
               </p>
-              <p className="card-title fw-bold lh-sm text-dark fs-15">
+              <p className="card-title fw-bold lh-sm text-dark fs-30">
                 $10,000 por 20 días <br />
                 $15,000 por 30 días
                 <br />
@@ -95,22 +97,22 @@ export const Cobertura = () => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper h-75"
         >
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-                <div className="icon-height">
+              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
+                <div className="icon-height d-flex align-content-center justify-content-center">
                   <KeysIcon />
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-medium fst-italic lh-sm text-dark fs-15">
-                  Llaves perdidas
+                <p className="card-title fw-500 fst-italic lh-sm text-dark fs-30">
+                  <span className="fw-bold fs-30">Llaves perdidas</span>
                   <br />
                   (máximo 1 al año)
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-15 pt-5">
+                <p className="card-title fw-normal lh-sm text-dark fs-30 pt-5">
                   Máxima suma asegurada $5,000
                 </p>
                 <p className="card-title fs-11 fw-bold lh-sm text-dark mt-5">
@@ -121,16 +123,16 @@ export const Cobertura = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-                <div className="icon-height">
+              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
+                <div className="icon-height d-flex align-content-center justify-content-center">
                   <CrystalIcon />
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-medium fst-italic lh-sm text-dark fs-15">
-                  Cristalazo
+                <p className="card-title fw-medium fst-italic lh-sm text-dark fs-30">
+                  <span className="fw-bold fs">Cristalazo</span>
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-3 mt-5 pt-5">
+                <p className="card-title fw-500 lh-sm text-dark fs-3 mt-5 pt-5">
                   Dev. deducible cristal y
                   <br />
                   $5,000.00 de ayuda por robo
@@ -143,17 +145,17 @@ export const Cobertura = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
-                <div className="icon-height icon-height-platform_icon mx-auto">
+              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
+                <div className="icon-height icon-height-platform_icon mx-auto d-flex align-content-center justify-content-center">
                   <PlatformsIcon />
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-medium fst-italic lh-sm text-dark fs-15 fst-italic">
-                  Plataformas con <br />
-                  socios conductores
+                <p className="card-title fw-500 fst-italic lh-sm text-dark fs-30 fst-italic">
+                  <span  className="fw-bold fs">Plataformas con <br />
+                  socios conductores </span>
                   <br />
-                  (Cuotas anuales)
+                  <span>(Cuotas anuales)</span>
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-3 my-3">
                   Por pérdida parcial, total o corralón.
@@ -177,7 +179,7 @@ export const Cobertura = () => {
         <Dudes />
       </div>
 
-      <div className="container h-75 py-3 d-md-none">
+      <div className="container h-auto py-3 d-md-none">
         <div className="mx-5 dudas__container gap-5">
           <div>
             <h4 className="fst-italic  text-center my-5 py-5">
@@ -226,7 +228,7 @@ export const Cobertura = () => {
 };
 
 const CoberturaSection = styled.section`
-  height: 230rem;
+  height: 200vh;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -250,8 +252,16 @@ const CoberturaSection = styled.section`
     border-color: #5f93a9 !important;
   }
 
+  .swiper {
+    height: 70rem;
+  }
+
   .swiper-slide {
     height: 62rem;
+  }
+
+  .swiper-pagination-bullets {
+    bottom: 0;
   }
 
   .swiper-slide-h-50 {
@@ -266,13 +276,17 @@ const CoberturaSection = styled.section`
     font-size: 2.7rem;
   }
 
-  .fs-15 {
+  .fs-50 {
+    font-size: 5rem;
+  }
+
+  .fs-30 {
     font-size: 3rem;
   }
 
   .card {
-    width: 30rem;
-    height: 30rem;
+    width: 35rem;
+    height: 35rem;
     background-color: #5f93a9;
 
     .icon-height {
@@ -308,13 +322,13 @@ const CoberturaSection = styled.section`
   }
 
   .dudas__container {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
   }
 
   .dudas__text {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 4.5rem;
   }
 
@@ -333,10 +347,6 @@ const CoberturaSection = styled.section`
 
     .dudas__container {
       height: 100%;
-    }
-
-    .dudas__text {
-      font-size: 3rem;
     }
 
     .document-icon {

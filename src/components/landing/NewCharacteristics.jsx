@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { Image } from "react-bootstrap";
 import { PersonIcon, ReportIcon, ChatIcon, IdeaIcon } from "../../assets/icons";
-import Fade from 'react-bootstrap/Fade';
+import Fade from "react-bootstrap/Fade";
 // import { GreenStain } from "../../assets/backgrounds";
 
 export const NewCharacteristics = () => {
@@ -56,7 +56,7 @@ export const NewCharacteristics = () => {
       <div className="mt-5 pt-5 w-100 d-none d-md-block">
         <div className="services-position">
           <ul className="d-flex flex-row justify-content-around mx-auto">
-            <li>
+            <li className="flex-1 text-center d-flex flex-column align-items-center">
               <p
                 className="services__title"
                 onMouseOver={handleMouseOver}
@@ -65,7 +65,7 @@ export const NewCharacteristics = () => {
                 Procesos eficientes
               </p>
               {isHovering1 && (
-                <Fade in={isHovering1} >
+                <Fade in={isHovering1}>
                   <p className="fs-2 text-center">
                     El proceso para contratar cualquiera de <br />
                     nuestros productos es fácil y sencillo.
@@ -73,7 +73,7 @@ export const NewCharacteristics = () => {
                 </Fade>
               )}
             </li>
-            <li>
+            <li className="flex-1 text-center">
               <p
                 className="services__title "
                 onMouseOver={handleMouseOver2}
@@ -81,14 +81,14 @@ export const NewCharacteristics = () => {
               >
                 Productos a la medida
               </p>
-                {isHovering2 && (
-                  <p className="fs-2 text-center">
-                    Productos que se adaptan a <br />
-                    tus necesidades.
-                  </p>
-                )}
+              {isHovering2 && (
+                <p className="fs-2 text-center">
+                  Productos que se adaptan a <br />
+                  tus necesidades.
+                </p>
+              )}
             </li>
-            <li>
+            <li className="flex-1 text-center">
               <p
                 className="services__title"
                 onMouseOver={handleMouseOver3}
@@ -104,7 +104,7 @@ export const NewCharacteristics = () => {
                 </p>
               )}
             </li>
-            <li>
+            <li className="flex-1 text-center ">
               <p
                 className="services__title"
                 onMouseOver={handleMouseOver4}
@@ -127,6 +127,13 @@ export const NewCharacteristics = () => {
       </div>
 
       <div className="container py-3 position-relative d-md-none">
+        <div className="services-title px-4 container text-center">
+          <h3 className="pb-2 fw-semi-bold text-dark">
+            <span className="text-dark fw-normal fs-50 fw-500">La única opción digital para <br />
+              complementar tu protección</span>
+          </h3>
+          <h5 className="text-dark fs-30 fw-normal text-center pt-4">Trabajamos para superar tus expectativas con:</h5>
+        </div>
         <div className="row d-flex justify-content-between mx-5 px-5 gap-5">
           <div className="col-12">
             <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center d-flex row align-items-center justify-content-around">
@@ -134,10 +141,10 @@ export const NewCharacteristics = () => {
                 <PersonIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
                   Productos a la medida
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5 align-self-center">
+                <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5 align-self-center">
                   Productos que se adaptan a<br />
                   tus necesidedes.
                 </p>
@@ -150,10 +157,10 @@ export const NewCharacteristics = () => {
                 <ReportIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
                   Procesos eficientes
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5">
+                <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5">
                   El proceso para contratar cualquiera de <br />
                   nuestros productos es fácil y sencillo.
                 </p>
@@ -166,10 +173,10 @@ export const NewCharacteristics = () => {
                 <ChatIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
                   Atención personalizada
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5">
+                <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5">
                   Siempre podrás hablar con alguien <br />
                   para resolver tus dudas.
                 </p>
@@ -182,10 +189,10 @@ export const NewCharacteristics = () => {
                 <IdeaIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-bold lh-sm text-primary fst-italic fs-30">
                   Innovación
                 </p>
-                <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5">
+                <p className="card-title fw-normal lh-sm text-primary fs-25 mt-5">
                   Nos adaptamos a nuevas formas de
                   <br />
                   comunicación, para ofrecer un servicio
@@ -209,7 +216,7 @@ export const NewCharacteristics = () => {
 };
 
 const CharacteristicsSection = styled.section`
-  height: 120rem;
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -226,6 +233,23 @@ const CharacteristicsSection = styled.section`
   .services-position {
     position: relative;
     z-index: 5;
+
+    ul {
+      list-style: none;
+
+      li p:first-child::before {
+        /* add the new bullet point */
+        display: inline-block;
+        content: "";
+        -webkit-border-radius: 0.375rem;
+        border-radius: 0.375rem;
+        height: 0.8rem;
+        width: 0.8rem;
+        margin-right: 1rem;
+        margin-bottom: .5rem;
+        background-color: #000;
+      }
+    }
   }
 
   .services__title {
@@ -259,6 +283,18 @@ const CharacteristicsSection = styled.section`
     border: 10px solid #6983d6 !important;
   }
 
+  .fs-50 {
+    font-size: 5rem;
+  }
+
+  .fs-30 {
+    font-size: 3rem;
+  }
+
+  .fs-25 {
+    font-size: 2.5rem;
+  }
+
   .icon svg {
     width: 30px;
     height: 30px;
@@ -285,7 +321,7 @@ const CharacteristicsSection = styled.section`
     }
 
     .card-body {
-      width: 86%;
+      width: auto;
     }
   }
 
@@ -311,17 +347,20 @@ const CharacteristicsSection = styled.section`
     .services-title {
       padding-bottom: 15rem;
     }
+
+    .flex-1 {
+      flex: 1;
+    }
   }
 
   @media (min-width: 992px) {
     .card {
-    width: 28rem;
-    height: 40rem;
+      width: 28rem;
+      height: 40rem;
 
-    .card-body .card-title {
-      font-size: 14px;
-    }
+      .card-body .card-title {
+        font-size: 14px;
+      }
     }
   }
 `;
-

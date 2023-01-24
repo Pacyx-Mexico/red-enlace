@@ -76,7 +76,7 @@ export const Services = () => {
                 to="/deducible-gastos-medicos"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-first text-center position-relative card-hover_first">
+                <div className="card border-none border-first text-center position-relative card-hover_first">
                   <div className="position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -136,16 +136,16 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="container-fluid py-3 position-relative d-lg-none">
+    <div className="container-fluid position-relative d-lg-none">
       <div className="d-flex justify-content-center flex-column mb-lg pb-5">
-        <div className="text-center mt-5 pt-5 position-relative">
+        <div className="text-center position-relative">
           <div className="primary-title-h">
-            <h2 className="fs-11 mb-5 pb-5 fw-bold">¿Qué nos hace únicos?</h2>
+            <h2 className="fs-11 mb-5 pb-5 fw-500">¿Qué nos hace únicos?</h2>
             <div className="d-flex py-5 flex-column bg-blue">
-              <p className="fs-35 mt-5 pt-5 fw-normal text-white">
+              <p className="fs-50 mt-5 pt-5 fw-normal text-white">
                 Devolución <span className="fw-semibold">de deducible</span>
               </p>
-              <p className="fs-1 fw-normal mb-5 py-5 px-5 mx-5 mt-5 text-white">
+              <p className="fs-35 fw-normal mb-5 py-5 px-5 mx-5 mt-5 text-white">
               Somos la empresa pionera en la creación de asistencias pensadas 100% en las necesitas en las necesidades de nuestros clientes.
               Reescribimos la historia de las asistencias de seguros para <span className="fw-semibold">reembolsar el pago de deducible</span> en caso de accidente en tu auto, de enfermedad o en caso de ser hospitalizado.
               </p>
@@ -154,7 +154,7 @@ export const Services = () => {
         </div>
       </div>
         <div className="services-title-mb container-fluid text-center d-lg-none">
-          <h4 className="fw-semi-bold fs-11 text-dar mb-5 pb-5 mt-5 pt-5">
+          <h4 className="fw-500 fs-50 text-dar mb-5 pb-5 mt-5 pt-5">
             Conoce nuestros productos
           </h4>
         </div>
@@ -164,7 +164,7 @@ export const Services = () => {
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-first text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
+              <div className="card border-first text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
@@ -271,26 +271,27 @@ const ServicesContainer = styled.section`
   .border- {
     &first {
       color: white !important;
-      border-color: #1d45c2 !important;
-      background-color: #1d45c2 !important;
+      border: none !important;
+      border-color: rgba(29, 69, 194, .6) !important;
+      background-color: rgba(29, 69, 194, .6) !important;
     }
 
     &second {
       color: white !important;
-      border-color: #1a6a8b !important;
-      background-color: #1a6a8b !important;
+      border: none !important;
+      background-color: rgba(26, 106, 139, .6) !important;
     }
 
     &third {
       color: white !important;
-      border-color: #1b8e5c !important;
-      background-color: #1b8e5c !important;
+      border: none !important;
+      background-color: rgba(29, 169, 57, .6) !important;
     }
 
     &fourth {
       color: white !important;
-      border-color: #1da939 !important;
-      background-color: #1da939 !important;
+      border: none !important;
+      background-color: rgba(29, 169, 57, .6) !important;
     }
   }
 
@@ -440,8 +441,12 @@ const ServicesContainer = styled.section`
   .fs-10 {
     font-size: 5rem;
   }
-  
+
   .fs-35 {
+    font-size: 3.5rem;
+  }
+  
+  .fs-50 {
     font-size: 5rem;
   }
 
@@ -563,8 +568,8 @@ const ServicesContainer = styled.section`
 
     .card_img-width_first {
       width: 35.5rem;
-      top: 0.3rem;
-      right: 1.6rem;
+      top: 0.5rem;
+      right: 1.3rem;
       border-radius: 19rem;
     }
 
@@ -605,15 +610,15 @@ const ServicesContainer = styled.section`
     .card_img-width_second {
       border-radius: 0 21rem 21rem;
       width: 34rem;
-      top: 8.4rem;
-      right: 0.6rem;
+      top: 9.1rem;
+      right: 0rem;
     }
 
     .card_img-width_third {
       width: 37rem;
-      top: 1.5rem;
-      right: 2.4rem;
-      border-radius: 42rem;
+      top: 2.2rem;
+      right: 1.9rem;
+      border-radius: 24rem;
     }
 
     .services-title {

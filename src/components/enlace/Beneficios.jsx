@@ -6,10 +6,18 @@ import { Pagination, Navigation } from "swiper";
 export const Beneficios = () => {
   return (
     <BeneficiosSection className="d-flex align-items-center justify-content-center flex-column">
-      <div className="services-title container text-center mt-5 pt-5">
+      <div className="services-title container text-center mt-5 pt-5 d-none d-md-block">
         <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-normal fs-40">
+          <span className="text-dark fw-normal fs-45">
             Beneficios de ser parte de la comunidad Red Enlace
+          </span>
+        </h3>
+      </div>
+      <div className="services-title container text-center mt-5 pt-5 d-md-none">
+        <h3 className="pb-2 fw-semi-bold text-dark">
+          <span className="text-dark fw-500 fs-50">
+            Beneficios de ser parte de la <br />
+            comunidad Red Enlace
           </span>
         </h3>
       </div>
@@ -93,16 +101,10 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-3">
-                  Llaves perdidas
-                  <br />
-                  (máximo 1 al año)
-                </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
-                  Máxima suma asegurada $5,000
-                </p>
-                <p className="card-title fw-bold lh-sm text-dark fs-25">
-                  Costo anual: $120.00
+                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                  Ahorro <br />
+                  garantizado, hasta <br />
+                  35%
                 </p>
               </div>
             </div>
@@ -115,16 +117,9 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-3">
-                  Cristalazo
-                </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
-                  Dev. deducible cristal y
-                  <br />
-                  $5,000.00 de ayuda por robo
-                </p>
-                <p className="card-title fw-bold lh-sm text-dark fs-25">
-                  Costo $670.00
+                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                  Pago de siniestros en <br />
+                  menos de 72 horas
                 </p>
               </div>
             </div>
@@ -137,18 +132,25 @@ export const Beneficios = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-bold lh-sm text-dark fs-3">
-                  Plataformas con socios conductores <br />
-                  (Cuotas anuales)
+                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                  Ayuda diaria por <br />
+                  hospitalización
                 </p>
-                <p className="card-title fw-normal lh-sm text-dark fs-3 pt-5">
-                  Por pérdida parcial, total o corralón.
-                </p>
-                <p className="card-title fw-bold lh-sm text-dark fs-25">
-                  $10,000 por 20 días <br />
-                  $15,000 por 30 días
-                  <br />
-                  $20,000 por 40 días
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="col-auto d-flex flex-column justify-content-center align-items-center">
+              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+                <div className="icon-height d-flex align-items-center">
+                  <MoneyTwoIcon />
+                </div>
+              </div>
+              <div className="card-body px-2 pb-0 mt-5 text-center">
+                <p className="card-title fw-500 lh-sm text-dark pt-5 fst-italic">
+                  En caso de enfermedades <br />
+                  graves nosotros pagamos <br />
+                  tu deducible
                 </p>
               </div>
             </div>
@@ -160,13 +162,19 @@ export const Beneficios = () => {
 };
 
 const BeneficiosSection = styled.section`
-  height: 71vh;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  height: 80vh;
 
   .height-lile {
     height: auto;
     background: #f1f6f8;
+  }
+
+  .fs-40 {
+   font-size: 4rem;
+  }
+
+  .fs-50 {
+    font-size: 5rem;
   }
 
   .icon svg {
@@ -180,6 +188,7 @@ const BeneficiosSection = styled.section`
 
   .card-title {
     margin-bottom: 0rem;
+    font-size: 3.5rem;
   }
 
   .text-primary,
@@ -232,7 +241,8 @@ const BeneficiosSection = styled.section`
 
   @media (min-width: 767px) {
     height: 100vh;
-    padding-bottom: 0rem;  
+    padding-top: 0;
+    padding-bottom: 0;  
     .card {
       width: 25rem;
       height: 25rem;
@@ -246,7 +256,7 @@ const BeneficiosSection = styled.section`
       }
     }
 
-    .fs-40 {
+    .fs-45 {
       font-size: 4.5rem;
     }
 

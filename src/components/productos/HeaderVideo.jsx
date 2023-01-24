@@ -20,7 +20,7 @@ function HeaderVideo({ video, title, url }) {
         <section className="pt-5">
           <h4 className="videoTitle fw-normal fs-55 mt-5 pt-5">¿Cómo funciona?</h4>
           <div className="productVideo">
-            <h4 className="productVideo__videoTitle">¿Cómo funciona?</h4>
+            <h4 className="productVideo__videoTitle fst-italic">¿Cómo funciona?</h4>
             <video ref={vidRef} className="productVideo__videoContainer" autoPlay loop muted>
               <source
                 src={url}
@@ -39,7 +39,7 @@ function HeaderVideo({ video, title, url }) {
             <div onClick={scrollTop} className="d-md-none">
               <Link to="/cotizador-deducible-gastos-medicos">
                 <button className="btn btn-lg btn-first rounded-pill fw-bold mx-auto w-100 opacity-75 fs-1">
-                  Cotizar
+                  Contratar
                 </button>
               </Link>
             </div>

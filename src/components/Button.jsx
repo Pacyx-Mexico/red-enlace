@@ -6,11 +6,11 @@ function Button({ text }) {
 
 const Btn = styled.button`
   height: 6rem;
-  min-width: 20rem;
+  min-width: auto;
   border-radius: 5rem;
   padding: 0 2rem;
   border: 2px solid var(--primary-color2);
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
   padding-top: 0.25rem;

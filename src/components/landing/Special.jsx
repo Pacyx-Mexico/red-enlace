@@ -17,7 +17,7 @@ export const Special = () => {
           <div className="col-lg-7 col-xl-6 offset-lg-1 d-flex flex-column justify-content-center align-items-start text-start text-lg-start">
             <h1 className="fw-normal mt-4">Contratación</h1>
             <h1 className="fw-bold">100% digital.</h1>
-            <p className="text-secondary mt-2 mb-5 fs-25 fw-light">
+            <p className="text-secondary mt-2 mb-5 fs-30 fw-light">
               Somos la única opción de contratación <br />
               100% digital de principio a fin.
             </p>
@@ -26,7 +26,7 @@ export const Special = () => {
       </div>
       <div className="container-fluid d-lg-none h-100">
         <div className="row h-100">
-          <div className="position-absolute z-index-custom">
+          <div className="position-relative d-flex flex-column justify-content-between z-index-custom">
             <div className="d-flex flex-column justify-content-center align-items-center text-center text-lg-start mb-5 pb-5">
               <h1 className="fw-normal mt-4 special__title-first">
                 Contratación
@@ -35,22 +35,22 @@ export const Special = () => {
                 100% digital.
               </h1>
             </div>
-            <div className="d-flex flex-column align-items-center text-center text-lg-start special__last-text">
-              <p className="mb-5 fs-1 fw-light">
-                Somos la única opción de contratación <br />
-                <span className="fw-bold fst-italic">
-                  100% digital de principio a fin.
-                </span>
-              </p>
-            </div>
-          </div>
-          <div className="d-flex mt-5 ">
+            <div className="d-flex">
             <Image
               className="gradient_img_bg position-absolute"
               src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
               alt="Gradient background element"
             />
             <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="" />
+            </div>
+            <div className="d-flex flex-column align-items-center text-center special__last-text">
+              <p className="mb-5 fs-30 fw-light">
+                Somos la única opción de contratación <br />
+                <span className="fw-bold fst-italic">
+                  100% digital de principio a fin.
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -70,15 +70,19 @@ const SpecialContainer = styled.section`
     z-index: -2;
     height: 55%;
     width: 90%;
-    top: 40%;
+    top: 25%;
     right: 0;  
+  }
+
+  .fs-30 {
+    font-size: 3rem;
   }
 
   .phone_img {
     z-index: -1;
     height: 67%;
     width: auto;
-    top: 35%;
+    top: 21%;
     left: 27%;
   }
 
@@ -163,10 +167,6 @@ const SpecialContainer = styled.section`
       width: auto;
       top: 3%;
       left: 55%;
-    }
-
-    .fs-25 {
-      font-size: 3rem;
     }
   }
 `;

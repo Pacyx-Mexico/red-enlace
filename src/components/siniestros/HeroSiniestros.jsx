@@ -6,10 +6,10 @@ export const HeroSiniestros = () => {
     <HeroContainer className="home position-relative" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
-        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+733.png"}
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+737.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center position-absolute top-50 w-100 d-none d-md-flex ms-10">
+      <div className="align-items-center position-absolute top-50 w-100 d-none d-lg-flex ms-10">
         <div className="home__info d-flex flex-column justify-content-center text-start align-items-start">
           <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-start h2-heading text-black">
             ¿Qué hacer en <br />
@@ -23,11 +23,11 @@ export const HeroSiniestros = () => {
 
       </div>
 
-      <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-md-none">
+      <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-lg-none">
         <div className="home__info-mb d-flex flex-column justify-content-center w-100 align-items-center gap-5">
           <h2 className="pr-xxl-5 z-index fw-medium h2-heading primary_title">
             ¿Qué hacer en caso de <br />
-            <span className="primary_title fw-bold fst-italic">siniestro?</span>
+            <span className="primary_title fw-bold">siniestro?</span>
           </h2>
           <p className="mb-4 mb-lg-5 hero_subtitle w-100 px-5 mt-5">
             Ponemos a tu disposición todo lo necesario <br />
@@ -46,6 +46,7 @@ const HeroContainer = styled.section`
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index:-1;
     height: 112rem;
   }
 
@@ -62,7 +63,7 @@ const HeroContainer = styled.section`
   }
 
   .hero_subtitle {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: #6f6f6f;
     text-align: center;
@@ -97,7 +98,7 @@ const HeroContainer = styled.section`
     height: 80rem;
     .gradient_img_bg {
       z-index: -1;
-      height: 221rem;
+      height: 218.5vh;
       width: 35%;
       top: 0;
       right: 0;

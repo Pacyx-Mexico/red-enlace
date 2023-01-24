@@ -15,12 +15,12 @@ export const EnlaceHero = () => {
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/Enlace-hero.png" }
         alt="Gradient background element"
       />
-      <div className="d-flex align-items-center position-absolute w-50 h-100 d-none d-md-flex">
+      <div className="d-flex align-items-center position-absolute w-75 h-100 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
           <h2 className="mb-4 pr-xxl-5 fw-normal fs-65 z-index text-dark text-start">
             Enlaces
           </h2>
-          <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
+          <p className="text-secondary pb-5 mb-5 mt-4 mb-lg-5 hero_subtitle fw-light">
           Ahorra en tu póliza de Gastos Médicos con "Enlace"
           </p>
           <div onClick={scrollTop}>
@@ -37,9 +37,9 @@ export const EnlaceHero = () => {
         <h2 className="fw-normal fw-medium text-dark fst-italic h2-title primary_title py-5">
         Enlaces
         </h2>
-        <div className="d-flex justify-content-center px-5 mx-5">
+        <div className="d-flex justify-content-center px-5 h-50 mx-5">
           <Image
-            className="gradient_img_bg_sm px-5 d-md-none"
+            className="gradient_img_bg_sm px-5 d-md-none mb-5"
             src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png" }
             alt="Gradient background element"
           />
@@ -72,7 +72,7 @@ const HeroContainer = styled.section`
   }
 
   .h2-title {
-    margin-top: 20rem;
+    margin-top: 15rem;
     margin-bottom: 12rem;
   }
 
@@ -117,7 +117,7 @@ const HeroContainer = styled.section`
   }
 
   .gradient_img_bg_sm {
-      width: 70rem;
+      width: auto;
       height: 100%;
   }
 

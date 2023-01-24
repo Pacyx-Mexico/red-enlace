@@ -34,23 +34,23 @@ export const Contact = () => {
       </div>
 
       <div className="container d-md-none px-5">
-        <h3 className="fw-medium contact__title text-center">¡Contáctanos!</h3>
+        <h3 className="fw-500 contact__title text-center">¡Contáctanos!</h3>
         <div className="container card contact-form round rounded-5 contact-form d-flex shadow-lg pt-5 mt-5">
           <Form className="p-5 my-4 mx-5">
             <div className="flex-column d-flex justify-content-between">
               <div className="col-12">
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicEmail">
-                  <Form.Control type="text" className="fs-3 p-4 border-none shadow" placeholder="Nombre:" />
+                <Form.Group className="mb-5 shadow-lg rounded-pill" controlId="formBasicEmail">
+                  <Form.Control type="text" className="fs-3 p-4 border-none shadow rounded-pill" placeholder="Nombre:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicPassword">
-                  <Form.Control type="email" className="fs-3 p-4 border-none shadow" placeholder="Correo electrónico:" />
+                <Form.Group className="mb-5 shadow-lg rounded-pill" controlId="formBasicPassword">
+                  <Form.Control type="email" className="fs-3 p-4 border-none shadow rounded-pill" placeholder="Correo electrónico:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicPassword">
-                  <Form.Control type="phone"  className="fs-3 p-4 border-none shadow" placeholder="Teléfono:" />
+                <Form.Group className="mb-5 shadow-lg rounded-pill" controlId="formBasicPassword">
+                  <Form.Control type="phone"  className="fs-3 p-4 border-none shadow rounded-pill" placeholder="Teléfono:" />
                 </Form.Group>
               </div>
               <div className="col-12">
-                <Form.Group className="mb-3 shadow-lg" controlId="formBasicEmail">
+                <Form.Group className="mb-3 shadow-lg rounded-pill" controlId="formBasicEmail">
                   <Form.Control as="textarea" type="text" placeholder="Mensaje:" className="fs-3 p-5 form-rounded shadow"/>
                 </Form.Group>
               </div>

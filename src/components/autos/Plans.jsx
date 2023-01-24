@@ -17,13 +17,13 @@ export const Plans = () => {
         </h5>
       </div>
       <div className="services-title container text-center d-md-none">
-        <h5 className="text-dark fs-40 fst-italic fw-semi-bold text-center pt-4">
+        <h5 className="text-dark fs-50 fw-semi-bold text-center pt-4">
           Descubre nuestros <br />
           paquetes disponibles
         </h5>
       </div>
       <div className="container py-3 d-none d-lg-block">
-        <div className="row d-flex justify-content-between">
+        <div className="d-flex justify-content-around gap-5">
           <div className="col-auto">
             <div className="card border-primary rounded-5 py-5 px-2 text-center d-flex align-items-center justify-content-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary fs-35">Básico</p>
@@ -131,7 +131,7 @@ export const Plans = () => {
                 <p className="fs-40 fst-italic mb-0 ps-5">$3,350.00</p>
               </div>
               <div className="card-body w-100 px-2 pb-0">
-                <p className="card-title fst-italic lh-sm my-5 pt-5 text-primary">
+                <p className="card-title fst-italic lh-sm mb-5 pt-5 text-primary">
                 Pago anual con<br />IVA incluído
                 </p>
                 <p className="card-subtitle fw-normal lh-sm text-primary my-3">
@@ -170,8 +170,8 @@ export const Plans = () => {
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Básico</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-5 d-flex align-items-center justify-content-center w-100 p-5">
-                <p className="fs-1 mt-3">$690.00</p>
+              <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
+                <p className="fs-50 mt-3">$690.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
@@ -197,8 +197,8 @@ export const Plans = () => {
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Standar</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-5 d-flex align-items-center justify-content-center w-100 p-5">
-                <p className="fs-1 mt-3">$1,297.00</p>
+              <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
+                <p className="fs-50 mt-3">$1,297.00</p>
               </div>
               <div className="card-body px-2 pb-0">
                 <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
@@ -224,8 +224,8 @@ export const Plans = () => {
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Premium</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-5 d-flex align-items-center justify-content-center w-100 p-5">
-                <p className="fs-1 mt-3">$1,840.00</p>
+              <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
+                <p className="fs-50 mt-3">$1,840.00</p>
               </div>
               <div className="card-body px-2 pb-0 cb-mb">
                 <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
@@ -251,8 +251,8 @@ export const Plans = () => {
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Gold</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-5 d-flex align-items-center justify-content-center w-100 p-5">
-                <p className="fs-1 mt-3">$2,420.00</p>
+              <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
+                <p className="fs-50 mt-3">$2,420.00</p>
               </div>
               <div className="card-body px-2 pb-0 cb-mb">
                 <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
@@ -278,8 +278,8 @@ export const Plans = () => {
           <div className="col-auto d-flex justify-content-center align-items-center flex-column">
             <div className="card border border-4 border-primary rounded-5 py-5 px-2 text-center shadow-lg">
               <p className="card-title fw-semi-bold fst-italic lh-sm text-primary">Black</p>
-              <div className="card-price rounded-4 top-20 start-0 mt-5 d-flex align-items-center justify-content-center w-100 p-5">
-                <p className="fs-1 mt-3">$2,995.00</p>
+              <div className="card-price top-20 start-0 mt-5 d-flex align-items-center justify-content-center p-5">
+                <p className="fs-50 mt-3">$2,995.00</p>
               </div>
               <div className="card-body px-2 pb-0 cb-mb">
                 <p className="card-title fst-italic lh-sm my-5 py-3 text-primary">
@@ -362,9 +362,14 @@ const PlansSection = styled.section`
     font-size: 2rem;
   }
 
+  .fs-50 {
+    font-size: 5rem;
+  }
+
   .RE_img_bg {
-    z-index: -11;
-    top: 85%;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
   }
 
   .card-title {
@@ -378,11 +383,12 @@ const PlansSection = styled.section`
   }
 
   .card-price {
-    width: 25rem;
-    height: 5rem;
-    background-color: #5F93A9;
+    width: 100%;
+    height: 10rem;
+    background-color: #9fbdcc;
     color: white;
     margin-left: -8rem;
+    border-radius: 3rem;
   }
 
   .card .card-body .card-title {

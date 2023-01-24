@@ -40,28 +40,28 @@ export const InfoForm = () => {
       </div>
 
       <div className="container d-flex alig-items-center flex-column d-md-none px-5">
-      <p className="fw-normal fs-1 text-center mb-5 px-5">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario y nos contactaremos contigo a la brevedad.</p>
+      <p className="fw-normal fs-35 text-center mb-5 px-5">Si deseas más información sobre alguno de nuestros paquetes, favor de llenar este formulario y nos contactaremos contigo a la brevedad.</p>
         <div className="container card contact-form round rounded-5 contact-form d-flex shadow-lg pt-5 mt-5">
           <Form className="p-5 my-4 mx-5">
             <div className="flex-column d-flex justify-content-between">
               <div className="col-12">
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicEmail">
-                  <Form.Control type="text" className="fs-3 p-4 border-none shadow py-5" placeholder="Nombre:" />
+                <Form.Group className="mb-5 shadow-lg rounded-5" controlId="formBasicEmail">
+                  <Form.Control type="text" className="fs-3 p-4 border-none shadow py-5 rounded-5" placeholder="Nombre:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicPassword">
-                  <Form.Control type="email" className="fs-3 p-4 border-none shadow py-5" placeholder="Correo electrónico:" />
+                <Form.Group className="mb-5 shadow-lg rounded-5" controlId="formBasicPassword">
+                  <Form.Control type="email" className="fs-3 p-4 border-none shadow py-5 rounded-5" placeholder="Correo electrónico:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicPassword">
-                  <Form.Control type="phone"  className="fs-3 p-4 border-none shadow py-5" placeholder="Teléfono:" />
+                <Form.Group className="mb-5 shadow-lg rounded-5" controlId="formBasicPassword">
+                  <Form.Control type="phone"  className="fs-3 p-4 border-none shadow py-5 rounded-5" placeholder="Teléfono:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicEmail">
-                  <Form.Control type="text" className="fs-3 p-4 border-none shadow py-5" placeholder="Nombre:" />
+                <Form.Group className="mb-5 shadow-lg rounded-5" controlId="formBasicEmail">
+                  <Form.Control type="text" className="fs-3 p-4 border-none shadow py-5 rounded-5" placeholder="Nombre:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicPassword">
-                  <Form.Control type="email" className="fs-3 p-4 border-none shadow py-5" placeholder="Correo electrónico:" />
+                <Form.Group className="mb-5 shadow-lg rounded-5" controlId="formBasicPassword">
+                  <Form.Control type="email" className="fs-3 p-4 border-none shadow py-5 rounded-5" placeholder="Correo electrónico:" />
                 </Form.Group>
-                <Form.Group className="mb-5 shadow-lg" controlId="formBasicPassword">
-                  <Form.Control type="phone"  className="fs-3 p-4 border-none shadow py-5" placeholder="Teléfono:" />
+                <Form.Group className="mb-5 shadow-lg rounded-5" controlId="formBasicPassword">
+                  <Form.Control type="phone"  className="fs-3 p-4 border-none shadow py-5 rounded-5" placeholder="Teléfono:" />
                 </Form.Group>
               </div>
             </div>
@@ -123,7 +123,7 @@ const InfoFormSection = styled.section`
   }
 
   @media (max-width: 768px) {
-    height: 100vh;
+    height: 71vh;
 
     .contact-form {
       height: auto;
@@ -134,8 +134,17 @@ const InfoFormSection = styled.section`
       margin-bottom: 10rem;
     }
 
+    input::placeholder {
+      font-size: 2.5rem;
+      text-align: center; 
+    }
+
     textarea {
       height: 58.5rem;
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
     }
   }
 `;

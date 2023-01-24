@@ -55,7 +55,7 @@ export const Dudes = () => {
 };
 
 const DudesSection = styled.section`
-  height: 95rem;
+  height: 58.8vh;
   padding-top: 10rem;
   padding-bottom: 10rem;
 

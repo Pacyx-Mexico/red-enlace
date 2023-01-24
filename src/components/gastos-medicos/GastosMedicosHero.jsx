@@ -15,13 +15,13 @@ export const GastosMedicosHero = () => {
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center position-relative top-25 w-50 d-none d-md-flex">
+      <div className="align-items-center position-relative top-25 w-75 d-none d-lg-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
           <h2 className="mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start">
             Devolución de deducible <br />
             <span>Gastos Médicos</span>
           </h2>
-          <p className="text-secondary mb-4 lh-md hero_subtitle fw-light">
+          <p className="text-secondary pb-5 mb-5 mt-4 lh-md hero_subtitle fw-light">
             Te cuidamos. Te devolvemos tu deducible de manera garantizada
           </p>
           <div onClick={scrollTop}>
@@ -33,18 +33,19 @@ export const GastosMedicosHero = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid d-flex flex-column w-100 h-100 d-md-none">
+      <div className="container-fluid d-flex flex-column w-100 h-100 d-lg-none">
         <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
-          Devolución de deducible <br /><span className="fst-italic"> Gastos Médicos</span>
+          Devolución de deducible <br />
+          Gastos Médicos
         </h2>
-        <div className="d-flex justify-content-center px-5 mx-5">
+        <div className="d-flex justify-content-center px-5 mx-5 h-50">
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
             src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Gastos-medicos-mb.png"}
             alt="Gradient background element"
           />
         </div>
-        <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
+        <div className="d-flex justify-content-center w-100 d-md-none mt-11 pt-5">
           <div onClick={scrollTop}>
             <Link
               to="/cotizador-deducible-gastos-medicos"
@@ -61,7 +62,7 @@ export const GastosMedicosHero = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 120rem;
+  height: 100vh;
 
   .ihjuak {
     background:  #FFF !important;
@@ -90,9 +91,11 @@ const HeroContainer = styled.section`
 
   .img-fluid {
     width: auto;
-    height: 60rem;
+    height: 100%;
   }
-
+  .mt-11 {
+    margin-top: 11rem;
+  }
   .gradient_img_bg_sm {
     margin-top: 7rem;
   }
@@ -123,7 +126,7 @@ const HeroContainer = styled.section`
   }
 
   .primary_title {
-      margin-top: 20rem;
+      margin-top: 25.5rem;
   }
 
   @media (min-width: 576px) {

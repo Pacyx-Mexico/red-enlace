@@ -15,13 +15,13 @@ export const HeroAutos = () => {
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+732.png"}
         alt="Gradient background element"
       />
-      <div className="align-items-center w-50 d-none d-md-flex">
+      <div className="align-items-center w-75 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-start text-center align-items-start">
           <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark fs-65 text-start">
             Devolución de deducible <br />
             Autos
           </h2>
-          <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
+          <p className="text-secondary pb-5 mb-5 mt-4 mb-lg-5 hero_subtitle fw-light">
             Te cuidamos. Te devolvemos tu deducible de manera garantizada
           </p>
           <div onClick={scrollTop}>
@@ -35,14 +35,14 @@ export const HeroAutos = () => {
         </div>
       </div>
       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
-        <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
+        <h2 className="fw-normal fw-500 text-dark h2-heading primary_title">
           Devolución de deducible <br /> 
-          <span className="fst-italic">Autos</span>
+          Autos
         </h2>
-        <div className="d-flex justify-content-center px-5 mx-5">
+        <div className="d-flex justify-content-center h-50">
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
-            src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-siniestro-mobile.png"}
+            src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+738.png"}
             alt="Gradient background element"
           />
         </div>
@@ -63,7 +63,7 @@ export const HeroAutos = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100rem;
   .gradient_img_bg {
     z-index: 1;
@@ -84,7 +84,6 @@ const HeroContainer = styled.section`
   .hero-title {
     margin-left: 10rem;
   }
-
   .fs-65 {
     font-size: 7rem;
     margin-top:14rem;
@@ -128,11 +127,17 @@ const HeroContainer = styled.section`
 
   @media (max-width: 768px) {
     overflow-x: hidden;
-    height: 178rem;
+    height: 100vh;
+    top: 15rem;
     .gradient_img_bg_sm {
-      width: 70rem;
+      width: auto;
       height: 100%;
     }
+
+    .primary_title {
+      margin-top: 14rem;
+    }
+
 
     .RE_img_bg {
       display: none;
@@ -140,7 +145,7 @@ const HeroContainer = styled.section`
 
     .primary_title {
       font-size: 25px;
-      margin-bottom: 10rem;
+      margin-bottom: 8.5rem;
     }
 
     .primary_subtitle {

@@ -149,14 +149,14 @@ const SelectSiniestroContainer = styled.section`
   .border- {
     &first {
       color: white !important;
-      border-color: #1d45c2 !important;
-      background-color: #1d45c2 !important;
+      border-color: #b5c2e8 !important;
+      background-color: #b5c2e8 !important;
     }
 
     &second {
       color: white !important;
-      border-color: #1a6a8b !important;
-      background-color: #1a6a8b !important;
+      border-color: #b5c2e8  !important;
+      background-color: #b5c2e8  !important;
     }
 
     &third {

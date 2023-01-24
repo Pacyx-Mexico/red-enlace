@@ -17,7 +17,7 @@ export const SiniestroSteps = () => {
         </h3>
       </div>
       <div className="container-fluid text-center d-lg-none">
-        <h4 className="fw-semi-bold services-title-mb fst-italic text-dark mb-5 pb-5">
+        <h4 className="fw-semi-bold services-title-mb  text-dark mb-5 pb-5">
           Conoce nuestros productos
         </h4>
       </div>
@@ -85,7 +85,7 @@ export const SiniestroSteps = () => {
           <div className="d-flex flex-column justify-content-center w-76">
             <div className="d-flex align-items-center justify-content-center gap-5">
               <div className="d-flex flex-row align-items-center gap-5 me-5 pe-5">
-                <div className="d-flex flex-column jsutify-content-center align-items-center gap-5">
+                <div className="d-flex flex-column justify-content-center align-items-center gap-5">
                   <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
                     <div className="d-flex align-items-center justify-content-center">
                       <div className="icon-width d-flex align-items-center justify-content-center">
@@ -98,7 +98,7 @@ export const SiniestroSteps = () => {
                   </div>
                 </div>
                 <div className="mb-5 pb-5 d-flex justify-content-center">
-                  <p className="card-title fw-normal lh-sm w-100 mb-5 pb-5">
+                  <p className="card-title fw-normal fs-30 lh-sm w-100 mb-5 pb-5">
                     Selecciona el producto
                   </p>
                 </div>
@@ -109,7 +109,7 @@ export const SiniestroSteps = () => {
           <div className="d-flex flex-column justify-content-center w-76">
             <div className="d-flex align-items-center justify-content-center gap-5">
               <div className="d-flex flex-row align-items-center gap-5 me-4">
-                <div className="d-flex flex-column jsutify-content-center align-items-center gap-5">
+                <div className="d-flex flex-column justify-content-center align-items-center gap-5">
                   <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
                     <div className="d-flex align-items-center justify-content-center">
                       <div className="icon-width d-flex align-items-center justify-content-center">
@@ -122,7 +122,7 @@ export const SiniestroSteps = () => {
                   </div>
                 </div>
                 <div className="mb-5 pb-5 d-flex justify-content-center">
-                  <p className="card-title fw-normal lh-sm w-100 mb-5 pb-5">
+                  <p className="card-title fw-normal fs-30 lh-sm w-100 mb-5 pb-5">
                     Descarga y requisita los <br />
                     formatos correspondientes, <br />
                     no olvides firmarlos
@@ -141,7 +141,7 @@ export const SiniestroSteps = () => {
               <div className="d-flex flex-column justify-content-center w-76">
                 <div className="d-flex align-items-center justify-content-center gap-5">
                   <div className="d-flex flex-row align-items-center gap-5 me-4">
-                    <div className="d-flex flex-column jsutify-content-center align-items-center gap-5">
+                    <div className="d-flex flex-column justify-content-center align-items-center gap-5">
                       <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
                         <div className="d-flex align-items-center justify-content-center">
                           <div className="icon-width d-flex align-items-center justify-content-center">
@@ -151,7 +151,7 @@ export const SiniestroSteps = () => {
                       </div>
                     </div>
                     <div className="d-flex justify-content-center">
-                      <p className="card-title fw-normal lh-sm w-100">
+                      <p className="card-title fw-normal fs-30 lh-sm w-100">
                         Completa tu información y <br />
                         adjunta la documentación <br />
                         solicitada
@@ -254,6 +254,10 @@ const ServicesContainer = styled.section`
 
   .rounded-5 {
     border-radius: 5.5rem !important;
+  }
+
+  .fs-30 {
+    font-size: 3rem;
   }
 
   .arrow {

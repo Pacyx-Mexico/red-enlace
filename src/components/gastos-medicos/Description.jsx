@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Description = () => {
   return (
-    <DescriptionSection className="container-fluid px-0">
+    <DescriptionSection className="container-fluid px-0 d-flex align-items-center">
       <div className="d-flex flex-column d-none d-md-block">
         <div className="row mt-5 pt-5">
           <div className="col-md-5">
@@ -56,7 +56,7 @@ export const Description = () => {
             />
           </div>
           <div className="px-4">
-            <p className="mt-3 mb-0 fs-20 fw-light text-center">
+            <p className="mt-3 mb-0 fs-35 text-secondary fw-light text-center">
               Con nosotros, tú eliges el porcentaje:
             </p>
             <p className="text-dark mb-5 fs-30 fw-bold text-center">
@@ -98,6 +98,10 @@ const DescriptionSection = styled.section`
 
   .fs-30 {
     font-size: 30px;
+  }
+
+  .fs-35 {
+    font-size: 3.5rem;
   }
 
   .fs-42 {

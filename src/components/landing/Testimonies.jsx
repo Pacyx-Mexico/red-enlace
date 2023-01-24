@@ -130,9 +130,10 @@ export const Testimonies = () => {
         </div>
       </div>
 
-      <div className="container position-relative d-md-none">
-        <div className="testimonials__title my-4">
-          <h2 className="text-center fw-normal lh-sm text-dark">
+      <div className="container position-relative d-md-none px-0">
+        <hr className="custom-hr "/>
+        <div className="testimonials__title my-5 mx-5">
+          <h2 className="text-center fw-normal mt-5 pt-5 lh-sm text-dark">
             Testimoniales
           </h2>
           <div className="d-flex flex-row justify-content-center">
@@ -268,9 +269,19 @@ const TestimonialsSection = styled.section`
   }
 
   @media (max-width: 768px) {
+    height: 65vh;
     .testimonials__carousel-bg {
       border-radius: 4rem; 
       width: 95%;
+    }
+
+    .custom-hr {
+      height: 2rem;
+      width: 100%;
+      background: #c7d1ef;
+      border-top: none;
+      opacity: 1;
+      margin: 0;
     }
   }
 `;
