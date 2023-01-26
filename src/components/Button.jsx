@@ -14,15 +14,15 @@ const Btn = styled.button`
   font-weight: 500;
   text-decoration: none;
   padding-top: 0.25rem;
-  color: #fff;
+  color: var(--primary-color2);
   box-shadow: 2px 2px 3px var(--shadow-color);
-  background-color: var(--primary-color2); 
+  background-color: #FFFFFF; 
   transition: all ease 0.3s;
 
   &:hover {
-    background-color: #FFFFFF;
+    background-color: var(--primary-color2);
     transition: all ease 0.3s;
-    color: var(--primary-color2);
+    color: #FFFFFF;
   }
 `;
 

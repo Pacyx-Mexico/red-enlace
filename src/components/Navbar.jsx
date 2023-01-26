@@ -10,6 +10,10 @@ import {
   MenuItem,
   MobileIcon,
 } from "../styles/navbar.elements";
+import Scroll from 'react-scroll'
+const ScrollLink = Scroll.ScrollLink
+var scroller = Scroll.scroller;
+
 
 export default function Navbar({ type }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -18,6 +22,14 @@ export default function Navbar({ type }) {
     scroll.scrollToTop();
     setShowMobileMenu(false);
   };
+
+  const scrollToSection = () => {
+    scroll.scrollTo(
+      'productos', {
+        containerId: 'productos'
+      }
+    )
+  }
 
   return (
     <ContainerNav>
@@ -43,17 +55,40 @@ export default function Navbar({ type }) {
         </LogoContainer>
 
         <Menu open={showMobileMenu}>
-        <MenuItem onClick={inicio}>
-            <LinkRouter to="/deducible-gastos-medicos">Médicos</LinkRouter>
+          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            {/* <LinkRouter
+              to="#productos"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="color-white"
+            >
+              Productos
+            </LinkRouter> */}
+            <MenuItem onClick={scrollToSection}>
+              <Link 
+                to="productos" 
+                spy={false} 
+                hashSpy={true}
+                smooth={true} 
+                offset={-150}
+                duration={500} 
+                className='color-white' 
+                activeClass='some-active-class'
+              >
+                Productos
+              </Link>
+            </MenuItem>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/deducible-autos">Autos</LinkRouter>
+            <LinkRouter to="/reclamacion-siniestros">Siniestros</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/enlace">Enlaces</LinkRouter>
+            <LinkRouter to="/">Agentes</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/reclamacion-siniestros">Siniestro</LinkRouter>
+            <LinkRouter to="/">Clientes</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
             <LinkRouter to="/facturacion">Facturación</LinkRouter>

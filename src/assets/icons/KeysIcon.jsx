@@ -2,10 +2,7 @@ import React from "react";
 
 export const KeysIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 89.463 88.776"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.463 88.776">
       <g
         id="Group_673"
         data-name="Group 673"
