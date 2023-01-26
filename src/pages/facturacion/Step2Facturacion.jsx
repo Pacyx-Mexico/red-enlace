@@ -36,7 +36,7 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
 
           <Card style={{ marginTop: 80 }}>
             <Card.Body className="w-100 d-flex justify-content-center mx-5 ">
-              <Form onSubmit={submitFormData} className="d-flex gap-5 flex-column w-100 mx-5 px-5">
+              <Form onSubmit={submitFormData} className="d-flex gap-5 flex-column w-100 mx-5 px-5 pr-facturacion">
                 <div className="d-flex justify-content-center gap-5">
                   <Form.Group className="mb-3">
                     <Form.Control
@@ -388,6 +388,10 @@ const FacturacionContainer = styled.section`
   overflow-x: hidden;
   height: 105vh;
   margin-top: 15rem;
+
+  .pr-facturacion {
+    margin-right: 6rem !important;
+  }
 
   .card {
     border: none; 

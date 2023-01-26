@@ -15,11 +15,11 @@ export const Dudes = () => {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4 mb-5 pb-5">&#8226; </span> ¿Cómo funciona?
+                <span className="secondary-color3 me-4 mb-5 pb-5 fw-500">&#8226; </span> ¿Cómo funciona?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-30 ps-5">
+              <p className="fw-normal fs-30 ps-5 mt-3">
               En caso de robo total, pérdida total o daños materiales, nosotros te devolveremos el deducible de tu póliza auto de acuerdo con la asistencia que hayas elegido.
               </p>
             </AccordionItemPanel>
@@ -27,11 +27,11 @@ export const Dudes = () => {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Puedo cotizarlo con cualquier póliza?
+                <span className="secondary-color3 me-4 fw-500">&#8226; </span> ¿Puedo cotizarlo con cualquier póliza?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-30 ps-5">
+              <p className="fw-normal fs-30 ps-5 mt-3">
                 Operamos con cualquier compañía aseguradora dentro del territorio nacional.
               </p>
             </AccordionItemPanel>
@@ -39,11 +39,11 @@ export const Dudes = () => {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Hay un límite de eventos?
+                <span className="secondary-color3 me-4 fw-500">&#8226; </span> ¿Hay un límite de eventos?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-30 ps-5">
+              <p className="fw-normal fs-30 ps-5 mt-3">
                 Se pagará el deducible hasta que se agote la suma del plan contratado, sin importar el número de eventos.
               </p>
             </AccordionItemPanel>
@@ -96,5 +96,11 @@ const DudesSection = styled.section`
     border-bottom: 4px solid #5F93A9;
     border-right: 4px solid #5F93A9;
     transform: rotate(-45deg);
+  }
+
+  @media (min-width: 768px) {
+    .fs-30 {
+      font-size: 2.3rem;
+    }
   }
 `;

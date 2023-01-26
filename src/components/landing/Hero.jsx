@@ -33,7 +33,16 @@ export const Hero = () => {
       <div className="container position-absolute RE_img_bg d-none d-lg-block">
         <RedEnlaceBg />
       </div>
-      <div className="position-absolute d-none d-lg-block z-index-3">
+      <div className="position-absolute d-none d-lg-block z-index-15">
+        <div onClick={scrollTop}>
+          <Link to="/cotizador-deducible-gastos-medicos">
+            <button className="button-hero rounded-pill pt-1">
+              Cotizar
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div className="position-absolute d-lg-none z-index-15">
         <div onClick={scrollTop}>
           <Link to="/cotizador-deducible-gastos-medicos">
             <button className="button-hero rounded-pill pt-1">
@@ -44,12 +53,16 @@ export const Hero = () => {
       </div>
       <div className="align-items-center position-absolute top-50 w-85 d-none d-lg-block">
         <div className="home__info d-flex flex-column justify-content-center text-center align-items-center">
-          <h2 className="mb-4 pr-xxl-5 fw-bold pt-5 mt-5 z-index text-primary h2-heading">
+          <h2 className="mb-4 pr-xxl-5 fw-bold pt-5 mt-5 z-index-3 text-primary h2-heading">
             Ahorro &nbsp;<span className="text-white"> fácil y seguro</span>
           </h2>
-          <p className="text-white mb-4 mb-md-5 hero_subtitle">
+          <p className="text-white mb-4 mb-md-5 z-index-3 hero_subtitle">
             te regresamos tu deducible
           </p>
+          <Image
+            className="redenlace_logo position-absolute d-none d-lg-block"
+            src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+739.png"
+          />  
         </div>
       </div>
 
@@ -102,7 +115,24 @@ const HeroContainer = styled.section`
     opacity: 0.9;
   }
 
+  .redenlace_logo {
+    z-index: 1;
+    height: 50rem;
+    width: auto;
+    left: 90rem;
+    opacity: .1;
+  }
+
+  .home__info {
+    position: relative;
+    z-index: 3;
+  }
+
   .z-index-3 {
+    z-index: 3;
+  }
+
+  .z-index-15 {
     z-index: 15;
     top: 58%;
     right: 15%;
@@ -147,8 +177,8 @@ const HeroContainer = styled.section`
   .RE_img_bg {
     z-index: 1;
     width: 47% !important;
-    bottom: 1.5%;
-    opacity: 0.3;
+    top: 30%;
+    opacity: 0.1;
     right: 0;
   }
   .hero_subtitle {
@@ -166,6 +196,12 @@ const HeroContainer = styled.section`
       bottom: 0;
       width: 100%;
       height: 112rem;
+    }
+
+    .z-index-15 {
+      z-index: 15;
+      top: 90%;
+      right: 40%;
     }
 
     .RE_img_bg {

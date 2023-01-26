@@ -21,7 +21,7 @@ export const Cobertura = () => {
       <div className="container py-3 position-relative d-none d-md-block">
         <div className="row d-flex justify-content-around">
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-            <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+            <div className="card border border-4 border-primary py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
                 <KeysIcon />
               </div>
@@ -41,7 +41,7 @@ export const Cobertura = () => {
             </div>
           </div>
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-            <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+            <div className="card border border-4 border-primary py-5 px-5 text-center shadow-lg">
               <div className="icon-height">
                 <CrystalIcon />
               </div>
@@ -61,7 +61,7 @@ export const Cobertura = () => {
             </div>
           </div>
           <div className="col-auto d-flex flex-column justify align-items-center">
-            <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+            <div className="card border border-4 border-primary py-5 px-5 text-center shadow-lg">
               <div className="icon-height-platform_icon mx-auto">
                 <PlatformsIcon />
               </div>
@@ -101,7 +101,7 @@ export const Cobertura = () => {
         >
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
+              <div className="card border border-4 border-primary py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
                 <div className="icon-height d-flex align-content-center justify-content-center">
                   <KeysIcon />
                 </div>
@@ -123,7 +123,7 @@ export const Cobertura = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
+              <div className="card border border-4 border-primary py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
                 <div className="icon-height d-flex align-content-center justify-content-center">
                   <CrystalIcon />
                 </div>
@@ -145,11 +145,16 @@ export const Cobertura = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
-              <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
+              <div className="text-center d-flex align-content-center justify-content-center">
+                <div className="icon-height icon-height-platform_icon mx-auto d-flex align-content-center justify-content-center">
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+739.png" alt="" />
+                </div>
+              </div>
+{/*               <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
                 <div className="icon-height icon-height-platform_icon mx-auto d-flex align-content-center justify-content-center">
                   <PlatformsIcon />
                 </div>
-              </div>
+              </div> */}
               <div className="card-body px-2 pb-0 mt-5 text-center">
                 <p className="card-title fw-500 lh-sm text-dark fs-30">
                   <span  className="fw-500 fs-30">Plataformas con <br />
@@ -250,6 +255,7 @@ const CoberturaSection = styled.section`
   .card {
     width: 35rem;
     height: 35rem;
+    border-radius:6rem;
     background-color: #5f93a9;
 
     .icon-height {
@@ -323,6 +329,7 @@ const CoberturaSection = styled.section`
     .card {
       width: 20rem;
       height: 20rem;
+      border-radius: 4.5rem;
 
       .icon-height {
         width: auto;

@@ -95,11 +95,17 @@ export const Beneficios = () => {
         >
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+
+              <div className="d-flex align-content-center justify-content-center">
+                <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+738.png" alt="Icon money" className="icon"/>
+                </div>
+              </div>
+{/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height d-flex align-items-center justify-content-center">
                   <MoneyIcon />
                 </div>
-              </div>
+              </div> */}
               <div className="card-body px-2 pb-0 mt-5 text-center">
                 <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   Ahorro <br />
@@ -111,11 +117,17 @@ export const Beneficios = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+              
+              <div className="d-flex align-content-center justify-content-center">
+                <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+741.png" alt="Icon hand" className="icon"/>
+                </div>
+              </div>
+{/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height d-flex align-items-center justify-content-center">
                   <SeventyTwoHoursIcon />
                 </div>
-              </div>
+              </div> */}
               <div className="card-body px-2 pb-0 mt-5 text-center">
                 <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   Pago de siniestros en <br />
@@ -126,11 +138,16 @@ export const Beneficios = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+              <div className="d-flex align-content-center justify-content-center">
+                <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+740.png" alt="Icon hospital" className="icon"/>
+                </div>
+              </div>
+{/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height d-flex align-items-center">
                   <HospitalIcon />
                 </div>
-              </div>
+              </div> */}
               <div className="card-body px-2 pb-0 mt-5 text-center">
                 <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   Ayuda diaria por <br />
@@ -141,11 +158,16 @@ export const Beneficios = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
+              <div className="d-flex align-content-center justify-content-center">
+                <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+740.png" alt="Icon hand" className="icon"/>
+                </div>
+              </div>
+{/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
                 <div className="icon-height d-flex align-items-center">
                   <MoneyTwoIcon />
                 </div>
-              </div>
+              </div> */}
               <div className="card-body px-2 pb-0 mt-5 text-center">
                 <p className="card-title fw-500 lh-sm text-dark pt-5  ">
                   En caso de enfermedades <br />
@@ -198,15 +220,15 @@ const BeneficiosSection = styled.section`
     border-color: #79c789 !important;
   }
 
+  .icon-height {
+    height: 35rem;
+    width: auto;
+  }  
+
   .card {
     width: 35rem;
     height: 37rem;
     background-color: #79c789;
-
-    .icon-height {
-      height: auto;
-      width: 21rem;
-    }
 
     .icon-height-platform_icon {
       height: auto;

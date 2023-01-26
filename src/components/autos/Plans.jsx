@@ -410,15 +410,14 @@ const PlansSection = styled.section`
   }
 
   .btn-first {
-    background-color: #6983d6;
-    color: #FFF;
+    background-color: #FFF;
+    color: #6983d6;
     padding: 1rem 0rem;
-    border: none !important;
+    border: 2px solid #6983d6 !important;
 
     &:hover {
-      background-color: #ffffff;
-      border: 3px solid #6983d6 !important;
-      color: #6983d6; 
+      background-color: #6983d6;
+      color: #FFF; 
     }
   }
 
@@ -482,4 +481,5 @@ const PlansSection = styled.section`
     }
   }
 `;
+
 

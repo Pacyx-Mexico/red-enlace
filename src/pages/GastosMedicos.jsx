@@ -4,7 +4,7 @@ import { GastosMedicosHero, Description, Toppings } from '../components/gastos-m
 import Footer from "../components/Footer";
 
 export const GastosMedicos = () => {
-  const videoGM = "https://elementos-red-enlace.s3.amazonaws.com/FINAL+GMM.mp4"
+  const videoGM = "https://elementos-red-enlace.s3.amazonaws.com/Landing/EXPLICATIVO+GMM+24.mp4"
   return (
     <>
       <Navbar type="productos" />
