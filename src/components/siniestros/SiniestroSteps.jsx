@@ -3,6 +3,7 @@ import { Point } from "../../assets/icons";
 import { NavLink, Link } from "react-router-dom";
 import Button from "../Button";
 import { IoIosArrowDown } from "react-icons/io";
+import { animateScroll as scroll } from "react-scroll";
 
 export const SiniestroSteps = () => {
   const scrollTop = () => {
@@ -122,86 +123,6 @@ export const SiniestroSteps = () => {
               <hr className="custom-hr" />
             </div>
           </div>
-          {/* <div className="d-flex flex-column justify-content-center w-76">
-            <div className="d-flex align-items-center justify-content-center gap-5">
-              <div className="d-flex flex-row align-items-center gap-5 me-5 pe-5">
-                <div className="d-flex flex-column justify-content-center align-items-center gap-5">
-                  <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
-                    <div className="d-flex align-items-center justify-content-center">
-                      <div className="icon-width d-flex align-items-center justify-content-center">
-                        <h2 className="number-fs fw-normal">1</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="arrow d-flex justify-content-center my-5 opacity-75">
-                    <IoIosArrowDown />
-                  </div>
-                </div>
-                <div className="mb-5 pb-5 d-flex justify-content-center">
-                  <p className="card-title fw-normal fs-30 lh-sm w-100 mb-5 pb-5">
-                    Selecciona el producto
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="d-flex flex-column justify-content-center w-76">
-            <div className="d-flex align-items-center justify-content-center gap-5">
-              <div className="d-flex flex-row align-items-center gap-5 me-4">
-                <div className="d-flex flex-column justify-content-center align-items-center gap-5">
-                  <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
-                    <div className="d-flex align-items-center justify-content-center">
-                      <div className="icon-width d-flex align-items-center justify-content-center">
-                        <h2 className="number-fs fw-normal">2</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="arrow d-flex justify-content-center my-5 opacity-75">
-                    <IoIosArrowDown />
-                  </div>
-                </div>
-                <div className="mb-5 pb-5 d-flex justify-content-center">
-                  <p className="card-title fw-normal fs-30 lh-sm w-100 mb-5 pb-5">
-                    Descarga y requisita los <br />
-                    formatos correspondientes, <br />
-                    no olvides firmarlos
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <NavLink
-              onClick={scrollTop}
-              to="/deducible-gastos-medicos"
-              className="w-100 text-dark text-decoration-none"
-            >
-              <div className="d-flex flex-column justify-content-center w-76">
-                <div className="d-flex align-items-center justify-content-center gap-5">
-                  <div className="d-flex flex-row align-items-center gap-5 me-4">
-                    <div className="d-flex flex-column justify-content-center align-items-center gap-5">
-                      <div className="card border-0 rounded-5 text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto">
-                        <div className="d-flex align-items-center justify-content-center">
-                          <div className="icon-width d-flex align-items-center justify-content-center">
-                            <h2 className="number-fs fw-normal">3</h2>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-center">
-                      <p className="card-title fw-normal fs-30 lh-sm w-100">
-                        Completa tu información y <br />
-                        adjunta la documentación <br />
-                        solicitada
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </NavLink>
-          </div> */}
           <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
               <Link

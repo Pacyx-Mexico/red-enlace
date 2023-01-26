@@ -67,7 +67,7 @@ const HeroContainer = styled.section`
     font-weight: 400;
     color: #6f6f6f;
     text-align: center;
-    line-height: 3rem;
+    line-height: 4rem;
     z-index: 2;
   }
 

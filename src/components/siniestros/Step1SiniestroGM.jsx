@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import Button from "../Button";
 import validator from "validator";
-import { Form, Card /* , Button */ } from "react-bootstrap";
+import { Form, Card } from "react-bootstrap";
 
 export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
@@ -19,7 +18,7 @@ export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
   };
   return (
     <>
-      <SiniestroAContainer>
+      <SiniestroGMContainer>
         <div className="d-none d-md-block">
           <div className="d-flex justify-content-center flex-column">
             <h1 className="  fs-35 fw-500 mt-5">
@@ -58,6 +57,7 @@ export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
             </Card.Body>
           </Card>
         </div>
+
         <div className="d-md-none">
           <div className="d-flex justify-content-center flex-column">
             <h1 className="primary-title-mb fw-500">
@@ -81,7 +81,7 @@ export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
-                      This is a required field
+                      Ingresa número de un contrato válido
                     </Form.Text>
                   ) : (
                     ""
@@ -93,12 +93,12 @@ export const Step1SiniestroGM = ({ nextStep, handleFormData, values }) => {
             </Card.Body>
           </Card>
         </div>
-      </SiniestroAContainer>
+      </SiniestroGMContainer>
     </>
   );
 };
 
-const SiniestroAContainer = styled.section`
+const SiniestroGMContainer = styled.section`
   height: 90vh;
   margin-top: 15rem;
 
@@ -111,8 +111,8 @@ const SiniestroAContainer = styled.section`
   }
 
   .form-text {
-    margin-top: -7.75rem;
-    font-size: 2rem;
+    margin-top: 0rem;
+    font-size: 2.5rem;
   }
 
   .card {
@@ -134,7 +134,7 @@ const SiniestroAContainer = styled.section`
   }
 
   .gap-15 {
-    gap: 10rem;  
+   gap: 10rem;  
   }
 
   .bBlzVr {
@@ -158,8 +158,8 @@ const SiniestroAContainer = styled.section`
       color: #000;
     }
 
-    .flvQUx:hover
-    .gjxwFZ:hover {
+    .gjxwFZ:hover,
+    .flvQUx:hover {
       background: #8099db; 
     }
 
@@ -205,16 +205,16 @@ const SiniestroAContainer = styled.section`
       }
     }
 
-    .card {
-      border: none; 
-    }
-
     .fs-35 {
       font-size: 3.5rem;
     }
 
     .fs-25 {
       font-size: 2.5rem;
+    }
+
+    .card {
+      border: none; 
     }
 
     .bBlzVr {

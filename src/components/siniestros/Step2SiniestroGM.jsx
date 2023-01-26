@@ -5,41 +5,142 @@ import Button from "../Button";
 import validator from "validator";
 import { Form, Card /* , Button */ } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
+import { animateScroll as scroll } from "react-scroll";
+import { MdArrowBackIosNew } from "react-icons/md";
 
-export const Step2SiniestroGM = ({ nextStep, handleFormData, values }) => {
+export const Step2SiniestroGM = ({ nextStep, prevStep, handleFormData, values }) => {
+  const scrollTop = () => {
+    scroll.scrollToTop();
+  };
   const [error, setError] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("");
   const submitFormData = (e) => {
     e.preventDefault();
-    nextStep();
-
     // checking if value of first name and last name is empty show error else take to step 2
-    /* if (
-      validator.isEmpty(values.firstName) ||
-      validator.isEmpty(values.lastName)
-    ) {
+    if (validator.isEmpty(selectedItem)) {
+      console.log("Validator asegurados ==> ", validator.isEmpty(selectedItem));
       setError(true);
     } else {
       nextStep();
-    } */
+    }
   };
   return (
     <>
-      <SiniestroAContainer>
-      <div className="d-flex flex-column d-none d-lg-block">
+      <SiniestroGMContainer>
+        <div className="d-flex flex-column d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="  fs-35 fw-500 mt-5">
-              PASO 2/4:
-            </h1>
+            <h1 className="  fs-35 fw-500 mt-5">PASO 2/4:</h1>
           </div>
 
           <Card className="h-100" style={{ marginTop: 100 }}>
+            <div className="d-flex align-items-end">
+              <div onClick={prevStep}>
+                <MdArrowBackIosNew className="iconPrev" />
+              </div>
+              <Card.Body>
+                <Form
+                  onSubmit={submitFormData}
+                  className="d-flex justify-content-center flex-column h-100"
+                >
+                  <Form.Group className="mb-3 d-flex justify-content-center align-items-end">
+                    <Form.Label className="fw-500   mb-0 fs-17 w-25">
+                      # de Contrato:
+                    </Form.Label>
+                    <Form.Control
+                      name="asegurados"
+                      defaultValue={values.asegurados}
+                      type="text"
+                      onChange={handleFormData("asegurados")}
+                      className="w-25"
+                      placeholder={values.noContrato}
+                    />
+                  </Form.Group>
+                  <Dropdown className="w-100 d-flex justify-content-center">
+                    <div className="d-flex flex-column w-100">
+                      <Dropdown.Toggle
+                        variant="success"
+                        id="dropdown-button-drop-1"
+                        className="mt-4"
+                        style={{ border: error ? "2px solid red" : "" }}
+                      >
+                        <span className="fw-500 mx-5">Asegurado:</span>
+                        {selectedItem ? (
+                          <span className="opacity-75 fs-10 me-4">
+                            {selectedItem}
+                          </span>
+                        ) : (
+                          <span className="opacity-75 fs-10 me-4">
+                            Elige qué asegurado tuvo el siniestro
+                          </span>
+                        )}
+                      </Dropdown.Toggle>
+                    </div>
+                    <Dropdown.Menu>
+                      <Dropdown.Item
+                        /* onSelect={()=>setSelectedItem("Asegurado 1")} */ onClick={() =>
+                          setSelectedItem("Asegurado 1")
+                        }
+                        eventKey="Asegurado 1"
+                      >
+                        Asegurado 1
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedItem("Asegurado 2")}
+                        eventKey="Asegurado 2"
+                      >
+                        Asegurado 2
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedItem("Asegurado 3")}
+                        eventKey="Asegurado 3"
+                      >
+                        Asegurado 3
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedItem("Asegurado 4")}
+                        eventKey="Asegurado 4"
+                      >
+                        Asegurado 4
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                  {error ? (
+                    <Form.Text style={{ color: "red" }}>
+                      Selecciona un asegurado
+                    </Form.Text>
+                  ) : (
+                    ""
+                  )}
+                  <div onClick={scrollTop} className="d-flex justify-content-center mt-5 pt-5">
+                    <Button
+                      className="mx-auto w-50"
+                      variant="primary"
+                      type="submit"
+                      text="Siguiente"
+                    ></Button>
+                  </div>
+                </Form>
+              </Card.Body>
+            </div>
+          </Card>
+        </div>
+
+        <div className="d-flex flex-column d-lg-none px-5">
+          <div className="d-flex justify-content-center">
+            <h1 className="  fw-500 mt-5 primary-title-mb">PASO 2/4:</h1>
+          </div>
+
+          <Card className="h-100" style={{ marginTop: 60 }}>
             <Card.Body>
-              <Form onSubmit={submitFormData} className="d-flex justify-content-center flex-column h-100">
+              <Form
+                onSubmit={submitFormData}
+                className="d-flex justify-content-center flex-column h-100 position-relative"
+              >
                 <Form.Group className="mb-3 d-flex justify-content-center align-items-end">
-                  <Form.Label className="fw-500   mb-0 fs-17 w-25"># de Contrato:</Form.Label>
+                  <Form.Label className="fw-500   mb-0 fs-1 w-50">
+                    # de Contrato:
+                  </Form.Label>
                   <Form.Control
-                    /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
                     name="asegurados"
                     defaultValue={values.asegurados}
                     type="text"
@@ -47,35 +148,75 @@ export const Step2SiniestroGM = ({ nextStep, handleFormData, values }) => {
                     className="w-25"
                     placeholder={values.noContrato}
                   />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
                 </Form.Group>
-                <Dropdown className="w-100 d-flex justify-content-center">
-                  <Dropdown.Toggle variant="success" id="dropdown-basic" className="mt-4">
-                    <span className="fw-500 mx-5">Asegurados:</span>
-                    <span className="opacity-75 fs-10 me-4">Elige que asegurado tuvo el siniestro</span>
-                  </Dropdown.Toggle>
+                <div>
+                  <div className="mt-5 pt-5">
+                    <p className="fs-15 text-secondary fw-light">
+                      Elige al asegurado que tuvo el siniestro
+                    </p>
+                  </div>
 
+                  <div>
+                  <Dropdown className="w-100 d-flex justify-content-center">
+                  <div className="d-flex flex-column w-100">
+                    <Dropdown.Toggle
+                      variant="success"
+                      id="dropdown-button-drop-1"
+                      className="mt-4"
+                      style={{ border: error ? "2px solid red" : "" }}
+                    >
+                      <span className="fw-500 mx-5">Asegurados:</span>
+                      {selectedItem ? (
+                        <span className="opacity-75 fs-10 me-4">
+                          {selectedItem}
+                        </span>
+                      ) : ''}
+                    </Dropdown.Toggle>
+                  </div>
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1" >Asegurado 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
+                    <Dropdown.Item
+                      /* onSelect={()=>setSelectedItem("Asegurado 1")} */ onClick={() =>
+                        setSelectedItem("Asegurado 1")
+                      }
+                      eventKey="Asegurado 1"
+                    >
+                      Asegurado 1
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedItem("Asegurado 2")}
+                      eventKey="Asegurado 2"
+                    >
                       Asegurado 2
                     </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
+                    <Dropdown.Item
+                      onClick={() => setSelectedItem("Asegurado 3")}
+                      eventKey="Asegurado 3"
+                    >
                       Asegurado 3
                     </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
+                    <Dropdown.Item
+                      onClick={() => setSelectedItem("Asegurado 4")}
+                      eventKey="Asegurado 4"
+                    >
                       Asegurado 4
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <div className="d-flex justify-content-center mt-5 pt-5">
-                  <Button className="mx-auto w-50"
+                {error ? (
+                  <Form.Text style={{ color: "red" }}>
+                    Selecciona un asegurado
+                  </Form.Text>
+                ) : (
+                  ""
+                )}
+                  </div>
+                </div>
+                <div onClick={prevStep} className="position-absolute bottom-0">
+                  <MdArrowBackIosNew className="iconPrev" />
+                </div>
+                <div onClick={scrollTop} className="d-flex justify-content-center mt-5 pt-5">
+                  <Button
+                    className="mx-auto w-50"
                     variant="primary"
                     type="submit"
                     text="Siguiente"
@@ -85,89 +226,34 @@ export const Step2SiniestroGM = ({ nextStep, handleFormData, values }) => {
             </Card.Body>
           </Card>
         </div>
-
-        <div className="d-flex flex-column d-lg-none px-5">
-          <div className="d-flex justify-content-center">
-            <h1 className="  fw-500 mt-5 primary-title-mb">
-              PASO 2/4:
-            </h1>
-          </div>
-
-          <Card className="h-100" style={{ marginTop: 60 }}>
-            <Card.Body>
-              <Form onSubmit={submitFormData} className="d-flex justify-content-center flex-column h-100">
-                <Form.Group className="mb-3 d-flex flex-row justify-content-center align-items-center gap-5">
-                  <Form.Label className="fw-500   mb-0 fs-20"># de Contrato:</Form.Label>
-                  <Form.Control
-                    /* Cambiar por dropDown */
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="asegurados"
-                    defaultValue={values.asegurados}
-                    type="text"
-                    onChange={handleFormData("asegurados")}
-                    className="w-50"
-                    placeholder={values.noContrato}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                </Form.Group>
-                <div>
-                  <div className="mt-5 pt-5">
-                    <p className="fs-15 text-secondary fw-light">Elige al asegurado que tuvo el siniestro</p>
-                  </div>
-
-                  <div>
-                    <Dropdown className="w-100 d-flex justify-content-center">
-                    <Dropdown.Toggle variant="success" id="dropdown-basic" className="mt-4 text-start px-5 text-secondary">
-                      <span className="fw-light text-start ">Asegurado:</span>
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Asegurado 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Asegurado 2
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Asegurado 3
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Asegurado 4
-                    </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                  </div>
-                </div>
-                <div className="d-flex justify-content-center mt-5 pt-5">
-                  <Button className="mx-auto w-50"
-                    variant="primary"
-                    type="submit"
-                    text="Siguiente"
-                  ></Button>
-                </div>
-              </Form>
-            </Card.Body>
-          </Card>
-        </div>
-      </SiniestroAContainer>
+      </SiniestroGMContainer>
     </>
   );
 };
 
-const SiniestroAContainer = styled.section`
+const SiniestroGMContainer = styled.section`
   height: 89vh;
   margin-top: 15rem;
 
   .card {
-    border: none; 
+    border: none;
+  }
+
+  .dropdown-item {
+    font-size: 2.5rem !important;
+  }
+
+  .dropdown-menu {
+    right: 0 !important;
+    text-align: end;
   }
 
   .primary-title-mb {
     font-size: 4rem;
+  }
+
+  #dropdown-button-drop-1 {
+    height: 10rem;
   }
 
   .fs-20 {
@@ -180,7 +266,7 @@ const SiniestroAContainer = styled.section`
 
   .form-control {
     width: 70%;
-    border: solid 2px #FFFFFF;
+    border: solid 2px #ffffff;
     border-bottom: 2px solid #000;
     border-radius: 0;
     padding-left: 3rem;
@@ -192,10 +278,10 @@ const SiniestroAContainer = styled.section`
     }
   }
 
-  
-    .dropdown-item {
-      font-size: 3rem !important;
-    }
+  .form-text {
+    margin-top: 0rem;
+    font-size: 2.5rem;
+  }
 
   .btn-success {
     background: #f2f5fa;
@@ -208,9 +294,9 @@ const SiniestroAContainer = styled.section`
     justify-content: space-between;
     align-items: center;
 
-    &:focus, 
+    &:focus,
     &:active {
-      background: #F5FFFA;
+      background: #f5fffa;
       color: #000;
       border: none;
       outline: none;
@@ -223,12 +309,25 @@ const SiniestroAContainer = styled.section`
       font-size: 20px;
     }
 
-    .dropdown-item {
-      font-size: 1.5rem;
+    .form-text {
+      margin-top: 0rem;
+      font-size: 2rem;
+    }
+
+    #dropdown-button-drop-1 {
+      height: 6rem;
     }
 
     .fs-15 {
       font-size: 15px;
+    }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .dropdown-item {
+      font-size: 1.5rem;
     }
   }
 
@@ -236,7 +335,7 @@ const SiniestroAContainer = styled.section`
     height: 90vh;
     .form-control {
       width: 70%;
-      border: solid 2px #FFFFFF;
+      border: solid 2px #ffffff;
       border-bottom: 2px solid #000;
       border-radius: 0;
       padding-left: 3rem;
@@ -259,12 +358,8 @@ const SiniestroAContainer = styled.section`
       font-size: 15px;
     }
 
-    .fs-35 {
-      font-size: 3.5rem;
-    }
-
     .card {
-      border: none; 
+      border: none;
     }
 
     .btn-success {
@@ -275,9 +370,9 @@ const SiniestroAContainer = styled.section`
       font-size: 15px;
       border-radius: 1rem;
 
-      &:focus, 
+      &:focus,
       &:active {
-        background: #F5FFFA;
+        background: #f5fffa;
         color: #000;
         border: none;
         outline: none;

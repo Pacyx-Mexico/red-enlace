@@ -4,8 +4,12 @@ import styled from "styled-components";
 import Button from "../Button";
 import { MedicineIcon } from "../../assets/icons";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 export const SiniestroGM = () => {
+  const scrollTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <>
       <Navbar />
@@ -22,7 +26,7 @@ export const SiniestroGM = () => {
                 Médicos
               </p>
             </div>
-            <div className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
+            <div onClick={scrollTop} className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
               <p className="fs-35 text-center pb-5 mb-5">
                 Para que la única recuperación por <br />
                 la que te preocupes <span className="fw-500">sea la tuya</span>
@@ -52,7 +56,7 @@ export const SiniestroGM = () => {
                 <MedicineIcon />
               </div>
             </div>
-            <div className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
+            <div onClick={scrollTop} className="col-md-9 d-flex justify-content-center flex-column align-items-center gap-5">
               <p className="fs-35 text-center pb-5 mb-5 text-secondary mt-5 pt-5">
               Para que la única recuperación por <br />
                 la que te preocupes <span className="fw-500">sea la tuya</span>

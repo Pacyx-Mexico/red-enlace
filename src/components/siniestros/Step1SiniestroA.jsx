@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import Button from "../Button";
 import validator from "validator";
-import { Form, Card /* , Button */ } from "react-bootstrap";
+import { Form, Card } from "react-bootstrap";
 
 export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
@@ -82,7 +81,7 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
-                      This is a required field
+                      Ingresa número de un contrato válido
                     </Form.Text>
                   ) : (
                     ""
@@ -94,8 +93,6 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
             </Card.Body>
           </Card>
         </div>
-
-
       </SiniestroAContainer>
     </>
   );
@@ -114,8 +111,8 @@ const SiniestroAContainer = styled.section`
   }
 
   .form-text {
-    margin-top: -7.75rem;
-    font-size: 2rem;
+    margin-top: 0rem;
+    font-size: 2.5rem;
   }
 
   .card {

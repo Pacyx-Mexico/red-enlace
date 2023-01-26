@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { NavLink, Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 export const SelectSiniestro = () => {
   const scrollTop = () => {
@@ -45,7 +46,7 @@ export const SelectSiniestro = () => {
                 >
                   <Link to="/reclamacion-siniestros/gastos-medicos">
                     <button className="button-hero rounded-pill pt-1">
-                      Cotizar
+                      Seleccionar
                     </button>
                   </Link>
                 </div>
@@ -78,7 +79,7 @@ export const SelectSiniestro = () => {
                 >
                   <Link to="/reclamacion-siniestros/autos">
                     <button className="button-hero rounded-pill pt-1">
-                      Cotizar
+                      Seleccionar
                     </button>
                   </Link>
                 </div>
@@ -120,7 +121,7 @@ export const SelectSiniestro = () => {
                 >
                   <Link to="/reclamacion-siniestros/gastos-medicos">
                     <button className="button-hero rounded-pill pt-1">
-                      Cotizar
+                      Seleccionar
                     </button>
                   </Link>
                 </div>
@@ -153,7 +154,7 @@ export const SelectSiniestro = () => {
                 >
                   <Link to="/reclamacion-siniestros/autos">
                     <button className="button-hero rounded-pill pt-1">
-                      Cotizar
+                      Seleccionar
                     </button>
                   </Link>
                 </div>
@@ -428,6 +429,5 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
-
 
 

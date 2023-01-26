@@ -8,7 +8,13 @@ import { FiUpload } from "react-icons/fi";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
+import { animateScroll as scroll } from "react-scroll";
+import { MdArrowBackIosNew } from "react-icons/md";
+
+export const Step4SiniestroA = ({ nextStep, prevStep, handleFormData, values }) => {
+  const scrollTop = () => {
+    scroll.scrollToTop();
+  };
   const [error, setError] = useState(false);
   const submitFormData = (e) => {
     e.preventDefault();
@@ -36,12 +42,13 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
               Adjuntar documentación.
             </p>
           </div>
-          <Container onSubmit={submitFormData} className="mt-5 pt-5">
-            <Form onSubmit={submitFormData}>
+          <div onSubmit={submitFormData} className="mt-5 pt-5">
+            <Form onSubmit={submitFormData} className="position-relative">
               <Row className="mt-5">
                 <Col className="d-flex mx-auto">
                   <div className="d-flex align-items-center">
                     <Link className="bg-blue rounded-lg ">
+                      <input type="file" style={{'display': 'none'}}/>
                       < FiUpload className="icon-width"/>
                     </Link>
                     <p className="my-auto ms-5 ps-5 fs-20 fw-normal">Formato solicitud de reembolso*</p>
@@ -108,11 +115,14 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                   </div>
                 </Col>
               </Row>
-              <div className="d-flex justify-content-center mt-5 pt-5">
-                    <Button variant="primary" type="submit" text="Siguiente"></Button>
+              <div onClick={prevStep} className="position-absolute bottom-0">
+                <MdArrowBackIosNew className="iconPrev" />
+              </div>
+              <div onClick={scrollTop} className="d-flex justify-content-center mt-5 pt-5">
+                <Button variant="primary" type="submit" text="Siguiente"></Button>
               </div>
             </Form>
-          </Container>
+          </div>
         </div>
 
         <div className="d-md-none">
@@ -127,7 +137,7 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
           <Container onSubmit={submitFormData} className="mt-5 pt-5">
             <Form onSubmit={submitFormData}>
               <div className="mt-5">
-                <div className="d-flex flex-column justify-content-start mx-5"> 
+                <div className="d-flex flex-column justify-content-start mx-5 position-relative"> 
                   <ul className="d-flex flex-column list-unstyled gap-5 w-100">
                     <li className="fs-35 d-flex justify-content-start align-items-center">
                       <Link className="bg-blue rounded-lg">
@@ -185,8 +195,10 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
                       <p className="my-auto ms-5 ps-5 fs-35 fw-normal">Corte de caja*</p>   
                     </li>
                   </ul>
-
-                  <div className="d-flex justify-content-center mt-5 pt-5">
+                  <div onClick={prevStep} className="position-absolute bottom-0 start-0">
+                    <MdArrowBackIosNew className="iconPrev" />
+                  </div>
+                  <div onClick={scrollTop} className="d-flex justify-content-center mt-5 pt-5">
                     <Button variant="primary" type="submit" text="Siguiente"></Button>
                   </div>
                 </div>
@@ -201,7 +213,6 @@ export const Step4SiniestroA = ({ nextStep, handleFormData, values }) => {
 
 const SiniestroAContainer = styled.section`
   height: 95vh;
-
   margin-top: 15rem;
 
   .fs-20 {
