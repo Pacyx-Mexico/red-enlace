@@ -97,7 +97,7 @@ export const MenuItem = styled.li`
     height: 12rem;
 
     a {
-      font-size: 2.6rem;
+      font-size: 3.5rem;
       padding: 0 1.2em;
     }
   }

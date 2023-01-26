@@ -115,7 +115,7 @@
   .footer {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(2, 1fr);
-    height: 25vh  ;
+    height: 19vh  ;
     padding: 2rem 4rem 2rem 4rem;
   }
   .footer__section1 {
@@ -133,6 +133,7 @@
     order: 4;
     align-self: start;
     grid-column: 1 / span 3;
+    margin-top: auto;
   }
   .footer__section2_img {
     width: 15rem;

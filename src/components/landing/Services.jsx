@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MedicineIcon, MedicalExpensesIcon, CarIcon } from "../../assets/icons";
 import { Link } from "react-router-dom";
+import { Element, animateScroll as scroll } from "react-scroll";
 
 export const Services = () => {
   let services = [
@@ -74,112 +75,113 @@ export const Services = () => {
           </div>
         </div>
       </div>
-
-      <div className="bg-gradient-blue d-none d-lg-block">
-        <div className="services-title container-fluid text-center pt-1 pb-5">
-          <h3 className="fs-10 fw-normal text-dark">
-            Conoce nuestros productos
-          </h3>
-        </div>
-        <div className="container-fluid px-5 h-auto position-relative d-none d-lg-block">
-          <div className="row pt-5 mb-5 mr-5 ml-5 d-flex justify-content-around gap-5">
-            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-              <Link
-                to="/deducible-gastos-medicos"
-                className="w-100 text-decoration-none"
-              >
-                <div className="card border-none border-first text-center position-relative card-hover_first">
-                  <div className="position-absolute d-flex align-items-center justify-content-center">
-                    <img
-                      src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                      alt="Gastos medicos hombre"
-                      className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
-                    />
-                  </div>
-                </div>
-                <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
-                    Devolución de deducible
-                    <br />
-                    Gastos Médicos
-                  </p>
-                </div>
-                <div
-                  onClick={scrollTop}
-                  className="d-flex justify-content-center mt-5"
+      <Element id="productos" name="productos" containerId="productos">
+        <div className="bg-gradient-blue d-none d-lg-block">
+          <div className="services-title container-fluid text-center pt-1 pb-5">
+            <h3 className="fs-10 fw-normal text-dark">
+              Conoce nuestros productos
+            </h3>
+          </div>
+          <div className="container-fluid px-5 h-auto position-relative d-none d-lg-block">
+            <div className="row pt-5 mb-5 mr-5 ml-5 d-flex justify-content-around gap-5">
+              <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+                <Link
+                  to="/deducible-gastos-medicos"
+                  className="w-100 text-decoration-none"
                 >
-                  <Link to="/deducible-gastos-medicos">
-                    <button className="button-hero rounded-pill pt-1">
-                      Cotizar
-                    </button>
-                  </Link>
-                </div>
-              </Link>
-            </div>
-            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-              <Link
-                to="/deducible-autos"
-                className="w-100 text-decoration-none"
-              >
-                <div className="card border border-4 border-second text-center position-relative card-hover_second">
-                  <div className="position-absolute d-flex align-items-center justify-content-center">
-                    <img
-                      src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                      alt="hombre auto"
-                      className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
-                    />
+                  <div className="card border-none border-first text-center position-relative card-hover_first">
+                    <div className="position-absolute d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
+                        alt="Gastos medicos hombre"
+                        className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
-                    Devolución de deducible
-                    <br />
-                    Autos
-                  </p>
-                </div>
-                <div
-                  onClick={scrollTop}
-                  className="d-flex justify-content-center mt-5"
-                >
-                  <Link to="/deducible-autos">
-                    <button className="button-hero rounded-pill pt-1">
-                      Cotizar
-                    </button>
-                  </Link>
-                </div>
-              </Link>
-            </div>
-            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
-              <Link to="/enlace" className="w-100 text-decoration-none">
-                <div className="card border border-4 border-fourth text-center position-relative card-hover_third">
-                  <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                    <img
-                      src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
-                      alt="hombre auto"
-                      className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
-                    />
+                  <div className="mt-5 d-flex justify-content-center w-100">
+                    <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                      Devolución de deducible
+                      <br />
+                      Gastos Médicos
+                    </p>
                   </div>
-                </div>
-                <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
-                    Enlaces
-                  </p>
-                </div>
-                <div
-                  onClick={scrollTop}
-                  className="d-flex justify-content-center mt-5 pt-5"
+                  <div
+                    onClick={scrollTop}
+                    className="d-flex justify-content-center mt-5"
+                  >
+                    <Link to="/deducible-gastos-medicos">
+                      <button className="button-hero rounded-pill pt-1">
+                        Cotizar
+                      </button>
+                    </Link>
+                  </div>
+                </Link>
+              </div>
+              <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+                <Link
+                  to="/deducible-autos"
+                  className="w-100 text-decoration-none"
                 >
-                  <Link to="/enlace">
-                    <button className="button-hero rounded-pill pt-1">
-                      Cotizar
-                    </button>
-                  </Link>
-                </div>
-              </Link>
+                  <div className="card border border-4 border-second text-center position-relative card-hover_second">
+                    <div className="position-absolute d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
+                        alt="hombre auto"
+                        className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-5 d-flex justify-content-center w-100">
+                    <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                      Devolución de deducible
+                      <br />
+                      Autos
+                    </p>
+                  </div>
+                  <div
+                    onClick={scrollTop}
+                    className="d-flex justify-content-center mt-5"
+                  >
+                    <Link to="/deducible-autos">
+                      <button className="button-hero rounded-pill pt-1">
+                        Cotizar
+                      </button>
+                    </Link>
+                  </div>
+                </Link>
+              </div>
+              <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+                <Link to="/enlace" className="w-100 text-decoration-none">
+                  <div className="card border border-4 border-fourth text-center position-relative card-hover_third">
+                    <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
+                        alt="hombre auto"
+                        className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-5 d-flex justify-content-center w-100">
+                    <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                      Enlaces
+                    </p>
+                  </div>
+                  <div
+                    onClick={scrollTop}
+                    className="d-flex justify-content-center mt-5 pt-5"
+                  >
+                    <Link to="/enlace">
+                      <button className="button-hero rounded-pill pt-1">
+                        Cotizar
+                      </button>
+                    </Link>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Element>
 
       <div className="container-fluid position-relative d-lg-none">
         <div className="d-flex justify-content-center flex-column mb-lg pb-5">
@@ -233,15 +235,15 @@ export const Services = () => {
                 </p>
               </div>
               <div
-                  onClick={scrollTop}
-                  className="d-flex justify-content-center mt-5"
-                >
-                  <Link to="/deducible-gastos-medicos">
-                    <button className="button-hero rounded-pill pt-1">
-                      Cotizar
-                    </button>
-                  </Link>
-                </div>
+                onClick={scrollTop}
+                className="d-flex justify-content-center mt-5"
+              >
+                <Link to="/deducible-gastos-medicos">
+                  <button className="button-hero rounded-pill pt-1">
+                    Cotizar
+                  </button>
+                </Link>
+              </div>
             </Link>
           </div>
           <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
@@ -263,15 +265,15 @@ export const Services = () => {
                 </p>
               </div>
               <div
-                  onClick={scrollTop}
-                  className="d-flex justify-content-center mt-5"
-                >
-                  <Link to="/deducible-autos">
-                    <button className="button-hero rounded-pill pt-1">
-                      Cotizar
-                    </button>
-                  </Link>
-                </div>
+                onClick={scrollTop}
+                className="d-flex justify-content-center mt-5"
+              >
+                <Link to="/deducible-autos">
+                  <button className="button-hero rounded-pill pt-1">
+                    Cotizar
+                  </button>
+                </Link>
+              </div>
             </Link>
           </div>
           <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
@@ -291,9 +293,9 @@ export const Services = () => {
                 </p>
               </div>
               <div
-                  onClick={scrollTop}
-                  className="d-flex justify-content-center mt-5"
-                >
+                onClick={scrollTop}
+                className="d-flex justify-content-center mt-5"
+              >
                 <Link to="/enlace">
                   <button className="button-hero rounded-pill pt-1">
                     Cotizar
@@ -462,7 +464,7 @@ const ServicesContainer = styled.section`
   }
   .button-hero:hover {
     background-color: #5872c4;
-    color: #FFF;  
+    color: #fff;
   }
 
   .btn-third {
@@ -663,10 +665,10 @@ const ServicesContainer = styled.section`
     }
 
     .card_img-width_first {
-    width: 35.5rem;
-    top: 0.9rem;
-    right: 0.8rem;
-    border-radius: 19rem;
+      width: 35.5rem;
+      top: 0.9rem;
+      right: 0.8rem;
+      border-radius: 19rem;
     }
 
     .primary-title-h {
