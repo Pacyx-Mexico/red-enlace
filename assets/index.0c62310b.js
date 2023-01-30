@@ -824,7 +824,7 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
       font-size: 3.5rem;
     }
   }
-`,UM=()=>f(be,{children:[i(et,{type:"productos"}),i(DP,{}),i(aM,{}),i(fM,{}),i(BM,{}),i(HM,{}),i(tt,{})]});function Ym({video:e,title:t,url:r}){const a=()=>{ft.scrollToTop()},n=F.exports.useRef(null);return i(be,{children:e?f("section",{className:"pt-5",children:[i("h4",{className:"videoTitle fw-normal fs-55 mt-5 pt-5",children:"\xBFC\xF3mo funciona?"}),f("div",{className:"productVideo",children:[i("h4",{className:"productVideo__videoTitle  ",children:"\xBFC\xF3mo funciona?"}),i("video",{ref:n,className:"productVideo__videoContainer",autoPlay:!0,loop:!0,muted:!0,playsinline:!0,children:i("source",{src:r,type:"video/mp4"})}),i("h5",{className:"productVideo__subtitle fw-normal",children:"*Personaliza tu protecci\xF3n con coberturas adicionales"}),i("div",{onClick:a,className:"d-none d-md-block",children:i(se,{to:"/cotizador-deducible-gastos-medicos",children:i("button",{className:"button-video rounded-pill pt-1",children:"Conoce m\xE1s"})})}),i("div",{onClick:a,className:"d-md-none",children:i(se,{to:"/cotizador-deducible-gastos-medicos",children:i("button",{className:"btn btn-lg btn-first rounded-pill fw-500 mx-auto w-100 opacity-75 fs-1",children:"Contratar"})})})]})]}):""})}const qM=()=>{const e=()=>{scroll.scrollToTop()};return f(WM,{className:"home d-flex",id:"home",children:[i(At,{className:"gradient_img_bg position-absolute d-none d-md-block",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png",alt:"Gradient background element"}),i("div",{className:"align-items-center position-relative top-25 w-75 d-none d-lg-flex",children:f("div",{className:"hero-title d-flex flex-column justify-content-center text-center align-items-start",children:[f("h2",{className:"mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start",children:["Devoluci\xF3n de deducible ",i("br",{}),i("span",{children:"Gastos M\xE9dicos"})]}),i("p",{className:"text-secondary pb-5 mb-5 mt-4 lh-md hero_subtitle fw-light",children:"Te cuidamos. Te devolvemos tu deducible de manera garantizada"}),i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-gastos-medicos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})]})}),f("div",{className:"container-fluid d-flex flex-column w-100 h-100 d-lg-none",children:[f("h2",{className:"fw-normal fw-medium text-dark h2-heading primary_title",children:["Devoluci\xF3n de deducible ",i("br",{}),"Gastos M\xE9dicos"]}),i("div",{className:"d-flex justify-content-center px-5 mx-5 h-50",children:i(At,{className:"gradient_img_bg_sm img-fluid px-5 d-md-none",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/Gastos-medicos-mb.png",alt:"Gradient background element"})}),i("div",{className:"d-flex justify-content-center w-100 d-md-none mt-11 pt-5",children:i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-gastos-medicos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})})]})]})},WM=R.section`
+`,UM=()=>f(be,{children:[i(et,{type:"productos"}),i(DP,{}),i(aM,{}),i(fM,{}),i(BM,{}),i(HM,{}),i(tt,{})]});function Ym({video:e,title:t,url:r}){const a=()=>{ft.scrollToTop()},n=F.exports.useRef(null);return i(be,{children:e?f("section",{className:"pt-5",children:[i("h4",{className:"videoTitle fw-normal fs-55 mt-5 pt-5",children:"\xBFC\xF3mo funciona?"}),f("div",{className:"productVideo",children:[i("h4",{className:"productVideo__videoTitle  ",children:"\xBFC\xF3mo funciona?"}),i("video",{ref:n,className:"productVideo__videoContainer",autoPlay:!0,loop:!0,muted:!0,playsinline:!0,children:i("source",{src:r,type:"video/mp4"})}),i("h5",{className:"productVideo__subtitle fw-normal",children:"*Personaliza tu protecci\xF3n con coberturas adicionales"}),i("div",{onClick:a,className:"d-none d-md-block",children:i(se,{to:"/cotizador-deducible-gastos-medicos",children:i("button",{className:"button-video rounded-pill pt-1",children:"Conoce m\xE1s"})})}),i("div",{onClick:a,className:"d-md-none",children:i(se,{to:"/cotizador-deducible-gastos-medicos",children:i("button",{className:"btn btn-lg btn-first rounded-pill fw-500 mx-auto w-100 opacity-75 fs-1",children:"Contratar"})})})]})]}):""})}const qM=()=>{const e=()=>{scroll.scrollToTop()};return f(WM,{className:"home d-flex",id:"home",children:[i(At,{className:"gradient_img_bg position-absolute d-none d-md-block",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png",alt:"Gradient background element"}),i("div",{className:"align-items-center position-relative top-25 w-75 d-none d-lg-flex",children:f("div",{className:"hero-title d-flex flex-column justify-content-center text-center align-items-start",children:[f("h2",{className:"mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start",children:["Devoluci\xF3n de deducible ",i("br",{}),i("span",{children:"Gastos M\xE9dicos"})]}),i("p",{className:"text-secondary pb-5 mb-5 mt-4 lh-md hero_subtitle fw-light",children:"Te cuidamos. Te devolvemos tu deducible de manera garantizada"}),i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-gastos-medicos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})]})}),f("div",{className:"container-fluid d-flex flex-column justify-content-center w-100 h-100 d-lg-none",children:[f("h2",{className:"fw-normal fw-medium text-dark primary_title mb-5 pb-5",children:["Devoluci\xF3n de deducible ",i("br",{}),"Gastos M\xE9dicos"]}),i("div",{className:"d-flex justify-content-center px-5 mx-5 h-50",children:i(At,{className:"gradient_img_bg_sm img-fluid px-5 d-md-none",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/Gastos-medicos-mb.png",alt:"Gradient background element"})}),i("div",{className:"d-flex justify-content-center w-100 d-md-none mt-5 pt-5",children:i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-gastos-medicos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})})]})]})},WM=R.section`
   background-color: #fff;
   height: 100vh;
 
@@ -852,7 +852,9 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
     margin-left: 10rem;
     margin-bottom: 7.5rem;
   }
-
+  .primary_title {
+    font-size: 25px;
+  }
   .img-fluid {
     width: auto;
     height: 100%;
@@ -860,10 +862,6 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
   .mt-11 {
     margin-top: 11rem;
   }
-  .gradient_img_bg_sm {
-    margin-top: 7rem;
-  }
-
   .w-85 {
     width: 85%;
   }
@@ -889,9 +887,6 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
     text-align: start;
   }
 
-  .primary_title {
-      margin-top: 25.5rem;
-  }
 
   @media (min-width: 576px) {
     height: 160rem;
@@ -3824,7 +3819,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       margin-top: 10rem;
     }
   }
-`,lj=()=>f(be,{children:[i(et,{type:"productos"}),i(RI,{}),i(LI,{}),i(tt,{})]}),dj=()=>{const e=()=>{scroll.scrollToTop()};return f(cj,{className:"home d-flex mb-5 pb-5 w-100",id:"home",children:[i(At,{className:"gradient_img_bg position-absolute d-none d-md-block",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+732.png",alt:"Gradient background element"}),i("div",{className:"align-items-center w-75 d-none d-md-flex",children:f("div",{className:"hero-title d-flex flex-column justify-content-start text-center align-items-start",children:[f("h2",{className:"mb-4 pr-xxl-5 fw-normal z-index text-dark fs-65 text-start",children:["Devoluci\xF3n de deducible ",i("br",{}),"Autos"]}),i("p",{className:"text-secondary pb-5 mb-5 mt-4 mb-lg-5 hero_subtitle fw-light",children:"Te cuidamos. Te devolvemos tu deducible de manera garantizada"}),i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-autos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})]})}),f("div",{className:"container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none",children:[f("h2",{className:"fw-normal fw-500 text-dark h2-heading primary_title",children:["Devoluci\xF3n de deducible ",i("br",{}),"Autos"]}),i("div",{className:"d-flex justify-content-center h-50",children:i(At,{className:"gradient_img_bg_sm img-fluid px-5 d-md-none",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+738.png",alt:"Gradient background element"})}),i("div",{className:"d-flex justify-content-center w-100 d-md-none mt-5 pt-5",children:i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-gastos-medicos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})})]})]})},cj=R.section`
+`,lj=()=>f(be,{children:[i(et,{type:"productos"}),i(RI,{}),i(LI,{}),i(tt,{})]}),dj=()=>{const e=()=>{scroll.scrollToTop()};return f(cj,{className:"home d-flex mb-5 pb-5 w-100",id:"home",children:[i(At,{className:"gradient_img_bg position-absolute d-none d-md-block",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+732.png",alt:"Gradient background element"}),i("div",{className:"align-items-center w-75 d-none d-md-flex",children:f("div",{className:"hero-title d-flex flex-column justify-content-start text-center align-items-start",children:[f("h2",{className:"mb-4 pr-xxl-5 fw-normal z-index text-dark fs-65 text-start",children:["Devoluci\xF3n de deducible ",i("br",{}),"Autos"]}),i("p",{className:"text-secondary pb-5 mb-5 mt-4 mb-lg-5 hero_subtitle fw-light",children:"Te cuidamos. Te devolvemos tu deducible de manera garantizada"}),i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-autos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})]})}),f("div",{className:"container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none",children:[f("h2",{className:"fw-normal fw-500 text-dark primary_title mb-5 pb-5 mt-5",children:["Devoluci\xF3n de deducible ",i("br",{}),"Autos"]}),i("div",{className:"d-flex justify-content-center h-50",children:i(At,{className:"gradient_img_bg_sm img-fluid px-5 d-md-none",src:"https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+738.png",alt:"Gradient background element"})}),i("div",{className:"d-flex justify-content-center w-100 d-md-none pt-5 mt-50",children:i("div",{onClick:e,children:i(se,{to:"/cotizador-deducible-gastos-medicos",className:"headerTitle__btn",children:i(Oe,{text:"Contratar"})})})})]})]})},cj=R.section`
   background-color: #fff;
   overflow: hidden;
   height: 100rem;
@@ -3851,7 +3846,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     font-size: 7rem;
     margin-top:14rem;
   }
-
+  .mt-11 {
+    margin-top: 11rem;
+  }
   .img-fluid {
     max-width: 100%;
     height: auto;
@@ -3861,6 +3858,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
   .z-index {
     z-index: 2;
+  }
+  .mt-50 {
+    margin-top: 5rem;
   }
   .text-primary {
     color: #314faf !important;
@@ -3894,7 +3894,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     top: 15rem;
     .gradient_img_bg_sm {
       width: auto;
-      height: 100%;
+      height: 102%;
     }
 
     .RE_img_bg {
@@ -3903,7 +3903,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     .primary_title {
       font-size: 25px;
-      margin-bottom: 8.5rem;
     }
 
     .primary_subtitle {
