@@ -100,7 +100,7 @@ Error generating stack: `+o.message+`
     background-color: var(--primary-color);
     border: none;
     padding: 0 0;
-    transform: translate3d(121.3rem,67px,0px) !important;
+    transform: translate3d(121.3rem, 54%, 0px) !important;
     width: auto;
 
     a {
