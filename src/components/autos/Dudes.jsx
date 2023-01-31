@@ -85,6 +85,10 @@ const DudesSection = styled.section`
     text-align: start !important;
     font-size: 3rem;
     font-weight: 400;
+
+    &:focus {
+      font-weight: 600;
+    }
   }
 
   .accordion__button:after {

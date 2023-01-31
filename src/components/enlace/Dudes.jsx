@@ -10,7 +10,7 @@ import {
 export const Dudes = () => {
   return (
     <DudesSection className="container d-block text-center  fs-2">
-      <h4 className="mt-5 mt-xxl-5 fw-normal fs-50 text-dark pb-5">
+      <h4 className="mt-5 mt-xxl-5 fw-500 fs-50 text-dark pb-5">
         Preguntas frecuentes
       </h4>
       <div className="container my-5">
@@ -114,6 +114,10 @@ const DudesSection = styled.section`
     text-align: start !important;
     font-size: 3rem;
     font-weight: 400;
+
+    &:focus {
+      font-weight: 600;
+    }
   }
 
   .accordion__button:after {
