@@ -9,15 +9,13 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
   const submitFormData = (e) => {
     e.preventDefault();
-    nextStep();
-
     // checking if value of first name and last name is empty show error else take to step 2
-    /* if (
-      validator.isEmpty(values.firstName) ||
-      validator.isEmpty(values.lastName)
-    ) {
+    if (validator.isEmpty(values.noContrato)) {
+      console.log("Validator noContrato ==> ", validator.isEmpty(values.noContrato))
       setError(true);
-    } */
+    } else {
+      nextStep();
+    }
   };
   return (
     <>
@@ -47,7 +45,7 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
                     />
                     {error ? (
                       <Form.Text style={{ color: "red" }}>
-                        This is a required field
+                        Ingresa número de un contrato válido
                       </Form.Text>
                     ) : (
                       ""
@@ -116,6 +114,11 @@ const FacturacionContainer = styled.section`
     font-size: 3rem;
   }
 
+  .form-text {
+    margin-top: 0rem;
+    font-size: 2.5rem;
+  }
+
   .gap-10 {
     gap: 10rem;
   }
@@ -142,6 +145,11 @@ const FacturacionContainer = styled.section`
 
     .primary-subtitle-mb {
       font-size: rem;
+    }
+
+    .form-text {
+      margin-top: 0rem;
+      font-size: 2rem;
     }
 
     .form-control {
