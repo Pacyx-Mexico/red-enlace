@@ -44,8 +44,8 @@ function App() {
             <Route path="reclamacion-siniestros">
               <Route index element={<Siniestro />} />
               <Route path="select" element={<SelectSiniestro />} />
-              <Route path="gastos-medicos" element={<SiniestroGM />} />
-              <Route path="autos" element={<SiniestroAuto />} />
+              {/* <Route path="gastos-medicos" element={<SiniestroGM />} />
+              <Route path="autos" element={<SiniestroAuto />} /> */}
               <Route path="auto-form" element={<MainSiniestroAuto />} />
               <Route path="gastos-medicos-form" element={<MainSiniestroGM />} />
             </Route>
