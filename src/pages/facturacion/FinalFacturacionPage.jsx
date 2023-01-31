@@ -11,7 +11,7 @@ export const FinalFacturacionPage = () => {
           Tu factura será enviada al correo:
         </h4>
       </div>
-      <Container className="d-none d-md-block">
+      <Container className="d-none d-md-flex justify-content-center">
         <div className="mt-10 pt-5">
           <div className="d-flex justify-content-center gap-10 align-items-center">
             <p className="fs-20">
@@ -27,7 +27,7 @@ export const FinalFacturacionPage = () => {
             </p>
           </div>
           <div className="mt-5 pt-5">
-            <p className="fs-20 text-center mt-5">contacto@redenlace.com.mx</p>
+            <p className="fs-20 text-center mt-5 ms-5">contacto@redenlace.com.mx</p>
           </div>
         </div>
       </Container>
@@ -62,7 +62,7 @@ export const FinalFacturacionPage = () => {
 };
 
 const FinalFacturacionContainer = styled.section`
-  height: 80vh;
+  height: 90vh;
   margin-top: 15rem;
 
   .RedLogo-width {
@@ -94,7 +94,7 @@ const FinalFacturacionContainer = styled.section`
     }
     
     .fs-20 {
-      font-size: 15px;
+      font-size: 20px;
     }
   }
 
@@ -118,8 +118,5 @@ const FinalFacturacionContainer = styled.section`
       margin-top: 10rem;
     }
 
-    .fs-20 {
-      font-size: 15px;
-    }
   }
 `;

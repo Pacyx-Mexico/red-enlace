@@ -29,21 +29,21 @@ export const Step2SiniestroA = ({ nextStep, prevStep, handleFormData, values }) 
       <SiniestroAContainer>
         <div className="d-flex flex-column d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="  fs-35 fw-500 mt-5">PASO 2/4:</h1>
+            <h1 className="fs-35 fw-500 mt-5">PASO 2/4:</h1>
           </div>
 
-          <Card className="h-100" style={{ marginTop: 100 }}>
+          <Card className="h-100" style={{ marginTop: 10 }}>
             <div className="d-flex align-items-end">
               <div onClick={prevStep}>
                 <MdArrowBackIosNew className="iconPrev" />
               </div>
-              <Card.Body>
+              <Card.Body className="pt-0">
                 <Form
                   onSubmit={submitFormData}
                   className="d-flex justify-content-center flex-column h-100"
                 >
-                  <Form.Group className="mb-3 d-flex justify-content-center align-items-end">
-                    <Form.Label className="fw-500   mb-0 fs-17 w-25">
+                  <Form.Group className="mb-3 d-flex justify-content-center align-items-end gap-4 w-100">
+                    <Form.Label className="fw-normal mb-0 fs-17">
                       # de Contrato:
                     </Form.Label>
                     <Form.Control
@@ -55,7 +55,7 @@ export const Step2SiniestroA = ({ nextStep, prevStep, handleFormData, values }) 
                       placeholder={values.noContrato}
                     />
                   </Form.Group>
-                  <Dropdown className="w-100 d-flex justify-content-center">
+                  <Dropdown className="w-100 d-flex justify-content-center mt-5 pt-5">
                     <div className="d-flex flex-column w-100">
                       <Dropdown.Toggle
                         variant="success"
@@ -130,7 +130,7 @@ export const Step2SiniestroA = ({ nextStep, prevStep, handleFormData, values }) 
             <h1 className="  fw-500 mt-5 primary-title-mb">PASO 2/4:</h1>
           </div>
 
-          <Card className="h-100" style={{ marginTop: 60 }}>
+          <Card className="h-100" style={{ marginTop: 5 }}>
             <Card.Body>
               <Form
                 onSubmit={submitFormData}
@@ -233,7 +233,7 @@ export const Step2SiniestroA = ({ nextStep, prevStep, handleFormData, values }) 
 
 const SiniestroAContainer = styled.section`
   height: 89vh;
-  margin-top: 15rem;
+  margin-top: 16.3rem;
 
   .card {
     border: none;

@@ -30,10 +30,10 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
           </div>
           
           <Card style={{ marginTop: 60 }}>
-            <Card.Body className="d-flex justify-content-center">
+            <Card.Body className="px-5">
               <Form onSubmit={submitFormData}>
-                <Form.Group className="mb-3 d-flex gap-5">
-                  <div className="d-flex flex-column">
+                <Form.Group className="mb-3 d-flex justify-content-center gap-5">
+                  <div className="d-flex flex-column w-75">
                     <Form.Control
                       style={{ border: error ? "2px solid red" : "" }}
                       name="noContrato"
@@ -50,8 +50,7 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
                       ""
                     )}
                   </div>
-                  <Button variant="primary" type="submit" text="Buscar">
-                  </Button>
+                  <button type="submit" className="btn-square">Buscar</button>
                 </Form.Group>
               </Form>
             </Card.Body>
@@ -60,7 +59,7 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
 
         <div className="d-md-none">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="primary-title-mb fw-500">
+            <h1 className="primary-title-mb fw-500 mt-5">
               PASO 1/4:
             </h1>
             <p className="text-center primary-subtitle-mb text-secondary fw-normal pt-5 mt-5">
@@ -69,8 +68,8 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
           </div>
           <Card style={{ marginTop: 40 }}>
             <Card.Body>
-              <Form onSubmit={submitFormData} className>
-                <Form.Group className="mb-3 d-flex align-items-center flex-column gap-15 mx-3">
+            <Form onSubmit={submitFormData} className="d-flex justify-content-center gap-10 flex-column">
+                <Form.Group className="mb-3 d-flex align-items-center flex-column gap-2 mx-5">
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
                     name="noContrato"
@@ -80,15 +79,17 @@ export const Step1SiniestroA = ({ nextStep, handleFormData, values }) => {
                     onChange={handleFormData("noContrato")}
                   />
                   {error ? (
-                    <Form.Text style={{ color: "red" }}>
+                    <Form.Text className="align-self-start ms-1" style={{ color: "red" }}>
                       Ingresa número de un contrato válido
                     </Form.Text>
                   ) : (
                     ""
                   )}
+                </Form.Group>
+                <div className="d-flex justify-content-center">
                   <Button variant="primary" type="submit" text="Buscar">
                   </Button>
-                </Form.Group>
+                </div>
               </Form>
             </Card.Body>
           </Card>
@@ -133,7 +134,7 @@ const SiniestroAContainer = styled.section`
     }
   }
 
-  .gap-15 {
+  .gap-10 {
    gap: 10rem;  
   }
 

@@ -22,38 +22,38 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
   return (
     <>
       <FacturacionContainer>
-        <div className="d-none d-md-block">
+        <div className="d-none d-md-flex justify-content-center flex-column">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="  fs-1 fw-500 mt-5">
+            <h1 className="fs-35 fw-500 mt-5">
               PASO 1/2:
             </h1>
-            <p className="text-center fs-2 fw-normal mt-5">
+            <p className="text-center fs-25 fw-normal mt-5">
               Proporciona tu número de contrato.
             </p>
           </div>
           
           <Card style={{ marginTop: 60 }}>
             <Card.Body>
-              <Form onSubmit={submitFormData} className>
-                <Form.Group className="mb-3 d-flex gap-5">
-                  <Form.Control
-                    style={{ border: error ? "2px solid red" : "" }}
-                    name="noContrato"
-                    defaultValue={values.noContrato}
-                    type="text"
-                    placeholder="# de Contrato*"
-                    onChange={handleFormData("noContrato")}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-
-                  <Button variant="primary" type="submit" text="Buscar">
-                  </Button>
+              <Form onSubmit={submitFormData}>
+                <Form.Group className="mb-3 d-flex justify-content-center gap-5">
+                  <div className="d-flex flex-column w-75">
+                    <Form.Control
+                      style={{ border: error ? "2px solid red" : "" }}
+                      name="noContrato"
+                      defaultValue={values.noContrato}
+                      type="text"
+                      placeholder="# de Contrato*"
+                      onChange={handleFormData("noContrato")}
+                    />
+                    {error ? (
+                      <Form.Text style={{ color: "red" }}>
+                        This is a required field
+                      </Form.Text>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  <button type="submit" className="btn-square">Buscar</button>
                 </Form.Group>
               </Form>
             </Card.Body>
@@ -74,7 +74,7 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
           <Card style={{ marginTop: 30 }}>
             <Card.Body>
               <Form onSubmit={submitFormData} className="mx-3">
-                <Form.Group className="mb-5 pb-5 d-flex flex-column gap-5">
+                <Form.Group className="mb-5 pb-5 d-flex flex-column gap-10">
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
                     name="noContrato"
@@ -90,7 +90,7 @@ export const Step1Facturacion = ({ nextStep, handleFormData, values }) => {
                   ) : (
                     ""
                   )}
-                  <div className="d-flex justify-content-center mt-5 pt-5">
+                  <div className="d-flex justify-content-center">
                     <Button variant="primary" type="submit" text="Buscar">
                     </Button>
                   </div>
@@ -116,11 +116,16 @@ const FacturacionContainer = styled.section`
     font-size: 3rem;
   }
 
+  .gap-10 {
+    gap: 10rem;
+  }
+
   .form-control {
     border: none;
-    height: 6rem;
+    height: 10rem;
     border-radius: 1.5rem;
     background: #f2f5fc;
+    margin-top: 2rem;
     padding: 0 6rem;
     font-size: 2.5rem;
   }
@@ -147,16 +152,26 @@ const FacturacionContainer = styled.section`
         font-size: 3rem;
       }
     }
+
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
+    }
   }
 
   @media (min-width: 992px) {
     height: 90vh;
     .form-control {
-      width: 70%;
+      width: 100%;
+      height: 6rem;
       background: #f2f5fc;
       border: none;
       border-radius: 1.5rem;
       padding-left: 3rem;
+      margin-top: 0;
       font-size: 2rem;
 
       &::placeholder {

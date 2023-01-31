@@ -11,7 +11,7 @@ export const FinalSiniestroPage = () => {
           Tu siniestro ha sido reclamado de manera exitosa
         </h4>
       </div>
-      <Container className="d-none d-md-block">
+      <Container className="d-none d-md-flex justify-content-center">
         <div className="mt-10 pt-5">
           <div className="d-flex justify-content-center gap-10 align-items-center">
             <p className="fs-20">
@@ -27,7 +27,7 @@ export const FinalSiniestroPage = () => {
             </p>
           </div>
           <div className="mt-5 pt-5">
-            <p className="fs-20 text-center mt-5">contacto@redenlace.com.mx</p>
+            <p className="fs-20 text-center mt-5 ms-5">contacto@redenlace.com.mx</p>
           </div>
         </div>
       </Container>
@@ -87,7 +87,7 @@ const FinalSiniestroAContainer = styled.section`
     }
     
     .fs-20 {
-      font-size: 15px;
+      font-size: 20px;
     }
   }
 
@@ -109,10 +109,6 @@ const FinalSiniestroAContainer = styled.section`
 
     .mt-10 {
       margin-top: 10rem;
-    }
-
-    .fs-20 {
-      font-size: 15px;
     }
   }
 `;

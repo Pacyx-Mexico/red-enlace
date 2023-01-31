@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 import validator from "validator";
 import { Form, Card /* , Button */ } from "react-bootstrap";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { animateScroll as scroll } from "react-scroll";
 import { MdArrowBackIosNew } from "react-icons/md";
 
@@ -40,7 +38,7 @@ export const Step3SiniestroGM = ({
       <SiniestroGMContainer className="w-100">
         <div className="d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="  fs-35 fw-500 mt-5">PASO 3/4</h1>
+            <h1 className="fs-35 fw-500 mt-5">PASO 3/4</h1>
             <p className="text-center fs-25 fw-normal mt-5">
               Proporciona el nombre y fecha del siniestro.
             </p>

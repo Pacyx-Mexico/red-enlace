@@ -13,15 +13,15 @@ export const SelectSiniestro = () => {
       <Navbar />
       <SelectSiniestroContainer>
         <div className="services-title container-fluid text-center d-none d-lg-block">
-          <h3 className="pb-2 fw-normal text-dark mt-5">
+          <h3 className="pb-2 fw-normal fs-40 text-dark mt-5">
             Selecciona el producto
           </h3>
         </div>
         <div className="container-fluid py-3 position-relative d-none d-lg-block">
           <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-center gap-10">
-            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+            <div onClick={scrollTop} className="col-auto">
               <Link
-                to="/reclamacion-siniestros/gastos-medicos"
+                to="/reclamacion-siniestros/gastos-medicos-form"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-first rounded-pill text-center position-relative card-hover_first">
@@ -44,7 +44,7 @@ export const SelectSiniestro = () => {
                   onClick={scrollTop}
                   className="d-flex justify-content-center mt-5"
                 >
-                  <Link to="/reclamacion-siniestros/gastos-medicos">
+                  <Link to="/reclamacion-siniestros/gastos-medicos-form">
                     <button className="button-hero rounded-pill pt-1">
                       Seleccionar
                     </button>
@@ -52,9 +52,9 @@ export const SelectSiniestro = () => {
                 </div>
               </Link>
             </div>
-            <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+            <div onClick={scrollTop} className="col-auto">
               <Link
-                to="/reclamacion-siniestros/autos"
+                to="/reclamacion-siniestros/auto-form"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-second rounded-pill text-center position-relative card-hover_second">
@@ -77,7 +77,7 @@ export const SelectSiniestro = () => {
                   onClick={scrollTop}
                   className="d-flex justify-content-center mt-5"
                 >
-                  <Link to="/reclamacion-siniestros/autos">
+                  <Link to="/reclamacion-siniestros/auto-form">
                     <button className="button-hero rounded-pill pt-1">
                       Seleccionar
                     </button>
@@ -96,7 +96,7 @@ export const SelectSiniestro = () => {
             </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
               <Link
-                to="/reclamacion-siniestros/gastos-medicos"
+                to="/reclamacion-siniestros/gastos-medicos-form"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
@@ -119,7 +119,7 @@ export const SelectSiniestro = () => {
                   onClick={scrollTop}
                   className="d-flex justify-content-center mt-5"
                 >
-                  <Link to="/reclamacion-siniestros/gastos-medicos">
+                  <Link to="/reclamacion-siniestros/gastos-medicos-form">
                     <button className="button-hero rounded-pill pt-1">
                       Seleccionar
                     </button>
@@ -129,7 +129,7 @@ export const SelectSiniestro = () => {
             </div>
             <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
               <Link
-                to="/reclamacion-siniestros/autos"
+                to="/reclamacion-siniestros/auto-form"
                 className="w-100 text-decoration-none"
               >
                 <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
@@ -152,7 +152,7 @@ export const SelectSiniestro = () => {
                   onClick={scrollTop}
                   className="d-flex justify-content-center mt-5"
                 >
-                  <Link to="/reclamacion-siniestros/autos">
+                  <Link to="/reclamacion-siniestros/auto-form">
                     <button className="button-hero rounded-pill pt-1">
                       Seleccionar
                     </button>
@@ -358,12 +358,16 @@ const SelectSiniestroContainer = styled.section`
 
   @media (min-width: 768px) {
     height: 260rem;
-    padding-top: 20rem;
+    padding-top: 14rem;
     padding-bottom: 20rem;
 
     .services-title-mb h3 {
       padding: 0 3rem 15rem;
       text-align: start;
+    }
+
+    .fs-40 {
+      font-size: 4rem;
     }
 
     .card {
@@ -403,22 +407,26 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 992px) {
-    height: 130vh;
+    height: 105vh;
     .card {
-      width: 36rem;
-      height: 59rem;
+      width: 31rem;
+      height: 49rem;
+    }
+
+    .services-title {
+      padding-bottom: 2rem;
     }
 
     .card_img-width_first {
-      width: 36rem;
-      top: 5rem;
-      left: -0.5rem;
+      width: 32rem;
+      top: 0.9rem;
+      left: -1.3rem;
     }
 
     .card_img-width_second {
       border-radius: 0 21rem 21rem;
-      width: 35.9rem;
-      top: 11.2rem;
+      width: 30.9rem;
+      top: 8rem;
       right: 0.6rem;
     }
 
@@ -429,5 +437,3 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
-
-

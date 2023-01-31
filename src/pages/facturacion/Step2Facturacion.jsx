@@ -26,10 +26,10 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
       <FacturacionContainer>
         <div className="d-none d-lg-block">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="  fs-1 fw-500 mt-5">
-              PASO 2/2
+            <h1 className="fs-35 fw-500 mt-5">
+              PASO 2/2:
             </h1>
-            <p className="text-center fs-2 fw-normal mt-5">
+            <p className="text-center fs-25 fw-normal mt-5">
               Valida tu información
             </p>
           </div>
@@ -202,19 +202,19 @@ export const Step2Facturacion = ({ nextStep, handleFormData, values }) => {
           </Card>
         </div>
 
-        <div className="d-lg-none">
+        <div className="d-lg-none d-flex flex-column align-items-center">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="  fs-1 fw-500 mt-5">
-              PASO 2/2
+            <h1 className="fs-40 mt-5 fw-500">
+              PASO 2/2:
             </h1>
-            <p className="text-center fs-2 fw-normal mt-5">
+            <p className="text-center fs-35 fw-normal mt-5">
               Valida tu información
             </p>
           </div>
 
-          <Card style={{ marginTop: 50 }}>
+          <Card className="d-flex justify-content-center w-100 px-5" style={{ marginTop: 50 }}>
             <Card.Body className="w-100 d-flex justify-content-center mx-5 ">
-              <Form onSubmit={submitFormData} className="d-flex gap-5 flex-column w-100 mx-5 px-5">
+              <Form onSubmit={submitFormData} className="d-flex gap-5 flex-column w-100">
                 <div className="d-flex justify-content-center flex-column gap-5">
                   <Form.Group className="mb-3">
                     <Form.Control
@@ -393,6 +393,14 @@ const FacturacionContainer = styled.section`
     margin-right: 6rem !important;
   }
 
+  .fs-40 {
+    font-size: 4rem;
+  }
+
+  .fs-35 {
+    font-size: 3.5rem;
+  }
+
   .card {
     border: none; 
   }
@@ -401,6 +409,8 @@ const FacturacionContainer = styled.section`
     background: #f2f5fc;
     border: none;
     width: 100%;
+    height: 10rem;
+    text-align: center;
     font-size: 3rem;
 
     &::placeholder {
@@ -419,6 +429,14 @@ const FacturacionContainer = styled.section`
     width: 100%; 
     .card {
       border: none;
+    }
+    
+    .fs-35 {
+      font-size: 3.5rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
     }
 
     .card-body {
