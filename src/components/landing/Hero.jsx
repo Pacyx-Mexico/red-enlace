@@ -2,11 +2,17 @@ import styled from "styled-components";
 import { Image } from "react-bootstrap";
 import { RedEnlaceBg } from "../../assets/backgrounds";
 import { Link } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export const Hero = () => {
   const scrollTop = () => {
     scroll.scrollToTop();
+  };
+
+  const scrollToSection = () => {
+    scroll.scrollTo("productos", {
+      containerId: "productos",
+    });
   };
 
   return (
@@ -35,20 +41,34 @@ export const Hero = () => {
       </div>
       <div className="position-absolute d-none d-lg-block z-index-15">
         <div onClick={scrollTop}>
-          <Link to="/cotizador-deducible-gastos-medicos">
-            <button className="button-hero rounded-pill pt-1">
-              Cotizar
-            </button>
-          </Link>
+          <ScrollLink
+            to="productos"
+            spy={false}
+            hashSpy={true}
+            smooth={true}
+            offset={-90}
+            duration={500}
+            className="color-white"
+            activeClass="some-active-class"
+          >
+            <button className="button-hero rounded-pill pt-1">Cotizar</button>
+          </ScrollLink>
         </div>
       </div>
       <div className="position-absolute d-lg-none z-index-15">
         <div onClick={scrollTop}>
-          <Link to="/cotizador-deducible-gastos-medicos">
-            <button className="button-hero rounded-pill pt-1">
-              Cotizar
-            </button>
-          </Link>
+          <ScrollLink
+            to="productos"
+            spy={false}
+            hashSpy={true}
+            smooth={true}
+            offset={560}
+            duration={500}
+            className="color-white"
+            activeClass="some-active-class"
+          >
+            <button className="button-hero rounded-pill pt-1">Cotizar</button>
+          </ScrollLink>
         </div>
       </div>
       <div className="align-items-center position-absolute top-50 w-85 d-none d-lg-block">
@@ -62,7 +82,7 @@ export const Hero = () => {
           <Image
             className="redenlace_logo position-absolute d-none d-lg-block"
             src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+739.png"
-          />  
+          />
         </div>
       </div>
 
@@ -120,7 +140,7 @@ const HeroContainer = styled.section`
     height: 50rem;
     width: auto;
     left: 90rem;
-    opacity: .1;
+    opacity: 0.1;
   }
 
   .home__info {
@@ -142,17 +162,17 @@ const HeroContainer = styled.section`
     height: 6rem;
     min-width: auto;
     padding: 0 3rem;
-    background: #FFF;
+    background: #fff;
     color: #5872c4;
     border: 2px solid #5872c4;
     font-size: 2.3rem;
     font-weight: 500;
-    transition:all ease 0.3s;
-  } 
+    transition: all ease 0.3s;
+  }
 
   .button-hero:hover {
     background-color: #5872c4;
-    color: #FFF;  
+    color: #fff;
   }
   .man_img-bg {
     z-index: 2;
