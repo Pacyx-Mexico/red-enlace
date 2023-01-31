@@ -11,15 +11,12 @@
 }
 .iconPrev {
   font-size: 8rem;
-  fill: #808080;
+  fill: var(--primary-color);
   transition: all ease 0.2s;
   cursor: pointer;
-  width: 5rem;
 }
 .iconPrev:hover {
-  fill: #5872c4;
+  fill: var(--secondary-color);
   transform: scale(1.1);
   transition: all ease 0.2s;
 }
-
-

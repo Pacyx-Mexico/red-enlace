@@ -27,8 +27,8 @@ export default function InputSelect({
   }, [defaultOption]);
 
   return (
-    <SelectContainer onClick={changeInit} init={init} errorFX={errorFX}>
-      <Select
+    <SelectContainer2 onClick={changeInit} init={init} errorFX={errorFX}>
+      <Select2
         defaultColor={defaultOption}
         name={name}
         value={value}
@@ -36,20 +36,20 @@ export default function InputSelect({
         onKeyUp={validation}
         onBlur={validation}
       >
-        <OptionDefault value="">{placeholder}</OptionDefault>
+        <OptionDefault2 value="">{placeholder}</OptionDefault2>
         {options.map((op) => (
-          <Option value={op.value} key={op.id}>
+          <Option2 value={op.value} key={op.id}>
             {op.text}
-          </Option>
+          </Option2>
         ))}
-      </Select>
-    </SelectContainer>
+      </Select2>
+    </SelectContainer2>
   );
 }
 
-const SelectContainer = styled.div`
+const SelectContainer2 = styled.div`
   width: 100%;
-  height: 5.6rem;
+  height: var(--inputHeight-size);
   position: relative;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -60,24 +60,22 @@ const SelectContainer = styled.div`
       errorFX ? "var(--errorInput-color)" : "var(--primary-color3)"};
   ${({ init }) => (init ? "border: 2px solid var(--primary-color3);" : "")};
   transition: all ease 0.3s;
-
-
-  /* */
 `;
-const Select = styled.select`
+
+const Select2 = styled.select`
   width: 100%;
   height: 100%;
   background: none;
   border: none;
   outline: 0px;
-  font-size: 2.22rem;
+  font-size: var(--inputText-size);
   color: ${({ defaultColor }) => (defaultColor ? "gray" : "var(--text-color)")};
 `;
 
-const OptionDefault = styled.option`
+const OptionDefault2 = styled.option`
   color: gray;
 `;
 
-const Option = styled.option`
+const Option2 = styled.option`
   color: var(--text-color);
 `;

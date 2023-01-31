@@ -3,6 +3,8 @@ import InputText from "../../InputText";
 import InputSelect from "../../InputSelect";
 import ErrorInput from "../../ErrorInput";
 import ErrorInputInit from "../../ErrorInputInit";
+import InputDate from "../../../Inputs/InputDate";
+import useCurrentDate from "../../../../hooks/useCurrentDate";
 
 function TitularGM(props) {
   useEffect(() => {
@@ -26,8 +28,11 @@ function TitularGM(props) {
     },
   ];
 
+  const currentDate = useCurrentDate();
+
+
   return (
-    <form id="formStep1GM" className="gridStep1GM">
+    <form className="gridStep1GM">
       <div>
         <InputText
           type="text"
@@ -58,24 +63,25 @@ function TitularGM(props) {
           errorFX={props.error.errorFX__edad}
           errorNull={props.error.errorNull__edad}
           errorTest={props.error.errorTest__edad}
-          textError="La edad debe ser mayor a 1 y menor a 75 años"
+          textError="La edad debe ser mayor a 1 y menor a 101 años"
           textNull="Ingresa la edad"
         />
+
         <InputText
-          type="email"
-          placeholder="Correo Electrónico *"
-          name="correo"
-          value={props.state.correo}
+          type="text"
+          placeholder="RFC *"
+          name="rfc"
+          value={props.state.rfc}
           onChange={props.handleChange}
-          validation={props.validationCorreo}
-          errorFX={props.error.errorFX__correo}
+          validation={props.validationRFC}
+          errorFX={props.error.errorFX__rfc}
         />
         <ErrorInput
-          errorFX={props.error.errorFX__correo}
-          errorNull={props.error.errorNull__correo}
-          errorTest={props.error.errorTest__correo}
-          textError="El correo electrónico no es valido"
-          textNull="Ingresa un correo electrónico"
+          errorFX={props.error.errorFX__rfc}
+          errorNull={props.error.errorNull__rfc}
+          errorTest={props.error.errorTest__rfc}
+          textError="El RFC no es valido"
+          textNull="Ingresa el RFC"
         />
       </div>
       <div>
@@ -115,20 +121,20 @@ function TitularGM(props) {
         />
 
         <InputText
-          type="number"
-          placeholder="Teléfono *"
-          name="tel"
-          value={props.state.tel}
+          type="email"
+          placeholder="Correo Electrónico *"
+          name="correo"
+          value={props.state.correo}
           onChange={props.handleChange}
-          validation={props.validationTel}
-          errorFX={props.error.errorFX__tel}
+          validation={props.validationCorreo}
+          errorFX={props.error.errorFX__correo}
         />
         <ErrorInput
-          errorFX={props.error.errorFX__tel}
-          errorNull={props.error.errorNull__tel}
-          errorTest={props.error.errorTest__tel}
-          textError="El número telefónico es muy corto"
-          textNull="Ingresa el número telefónico"
+          errorFX={props.error.errorFX__correo}
+          errorNull={props.error.errorNull__correo}
+          errorTest={props.error.errorTest__correo}
+          textError="El correo electrónico no es valido"
+          textNull="Ingresa un correo electrónico"
         />
       </div>
       <div>
@@ -149,21 +155,33 @@ function TitularGM(props) {
           textNull="Ingresa el apellido materno"
         />
 
-        <InputText
-          type="text"
-          placeholder="RFC *"
-          name="rfc"
-          value={props.state.rfc}
+        <InputDate
+          autoValidation={true}
+          init={props.error.initAgeDate}
+          label="Fecha de Nacimiento"
+          name="ageDate"
           onChange={props.handleChange}
-          validation={props.validationRFC}
-          errorFX={props.error.errorFX__rfc}
+          value={props.state.ageDate}
+          textNull="Ingresa la fecha de nacimiento"
+          max={currentDate}
+          changeInit={props.changeInitAgeDate}
+        />
+
+        <InputText
+          type="number"
+          placeholder="Teléfono *"
+          name="tel"
+          value={props.state.tel}
+          onChange={props.handleChange}
+          validation={props.validationTel}
+          errorFX={props.error.errorFX__tel}
         />
         <ErrorInput
-          errorFX={props.error.errorFX__rfc}
-          errorNull={props.error.errorNull__rfc}
-          errorTest={props.error.errorTest__rfc}
-          textError="El RFC no es valido"
-          textNull="Ingresa el RFC"
+          errorFX={props.error.errorFX__tel}
+          errorNull={props.error.errorNull__tel}
+          errorTest={props.error.errorTest__tel}
+          textError="El número telefónico es muy corto"
+          textNull="Ingresa el número telefónico"
         />
       </div>
     </form>

@@ -1,16 +1,16 @@
+
 .instructionForm {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
-  margin-bottom: 2px;
+  padding-bottom: 2rem;
   overflow: hidden;
 }
 
 
 .instructionForm p {
-  font-size: 2.2rem;
+  font-size: 2.22rem;
   width: 80rem;
   text-align: center;
   margin-top: 2rem;

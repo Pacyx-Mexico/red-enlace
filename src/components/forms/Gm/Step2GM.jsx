@@ -1,1450 +1,442 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import NextPrevStep from "../../forms/NextPrevStep";
+import AccordionsAditionals from "./Inputs/AdicionalesGM/AccordionsAditionals";
 import StepIndicatorGM from "./StepIndicatorGM";
 import InstructionForm from "../InstructionForm";
-import NextPrevStep from "../NextPrevStep";
-import AdicionalesGM from "./Inputs/AdicionalesGM";
-import AlertForm from "../AlertForm";
+import AlertForm from "../../Inputs/AlertForm";
+import { nameRegEx } from "../../../utils/regEx";
 
-class Step2GM extends Component {
-  state = {
-    errorFX__nombreAdd1: false,
-    errorFX__paternoAdd1: false,
-    errorFX__maternoAdd1: false,
-    errorFX__edadAdd1: false,
-    errorFX__generoAdd1: false,
-    errorTest__nombreAdd1: false,
-    errorTest__paternoAdd1: false,
-    errorTest__maternoAdd1: false,
-    errorTest__edadAdd1: false,
-    errorNull__nombreAdd1: false,
-    errorNull__paternoAdd1: false,
-    errorNull__maternoAdd1: false,
-    errorNull__edadAdd1: false,
-    errorNull__generoAdd1: false,
-    init__generoAdd1: true,
+const Step2GM = ({
+  activeStep,
+  data,
+  handleChange,
+  sendStep2,
+  prevStep,
+  clearAdd1,
+  clearAdd2,
+  clearAdd3,
+  clearAdd4,
+  clearAdd5,
+}) => {
+  const [stateAccordions, setStateAccordions] = useState({
+    add1Accordion: false,
+    add2Accordion: false,
+    add3Accordion: false,
+    add4Accordion: false,
+    add5Accordion: false,
+  });
 
-    errorFX__nombreAdd2: false,
-    errorFX__paternoAdd2: false,
-    errorFX__maternoAdd2: false,
-    errorFX__edadAdd2: false,
-    errorFX__generoAdd2: false,
-    errorTest__nombreAdd2: false,
-    errorTest__paternoAdd2: false,
-    errorTest__maternoAdd2: false,
-    errorTest__edadAdd2: false,
-    errorNull__nombreAdd2: false,
-    errorNull__paternoAdd2: false,
-    errorNull__maternoAdd2: false,
-    errorNull__edadAdd2: false,
-    errorNull__generoAdd2: false,
-    init__generoAdd2: true,
+  const [alert, setAlert] = useState(false);
+  const [infoAlert, setInfoAlert] = useState("");
+  const [linkAlert, setLinkAlert] = useState("");
 
-    errorFX__nombreAdd3: false,
-    errorFX__paternoAdd3: false,
-    errorFX__maternoAdd3: false,
-    errorFX__edadAdd3: false,
-    errorFX__generoAdd3: false,
-    errorTest__nombreAdd3: false,
-    errorTest__paternoAdd3: false,
-    errorTest__maternoAdd3: false,
-    errorTest__edadAdd3: false,
-    errorNull__nombreAdd3: false,
-    errorNull__paternoAdd3: false,
-    errorNull__maternoAdd3: false,
-    errorNull__edadAdd3: false,
-    errorNull__generoAdd3: false,
-    init__generoAdd3: true,
+  const [add1ON, setAdd1ON] = useState("false");
+  const [add2ON, setAdd2ON] = useState("false");
+  const [add3ON, setAdd3ON] = useState("false");
+  const [add4ON, setAdd4ON] = useState("false");
+  const [add5ON, setAdd5ON] = useState("false");
 
-    errorFX__nombreAdd4: false,
-    errorFX__paternoAdd4: false,
-    errorFX__maternoAdd4: false,
-    errorFX__edadAdd4: false,
-    errorFX__generoAdd4: false,
-    errorTest__nombreAdd4: false,
-    errorTest__paternoAdd4: false,
-    errorTest__maternoAdd4: false,
-    errorTest__edadAdd4: false,
-    errorNull__nombreAdd4: false,
-    errorNull__paternoAdd4: false,
-    errorNull__maternoAdd4: false,
-    errorNull__edadAdd4: false,
-    errorNull__generoAdd4: false,
-    init__generoAdd4: true,
+  const [add1, setAdd1] = useState("true");
+  const [add2, setAdd2] = useState("true");
+  const [add3, setAdd3] = useState("true");
+  const [add4, setAdd4] = useState("true");
+  const [add5, setAdd5] = useState("true");
 
-    errorFX__nombreAdd5: false,
-    errorFX__paternoAdd5: false,
-    errorFX__maternoAdd5: false,
-    errorFX__edadAdd5: false,
-    errorFX__generoAdd5: false,
-    errorTest__nombreAdd5: false,
-    errorTest__paternoAdd5: false,
-    errorTest__maternoAdd5: false,
-    errorTest__edadAdd5: false,
-    errorNull__nombreAdd5: false,
-    errorNull__paternoAdd5: false,
-    errorNull__maternoAdd5: false,
-    errorNull__edadAdd5: false,
-    errorNull__generoAdd5: false,
-    init__generoAdd5: true,
+  const [btnStep2ON, setBtnStep2ON] = useState("true");
 
-    offStep2: true,
-    showAlertStep2: false,
-    showAlertAdd: false,
-  };
-
-  closedAlertStep2 = () => {
-    this.setState({
-      showAlertStep2: false,
-    });
-  };
-  closedAlertAdd = () => {
-    this.setState({
-      showAlertAdd: false,
-    });
-  };
-  /*_____________________
+  /*__________________________
   
-      ON STEP
-  ______________________*/
-  validationONStep2 = () => {
-    if (
-      this.props.state.add1 === false &&
-      this.props.state.add2 === false &&
-      this.props.state.add3 == false &&
-      this.props.state.add4 === false &&
-      this.props.state.add5 === false
-    ) {
-      this.setState({
-        offStep2: true,
-      });
-    } else if (
-      this.props.state.add1 === true &&
-      this.props.state.add2 === false &&
-      this.props.state.add3 === false &&
-      this.props.state.add4 === false &&
-      this.props.state.add5 === false
-    ) {
-      if (
-        this.props.state.add1__nombre !== "" &&
-        this.props.state.add1__paterno !== "" &&
-        this.props.state.add1__materno !== "" &&
-        this.props.state.add1__edad !== "" &&
-        this.props.state.add1__genero !== ""
-      ) {
-        this.setState({
-          offStep2: true,
-        });
-      } else {
-        this.setState({
-          offStep2: false,
-        });
-      }
-    } else if (
-      this.props.state.add1 === true &&
-      this.props.state.add2 === true &&
-      this.props.state.add3 === false &&
-      this.props.state.add4 === false &&
-      this.props.state.add5 === false
-    ) {
-      if (
-        this.props.state.add1__nombre !== "" &&
-        this.props.state.add1__paterno !== "" &&
-        this.props.state.add1__materno !== "" &&
-        this.props.state.add1__edad !== "" &&
-        this.props.state.add1__genero !== "" &&
-        this.props.state.add2__nombre !== "" &&
-        this.props.state.add2__paterno !== "" &&
-        this.props.state.add2__materno !== "" &&
-        this.props.state.add2__edad !== "" &&
-        this.props.state.add2__genero !== ""
-      ) {
-        this.setState({
-          offStep2: true,
-        });
-      } else {
-        this.setState({
-          offStep2: false,
-        });
-      }
-    } else if (
-      this.props.state.add1 === true &&
-      this.props.state.add2 === true &&
-      this.props.state.add3 === true &&
-      this.props.state.add4 === false &&
-      this.props.state.add5 === false
-    ) {
-      if (
-        this.props.state.add1__nombre !== "" &&
-        this.props.state.add1__paterno !== "" &&
-        this.props.state.add1__materno !== "" &&
-        this.props.state.add1__edad !== "" &&
-        this.props.state.add1__genero !== "" &&
-        this.props.state.add2__nombre !== "" &&
-        this.props.state.add2__paterno !== "" &&
-        this.props.state.add2__materno !== "" &&
-        this.props.state.add2__edad !== "" &&
-        this.props.state.add2__genero !== "" &&
-        this.props.state.add3__nombre !== "" &&
-        this.props.state.add3__paterno !== "" &&
-        this.props.state.add3__materno !== "" &&
-        this.props.state.add3__edad !== "" &&
-        this.props.state.add3__genero !== ""
-      ) {
-        this.setState({
-          offStep2: true,
-        });
-      } else {
-        this.setState({
-          offStep2: false,
-        });
-      }
-    } else if (
-      this.props.state.add1 === true &&
-      this.props.state.add2 === true &&
-      this.props.state.add3 === true &&
-      this.props.state.add4 === true &&
-      this.props.state.add5 === false
-    ) {
-      if (
-        this.props.state.add1__nombre !== "" &&
-        this.props.state.add1__paterno !== "" &&
-        this.props.state.add1__materno !== "" &&
-        this.props.state.add1__edad !== "" &&
-        this.props.state.add1__genero !== "" &&
-        this.props.state.add2__nombre !== "" &&
-        this.props.state.add2__paterno !== "" &&
-        this.props.state.add2__materno !== "" &&
-        this.props.state.add2__edad !== "" &&
-        this.props.state.add2__genero !== "" &&
-        this.props.state.add3__nombre !== "" &&
-        this.props.state.add3__paterno !== "" &&
-        this.props.state.add3__materno !== "" &&
-        this.props.state.add3__edad !== "" &&
-        this.props.state.add3__genero !== "" &&
-        this.props.state.add4__nombre !== "" &&
-        this.props.state.add4__paterno !== "" &&
-        this.props.state.add4__materno !== "" &&
-        this.props.state.add4__edad !== "" &&
-        this.props.state.add4__genero !== ""
-      ) {
-        this.setState({
-          offStep2: true,
-        });
-      } else {
-        this.setState({
-          offStep2: false,
-        });
-      }
-    } else if (
-      this.props.state.add1 === true &&
-      this.props.state.add2 === true &&
-      this.props.state.add3 === true &&
-      this.props.state.add4 === true &&
-      this.props.state.add5 === true
-    ) {
-      if (
-        this.props.state.add1__nombre !== "" &&
-        this.props.state.add1__paterno !== "" &&
-        this.props.state.add1__materno !== "" &&
-        this.props.state.add1__edad !== "" &&
-        this.props.state.add1__genero !== "" &&
-        this.props.state.add2__nombre !== "" &&
-        this.props.state.add2__paterno !== "" &&
-        this.props.state.add2__materno !== "" &&
-        this.props.state.add2__edad !== "" &&
-        this.props.state.add2__genero !== "" &&
-        this.props.state.add3__nombre !== "" &&
-        this.props.state.add3__paterno !== "" &&
-        this.props.state.add3__materno !== "" &&
-        this.props.state.add3__edad !== "" &&
-        this.props.state.add3__genero !== "" &&
-        this.props.state.add4__nombre !== "" &&
-        this.props.state.add4__paterno !== "" &&
-        this.props.state.add4__materno !== "" &&
-        this.props.state.add4__edad !== "" &&
-        this.props.state.add4__genero !== "" &&
-        this.props.state.add5__nombre !== "" &&
-        this.props.state.add5__paterno !== "" &&
-        this.props.state.add5__materno !== "" &&
-        this.props.state.add5__edad !== "" &&
-        this.props.state.add5__genero !== ""
-      ) {
-        this.setState({
-          offStep2: true,
-        });
-      } else {
-        this.setState({
-          offStep2: false,
-        });
-      }
-    } else {
-      this.setState({
-        offStep2: false,
-      });
-    }
+         ACCORDION 
+  ____________________________*/
+  const openAdd1 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add1Accordion: true,
+    });
+  };
+  const openAdd2 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add2Accordion: true,
+    });
+  };
+  const openAdd3 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add3Accordion: true,
+    });
+  };
+  const openAdd4 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add4Accordion: true,
+    });
+  };
+  const openAdd5 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add5Accordion: true,
+    });
   };
 
-  /*_____________________
+  const closeAdd1 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add1Accordion: false,
+    });
+  };
+  const closeAdd2 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add2Accordion: false,
+    });
+  };
+  const closeAdd3 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add3Accordion: false,
+    });
+  };
+  const closeAdd4 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add4Accordion: false,
+    });
+  };
+  const closeAdd5 = () => {
+    setStateAccordions({
+      ...stateAccordions,
+      add5Accordion: false,
+    });
+  };
+
+  /*__________________________
   
-      VALIDATIONS
-  ______________________*/
-  validationNombreAdd1 = () => {
-    if (this.props.state.add1__nombre !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add1__nombre)) {
-        this.setState({
-          errorFX__nombreAdd1: true,
-          errorTest__nombreAdd1: true,
-          errorNull__nombreAdd1: false,
-        });
-      } else {
-        this.setState({
-          errorFX__nombreAdd1: false,
-          errorTest__nombreAdd1: false,
-          errorNull__nombreAdd1: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__nombreAdd1: true,
-        errorNull__nombreAdd1: true,
-        errorTest__nombreAdd1: false,
-      });
-    }
+         DELETE ADD 
+  ____________________________*/
+  const deleteAdd1 = () => {
+    closeAdd1();
+    clearAdd1();
   };
-  validationPaternoAdd1 = () => {
-    if (this.props.state.add1__paterno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add1__paterno)) {
-        this.setState({
-          errorFX__paternoAdd1: true,
-          errorTest__paternoAdd1: true,
-          errorNull__paternoAdd1: false,
-        });
-      } else {
-        this.setState({
-          errorFX__paternoAdd1: false,
-          errorTest__paternoAdd1: false,
-          errorNull__paternoAdd1: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__paternoAdd1: true,
-        errorNull__paternoAdd1: true,
-        errorTest__paternoAdd1: false,
-      });
-    }
+  const deleteAdd2 = () => {
+    closeAdd2();
+    clearAdd2();
   };
-  validationMaternoAdd1 = () => {
-    if (this.props.state.add1__materno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add1__materno)) {
-        this.setState({
-          errorFX__maternoAdd1: true,
-          errorTest__maternoAdd1: true,
-          errorNull__maternoAdd1: false,
-        });
-      } else {
-        this.setState({
-          errorFX__maternoAdd1: false,
-          errorTest__maternoAdd1: false,
-          errorNull__maternoAdd1: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__maternoAdd1: true,
-        errorNull__maternoAdd1: true,
-        errorTest__maternoAdd1: false,
-      });
-    }
+  const deleteAdd3 = () => {
+    closeAdd3();
+    clearAdd3();
   };
-  validationEdadAdd1 = () => {
-    if (this.props.state.add1__edad !== "") {
-      if (
-        this.props.state.add1__edad >= 1 &&
-        this.props.state.add1__edad <= 75
-      ) {
-        this.setState({
-          errorFX__edadAdd1: false,
-          errorTest__edadAdd1: false,
-          errorNull__edadAdd1: false,
-        });
-      } else {
-        this.setState({
-          errorFX__edadAdd1: true,
-          errorTest__edadAdd1: true,
-          errorNull__edadAdd1: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__edadAdd1: true,
-        errorNull__edadAdd1: true,
-        errorTest__edadAdd1: false,
-      });
-    }
+  const deleteAdd4 = () => {
+    closeAdd4();
+    clearAdd4();
   };
-  validationGeneroAdd1 = () => {
-    if (this.props.state.add1__genero === "") {
-      this.setState({
-        errorFX__generoAdd1: true,
-        errorNull__generoAdd1: true,
-      });
-    } else {
-      this.setState({
-        errorFX__generoAdd1: false,
-        errorNull__generoAdd1: false,
-      });
-    }
-  };
-  changeInitGeneroAdd1 = () => {
-    this.setState({
-      init__generoAdd1: false,
-    });
-  };
-  validationNombreAdd2 = () => {
-    if (this.props.state.add2__nombre !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add2__nombre)) {
-        this.setState({
-          errorFX__nombreAdd2: true,
-          errorTest__nombreAdd2: true,
-          errorNull__nombreAdd2: false,
-        });
-      } else {
-        this.setState({
-          errorFX__nombreAdd2: false,
-          errorTest__nombreAdd2: false,
-          errorNull__nombreAdd2: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__nombreAdd2: true,
-        errorNull__nombreAdd2: true,
-        errorTest__nombreAdd2: false,
-      });
-    }
-  };
-  validationPaternoAdd2 = () => {
-    if (this.props.state.add2__paterno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add2__paterno)) {
-        this.setState({
-          errorFX__paternoAdd2: true,
-          errorTest__paternoAdd2: true,
-          errorNull__paternoAdd2: false,
-        });
-      } else {
-        this.setState({
-          errorFX__paternoAdd2: false,
-          errorTest__paternoAdd2: false,
-          errorNull__paternoAdd2: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__paternoAdd2: true,
-        errorNull__paternoAdd2: true,
-        errorTest__paternoAdd2: false,
-      });
-    }
-  };
-  validationMaternoAdd2 = () => {
-    if (this.props.state.add2__materno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add2__materno)) {
-        this.setState({
-          errorFX__maternoAdd2: true,
-          errorTest__maternoAdd2: true,
-          errorNull__maternoAdd2: false,
-        });
-      } else {
-        this.setState({
-          errorFX__maternoAdd2: false,
-          errorTest__maternoAdd2: false,
-          errorNull__maternoAdd2: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__maternoAdd2: true,
-        errorNull__maternoAdd2: true,
-        errorTest__maternoAdd2: false,
-      });
-    }
-  };
-  validationEdadAdd2 = () => {
-    if (this.props.state.add2__edad !== "") {
-      if (
-        this.props.state.add2__edad >= 1 &&
-        this.props.state.add2__edad <= 75
-      ) {
-        this.setState({
-          errorFX__edadAdd2: false,
-          errorTest__edadAdd2: false,
-          errorNull__edadAdd2: false,
-        });
-      } else {
-        this.setState({
-          errorFX__edadAdd2: true,
-          errorTest__edadAdd2: true,
-          errorNull__edadAdd2: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__edadAdd2: true,
-        errorNull__edadAdd2: true,
-        errorTest__edadAdd2: false,
-      });
-    }
-  };
-  validationGeneroAdd2 = () => {
-    if (this.props.state.add2__genero === "") {
-      this.setState({
-        errorFX__generoAdd2: true,
-        errorNull__generoAdd2: true,
-      });
-    } else {
-      this.setState({
-        errorFX__generoAdd2: false,
-        errorNull__generoAdd2: false,
-      });
-    }
-  };
-  changeInitGeneroAdd2 = () => {
-    this.setState({
-      init__generoAdd2: false,
-    });
-  };
-  validationNombreAdd3 = () => {
-    if (this.props.state.add3__nombre !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add3__nombre)) {
-        this.setState({
-          errorFX__nombreAdd3: true,
-          errorTest__nombreAdd3: true,
-          errorNull__nombreAdd3: false,
-        });
-      } else {
-        this.setState({
-          errorFX__nombreAdd3: false,
-          errorTest__nombreAdd3: false,
-          errorNull__nombreAdd3: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__nombreAdd3: true,
-        errorNull__nombreAdd3: true,
-        errorTest__nombreAdd3: false,
-      });
-    }
-  };
-  validationPaternoAdd3 = () => {
-    if (this.props.state.add3__paterno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add3__paterno)) {
-        this.setState({
-          errorFX__paternoAdd3: true,
-          errorTest__paternoAdd3: true,
-          errorNull__paternoAdd3: false,
-        });
-      } else {
-        this.setState({
-          errorFX__paternoAdd3: false,
-          errorTest__paternoAdd3: false,
-          errorNull__paternoAdd3: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__paternoAdd3: true,
-        errorNull__paternoAdd3: true,
-        errorTest__paternoAdd3: false,
-      });
-    }
-  };
-  validationMaternoAdd3 = () => {
-    if (this.props.state.add3__materno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add3__materno)) {
-        this.setState({
-          errorFX__maternoAdd3: true,
-          errorTest__maternoAdd3: true,
-          errorNull__maternoAdd3: false,
-        });
-      } else {
-        this.setState({
-          errorFX__maternoAdd3: false,
-          errorTest__maternoAdd3: false,
-          errorNull__maternoAdd3: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__maternoAdd3: true,
-        errorNull__maternoAdd3: true,
-        errorTest__maternoAdd3: false,
-      });
-    }
-  };
-  validationEdadAdd3 = () => {
-    if (this.props.state.add3__edad !== "") {
-      if (
-        this.props.state.add3__edad >= 1 &&
-        this.props.state.add3__edad <= 75
-      ) {
-        this.setState({
-          errorFX__edadAdd3: false,
-          errorTest__edadAdd3: false,
-          errorNull__edadAdd3: false,
-        });
-      } else {
-        this.setState({
-          errorFX__edadAdd3: true,
-          errorTest__edadAdd3: true,
-          errorNull__edadAdd3: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__edadAdd3: true,
-        errorNull__edadAdd3: true,
-        errorTest__edadAdd3: false,
-      });
-    }
-  };
-  validationGeneroAdd3 = () => {
-    if (this.props.state.add3__genero === "") {
-      this.setState({
-        errorFX__generoAdd3: true,
-        errorNull__generoAdd3: true,
-      });
-    } else {
-      this.setState({
-        errorFX__generoAdd3: false,
-        errorNull__generoAdd3: false,
-      });
-    }
-  };
-  changeInitGeneroAdd3 = () => {
-    this.setState({
-      init__generoAdd3: false,
-    });
-  };
-  validationNombreAdd4 = () => {
-    if (this.props.state.add4__nombre !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add4__nombre)) {
-        this.setState({
-          errorFX__nombreAdd4: true,
-          errorTest__nombreAdd4: true,
-          errorNull__nombreAdd4: false,
-        });
-      } else {
-        this.setState({
-          errorFX__nombreAdd4: false,
-          errorTest__nombreAdd4: false,
-          errorNull__nombreAdd4: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__nombreAdd4: true,
-        errorNull__nombreAdd4: true,
-        errorTest__nombreAdd4: false,
-      });
-    }
-  };
-  validationPaternoAdd4 = () => {
-    if (this.props.state.add4__paterno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add4__paterno)) {
-        this.setState({
-          errorFX__paternoAdd4: true,
-          errorTest__paternoAdd4: true,
-          errorNull__paternoAdd4: false,
-        });
-      } else {
-        this.setState({
-          errorFX__paternoAdd4: false,
-          errorTest__paternoAdd4: false,
-          errorNull__paternoAdd4: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__paternoAdd4: true,
-        errorNull__paternoAdd4: true,
-        errorTest__paternoAdd4: false,
-      });
-    }
-  };
-  validationMaternoAdd4 = () => {
-    if (this.props.state.add4__materno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add4__materno)) {
-        this.setState({
-          errorFX__maternoAdd4: true,
-          errorTest__maternoAdd4: true,
-          errorNull__maternoAdd4: false,
-        });
-      } else {
-        this.setState({
-          errorFX__maternoAdd4: false,
-          errorTest__maternoAdd4: false,
-          errorNull__maternoAdd4: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__maternoAdd4: true,
-        errorNull__maternoAdd4: true,
-        errorTest__maternoAdd4: false,
-      });
-    }
-  };
-  validationEdadAdd4 = () => {
-    if (this.props.state.add4__edad !== "") {
-      if (
-        this.props.state.add4__edad >= 1 &&
-        this.props.state.add4__edad <= 75
-      ) {
-        this.setState({
-          errorFX__edadAdd4: false,
-          errorTest__edadAdd4: false,
-          errorNull__edadAdd4: false,
-        });
-      } else {
-        this.setState({
-          errorFX__edadAdd4: true,
-          errorTest__edadAdd4: true,
-          errorNull__edadAdd4: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__edadAdd4: true,
-        errorNull__edadAdd4: true,
-        errorTest__edadAdd4: false,
-      });
-    }
-  };
-  validationGeneroAdd4 = () => {
-    if (this.props.state.add4__genero === "") {
-      this.setState({
-        errorFX__generoAdd4: true,
-        errorNull__generoAdd4: true,
-      });
-    } else {
-      this.setState({
-        errorFX__generoAdd4: false,
-        errorNull__generoAdd4: false,
-      });
-    }
-  };
-  changeInitGeneroAdd4 = () => {
-    this.setState({
-      init__generoAdd4: false,
-    });
-  };
-  validationNombreAdd5 = () => {
-    if (this.props.state.add5__nombre !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add5__nombre)) {
-        this.setState({
-          errorFX__nombreAdd5: true,
-          errorTest__nombreAdd5: true,
-          errorNull__nombreAdd5: false,
-        });
-      } else {
-        this.setState({
-          errorFX__nombreAdd5: false,
-          errorTest__nombreAdd5: false,
-          errorNull__nombreAdd5: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__nombreAdd5: true,
-        errorNull__nombreAdd5: true,
-        errorTest__nombreAdd5: false,
-      });
-    }
-  };
-  validationPaternoAdd5 = () => {
-    if (this.props.state.add5__paterno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add5__paterno)) {
-        this.setState({
-          errorFX__paternoAdd5: true,
-          errorTest__paternoAdd5: true,
-          errorNull__paternoAdd5: false,
-        });
-      } else {
-        this.setState({
-          errorFX__paternoAdd5: false,
-          errorTest__paternoAdd5: false,
-          errorNull__paternoAdd5: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__paternoAdd5: true,
-        errorNull__paternoAdd5: true,
-        errorTest__paternoAdd5: false,
-      });
-    }
-  };
-  validationMaternoAdd5 = () => {
-    if (this.props.state.add5__materno !== "") {
-      if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(this.props.state.add5__materno)) {
-        this.setState({
-          errorFX__maternoAdd5: true,
-          errorTest__maternoAdd5: true,
-          errorNull__maternoAdd5: false,
-        });
-      } else {
-        this.setState({
-          errorFX__maternoAdd5: false,
-          errorTest__maternoAdd5: false,
-          errorNull__maternoAdd5: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__maternoAdd5: true,
-        errorNull__maternoAdd5: true,
-        errorTest__maternoAdd5: false,
-      });
-    }
-  };
-  validationEdadAdd5 = () => {
-    if (this.props.state.add5__edad !== "") {
-      if (
-        this.props.state.add5__edad >= 1 &&
-        this.props.state.add5__edad <= 75
-      ) {
-        this.setState({
-          errorFX__edadAdd5: false,
-          errorTest__edadAdd5: false,
-          errorNull__edadAdd5: false,
-        });
-      } else {
-        this.setState({
-          errorFX__edadAdd5: true,
-          errorTest__edadAdd5: true,
-          errorNull__edadAdd5: false,
-        });
-      }
-    } else {
-      this.setState({
-        errorFX__edadAdd5: true,
-        errorNull__edadAdd5: true,
-        errorTest__edadAdd5: false,
-      });
-    }
-  };
-  validationGeneroAdd5 = () => {
-    if (this.props.state.add5__genero === "") {
-      this.setState({
-        errorFX__generoAdd5: true,
-        errorNull__generoAdd5: true,
-      });
-    } else {
-      this.setState({
-        errorFX__generoAdd5: false,
-        errorNull__generoAdd5: false,
-      });
-    }
-  };
-  changeInitGeneroAdd5 = () => {
-    this.setState({
-      init__generoAdd5: false,
-    });
+  const deleteAdd5 = () => {
+    closeAdd5();
+    clearAdd5();
   };
 
-  activeValidationsAdd1 = () => {
-    this.validationNombreAdd1();
-    this.validationPaternoAdd1();
-    this.validationMaternoAdd1();
-    this.validationEdadAdd1();
-    this.changeInitGeneroAdd1();
-    this.props.add1True();
-  };
-  activeValidationsAdd2 = () => {
-    this.validationNombreAdd2();
-    this.validationPaternoAdd2();
-    this.validationMaternoAdd2();
-    this.validationEdadAdd2();
-    this.changeInitGeneroAdd2();
-    this.props.add2True();
-  };
-  activeValidationsAdd3 = () => {
-    this.validationNombreAdd3();
-    this.validationPaternoAdd3();
-    this.validationMaternoAdd3();
-    this.validationEdadAdd3();
-    this.changeInitGeneroAdd3();
-    this.props.add3True();
-  };
-  activeValidationsAdd4 = () => {
-    this.validationNombreAdd4();
-    this.validationPaternoAdd4();
-    this.validationMaternoAdd4();
-    this.validationEdadAdd4();
-    this.changeInitGeneroAdd4();
-    this.props.add4True();
-  };
-  activeValidationsAdd5 = () => {
-    this.validationNombreAdd5();
-    this.validationPaternoAdd5();
-    this.validationMaternoAdd5();
-    this.validationEdadAdd5();
-    this.changeInitGeneroAdd5();
-    this.props.add5True();
-  };
-
-  clearFx__Add1 = () => {
-    this.setState({
-      errorFX__nombreAdd1: false,
-      errorFX__paternoAdd1: false,
-      errorFX__maternoAdd1: false,
-      errorFX__edadAdd1: false,
-      init__generoAdd1: true,
-    });
-  };
-  clearFx__Add2 = () => {
-    this.setState({
-      errorFX__nombreAdd2: false,
-      errorFX__paternoAdd2: false,
-      errorFX__maternoAdd2: false,
-      errorFX__edadAdd2: false,
-      init__generoAdd2: true,
-    });
-  };
-  clearFx__Add3 = () => {
-    this.setState({
-      errorFX__nombreAdd3: false,
-      errorFX__paternoAdd3: false,
-      errorFX__maternoAdd3: false,
-      errorFX__edadAdd3: false,
-      init__generoAdd3: true,
-    });
-  };
-  clearFx__Add4 = () => {
-    this.setState({
-      errorFX__nombreAdd4: false,
-      errorFX__paternoAdd4: false,
-      errorFX__maternoAdd4: false,
-      errorFX__edadAdd4: false,
-      init__generoAdd4: true,
-    });
-  };
-  clearFx__Add5 = () => {
-    this.setState({
-      errorFX__nombreAdd5: false,
-      errorFX__paternoAdd5: false,
-      errorFX__maternoAdd5: false,
-      errorFX__edadAdd5: false,
-      init__generoAdd5: true,
-    });
-  };
-
-  /*_____________________
+  /*__________________________
   
-      ADD BENEFICIADO 
-  ______________________*/
-  add1Accordion = () => {
-    if (this.props.state.add1 === false) {
-      this.props.add1True();
+       ON 
+  ____________________________*/
+  const onAdd1 = () => {
+    if (
+      data.add1__Genere !== "" &&
+      data.add1__AgeDate !== "" &&
+      data.add1__Age >= 1 &&
+      data.add1__Age <= 100 &&
+      data.deductibleAdd1 !== "" &&
+      nameRegEx.test(data.add1__Name) &&
+      nameRegEx.test(data.add1__LastNameP) &&
+      nameRegEx.test(data.add1__LastNameM)
+    ) {
+      setAdd1ON("true");
     } else {
-      this.props.add1False();
-      this.props.clearAdd1();
-      this.clearFx__Add1();
+      setAdd1ON("false");
     }
   };
-  add2Accordion = () => {
-    if (this.props.state.add2 === false) {
-      if (this.props.state.add1 !== false) {
-        this.props.add2True();
-      } else {
-        this.activeValidationsAdd1();
-        this.props.add1True();
-        this.setState({
-          showAlertAdd: true,
-        });
-      }
+  const onAdd2 = () => {
+    if (
+      data.add2__Genere !== "" &&
+      data.add2__Age >= 1 &&
+      data.add2__Age <= 100 &&
+      data.deductibleAdd2 !== "" &&
+      nameRegEx.test(data.add2__Name) &&
+      nameRegEx.test(data.add2__LastNameP) &&
+      nameRegEx.test(data.add2__LastNameM)
+    ) {
+      setAdd2ON("true");
     } else {
-      this.props.add2False();
-      this.props.clearAdd2();
-      this.clearFx__Add2();
+      setAdd2ON("false");
     }
   };
-  add3Accordion = () => {
-    if (this.props.state.add3 === false) {
-      if (this.props.state.add1 !== false && this.props.state.add2 !== false) {
-        this.props.add3True();
-      } else {
-        this.activeValidationsAdd1();
-        this.props.add1True();
-        this.activeValidationsAdd2();
-        this.props.add2True();
-        this.setState({
-          showAlertAdd: true,
-        });
-      }
+  const onAdd3 = () => {
+    if (
+      data.add3__Genere !== "" &&
+      data.add3__Age >= 1 &&
+      data.add3__Age <= 100 &&
+      data.deductibleAdd3 !== "" &&
+      nameRegEx.test(data.add3__Name) &&
+      nameRegEx.test(data.add3__LastNameP) &&
+      nameRegEx.test(data.add3__LastNameM)
+    ) {
+      setAdd3ON("true");
     } else {
-      this.props.add3False();
-      this.props.clearAdd3();
-      this.clearFx__Add3();
+      setAdd3ON("false");
     }
   };
-  add4Accordion = () => {
-    if (this.props.state.add4 === false) {
-      if (
-        this.props.state.add1 !== false &&
-        this.props.state.add2 !== false &&
-        this.props.state.add3 !== false
-      ) {
-        this.props.add4True();
-      } else {
-        this.activeValidationsAdd1();
-        this.props.add1True();
-        this.activeValidationsAdd2();
-        this.props.add2True();
-        this.activeValidationsAdd3();
-        this.props.add3True();
-        this.setState({
-          showAlertAdd: true,
-        });
-      }
+  const onAdd4 = () => {
+    if (
+      data.add4__Genere !== "" &&
+      data.add4__Age >= 1 &&
+      data.add4__Age <= 100 &&
+      data.deductibleAdd4 !== "" &&
+      nameRegEx.test(data.add4__Name) &&
+      nameRegEx.test(data.add4__LastNameP) &&
+      nameRegEx.test(data.add4__LastNameM)
+    ) {
+      setAdd4ON("true");
     } else {
-      this.props.add4False();
-      this.props.clearAdd4();
-      this.clearFx__Add4();
+      setAdd4ON("false");
     }
   };
-  add5Accordion = () => {
-    if (this.props.state.add5 === false) {
-      if (
-        this.props.state.add1 !== false &&
-        this.props.state.add2 !== false &&
-        this.props.state.add3 !== false &&
-        this.props.state.add4 !== false
-      ) {
-        this.props.add5True();
-      } else {
-        this.activeValidationsAdd1();
-        this.props.add1True();
-        this.activeValidationsAdd2();
-        this.props.add2True();
-        this.activeValidationsAdd3();
-        this.props.add3True();
-        this.activeValidationsAdd4();
-        this.props.add4True();
-        this.setState({
-          showAlertAdd: true,
-        });
-      }
+  const onAdd5 = () => {
+    if (
+      data.add5__Genere !== "" &&
+      data.add5__Age >= 1 &&
+      data.add5__Age <= 100 &&
+      data.deductibleAdd5 !== "" &&
+      nameRegEx.test(data.add5__Name) &&
+      nameRegEx.test(data.add5__LastNameP) &&
+      nameRegEx.test(data.add5__LastNameM)
+    ) {
+      setAdd5ON("true");
     } else {
-      this.props.add5False();
-      this.props.clearAdd5();
-      this.clearFx__Add5();
+      setAdd5ON("false");
+    }
+  };
+  const valAdd1 = () => {
+    if (data.add1__Name === "" && add1ON === "false") {
+      setAdd1("true");
+    } else {
+      if (add1ON === "true") {
+        setAdd1("true");
+      } else {
+        setAdd1("false");
+      }
+    }
+  };
+  const valAdd2 = () => {
+    if (data.add2__Name === "" && add2ON === "false") {
+      setAdd2("true");
+    } else {
+      if (add2ON === "true") {
+        setAdd2("true");
+      } else {
+        setAdd2("false");
+      }
+    }
+  };
+  const valAdd3 = () => {
+    if (data.add3__Name === "" && add3ON === "false") {
+      setAdd3("true");
+    } else {
+      if (add3ON === "true") {
+        setAdd3("true");
+      } else {
+        setAdd3("false");
+      }
+    }
+  };
+  const valAdd4 = () => {
+    if (data.add4__Name === "" && add4ON === "false") {
+      setAdd4("true");
+    } else {
+      if (add4ON === "true") {
+        setAdd4("true");
+      } else {
+        setAdd4("false");
+      }
+    }
+  };
+  const valAdd5 = () => {
+    if (data.add5__Name === "" && add5ON === "false") {
+      setAdd5("true");
+    } else {
+      if (add5ON === "true") {
+        setAdd5("true");
+      } else {
+        setAdd5("false");
+      }
     }
   };
 
-  /*_____________________
+  const onStep2 = () => {
+    if (
+      add1 === "true" &&
+      add2 === "true" &&
+      add3 === "true" &&
+      add4 === "true" &&
+      add5 === "true"
+    ) {
+      if (
+        stateAccordions.add1Accordion === false &&
+        stateAccordions.add2Accordion === false &&
+        stateAccordions.add3Accordion === false &&
+        stateAccordions.add4Accordion === false &&
+        stateAccordions.add5Accordion === false
+      ) {
+        setBtnStep2ON("true");
+      } else {
+        setBtnStep2ON("false");
+      }
+    } else {
+      setBtnStep2ON("false");
+    }
+  };
+
+  useEffect(() => {
+    activeStep();
+  }, []);
+  useEffect(() => {
+    onAdd1();
+    onAdd2();
+    onAdd3();
+    onAdd4();
+    onAdd5();
+    valAdd1();
+    valAdd2();
+    valAdd3();
+    valAdd4();
+    valAdd5();
+    onStep2();
+  }, [data]);
+  useEffect(() => {
+    onStep2();
+  }, [stateAccordions.contractingAccordion]);
+  useEffect(() => {
+    onStep2();
+  }, [stateAccordions.holderAccordion]);
+  useEffect(() => {
+    valAdd1();
+    onStep2();
+  }, [stateAccordions.add1Accordion]);
+  useEffect(() => {
+    valAdd2();
+    onStep2();
+  }, [stateAccordions.add2Accordion]);
+  useEffect(() => {
+    valAdd3();
+    onStep2();
+  }, [stateAccordions.add3Accordion]);
+  useEffect(() => {
+    valAdd4();
+    onStep2();
+  }, [stateAccordions.add4Accordion]);
+  useEffect(() => {
+    valAdd5();
+    onStep2();
+  }, [stateAccordions.add5Accordion]);
+  useEffect(() => {
+    onStep2();
+  }, [add1]);
+  useEffect(() => {
+    onStep2();
+  }, [add2]);
+  useEffect(() => {
+    onStep2();
+  }, [add3]);
+  useEffect(() => {
+    onStep2();
+  }, [add4]);
+  useEffect(() => {
+    onStep2();
+  }, [add5]);
+
+  /*__________________________
   
-      NEXT STEP 
-  ______________________*/
-  valSend__Adds1 = () => {
-    if (
-      this.props.state.add1__nombre !== "" &&
-      this.props.state.add1__paterno !== "" &&
-      this.props.state.add1__materno !== "" &&
-      this.props.state.add1__edad !== "" &&
-      this.props.state.add1__genero !== ""
-    ) {
-      if (
-        this.state.errorTest__nombreAdd1 !== true &&
-        this.state.errorTest__paternoAdd1 !== true &&
-        this.state.errorTest__maternoAdd1 !== true &&
-        this.state.errorTest__edadAdd1 !== true
-      ) {
-        this.props.sendStep2();
-        this.props.nextStep();
-      } else {
-        this.activeValidationsAdd1();
-        this.setState({ showAlertStep2: true });
-      }
+         NEXT STEP
+  ____________________________*/
+  const nextStep2RC = () => {
+    if (btnStep2ON === "true") {
+      sendStep2();
     } else {
-      this.activeValidationsAdd1();
-      this.setState({ showAlertStep2: true });
+      if (stateAccordions.add1Accordion === true) {
+        setAlert(true);
+        setLinkAlert("add1RC");
+        setInfoAlert("Elimina o confirma tus asegurado adicional 1");
+      } else if (stateAccordions.add2Accordion === true) {
+        setAlert(true);
+        setLinkAlert("add2RC");
+        setInfoAlert("Elimina o confirma tus asegurado adicional 2");
+      } else if (stateAccordions.add3Accordion === true) {
+        setAlert(true);
+        setLinkAlert("add3RC");
+        setInfoAlert("Elimina o confirma tus asegurado adicional 3");
+      } else if (stateAccordions.add4Accordion === true) {
+        setAlert(true);
+        setLinkAlert("add4RC");
+        setInfoAlert("Elimina o confirma tus asegurado adicional 4");
+      } else if (stateAccordions.add5Accordion === true) {
+        setAlert(true);
+        setLinkAlert("add5RC");
+        setInfoAlert("Elimina o confirma tus asegurado adicional 5");
+      }
     }
   };
-  valSend__Adds2 = () => {
-    if (
-      this.props.state.add1__nombre !== "" &&
-      this.props.state.add1__paterno !== "" &&
-      this.props.state.add1__materno !== "" &&
-      this.props.state.add1__edad !== "" &&
-      this.props.state.add1__genero !== "" &&
-      this.props.state.add2__nombre !== "" &&
-      this.props.state.add2__paterno !== "" &&
-      this.props.state.add2__materno !== "" &&
-      this.props.state.add2__edad !== "" &&
-      this.props.state.add2__genero !== ""
-    ) {
-      if (
-        this.state.errorTest__nombreAdd1 !== true &&
-        this.state.errorTest__paternoAdd1 !== true &&
-        this.state.errorTest__maternoAdd1 !== true &&
-        this.state.errorTest__edadAdd1 !== true &&
-        this.state.errorTest__nombreAdd2 !== true &&
-        this.state.errorTest__paternoAdd2 !== true &&
-        this.state.errorTest__maternoAdd2 !== true &&
-        this.state.errorTest__edadAdd2 !== true
-      ) {
-        this.props.sendStep2();
-        this.props.nextStep();
-      } else {
-        this.activeValidationsAdd1();
-        this.activeValidationsAdd2();
-        this.setState({ showAlertStep2: true });
-      }
-    } else {
-      this.activeValidationsAdd1();
-      this.activeValidationsAdd2();
-      this.setState({ showAlertStep2: true });
-    }
-  };
-  valSend__Adds3 = () => {
-    if (
-      this.props.state.add1__nombre !== "" &&
-      this.props.state.add1__paterno !== "" &&
-      this.props.state.add1__materno !== "" &&
-      this.props.state.add1__edad !== "" &&
-      this.props.state.add1__genero !== "" &&
-      this.props.state.add2__nombre !== "" &&
-      this.props.state.add2__paterno !== "" &&
-      this.props.state.add2__materno !== "" &&
-      this.props.state.add2__edad !== "" &&
-      this.props.state.add2__genero !== "" &&
-      this.props.state.add3__nombre !== "" &&
-      this.props.state.add3__paterno !== "" &&
-      this.props.state.add3__materno !== "" &&
-      this.props.state.add3__edad !== "" &&
-      this.props.state.add3__genero !== ""
-    ) {
-      if (
-        this.state.errorTest__nombreAdd1 !== true &&
-        this.state.errorTest__paternoAdd1 !== true &&
-        this.state.errorTest__maternoAdd1 !== true &&
-        this.state.errorTest__edadAdd1 !== true &&
-        this.state.errorTest__nombreAdd2 !== true &&
-        this.state.errorTest__paternoAdd2 !== true &&
-        this.state.errorTest__maternoAdd2 !== true &&
-        this.state.errorTest__edadAdd2 !== true &&
-        this.state.errorTest__nombreAdd3 !== true &&
-        this.state.errorTest__paternoAdd3 !== true &&
-        this.state.errorTest__maternoAdd3 !== true &&
-        this.state.errorTest__edadAdd3 !== true
-      ) {
-        this.props.sendStep2();
-        this.props.nextStep();
-      } else {
-        this.activeValidationsAdd1();
-        this.activeValidationsAdd2();
-        this.activeValidationsAdd3();
-        this.setState({ showAlertStep2: true });
-      }
-    } else {
-      this.activeValidationsAdd1();
-      this.activeValidationsAdd2();
-      this.activeValidationsAdd3();
-      this.setState({ showAlertStep2: true });
-    }
-  };
-  valSend__Adds4 = () => {
-    if (
-      this.props.state.add1__nombre !== "" &&
-      this.props.state.add1__paterno !== "" &&
-      this.props.state.add1__materno !== "" &&
-      this.props.state.add1__edad !== "" &&
-      this.props.state.add1__genero !== "" &&
-      this.props.state.add2__nombre !== "" &&
-      this.props.state.add2__paterno !== "" &&
-      this.props.state.add2__materno !== "" &&
-      this.props.state.add2__edad !== "" &&
-      this.props.state.add2__genero !== "" &&
-      this.props.state.add3__nombre !== "" &&
-      this.props.state.add3__paterno !== "" &&
-      this.props.state.add3__materno !== "" &&
-      this.props.state.add3__edad !== "" &&
-      this.props.state.add3__genero !== "" &&
-      this.props.state.add4__nombre !== "" &&
-      this.props.state.add4__paterno !== "" &&
-      this.props.state.add4__materno !== "" &&
-      this.props.state.add4__edad !== "" &&
-      this.props.state.add4__genero !== ""
-    ) {
-      if (
-        this.state.errorTest__nombreAdd1 !== true &&
-        this.state.errorTest__paternoAdd1 !== true &&
-        this.state.errorTest__maternoAdd1 !== true &&
-        this.state.errorTest__edadAdd1 !== true &&
-        this.state.errorTest__nombreAdd2 !== true &&
-        this.state.errorTest__paternoAdd2 !== true &&
-        this.state.errorTest__maternoAdd2 !== true &&
-        this.state.errorTest__edadAdd2 !== true &&
-        this.state.errorTest__nombreAdd3 !== true &&
-        this.state.errorTest__paternoAdd3 !== true &&
-        this.state.errorTest__maternoAdd3 !== true &&
-        this.state.errorTest__edadAdd3 !== true &&
-        this.state.errorTest__nombreAdd4 !== true &&
-        this.state.errorTest__paternoAdd4 !== true &&
-        this.state.errorTest__maternoAdd4 !== true &&
-        this.state.errorTest__edadAdd4 !== true
-      ) {
-        this.props.sendStep2();
-        this.props.nextStep();
-      } else {
-        this.activeValidationsAdd1();
-        this.activeValidationsAdd2();
-        this.activeValidationsAdd3();
-        this.activeValidationsAdd4();
-        this.setState({ showAlertStep2: true });
-      }
-    } else {
-      this.activeValidationsAdd1();
-      this.activeValidationsAdd2();
-      this.activeValidationsAdd3();
-      this.activeValidationsAdd4();
-      this.setState({ showAlertStep2: true });
-    }
-  };
-  valSend__Adds5 = () => {
-    s;
-    if (
-      this.props.state.add1__nombre !== "" &&
-      this.props.state.add1__paterno !== "" &&
-      this.props.state.add1__materno !== "" &&
-      this.props.state.add1__edad !== "" &&
-      this.props.state.add1__genero !== "" &&
-      this.props.state.add2__nombre !== "" &&
-      this.props.state.add2__paterno !== "" &&
-      this.props.state.add2__materno !== "" &&
-      this.props.state.add2__edad !== "" &&
-      this.props.state.add2__genero !== "" &&
-      this.props.state.add3__nombre !== "" &&
-      this.props.state.add3__paterno !== "" &&
-      this.props.state.add3__materno !== "" &&
-      this.props.state.add3__edad !== "" &&
-      this.props.state.add3__genero !== "" &&
-      this.props.state.add4__nombre !== "" &&
-      this.props.state.add4__paterno !== "" &&
-      this.props.state.add4__materno !== "" &&
-      this.props.state.add4__edad !== "" &&
-      this.props.state.add4__genero !== "" &&
-      this.props.state.add5__nombre !== "" &&
-      this.props.state.add5__paterno !== "" &&
-      this.props.state.add5__materno !== "" &&
-      this.props.state.add5__edad !== "" &&
-      this.props.state.add5__genero !== ""
-    ) {
-      if (
-        this.state.errorTest__nombreAdd1 !== true &&
-        this.state.errorTest__paternoAdd1 !== true &&
-        this.state.errorTest__maternoAdd1 !== true &&
-        this.state.errorTest__edadAdd1 !== true &&
-        this.state.errorTest__nombreAdd2 !== true &&
-        this.state.errorTest__paternoAdd2 !== true &&
-        this.state.errorTest__maternoAdd2 !== true &&
-        this.state.errorTest__edadAdd2 !== true &&
-        this.state.errorTest__nombreAdd3 !== true &&
-        this.state.errorTest__paternoAdd3 !== true &&
-        this.state.errorTest__maternoAdd3 !== true &&
-        this.state.errorTest__edadAdd3 !== true &&
-        this.state.errorTest__nombreAdd4 !== true &&
-        this.state.errorTest__paternoAdd4 !== true &&
-        this.state.errorTest__maternoAdd4 !== true &&
-        this.state.errorTest__edadAdd4 !== true &&
-        this.state.errorTest__nombreAdd5 !== true &&
-        this.state.errorTest__paternoAdd5 !== true &&
-        this.state.errorTest__maternoAdd5 !== true &&
-        this.state.errorTest__edadAdd5 !== true
-      ) {
-        this.props.sendStep2();
-        this.props.nextStep();
-      } else {
-        this.activeValidationsAdd1();
-        this.activeValidationsAdd2();
-        this.activeValidationsAdd3();
-        this.activeValidationsAdd4();
-        this.activeValidationsAdd5();
-        this.setState({ showAlertStep2: true });
-      }
-    } else {
-      this.activeValidationsAdd1();
-      this.activeValidationsAdd2();
-      this.activeValidationsAdd3();
-      this.activeValidationsAdd4();
-      this.activeValidationsAdd5();
-      this.setState({ showAlertStep2: true });
-    }
+  const closedAlertStep2 = () => {
+    setAlert(false);
   };
 
-  nextStep2 = () => {
-    if (
-      this.props.state.add1 === false &&
-      this.props.state.add2 === false &&
-      this.props.state.add3 === false &&
-      this.props.state.add4 === false &&
-      this.props.state.add5 === false
-    ) {
-      this.props.nextStep();
-    } else {
-      if (
-        this.props.state.add1 === true &&
-        this.props.state.add2 === false &&
-        this.props.state.add3 === false &&
-        this.props.state.add4 === false &&
-        this.props.state.add5 === false
-      ) {
-        this.valSend__Adds1();
-      } else if (
-        this.props.state.add1 === true &&
-        this.props.state.add2 === true &&
-        this.props.state.add3 === false &&
-        this.props.state.add4 === false &&
-        this.props.state.add5 === false
-      ) {
-        this.valSend__Adds2();
-      } else if (
-        this.props.state.add1 === true &&
-        this.props.state.add2 === true &&
-        this.props.state.add3 === true &&
-        this.props.state.add4 === false &&
-        this.props.state.add5 === false
-      ) {
-        this.valSend__Adds3();
-      } else if (
-        this.props.state.add1 === true &&
-        this.props.state.add2 === true &&
-        this.props.state.add3 === true &&
-        this.props.state.add4 === true &&
-        this.props.state.add5 === false
-      ) {
-        this.valSend__Adds4();
-      } else if (
-        this.props.state.add1 === true &&
-        this.props.state.add2 === true &&
-        this.props.state.add3 === true &&
-        this.props.state.add4 === true &&
-        this.props.state.add5 === true
-      ) {
-        this.valSend__Adds5();
-      } else {
-        if (this.props.state.add5 === true) {
-          this.activeValidationsAdd1();
-          this.activeValidationsAdd2();
-          this.activeValidationsAdd3();
-          this.activeValidationsAdd4();
-          this.activeValidationsAdd5();
-          this.setState({
-            showAlertAdd: true,
-          });
-        } else if (this.props.state.add4 === true) {
-          this.activeValidationsAdd1();
-          this.activeValidationsAdd2();
-          this.activeValidationsAdd3();
-          this.activeValidationsAdd4();
-          this.setState({
-            showAlertAdd: true,
-          });
-        } else if (this.props.state.add3 === true) {
-          this.activeValidationsAdd1();
-          this.activeValidationsAdd2();
-          this.activeValidationsAdd3();
-          this.setState({
-            showAlertAdd: true,
-          });
-        } else if (this.props.state.add2 === true) {
-          this.activeValidationsAdd1();
-          this.activeValidationsAdd2();
-          this.setState({
-            showAlertAdd: true,
-          });
-        }
-      }
-    }
-  };
+  return (
+    <>
+      <StepIndicatorGM state={data} />
+      <InstructionForm
+        instruction="Agrega a tus asegurados adicionales."
+        instruction2="Si no cuentas con asegurados adicionales, da clic en Continuar."
+      />
+      <AccordionsAditionals
+        data={data}
+        handleChange={handleChange}
+        stateAccordions={stateAccordions}
+        add1ON={add1ON}
+        add2ON={add2ON}
+        add3ON={add3ON}
+        add4ON={add4ON}
+        add5ON={add5ON}
+        openAdd1={openAdd1}
+        openAdd2={openAdd2}
+        openAdd3={openAdd3}
+        openAdd4={openAdd4}
+        openAdd5={openAdd5}
+        closeAdd1={closeAdd1}
+        closeAdd2={closeAdd2}
+        closeAdd3={closeAdd3}
+        closeAdd4={closeAdd4}
+        closeAdd5={closeAdd5}
+        deleteAdd1={deleteAdd1}
+        deleteAdd2={deleteAdd2}
+        deleteAdd3={deleteAdd3}
+        deleteAdd4={deleteAdd4}
+        deleteAdd5={deleteAdd5}
+      />
 
-  render() {
-    return (
-      <section>
-        <StepIndicatorGM state={this.props.state} />
+      <NextPrevStep
+        icon={true}
+        off={btnStep2ON}
+        text="Siguiente"
+        nextStep={nextStep2RC}
+        prevStep={prevStep}
+      />
 
-        <InstructionForm
-          instruction="Agrega a tus asegurados adicionales.
-          Si no cuentas con asegurados adicionales, da clic en continuar"
-        />
-        <section id="formStep2GM"></section>
-        <AdicionalesGM
-          state={this.props.state}
-          error={this.state}
-          handleChange={this.props.handleChange}
-          activeStep={this.props.activeStep}
-          validationONStep2={this.validationONStep2}
-          add1Accordion={this.add1Accordion}
-          add2Accordion={this.add2Accordion}
-          add3Accordion={this.add3Accordion}
-          add4Accordion={this.add4Accordion}
-          add5Accordion={this.add5Accordion}
-          validationNombreAdd1={this.validationNombreAdd1}
-          validationPaternoAdd1={this.validationPaternoAdd1}
-          validationMaternoAdd1={this.validationMaternoAdd1}
-          validationEdadAdd1={this.validationEdadAdd1}
-          validationGeneroAdd1={this.validationGeneroAdd1}
-          changeInitGeneroAdd1={this.changeInitGeneroAdd1}
-          validationNombreAdd2={this.validationNombreAdd2}
-          validationPaternoAdd2={this.validationPaternoAdd2}
-          validationMaternoAdd2={this.validationMaternoAdd2}
-          validationEdadAdd2={this.validationEdadAdd2}
-          validationGeneroAdd2={this.validationGeneroAdd2}
-          changeInitGeneroAdd2={this.changeInitGeneroAdd2}
-          validationNombreAdd3={this.validationNombreAdd3}
-          validationPaternoAdd3={this.validationPaternoAdd3}
-          validationMaternoAdd3={this.validationMaternoAdd3}
-          validationEdadAdd3={this.validationEdadAdd3}
-          validationGeneroAdd3={this.validationGeneroAdd3}
-          changeInitGeneroAdd3={this.changeInitGeneroAdd3}
-          validationNombreAdd4={this.validationNombreAdd4}
-          validationPaternoAdd4={this.validationPaternoAdd4}
-          validationMaternoAdd4={this.validationMaternoAdd4}
-          validationEdadAdd4={this.validationEdadAdd4}
-          validationGeneroAdd4={this.validationGeneroAdd4}
-          changeInitGeneroAdd4={this.changeInitGeneroAdd4}
-          validationNombreAdd5={this.validationNombreAdd5}
-          validationPaternoAdd5={this.validationPaternoAdd5}
-          validationMaternoAdd5={this.validationMaternoAdd5}
-          validationEdadAdd5={this.validationEdadAdd5}
-          validationGeneroAdd5={this.validationGeneroAdd5}
-          changeInitGeneroAdd5={this.changeInitGeneroAdd5}
-        />
-        <NextPrevStep
-          icon={true}
-          text="Continuar"
-          off={this.state.offStep2}
-          prevStep={this.props.prevStep}
-          nextStep={this.nextStep2}
-        />
-        <AlertForm
-          showAlert={this.state.showAlertStep2}
-          closedAlert={this.closedAlertStep2}
-          linkId="formStep2GM"
-          text="Por favor llena correctamente todos los campos requeridos"
-        />
-        <AlertForm
-          showAlert={this.state.showAlertAdd}
-          closedAlert={this.closedAlertAdd}
-          linkId="formStep2GM"
-          text="Por favor agrega a tus asegurados adicionales en orden del 1 al 5"
-        />
-      </section>
-    );
-  }
-}
+      <AlertForm
+        text={infoAlert}
+        showAlert={alert}
+        closedAlert={closedAlertStep2}
+        linkId={linkAlert}
+      />
+    </>
+  );
+};
 
 export default Step2GM;
