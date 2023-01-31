@@ -6,7 +6,7 @@ import { Pagination, Navigation } from "swiper";
 export const Beneficios = () => {
   return (
     <BeneficiosSection className="d-flex align-items-center justify-content-center flex-column">
-      <div className="services-title container text-center mt-5 pt-5 d-none d-md-block">
+      <div className="services-title container text-center d-none d-md-block">
         <h3 className="pb-2 fw-semi-bold text-dark">
           <span className="text-dark fw-normal fs-45">
             Beneficios de ser parte de la comunidad Red Enlace
@@ -267,7 +267,7 @@ const BeneficiosSection = styled.section`
   }
 
   @media (min-width: 767px) {
-    height: 100vh;
+    height: 90vh;
     padding-top: 0;
     padding-bottom: 0;  
     .card {

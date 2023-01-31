@@ -110,7 +110,7 @@ export const NewCharacteristics = () => {
                 onMouseOver={handleMouseOver4}
                 onMouseOut={handleMouseOut4}
               >
-                innovación
+                Innovación
               </p>
               {isHovering4 && (
                 <p className="fs-2 text-center ">

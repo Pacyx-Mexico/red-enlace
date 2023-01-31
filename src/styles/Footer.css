@@ -115,12 +115,11 @@
   .footer {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(2, 1fr);
-    height: 19vh  ;
+    height: 21vh  ;
     padding: 2rem 4rem 2rem 4rem;
   }
   .footer__section1 {
     justify-content: center;
-    margin-top: 2rem;
   }
   .footer__section2 {
     order: 1;

@@ -178,7 +178,7 @@ export const Cobertura = () => {
       </div>
 
       <div className="container-fluid mx-auto position-relative dudas__container mt-5 pt-5">
-        <h4 className="mt-5 mt-xxl-5 text-dark height-lile fw-normal py-4">
+        <h4 className="mt-5 mt-xxl-5 text-dark height-lile fw-500 py-4">
           Preguntas frecuentes
         </h4>
         <Dudes />

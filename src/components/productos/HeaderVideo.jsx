@@ -21,7 +21,7 @@ function HeaderVideo({ video, title, url }) {
           <h4 className="videoTitle fw-normal fs-55 mt-5 pt-5">¿Cómo funciona?</h4>
           <div className="productVideo">
             <h4 className="productVideo__videoTitle  ">¿Cómo funciona?</h4>
-            <video ref={vidRef} className="productVideo__videoContainer" autoPlay loop muted>
+            <video ref={vidRef} className="productVideo__videoContainer" autoPlay loop muted playsinline>
               <source
                 src={url}
                 type="video/mp4"

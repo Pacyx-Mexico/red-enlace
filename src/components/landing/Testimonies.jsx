@@ -14,8 +14,8 @@ export const Testimonies = () => {
   const [key, setKey] = useState(1);
   const scrolling = useSpring({
     from: { transform: "translate(40%,0)" },
-    to: [{ transform: "translate(0%,0)" }, { transform: "translate(40%,0)" }],
-    config: { duration: 5000 },
+    to: [{ transform: "translate(-45%,0)" }, { transform: "translate(40%,0)" }],
+    config: { duration: 10000 },
     reset: true,
     // reverse: key % 2 == 0,
     onRest: () => {
@@ -70,10 +70,10 @@ export const Testimonies = () => {
         <div className="container" key={key}>
           <animated.div style={scrolling}>
             <div className="d-flex flex-row">
-              <div className="d-flex">
-                <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark p-3 pt-xxl-5 px-md-5 mx-5 my-5">
-                  <div className="testimonials__user-info my-4 my-lg-5 py-4 d-flex flex-column px-md-3 px-xl-5 gap-xl-5">
-                    <div className="flex-column align-items-start justify-content-start flex-shrink-0">
+              <div className="d-flex gap-13">
+                <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark pt-xxl-5 d-flex align-items-center justify-content-center">
+                  <div className="testimonials__user-info my-4 my-lg-5 py-4 d-flex flex-column px-md-4 px-xl-5 gap-xl-5 justify-content-center align-items-center">
+                    <div className="flex-column d-flex align-items-start align-self-start ms-2 justify-content-start flex-shrink-0">
                       <div className="text-start text-lg-start">
                         <h5 className="mb-1 text-start">
                           Carla
@@ -89,9 +89,9 @@ export const Testimonies = () => {
                     </div>
                   </div>
                 </div>
-                <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark p-3 pt-xxl-5 px-md-5 mx-5 my-5">
-                  <div className="testimonials__user-info my-4 my-lg-5 py-4 d-flex flex-column px-md-3 px-xl-5 gap-xl-5">
-                    <div className="flex-column align-items-start justify-content-start flex-shrink-0">
+                <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark pt-xxl-5 d-flex align-items-center justify-content-center">
+                  <div className="testimonials__user-info my-4 my-lg-5 py-4 d-flex flex-column px-md-3 px-xl-5 gap-xl-5 justify-content-center align-items-center">
+                    <div className="flex-column d-flex align-items-start justify-content-start align-self-start flex-shrink-0">
                       <div className="text-start text-lg-start">
                         <h5 className="mb-1 text-start">
                           Raúl
@@ -107,9 +107,9 @@ export const Testimonies = () => {
                     </div>
                   </div>
                 </div>
-                <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark p-3 pt-xxl-5 px-md-5 mx-5 my-5">
-                  <div className="testimonials__user-info my-4 my-lg-5 py-4 d-flex flex-column px-md-3 px-xl-5 gap-xl-5">
-                    <div className="flex-column align-items-start justify-content-start flex-shrink-0">
+                <div className="testimonials__carousel-bg card border-none shadow position-relative text-dark pt-xxl-5 px-md-5 d-flex align-items-center justify-content-center">
+                  <div className="testimonials__user-info d-flex flex-column gap-xl-5 justify-content-center align-items-center">
+                    <div className="flex-column d-flex align-items-start justify-content-start align-self-start flex-shrink-0">
                       <div className="text-start text-lg-start">
                         <h5 className="mb-1 text-start">
                           Diana
@@ -260,6 +260,10 @@ const TestimonialsSection = styled.section`
     opacity: 0.9;
     font-weight: 400;
     line-height: 1.875rem;
+  }
+
+  .gap-13 {
+    gap: 13rem;
   }
 
   .testimonials__user-info span {

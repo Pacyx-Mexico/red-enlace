@@ -29,7 +29,7 @@ export const Contact = () => {
           </Form>
         </div>
         <div className="mt-5 d-flex justify-content-center">
-          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-500">Enviar</button>
+          <button varianr="primary" className="btn btn-contact fs-2 rounded-pill px-5 fw-500">Enviar</button>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ export const Contact = () => {
           </Form>
         </div>
         <div className="container mt-5 d-flex justify-content-center">
-          <button varianr="primary" className="btn btn-primary fs-2 rounded-pill px-5 fw-500">Enviar</button>
+          <button varianr="primary" className="btn btn-contact fs-2 rounded-pill px-5 fw-500">Enviar</button>
         </div>
       </div>
     </ContactSection>
@@ -76,8 +76,18 @@ const ContactSection = styled.section`
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);;
   }
 
-  Button {
-    background-color: #3357C8 !important;
+  .btn-contact {
+    background: #FFF;
+    border: 2px solid #5872C4;
+    color: #5872C4;
+    height: 6rem;
+    min-width: auto;
+    font-size: 2.3rem;
+
+    &:hover {
+      background: #5872C4;
+      color: #FFF;
+    }
   }
 
   .btn-lg {
@@ -102,7 +112,7 @@ const ContactSection = styled.section`
   }
 
   @media (max-width: 768px) {
-    height: 140rem;
+    height: 125rem;
 
     .contact-form {
       height: auto;
@@ -118,3 +128,4 @@ const ContactSection = styled.section`
     }
   }
 `;
+
