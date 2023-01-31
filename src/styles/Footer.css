@@ -120,13 +120,16 @@
   }
   .footer__section1 {
     justify-content: center;
+    margin-top: 3rem;
   }
   .footer__section2 {
     order: 1;
+    margin-bottom: 3rem;
   }
   .footer__section3 {
     order: 3;
     width: 100%;
+    margin-bottom: 3rem;
   }
   .footer__section4 {
     order: 4;
