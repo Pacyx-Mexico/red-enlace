@@ -33,8 +33,8 @@ export const GastosMedicosHero = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid d-flex flex-column w-100 h-100 d-lg-none">
-        <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
+      <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-lg-none">
+        <h2 className="fw-normal fw-medium text-dark primary_title mb-5 pb-5">
           Devolución de deducible <br />
           Gastos Médicos
         </h2>
@@ -45,7 +45,7 @@ export const GastosMedicosHero = () => {
             alt="Gradient background element"
           />
         </div>
-        <div className="d-flex justify-content-center w-100 d-md-none mt-11 pt-5">
+        <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
           <div onClick={scrollTop}>
             <Link
               to="/cotizador-deducible-gastos-medicos"
@@ -88,7 +88,9 @@ const HeroContainer = styled.section`
     margin-left: 10rem;
     margin-bottom: 7.5rem;
   }
-
+  .primary_title {
+    font-size: 25px;
+  }
   .img-fluid {
     width: auto;
     height: 100%;
@@ -96,10 +98,6 @@ const HeroContainer = styled.section`
   .mt-11 {
     margin-top: 11rem;
   }
-  .gradient_img_bg_sm {
-    margin-top: 7rem;
-  }
-
   .w-85 {
     width: 85%;
   }
@@ -125,9 +123,6 @@ const HeroContainer = styled.section`
     text-align: start;
   }
 
-  .primary_title {
-      margin-top: 25.5rem;
-  }
 
   @media (min-width: 576px) {
     height: 160rem;

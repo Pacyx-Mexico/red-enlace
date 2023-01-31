@@ -35,7 +35,7 @@ export const HeroAutos = () => {
         </div>
       </div>
       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
-        <h2 className="fw-normal fw-500 text-dark h2-heading primary_title">
+        <h2 className="fw-normal fw-500 text-dark primary_title mb-5 pb-5 mt-5">
           Devolución de deducible <br /> 
           Autos
         </h2>
@@ -46,7 +46,7 @@ export const HeroAutos = () => {
             alt="Gradient background element"
           />
         </div>
-        <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
+        <div className="d-flex justify-content-center w-100 d-md-none pt-5 mt-50">
           <div onClick={scrollTop}>
             <Link
               to="/cotizador-deducible-gastos-medicos"
@@ -88,7 +88,9 @@ const HeroContainer = styled.section`
     font-size: 7rem;
     margin-top:14rem;
   }
-
+  .mt-11 {
+    margin-top: 11rem;
+  }
   .img-fluid {
     max-width: 100%;
     height: auto;
@@ -98,6 +100,9 @@ const HeroContainer = styled.section`
   }
   .z-index {
     z-index: 2;
+  }
+  .mt-50 {
+    margin-top: 5rem;
   }
   .text-primary {
     color: #314faf !important;
@@ -131,7 +136,7 @@ const HeroContainer = styled.section`
     top: 15rem;
     .gradient_img_bg_sm {
       width: auto;
-      height: 100%;
+      height: 102%;
     }
 
     .RE_img_bg {
@@ -140,7 +145,6 @@ const HeroContainer = styled.section`
 
     .primary_title {
       font-size: 25px;
-      margin-bottom: 8.5rem;
     }
 
     .primary_subtitle {

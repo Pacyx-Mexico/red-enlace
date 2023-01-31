@@ -99,9 +99,9 @@ const HeroContainer = styled.section`
     .gradient_img_bg {
       z-index: -1;
       height: 218.5vh;
-      width: 35%;
+      width: auto;
       top: 0;
-      right: 0;
+      right: -25rem;
       opacity: 0.9;
     }
   }

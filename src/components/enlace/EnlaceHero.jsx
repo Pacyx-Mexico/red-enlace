@@ -9,7 +9,7 @@ export const EnlaceHero = () => {
     scroll.scrollToTop();
   };
   return (
-    <HeroContainer className="home position-relative mb-5 pb-5" id="home">
+    <HeroContainer className="home d-flex align-items-center" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/Enlace-hero.png" }
@@ -33,7 +33,29 @@ export const EnlaceHero = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
+      <div className="container d-flex flex-column justify-content-center w-100 h-100 d-md-none">
+        <h2 className="fw-normal fw-500 text-dark h2-heading primary_title mb-5 pb-5">
+          Enlaces
+        </h2>
+        <div className="d-flex justify-content-center h-auto">
+          <Image
+            className="gradient_img_bg_sm img-fluid px-5 d-md-none"
+            src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png"}
+            alt="Gradient background element"
+          />
+        </div>
+        <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
+          <div onClick={scrollTop}>
+            <Link
+              to="/cotizador-deducible-gastos-medicos"
+              className="headerTitle__btn"
+            >
+              <Button text="Contratar" />
+            </Link>
+          </div>
+        </div>
+      </div>
+{/*       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
         <h2 className="fw-normal fw-medium text-dark   h2-title primary_title py-5">
         Enlaces
         </h2>
@@ -54,14 +76,14 @@ export const EnlaceHero = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
     </HeroContainer>
   );
 };
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 133rem;
+  height: 100vh;
   .gradient_img_bg {
     z-index: 1;
     height: 90%;
@@ -83,7 +105,6 @@ const HeroContainer = styled.section`
     top: 9.6rem;
     left: -16rem;
   }
-
   .hero-title {
     margin-left: 10rem;
   }
@@ -144,7 +165,7 @@ const HeroContainer = styled.section`
 
     .primary_title {
       font-size: 25px;
-      margin-bottom: 10rem;
+      margin-bottom: 8.5rem;
     }
 
     .primary_subtitle {
