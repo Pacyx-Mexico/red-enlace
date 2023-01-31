@@ -4,7 +4,7 @@ import TitularInputs from "../../TitularInputs";
 function FisicaAutos(props) {
   useEffect(() => {
     props.validationONFisica();
-  }, [props.state]); 
+  }, [props.state]);
 
   useEffect(() => {
     props.activeStep();
@@ -55,6 +55,9 @@ function FisicaAutos(props) {
       errorTest__genero={props.error.errorTest__rfc}
       changeInitGenero={props.changeInitGenero}
       initGenero={props.error.initGenero}
+      initAgeDate={props.error.initAgeDate}
+      valueAgeDate={props.state.ageDate}
+      changeInitAgeDate={props.changeInitAgeDate}
     />
   );
 }

@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
-function Button({ text }) {
-  return <Btn>{text}</Btn>;
+function Button({ text, func }) {
+  return (
+    <>
+      {func ? (
+        <Btn onClick={func}>{text}</Btn>
+      ) : (
+        <Btn>{text}</Btn>
+      )}
+    </>
+  );
 }
 
 const Btn = styled.button`
@@ -15,7 +23,7 @@ const Btn = styled.button`
   text-decoration: none;
   color: #fff;
   box-shadow: 2px 2px 3px var(--shadow-color);
-  background-color: var(--primary-color2); 
+  background-color: var(--primary-color2);
   transition: all ease 0.3s;
 
   &:hover {

@@ -8,6 +8,7 @@ import "../../../styles/forms/Gm/Step1GM.css";
 
 class Step1GM extends Component {
   state = {
+    initAgeDate: true,
     errorFX__nombre: false,
     errorFX__paterno: false,
     errorFX__materno: false,
@@ -36,7 +37,7 @@ class Step1GM extends Component {
 
     initGenero: true,
 
-    offStep1: false,
+    offStep1: "false",
     showAlertStep1: false,
   };
 
@@ -46,6 +47,7 @@ class Step1GM extends Component {
       this.props.state.paterno !== "" &&
       this.props.state.materno !== "" &&
       this.props.state.edad !== "" &&
+      this.props.state.ageDate !== "" &&
       this.props.state.genero !== "" &&
       this.props.state.rfc !== "" &&
       this.props.state.correo !== "" &&
@@ -61,12 +63,12 @@ class Step1GM extends Component {
         this.state.errorTest__tel !== true
       ) {
         this.setState({
-          offStep1: true,
+          offStep1: "true",
         });
       }
     } else {
       this.setState({
-        offStep1: false,
+        offStep1: "false",
       });
     }
   };
@@ -142,7 +144,7 @@ class Step1GM extends Component {
   };
   validationEdad = () => {
     if (this.props.state.edad !== "") {
-      if (this.props.state.edad >= 1 && this.props.state.edad <= 75) {
+      if (this.props.state.edad >= 1 && this.props.state.edad <= 101) {
         this.setState({
           errorFX__edad: false,
           errorTest__edad: false,
@@ -162,6 +164,11 @@ class Step1GM extends Component {
         errorTest__edad: false,
       });
     }
+  };
+  changeInitAgeDate = () => {
+    this.setState({
+      initAgeDate: false,
+    });
   };
   validationGenero = () => {
     if (this.props.state.genero === "") {
@@ -266,7 +273,7 @@ class Step1GM extends Component {
   };
 
   nextStep1 = () => {
-    if (this.state.offStep1 === false) {
+    if (this.state.offStep1 === "false") {
       this.setState({
         showAlertStep1: true,
       });
@@ -274,6 +281,7 @@ class Step1GM extends Component {
       this.validationPaterno();
       this.validationMaterno();
       this.validationEdad();
+      this.changeInitAgeDate();
       this.changeInitGenero();
       this.validationRFC();
       this.validationCorreo();
@@ -288,7 +296,6 @@ class Step1GM extends Component {
         this.state.errorTest__correo !== true &&
         this.state.errorTest__tel !== true
       ) {
-        this.props.nextStep();
         this.props.sendStep1();
       } else {
         this.setState({
@@ -308,7 +315,7 @@ class Step1GM extends Component {
 
   render() {
     return (
-      <section>
+      <section id="formStep1GM">
         <StepIndicatorGM state={this.props.state} />
         <InstructionForm instruction="Por favor llena todos los campos del Asegurado titular" />
         <TitularGM
@@ -326,6 +333,7 @@ class Step1GM extends Component {
           validationCorreo={this.validationCorreo}
           validationTel={this.validationTel}
           changeInitGenero={this.changeInitGenero}
+          changeInitAgeDate={this.changeInitAgeDate}
         />
         <NextPrevStep
           icon={false}

@@ -14,7 +14,7 @@ function MoralAutos(props) {
 
   return (
     <>
-      <div className="container">
+      <FormMoralAutos1>
         <InputText
           type="text"
           placeholder="Razón Social *"
@@ -29,7 +29,7 @@ function MoralAutos(props) {
           errorNull={props.error.errorNull__razonSocial}
           textNull="Ingresa la razón social"
         />
-      </div>
+      </FormMoralAutos1>
       <FormMoralAutos>
         <div>
           <InputText
@@ -96,10 +96,19 @@ const FormMoralAutos = styled.form`
   margin: 0 auto;
   grid-template-columns: 32% 32% 32%;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
   @media screen and (max-width: 600px) {
     grid-template-columns: 100%;
+    width: 80%;
+  }
+`;
+const FormMoralAutos1 = styled.form`
+  width: 87%;
+  margin: 0 auto;
+  margin-top: 4rem;
+
+  @media screen and (max-width: 600px) {
     width: 80%;
   }
 `;

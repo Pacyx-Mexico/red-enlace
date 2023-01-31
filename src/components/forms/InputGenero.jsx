@@ -44,7 +44,7 @@ export default function InputGenero({
 
 const SelectContainer = styled.div`
   width: 100%;
-  height: 5.6rem;
+  height: var(--inputHeight-size);
   position: relative;
   padding-left: 2rem;
   padding-right: 2rem;

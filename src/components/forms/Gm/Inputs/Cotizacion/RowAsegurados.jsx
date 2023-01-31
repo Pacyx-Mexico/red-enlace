@@ -6,12 +6,12 @@ function RowAsegurados({ id, nombre, paterno, materno, edad }) {
       {nombre !== "" ? (
         <RowAseguradosStyle>
           <p>{id}</p>
-          <p>
+          <h6>
             {nombre} {paterno} {materno}
-          </p>
-          <p>
+          </h6>
+          <h6>
             {edad} {edad === 1 ? "año" : "años"}
-          </p>
+          </h6>
         </RowAseguradosStyle>
       ) : (
         ""

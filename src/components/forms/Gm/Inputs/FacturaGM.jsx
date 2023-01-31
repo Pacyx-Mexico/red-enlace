@@ -116,8 +116,6 @@ function FacturaGM(props) {
         error={props.error}
         handleChange={props.handleChange}
         validationFormaDePago={props.validationFormaDePago}
-        validationMetodoDePago={props.validationMetodoDePago}
-        changeInitMetodoDePago={props.changeInitMetodoDePago}
         changeInitFormaDePago={props.changeInitFormaDePago}
       />
       <FacturaImg
