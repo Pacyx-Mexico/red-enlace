@@ -7,51 +7,71 @@ import AlertForm from "../AlertForm";
 
 class Step3GM extends Component {
   state = {
-    errorFX__polizaPrimaria: false,
-    errorNull__polizaPrimaria: false,
-    errorTest__polizaPrimaria: false,
+    errorFX__deducible: false,
+    errorNull__deducible: false,
+    errorTest__deducible: false,
 
     initInicioVigencia: true,
-    initDeductible: true,
     errorFX__inicioVigencia: false,
     errorNull__inicioVigencia: false,
 
     initFinVigencia: true,
     errorFX__finVigencia: false,
     errorNull__finVigencia: false,
-    initMoney: true,
-    initCurrencyType: true,
 
-    offStep3: "false",
+    offStep3: false,
     showAlertStep3: false,
   };
 
-  validationPolizaPrimaria = () => {
-    const deducibleGm = this.props.state.polizaPrimaria;
-    const deducible = deducibleGm.replace(/,/g, "");
-
-    if (this.props.state.polizaPrimaria === "") {
+  validationONStep3 = () => {
+    if (
+      this.props.state.deducible !== "" &&
+      this.props.state.inicioVigencia !== "" &&
+      this.props.state.finVigencia !== ""
+    ) {
+      if (this.state.errorTest__deducible !== true) {
+        this.setState({
+          offStep3: true,
+        });
+      }
+    } else {
       this.setState({
-        errorFX__polizaPrimaria: true,
-        errorNull__polizaPrimaria: true,
-        errorTest__polizaPrimaria: false,
+        offStep3: false,
+      });
+    }
+  };
+  closedAlertStep3 = () => {
+    this.setState({
+      showAlertStep3: false,
+    });
+  };
+
+  validationDeducible = () => {
+    const deducibleGm = this.props.state.deducible;
+
+    const deducible = deducibleGm.replace(/,/g, "");
+    if (deducible === "") {
+      this.setState({
+        errorFX__deducible: true,
+        errorNull__deducible: true,
+        errorTest__deducible: false,
       });
     } else {
-      if (deducible < 1) {
+      this.setState({
+        errorNull__deducible: false,
+      });
+
+      if (deducible >= 1 && deducible <= 100000) {
         this.setState({
-          errorFX__polizaPrimaria: true,
-          errorNull__polizaPrimaria: false,
-          errorTest__polizaPrimaria: true,
+          errorFX__deducible: false,
+          errorTest__deducible: false,
         });
       } else {
-        this.setState({
-          errorFX__polizaPrimaria: false,
-          errorNull__polizaPrimaria: false,
-          errorTest__polizaPrimaria: false,
-        });
+        this.setState({ errorFX__deducible: true, errorTest__deducible: true });
       }
     }
   };
+
   validationInicioVigencia = () => {
     if (this.props.state.inicioVigencia !== "") {
       this.setState({
@@ -80,6 +100,7 @@ class Step3GM extends Component {
       return;
     }
   };
+
   validationFinVigencia = () => {
     if (this.props.state.finVigencia !== "") {
       this.setState({
@@ -108,56 +129,35 @@ class Step3GM extends Component {
       return;
     }
   };
-  changeInitCurrencyType = () => {
-    this.setState({
-      initCurrencyType: false,
-    });
-  };
-
-  validationONStep3 = () => {
-    if (
-      this.props.state.inicioVigencia !== "" &&
-      this.props.state.finVigencia !== "" &&
-      this.props.state.currencyType !== "" &&
-      this.props.state.polizaPrimaria !== "" &&
-      this.state.errorTest__polizaPrimaria !== true
-    ) {
-      this.setState({
-        offStep3: "true",
-      });
-    } else {
-      this.setState({
-        offStep3: "false",
-      });
-    }
-  };
-
-  closedAlertStep3 = () => {
-    this.setState({
-      showAlertStep3: false,
-    });
-  };
 
   nextStep3 = () => {
-    if (this.state.offStep3 === "false") {
-      this.setState({
-        showAlertStep3: true,
-        initMoney: false,
-        initCurrencyType: false,
-      });
+    if (this.state.offStep3 === false) {
+      this.validationDeducible();
       this.validationFinVigenciaNext();
       this.validationInicioVigenciaNext();
-      this.validationPolizaPrimaria();
+      this.setState({
+        showAlertStep3: true,
+      });
     } else {
-      this.props.sendStep3();
+      if (this.state.errorTest__deducible !== true) {
+        this.props.nextStep();
+        this.props.sendStep3();
+      } else {
+        this.setState({
+          showAlertStep3: true,
+        });
+        this.validationDeducible();
+        this.validationFinVigenciaNext();
+        this.validationInicioVigenciaNext();
+      }
     }
   };
 
   render() {
     return (
-      <>
-        <div id="formStep3GM"></div>
+      <section>
         <StepIndicatorGM state={this.props.state} />
+
         <InstructionForm instruction="Cuéntanos un poco más sobre tu póliza actual" />
         <PolizaGM
           state={this.props.state}
@@ -165,12 +165,11 @@ class Step3GM extends Component {
           handleChange={this.props.handleChange}
           activeStep={this.props.activeStep}
           validationONStep3={this.validationONStep3}
+          validationDeducible={this.validationDeducible}
           validationInicioVigencia={this.validationInicioVigencia}
           changeInitInicioVigencia={this.changeInitInicioVigencia}
           validationFinVigencia={this.validationFinVigencia}
           changeInitFinVigencia={this.changeInitFinVigencia}
-          changeInitCurrencyType={this.changeInitCurrencyType}
-          validationPolizaPrimaria={this.validationPolizaPrimaria}
         />
         <NextPrevStep
           icon={true}
@@ -185,7 +184,7 @@ class Step3GM extends Component {
           linkId="formStep3GM"
           text="Por favor asegúrate de llenar todos los campos correctamente antes de continuar"
         />
-      </>
+      </section>
     );
   }
 }

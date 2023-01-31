@@ -8,9 +8,9 @@ import {
 } from "../../../../styles/forms/CotizacionTabla.elements";
 import ButtonDownload from "../../ButtonDownload";
 
-function CotizacionAutos({ activeStep, state }) {
+function CotizacionAutos(props) {
   useEffect(() => {
-    activeStep();
+    props.activeStep();
   }, []);
 
   return (
@@ -20,51 +20,39 @@ function CotizacionAutos({ activeStep, state }) {
           <p>Cobertura</p>
         </CotizacionTitle>
         <Row40x60 responsive={true}>
-          <p>
-            Devolución de deducible Autos - Paquete
-            <span>{state.package}</span>
-          </p>
-          <p>
-            Suma asegurada: $
-            <>
-              {state.package === "Básico" && "10,000.00"}
-              {state.package === "Standar" && "20,000.00"}
-              {state.package === "Premium" && "30,000.00"}
-              {state.package === "Gold" && "40,000.00"}
-              {state.package === "Black" && "50,000.00"}
-            </>
-          </p>
+          <p>Devolución de deducible Autos- Paquete básico</p>
+          <p>Suma asegurada: 10,000</p>
         </Row40x60>
         <CotizacionTitle>
           <p>Descripción de tu auto</p>
         </CotizacionTitle>
         <Row40x60>
           <p>Conductor habitual:</p>
-          <p>{state.conductor}</p>
+          <p>{props.state.conductor}</p>
         </Row40x60>
         <Row40x60>
           <p>Descripción:</p>
-          <p>{state.descripcion}</p>
+          <p>{props.state.descripcion}</p>
         </Row40x60>
         <Row40x60>
           <p>Modelo:</p>
-          <p>{state.modelo}</p>
+          <p>{props.state.modelo}</p>
         </Row40x60>
         <Row40x60>
           <p>Marca:</p>
-          <p>{state.marca}</p>
+          <p>{props.state.marca}</p>
         </Row40x60>
         <Row40x60>
           <p>Num. de serie:</p>
-          <p>{state.serie}</p>
+          <p>{props.state.serie}</p>
         </Row40x60>
         <Row40x60>
           <p>Num. de póliza:</p>
-          <p>{state.poliza}</p>
+          <p>{props.state.poliza}</p>
         </Row40x60>
         <Row40x60>
           <p>Placas:</p>
-          <p>{state.placas}</p>
+          <p>{props.state.placas}</p>
         </Row40x60>
         <CotizacionTitle>
           <p>Costo anual</p>

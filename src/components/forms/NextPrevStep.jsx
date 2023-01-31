@@ -2,6 +2,7 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import "../../styles/forms/NextPrevStep.css";
 import styled from "styled-components";
 
+
 function NextPrevStep({ icon, text, nextStep, prevStep, off }) {
   return (
     <div className="nextPrevContainer">
@@ -37,12 +38,13 @@ const ButtonOff = styled.button`
   box-shadow: 2px 2px 3px var(--shadow-color);
 
   background-color: ${({ off }) =>
-    off === "true" ? "var(--primary-color2)" : "var(--off-color2)"};
+    off ? "var(--primary-color2)" : "var(--off-color2)"};
   transition: all ease 0.3s;
+
 
   &:hover {
     background-color: ${({ off }) =>
-      off === "true" ? "var(--secondary-color2)" : "var(--off-color2)"};
+      off ? "var(--secondary-color2)" : "var(--off-color2)"};
     transition: all ease 0.3s;
   }
 `;

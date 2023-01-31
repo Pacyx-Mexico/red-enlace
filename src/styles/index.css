@@ -8,9 +8,6 @@
   --secondary-color3: #1da939;
   --secondary-color4: #4aba6012;
 
-  --tertiary-color: #3F809B;
-
-  --bgInput-color: #1d46c214;
   --errorInput-color: #f30000;
 
   --cards-color: #f5f7f9;
@@ -27,9 +24,6 @@
   --h4-size: 3em;
   --h5-size: 2.2em;
   --h6-size: 1em;
-
-  --inputHeight-size: 5.6rem;
-  --inputText-size: 2.2rem;
 }
 
 html {

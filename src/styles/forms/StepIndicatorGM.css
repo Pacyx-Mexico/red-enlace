@@ -5,18 +5,18 @@
   grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
   padding-left: 16rem;
   justify-content: center;
-  padding-bottom: 6rem;
-  padding-top: 16rem;
+  padding-bottom: 4rem;
+  padding-top: 20rem;
 }
 .stepIndicatorAutos {
   display: grid;
-  width: 90%;
+  width: 86%;
   margin: 0 auto;
-  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  grid-template-columns: 25% 25% 25% 25%;
   padding-left: 30rem;
   justify-content: center;
   padding-bottom: 4rem;
-  padding-top: 16rem;
+  padding-top: 20rem;
 }
 
 @media screen and (max-width: 600px) {

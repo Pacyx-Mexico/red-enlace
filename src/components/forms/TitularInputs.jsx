@@ -3,7 +3,6 @@ import InputText from "./InputText";
 import InputGenero from "./InputGenero";
 import ErrorInput from "./ErrorInput";
 import ErrorInputInit from "./ErrorInputInit";
-import InputDate from "../Inputs/InputDate";
 
 function FisicaAutos({
   id,
@@ -56,10 +55,6 @@ function FisicaAutos({
   errorNull__genero,
   changeInitGenero,
   initGenero,
-
-  valueAgeDate,
-  changeInitAgeDate,
-  initAgeDate,
 }) {
   return (
     <FormTitular id={id}>
@@ -97,20 +92,20 @@ function FisicaAutos({
           textNull="Ingresa la edad"
         />
         <InputText
-          type="text"
-          placeholder="RFC *"
-          name="rfc"
-          value={valueRFC}
+          type="email"
+          placeholder="Correo Electrónico *"
+          name="correo"
+          value={valueCorreo}
           onChange={onChange}
-          validation={validationRFC}
-          errorFX={errorFX__rfc}
+          validation={validationCorreo}
+          errorFX={errorFX__correo}
         />
         <ErrorInput
-          errorFX={errorFX__rfc}
-          errorNull={errorNull__rfc}
-          errorTest={errorTest__rfc}
-          textError="El RFC no es valido"
-          textNull="Ingresa el RFC"
+          errorFX={errorFX__correo}
+          errorNull={errorNull__correo}
+          errorTest={errorTest__correo}
+          textError="El correo electrónico no es valido"
+          textNull="Ingresa un correo electrónico"
         />
       </div>
       <div>
@@ -181,31 +176,22 @@ function FisicaAutos({
           textError="Este campo sólo acepta letras"
           textNull="Ingresa el apellido materno"
         />
-        <InputDate
-          autoValidation={true}
-          init={initAgeDate}
-          changeInit={changeInitAgeDate}
-          onChange={onChange}
-          label="Fecha de Nacimiento *"
-          name="ageDate"
-          value={valueAgeDate}
-          textNull="Ingresa la fecha de Nacimiento"
-        />
+
         <InputText
-          type="email"
-          placeholder="Correo Electrónico *"
-          name="correo"
-          value={valueCorreo}
+          type="text"
+          placeholder="RFC *"
+          name="rfc"
+          value={valueRFC}
           onChange={onChange}
-          validation={validationCorreo}
-          errorFX={errorFX__correo}
+          validation={validationRFC}
+          errorFX={errorFX__rfc}
         />
         <ErrorInput
-          errorFX={errorFX__correo}
-          errorNull={errorNull__correo}
-          errorTest={errorTest__correo}
-          textError="El correo electrónico no es valido"
-          textNull="Ingresa un correo electrónico"
+          errorFX={errorFX__rfc}
+          errorNull={errorNull__rfc}
+          errorTest={errorTest__rfc}
+          textError="El RFC no es valido"
+          textNull="Ingresa el RFC"
         />
       </div>
     </FormTitular>

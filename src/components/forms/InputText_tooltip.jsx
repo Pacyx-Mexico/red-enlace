@@ -59,7 +59,8 @@ const Tooltip = styled.div`
 const Input = styled.input`
   width: 100%;
   height: 100%;
-  font-size: var(--inputText-size);
+  font-size: 2.22rem;
+  font-size: 2.22rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border-top-right-radius: 1rem;
