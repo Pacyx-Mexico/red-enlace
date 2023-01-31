@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Twirl as Hamburger } from "hamburger-react";
-import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkRouter, NavLink } from "react-router-dom";
+import Accordion from 'react-bootstrap/Accordion';
+import Dropdown from 'react-bootstrap/Dropdown';
 import {
   ContainerNav,
   LogoContainer,
@@ -17,6 +19,13 @@ var scroller = Scroll.scroller;
 
 export default function Navbar({ type }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+      setShow(!show);
+  }
+  const hideDropdown = e => {
+      setShow(false);
+  }
 
   const inicio = () => {
     scroll.scrollToTop();
@@ -55,100 +64,62 @@ export default function Navbar({ type }) {
         </LogoContainer>
 
         <Menu open={showMobileMenu}>
-          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            {/* <LinkRouter
-              to="#productos"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="color-white"
-            >
-              Productos
-            </LinkRouter> */}
+          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)} className="d-none d-md-block">
             <MenuItem onClick={scrollToSection}>
               <Link 
                 to="productos" 
                 spy={false} 
                 hashSpy={true}
                 smooth={true} 
-                offset={-150}
+                offset={-90}
                 duration={500} 
                 className='color-white' 
                 activeClass='some-active-class'
               >
-                Productos
+                <Dropdown
+                   show={show}
+                   onMouseEnter={showDropdown} 
+                   onMouseLeave={hideDropdown}>
+                  <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    Productos
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu show={show}>
+                    <Dropdown.Item onClick={inicio} as={LinkRouter} to="/deducible-gastos-medicos">Devolución Gastos Médicos</Dropdown.Item>
+                    <Dropdown.Item onClick={inicio} as={LinkRouter} to="/deducible-autos">Devolución Autos</Dropdown.Item>
+                    <Dropdown.Item onClick={inicio} as={LinkRouter} to="/enlace">Enlaces</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </Link>
             </MenuItem>
           </MenuItem>
+
+          <Accordion className="d-md-none">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header className="py-4">Productos</Accordion.Header>
+              <div className="d-flex flex-column gap-5 align-items-center">
+              <Accordion.Body onClick={inicio} as={LinkRouter} to="/deducible-gastos-medicos">
+                    Devolución Gastos Médicos
+                </Accordion.Body>
+                <Accordion.Body onClick={inicio} as={LinkRouter} to="/deducible-autos">
+                    Devolución Autos
+                </Accordion.Body>
+                <Accordion.Body onClick={inicio} as={LinkRouter} to="/enlace">
+                    Enlaces
+                </Accordion.Body>
+              </div>
+            </Accordion.Item>
+          </Accordion>
+
           <MenuItem onClick={inicio}>
             <LinkRouter to="/reclamacion-siniestros">Siniestros</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
-            <LinkRouter to="/">Agentes</LinkRouter>
-          </MenuItem>
-          <MenuItem onClick={inicio}>
-            <LinkRouter to="/">Clientes</LinkRouter>
+            <LinkRouter to="/">Mi portal</LinkRouter>
           </MenuItem>
           <MenuItem onClick={inicio}>
             <LinkRouter to="/facturacion">Facturación</LinkRouter>
           </MenuItem>
-          {/* <MenuItem onClick={inicio}>
-            <LinkRouter to="/">Inicio</LinkRouter>
-          </MenuItem>
-          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <LinkRouter
-              to="productos"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="color-white"
-            >
-              Productos
-            </LinkRouter>
-          </MenuItem>
-          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <LinkRouter to="/siniestro" className="color-white">
-              Siniestros
-            </LinkRouter>
-          </MenuItem>
-          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <LinkRouter
-              to="beneficios"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="color-white"
-            >
-              Agentes
-            </LinkRouter>
-          </MenuItem>
-          <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <LinkRouter
-              to="testimonios"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="color-white"
-            >
-              Clientes
-            </LinkRouter>
-          </MenuItem> */}
-          {/* <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <LinkRouter
-              to="beneficios"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="color-white"
-            >
-              Facturación
-            </LinkRouter>
-          </MenuItem> */}
         </Menu>
       </Wrapper>
     </ContainerNav>
