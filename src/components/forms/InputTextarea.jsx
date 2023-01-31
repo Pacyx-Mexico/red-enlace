@@ -36,7 +36,7 @@ const Textarea = styled.textarea`
   outline: none;
   font-family: "Poppins", sans-serif;
   padding: 1rem 1.6rem;
-  font-size: 2.2rem;
+  font-size: var(--inputText-size);
 `;
 
 export default InputTextarea;

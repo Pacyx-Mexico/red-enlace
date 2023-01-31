@@ -7,7 +7,7 @@ function StepIndicatorAutos({ state }) {
       <NumberStepIndicator
         number="1"
         line={true}
-        text="Datos del asegurador"
+        text="Contratante"
         active={state.step1}
         complete={state.completeStep1}
       />
@@ -21,16 +21,30 @@ function StepIndicatorAutos({ state }) {
       <NumberStepIndicator
         number="3"
         line={true}
-        text="Cotización"
+        text="Paquete"
         active={state.step3}
         complete={state.completeStep3}
       />
       <NumberStepIndicator
         number="4"
-        line={false}
-        text="Factura/Pago"
+        line={true}
+        text="Coberturas Adicionales"
         active={state.step4}
         complete={state.completeStep4}
+      />
+      <NumberStepIndicator
+        number="5"
+        line={true}
+        text="Cotización"
+        active={state.step5}
+        complete={state.completeStep5}
+      />
+      <NumberStepIndicator
+        number="6"
+        line={false}
+        text="Factura/Pago"
+        active={state.step6}
+        complete={state.completeStep6}
       />
     </section>
   );

@@ -23,7 +23,7 @@ class Step2Autos extends Component {
     errorNull__placas: false,
     errorNull__descripcion: false,
 
-    offStep2: false,
+    offStep2: "false",
     showAlertStep2: false,
   };
 
@@ -108,18 +108,17 @@ class Step2Autos extends Component {
       this.props.state.descripcion !== ""
     ) {
       this.setState({
-        offStep2: true,
+        offStep2: "true",
       });
     } else {
       this.setState({
-        offStep2: false,
+        offStep2: "false",
       });
     }
   };
 
   nextStep2 = () => {
-    if (this.state.offStep2 === true) {
-      this.props.nextStep();
+    if (this.state.offStep2 === "true") {
       this.props.sendStep2();
     } else {
       this.setState({

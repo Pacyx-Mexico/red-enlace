@@ -7,10 +7,12 @@ function InputMoney({
   value,
   validation,
   errorFX,
+  hideSymbol,
 }) {
   return (
     <InputMoney2 errorFX={errorFX}>
-      <span>$</span>
+      {hideSymbol ? "" : <span>$</span>}
+
       <Cleave
         options={{
           numeral: true,
@@ -28,13 +30,14 @@ function InputMoney({
 }
 
 const InputMoney2 = styled.div`
-  width: 16rem;
+  width: 18rem;
   height: 5rem;
   display: flex;
   align-items: center;
   border-radius: 0.8rem;
   padding-left: 1.6rem;
   margin-bottom: 0.8rem;
+  margin-right: 1rem;
   background-color: var(--primary-color3);
 
   border: 2px solid

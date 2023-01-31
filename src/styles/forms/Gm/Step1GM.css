@@ -4,8 +4,9 @@
   margin: 0 auto;
   grid-template-columns: 32% 32% 32%;
   justify-content: space-between;
-  padding-top: 10rem;
+  padding-top: 2rem;
 }
+
 @media screen and (max-width: 600px) {
   
   .gridStep1GM {

@@ -25,7 +25,7 @@ class Step6GM extends Component {
         <NextPrevStep
           icon={true}
           text="Continuar"
-          off={true}
+          off={"true"}
           prevStep={this.props.prevStep}
           nextStep={this.nextStep6}
         />
