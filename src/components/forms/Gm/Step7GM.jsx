@@ -30,6 +30,7 @@ class Step7GM extends Component {
     errorFX__numPoliza: false,
     errorFX__compania: false,
     errorFX__formaDePago: false,
+    errorFX__metodoDePago: false,
     errorFX__ine: false,
     errorFX__poliza: false,
     errorFX__terminosGM: false,
@@ -71,16 +72,18 @@ class Step7GM extends Component {
     errorNull__numPoliza: false,
     errorNull__compania: false,
     errorNull__formaDePago: false,
+    errorNull__metodoDePago: false,
     errorNull__ine: false,
     errorNull__poliza: false,
     errorNull__terminosGM: false,
 
     initFormaDePago: true,
+    initMetodoDePago: true,
     initIne: true,
     initPoliza: true,
     initTerminosGM: true,
 
-    offStep7: "false",
+    offStep7: false,
     showAlertStep7: false,
   };
 
@@ -375,6 +378,7 @@ class Step7GM extends Component {
         errorTest__correoFactura: false,
       });
     }
+    console.log("me ejecute");
   };
   validationTelFactura = () => {
     if (this.props.state.telFactura !== "") {
@@ -544,7 +548,24 @@ class Step7GM extends Component {
       initFormaDePago: false,
     });
   };
-
+  validationMetodoDePago = () => {
+    if (this.props.state.metodoDePago !== "") {
+      this.setState({
+        errorFX__metodoDePago: false,
+        errorNull__metodoDePago: false,
+      });
+    } else {
+      this.setState({
+        errorFX__metodoDePago: true,
+        errorNull__metodoDePago: true,
+      });
+    }
+  };
+  changeInitMetodoDePago = () => {
+    this.setState({
+      initMetodoDePago: false,
+    });
+  };
   validationIne = () => {
     this.props.state.ine
       ? this.setState({ errorFX__ine: false })
@@ -607,6 +628,7 @@ class Step7GM extends Component {
       this.props.state.numPoliza !== "" &&
       this.props.state.compania !== "" &&
       this.props.state.formaDePago !== "" &&
+      this.props.state.metodoDePago !== "" &&
       this.props.state.poliza !== undefined &&
       this.props.state.ine !== undefined &&
       this.props.state.terminosGM !== false
@@ -621,12 +643,12 @@ class Step7GM extends Component {
         this.state.errorTest__cp === false
       ) {
         this.setState({
-          offStep7: "true",
+          offStep7: true,
         });
       }
     } else {
       this.setState({
-        offStep7: "false",
+        offStep7: false,
       });
     }
   };
@@ -662,12 +684,12 @@ class Step7GM extends Component {
         this.state.errorTest__cp === false
       ) {
         this.setState({
-          offStep7: "true",
+          offStep7: true,
         });
       }
     } else {
       this.setState({
-        offStep7: "false",
+        offStep7: false,
       });
     }
   };
@@ -689,6 +711,7 @@ class Step7GM extends Component {
       this.props.state.numPoliza !== "" &&
       this.props.state.compania !== "" &&
       this.props.state.formaDePago !== "" &&
+      this.props.state.metodoDePago !== "" &&
       this.props.state.poliza !== undefined &&
       this.props.state.ine !== undefined &&
       this.props.state.terminosGM !== false
@@ -703,12 +726,12 @@ class Step7GM extends Component {
         this.state.errorTest__cp === false
       ) {
         this.setState({
-          offStep7: "true",
+          offStep7: true,
         });
       }
     } else {
       this.setState({
-        offStep7: "false",
+        offStep7: false,
       });
     }
   };
@@ -744,12 +767,12 @@ class Step7GM extends Component {
         this.state.errorTest__cp === false
       ) {
         this.setState({
-          offStep7: "true",
+          offStep7: true,
         });
       }
     } else {
       this.setState({
-        offStep7: "false",
+        offStep7: false,
       });
     }
   };
@@ -769,6 +792,7 @@ class Step7GM extends Component {
       this.props.state.numPoliza !== "" &&
       this.props.state.compania !== "" &&
       this.props.state.formaDePago !== "" &&
+      this.props.state.metodoDePago !== "" &&
       this.props.state.poliza !== undefined &&
       this.props.state.ine !== undefined &&
       this.props.state.terminosGM !== false
@@ -783,12 +807,12 @@ class Step7GM extends Component {
         this.state.errorTest__cp === false
       ) {
         this.setState({
-          offStep7: "true",
+          offStep7: true,
         });
       }
     } else {
       this.setState({
-        offStep7: "false",
+        offStep7: false,
       });
     }
   };
@@ -822,12 +846,12 @@ class Step7GM extends Component {
         this.state.errorTest__cp === false
       ) {
         this.setState({
-          offStep7: "true",
+          offStep7: true,
         });
       }
     } else {
       this.setState({
-        offStep7: "false",
+        offStep7: false,
       });
     }
   };
@@ -883,12 +907,13 @@ class Step7GM extends Component {
     this.validationEstado();
     this.validationNumPoliza();
     this.changeInitFormaDePago();
+    this.changeInitMetodoDePago();
     this.changeInitIne();
     this.changeInitPoliza();
     this.changeInitTerminosGM();
   };
   titularPagoUnicoSend = () => {
-    if (this.state.offStep7 === "false") {
+    if (this.state.offStep7 === false) {
       this.setState({
         showAlertStep7: true,
       });
@@ -913,7 +938,7 @@ class Step7GM extends Component {
     }
   };
   titularPagoMensualSend = () => {
-    if (this.state.offStep7 === "false") {
+    if (this.state.offStep7 === false) {
       this.setState({
         showAlertStep7: true,
       });
@@ -938,7 +963,7 @@ class Step7GM extends Component {
     }
   };
   fisicaPagoUnicoSend = () => {
-    if (this.state.offStep7 === "false") {
+    if (this.state.offStep7 === false) {
       this.setState({
         showAlertStep7: true,
       });
@@ -963,7 +988,7 @@ class Step7GM extends Component {
     }
   };
   fisicaPagoMensualSend = () => {
-    if (this.state.offStep7 === "false") {
+    if (this.state.offStep7 === false) {
       this.setState({
         showAlertStep7: true,
       });
@@ -988,7 +1013,7 @@ class Step7GM extends Component {
     }
   };
   moralPagoUnicoSend = () => {
-    if (this.state.offStep7 === "false") {
+    if (this.state.offStep7 === false) {
       this.setState({
         showAlertStep7: true,
       });
@@ -1010,7 +1035,7 @@ class Step7GM extends Component {
     }
   };
   moralPagoMensualSend = () => {
-    if (this.state.offStep7 === "false") {
+    if (this.state.offStep7 === false) {
       this.setState({
         showAlertStep7: true,
       });
@@ -1070,6 +1095,7 @@ class Step7GM extends Component {
           activeStep={this.props.activeStep}
           validationONStep7={this.validationONStep7}
           validationFormaDePago={this.validationFormaDePago}
+          validationMetodoDePago={this.validationMetodoDePago}
           validationNombre={this.validationNombre}
           validationPaterno={this.validationPaterno}
           validationMaterno={this.validationMaterno}
@@ -1092,6 +1118,7 @@ class Step7GM extends Component {
           validationEstado={this.validationEstado}
           validationNumPoliza={this.validationNumPoliza}
           validationCompania={this.validationCompania}
+          changeInitMetodoDePago={this.changeInitMetodoDePago}
           changeInitFormaDePago={this.changeInitFormaDePago}
           validationIne={this.validationIne}
           validationPoliza={this.validationPoliza}

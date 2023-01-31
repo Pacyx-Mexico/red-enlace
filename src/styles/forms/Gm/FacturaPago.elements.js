@@ -28,6 +28,17 @@ export const ContainerPagoCol2 = styled.div`
   }
 `;
 
+export const ContainerMetodoDePago = styled.section`
+  display: grid;
+  width: 84rem;
+  margin: 0 auto;
+  grid-template-columns: 100%;
+  justify-items: center;
+
+  @media screen and (max-width: 600px) {
+    width: 80%;
+  }
+`;
 
 export const Tooltip = styled.div`
   display: flex;
@@ -47,6 +58,18 @@ export const CodigoAgente = styled.div`
   font-size: 1rem;
   width: 96%;
   box-shadow: 0 4px 2px -2px #676767;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+`;
+
+export const MetodoDePago = styled.div`
+  display: flex;
+  font-size: 1rem;
+  width: 70em;
+  box-shadow: 0 4px 2px -2px #676767;
+  height: 7.6rem;
 
   @media screen and (max-width: 600px) {
     width: 100%;

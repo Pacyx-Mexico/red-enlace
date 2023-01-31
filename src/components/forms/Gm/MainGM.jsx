@@ -7,7 +7,6 @@ import Step4GM from "./Step4GM";
 import Step5GM from "./Step5GM";
 import Step6GM from "./Step6GM";
 import Step7GM from "./Step7GM";
-import EndStep from "../EndStep";
 
 class MainGM extends Component {
   state = {
@@ -33,93 +32,321 @@ class MainGM extends Component {
     paterno: "",
     materno: "",
     edad: "",
-    ageDate: "",
     genero: "",
     rfc: "",
     correo: "",
     tel: "",
 
-    add1__Name: "",
-    add1__LastNameP: "",
-    add1__LastNameM: "",
-    add1__Age: "",
-    add1__Genere: "",
-    add1__AgeDate: "",
+    add1: false,
+    add2: false,
+    add3: false,
+    add4: false,
+    add5: false,
 
-    add2__Name: "",
-    add2__LastNameP: "",
-    add2__LastNameM: "",
-    add2__Age: "",
-    add2__Genere: "",
-    add2__AgeDate: "",
+    add1__nombre: "",
+    add2__nombre: "",
+    add3__nombre: "",
+    add4__nombre: "",
+    add5__nombre: "",
+    add1__paterno: "",
+    add2__paterno: "",
+    add3__paterno: "",
+    add4__paterno: "",
+    add5__paterno: "",
+    add1__materno: "",
+    add2__materno: "",
+    add3__materno: "",
+    add4__materno: "",
+    add5__materno: "",
+    add1__edad: "",
+    add2__edad: "",
+    add3__edad: "",
+    add4__edad: "",
+    add5__edad: "",
+    add1__genero: "",
+    add2__genero: "",
+    add3__genero: "",
+    add4__genero: "",
+    add5__genero: "",
 
-    add3__Name: "",
-    add3__LastNameP: "",
-    add3__LastNameM: "",
-    add3__Age: "",
-    add3__Genere: "",
-    add3__AgeDate: "",
-
-    add4__Name: "",
-    add4__LastNameP: "",
-    add4__LastNameM: "",
-    add4__Age: "",
-    add4__Genere: "",
-    add4__AgeDate: "",
-
-    add5__Name: "",
-    add5__LastNameP: "",
-    add5__LastNameM: "",
-    add5__Age: "",
-    add5__Genere: "",
-    add5__AgeDate: "",
-
-    polizaPrimaria: "",
-    currencyType: "",
+    deducible: "",
     inicioVigencia: "",
     finVigencia: "",
 
-    siniestro__add0: false,
-    siniestro__add1: false,
-    siniestro__add2: false,
-    siniestro__add3: false,
-    siniestro__add4: false,
-    siniestro__add5: false,
-    deductible__add0: "",
-    deductible__add1: "",
-    deductible__add2: "",
-    deductible__add3: "",
-    deductible__add4: "",
-    deductible__add5: "",
-    costDeductible__add0: 0,
-    costDeductible__add1: 0,
-    costDeductible__add2: 0,
-    costDeductible__add3: 0,
-    costDeductible__add4: 0,
-    costDeductible__add5: 0,
+    porcentajeDeducible: "",
 
-    coverageA: false,
-    coverageB: false,
-    coverageC: false,
+    coberturaNueva: "",
+    titular__cobA: false,
+    titular__cobB: false,
+    titular__cobC: false,
+    add1__cobA: false,
+    add1__cobB: false,
+    add1__cobC: false,
+    add2__cobA: false,
+    add2__cobB: false,
+    add2__cobC: false,
+    add3__cobA: false,
+    add3__cobB: false,
+    add3__cobC: false,
+    add4__cobA: false,
+    add4__cobB: false,
+    add4__cobC: false,
+    add5__cobA: false,
+    add5__cobB: false,
+    add5__cobC: false,
 
-    addCoverageA__add0: true,
-    addCoverageA__add1: false,
-    addCoverageA__add2: false,
-    addCoverageA__add3: false,
-    addCoverageA__add4: false,
-    addCoverageA__add5: false,
-    reimburseCoverageA__add0: "",
-    reimburseCoverageA__add1: "",
-    reimburseCoverageA__add2: "",
-    reimburseCoverageA__add3: "",
-    reimburseCoverageA__add4: "",
-    reimburseCoverageA__add5: "",
+    modalTitular: false,
+    modalAdd1: false,
+    modalAdd2: false,
+    modalAdd3: false,
+    modalAdd4: false,
+    modalAdd5: false,
+    add0__ben1: false,
+    add0__ben2: false,
+    add0__ben3: false,
+    add0__ben4: false,
+    add0__ben5: false,
+    add1__ben1: false,
+    add1__ben2: false,
+    add1__ben3: false,
+    add1__ben4: false,
+    add1__ben5: false,
+    add2__ben1: false,
+    add2__ben2: false,
+    add2__ben3: false,
+    add2__ben4: false,
+    add2__ben5: false,
+    add3__ben1: false,
+    add3__ben2: false,
+    add3__ben3: false,
+    add3__ben4: false,
+    add3__ben5: false,
+    add4__ben1: false,
+    add4__ben2: false,
+    add4__ben3: false,
+    add4__ben4: false,
+    add4__ben5: false,
+    add5__ben1: false,
+    add5__ben2: false,
+    add5__ben3: false,
+    add5__ben4: false,
+    add5__ben5: false,
 
-    policyTab: "",
-    percentage__coverageB: "",
-    costCoverageB: 0,
+    add0__ben1_nombre: "",
+    add0__ben2_nombre: "",
+    add0__ben3_nombre: "",
+    add0__ben4_nombre: "",
+    add0__ben5_nombre: "",
+    add0__ben1_materno: "",
+    add0__ben2_materno: "",
+    add0__ben3_materno: "",
+    add0__ben4_materno: "",
+    add0__ben5_materno: "",
+    add0__ben1_paterno: "",
+    add0__ben2_paterno: "",
+    add0__ben3_paterno: "",
+    add0__ben4_paterno: "",
+    add0__ben5_paterno: "",
+    add0__ben1_porcentaje: "",
+    add0__ben2_porcentaje: "",
+    add0__ben3_porcentaje: "",
+    add0__ben4_porcentaje: "",
+    add0__ben5_porcentaje: "",
+    add0__ben1_parentesco: "",
+    add0__ben2_parentesco: "",
+    add0__ben3_parentesco: "",
+    add0__ben4_parentesco: "",
+    add0__ben5_parentesco: "",
+    add0__ben1_edad: "",
+    add0__ben2_edad: "",
+    add0__ben3_edad: "",
+    add0__ben4_edad: "",
+    add0__ben5_edad: "",
+    add0__ben1_titular: "",
+    add0__ben2_titular: "",
+    add0__ben3_titular: "",
+    add0__ben4_titular: "",
+    add0__ben5_titular: "",
 
-    costCoverageC: 799,
+    add1__ben1_nombre: "",
+    add1__ben2_nombre: "",
+    add1__ben3_nombre: "",
+    add1__ben4_nombre: "",
+    add1__ben5_nombre: "",
+    add1__ben1_materno: "",
+    add1__ben2_materno: "",
+    add1__ben3_materno: "",
+    add1__ben4_materno: "",
+    add1__ben5_materno: "",
+    add1__ben1_paterno: "",
+    add1__ben2_paterno: "",
+    add1__ben3_paterno: "",
+    add1__ben4_paterno: "",
+    add1__ben5_paterno: "",
+    add1__ben1_porcentaje: "",
+    add1__ben2_porcentaje: "",
+    add1__ben3_porcentaje: "",
+    add1__ben4_porcentaje: "",
+    add1__ben5_porcentaje: "",
+    add1__ben1_parentesco: "",
+    add1__ben2_parentesco: "",
+    add1__ben3_parentesco: "",
+    add1__ben4_parentesco: "",
+    add1__ben5_parentesco: "",
+    add1__ben1_edad: "",
+    add1__ben2_edad: "",
+    add1__ben3_edad: "",
+    add1__ben4_edad: "",
+    add1__ben5_edad: "",
+    add1__ben1_titular: "",
+    add1__ben2_titular: "",
+    add1__ben3_titular: "",
+    add1__ben4_titular: "",
+    add1__ben5_titular: "",
+
+    add2__ben1_nombre: "",
+    add2__ben2_nombre: "",
+    add2__ben3_nombre: "",
+    add2__ben4_nombre: "",
+    add2__ben5_nombre: "",
+    add2__ben1_materno: "",
+    add2__ben2_materno: "",
+    add2__ben3_materno: "",
+    add2__ben4_materno: "",
+    add2__ben5_materno: "",
+    add2__ben1_paterno: "",
+    add2__ben2_paterno: "",
+    add2__ben3_paterno: "",
+    add2__ben4_paterno: "",
+    add2__ben5_paterno: "",
+    add2__ben1_porcentaje: "",
+    add2__ben2_porcentaje: "",
+    add2__ben3_porcentaje: "",
+    add2__ben4_porcentaje: "",
+    add2__ben5_porcentaje: "",
+    add2__ben1_parentesco: "",
+    add2__ben2_parentesco: "",
+    add2__ben3_parentesco: "",
+    add2__ben4_parentesco: "",
+    add2__ben5_parentesco: "",
+    add2__ben1_edad: "",
+    add2__ben2_edad: "",
+    add2__ben3_edad: "",
+    add2__ben4_edad: "",
+    add2__ben5_edad: "",
+    add2__ben1_titular: "",
+    add2__ben2_titular: "",
+    add2__ben3_titular: "",
+    add2__ben4_titular: "",
+    add2__ben5_titular: "",
+
+    add3__ben1_nombre: "",
+    add3__ben2_nombre: "",
+    add3__ben3_nombre: "",
+    add3__ben4_nombre: "",
+    add3__ben5_nombre: "",
+    add3__ben1_materno: "",
+    add3__ben2_materno: "",
+    add3__ben3_materno: "",
+    add3__ben4_materno: "",
+    add3__ben5_materno: "",
+    add3__ben1_paterno: "",
+    add3__ben2_paterno: "",
+    add3__ben3_paterno: "",
+    add3__ben4_paterno: "",
+    add3__ben5_paterno: "",
+    add3__ben1_porcentaje: "",
+    add3__ben2_porcentaje: "",
+    add3__ben3_porcentaje: "",
+    add3__ben4_porcentaje: "",
+    add3__ben5_porcentaje: "",
+    add3__ben1_parentesco: "",
+    add3__ben2_parentesco: "",
+    add3__ben3_parentesco: "",
+    add3__ben4_parentesco: "",
+    add3__ben5_parentesco: "",
+    add3__ben1_edad: "",
+    add3__ben2_edad: "",
+    add3__ben3_edad: "",
+    add3__ben4_edad: "",
+    add3__ben5_edad: "",
+    add3__ben1_titular: "",
+    add3__ben2_titular: "",
+    add3__ben3_titular: "",
+    add3__ben4_titular: "",
+    add3__ben5_titular: "",
+
+    add4__ben1_nombre: "",
+    add4__ben2_nombre: "",
+    add4__ben3_nombre: "",
+    add4__ben4_nombre: "",
+    add4__ben5_nombre: "",
+    add4__ben1_materno: "",
+    add4__ben2_materno: "",
+    add4__ben3_materno: "",
+    add4__ben4_materno: "",
+    add4__ben5_materno: "",
+    add4__ben1_paterno: "",
+    add4__ben2_paterno: "",
+    add4__ben3_paterno: "",
+    add4__ben4_paterno: "",
+    add4__ben5_paterno: "",
+    add4__ben1_porcentaje: "",
+    add4__ben2_porcentaje: "",
+    add4__ben3_porcentaje: "",
+    add4__ben4_porcentaje: "",
+    add4__ben5_porcentaje: "",
+    add4__ben1_parentesco: "",
+    add4__ben2_parentesco: "",
+    add4__ben3_parentesco: "",
+    add4__ben4_parentesco: "",
+    add4__ben5_parentesco: "",
+    add4__ben1_edad: "",
+    add4__ben2_edad: "",
+    add4__ben3_edad: "",
+    add4__ben4_edad: "",
+    add4__ben5_edad: "",
+    add4__ben1_titular: "",
+    add4__ben2_titular: "",
+    add4__ben3_titular: "",
+    add4__ben4_titular: "",
+    add4__ben5_titular: "",
+
+    add5__ben1_nombre: "",
+    add5__ben2_nombre: "",
+    add5__ben3_nombre: "",
+    add5__ben4_nombre: "",
+    add5__ben5_nombre: "",
+    add5__ben1_materno: "",
+    add5__ben2_materno: "",
+    add5__ben3_materno: "",
+    add5__ben4_materno: "",
+    add5__ben5_materno: "",
+    add5__ben1_paterno: "",
+    add5__ben2_paterno: "",
+    add5__ben3_paterno: "",
+    add5__ben4_paterno: "",
+    add5__ben5_paterno: "",
+    add5__ben1_porcentaje: "",
+    add5__ben2_porcentaje: "",
+    add5__ben3_porcentaje: "",
+    add5__ben4_porcentaje: "",
+    add5__ben5_porcentaje: "",
+    add5__ben1_parentesco: "",
+    add5__ben2_parentesco: "",
+    add5__ben3_parentesco: "",
+    add5__ben4_parentesco: "",
+    add5__ben5_parentesco: "",
+    add5__ben1_edad: "",
+    add5__ben2_edad: "",
+    add5__ben3_edad: "",
+    add5__ben4_edad: "",
+    add5__ben5_edad: "",
+    add5__ben1_titular: "",
+    add5__ben2_titular: "",
+    add5__ben3_titular: "",
+    add5__ben4_titular: "",
+    add5__ben5_titular: "",
 
     factura_si_no: "si",
     fisica_o_moral: "fisica",
@@ -152,18 +379,18 @@ class MainGM extends Component {
          STEP 
   ____________________________*/
   prevStep = () => {
+    scroll.scrollToTop();
     const { step } = this.state;
     this.setState({
       step: step - 1,
     });
-    scroll.scrollToTop();
   };
   nextStep = () => {
+    scroll.scrollToTop();
     const { step } = this.state;
     this.setState({
       step: step + 1,
     });
-    scroll.scrollToTop();
   };
   activeStep = () => {
     const { step } = this.state;
@@ -310,7 +537,7 @@ class MainGM extends Component {
   handleCheckChangeImg = (e) => {
     this.setState({ [e.target.name]: e.target.files[0] });
   };
-  handleChangeCheck = (e) => {
+  handleCheckCobertura = (e) => {
     this.setState({
       [e.target.name]: e.target.checked,
     });
@@ -320,128 +547,918 @@ class MainGM extends Component {
       terminosGM: e.target.checked,
     });
   };
+  handleCheckCobAT = (e) => {
+    this.setState({
+      titular__cobA: e.target.checked,
+      modalTitular: e.target.checked,
+    });
+  };
+  handleCheckCobA1 = (e) => {
+    this.setState({
+      add1__cobA: e.target.checked,
+      modalAdd1: e.target.checked,
+    });
+  };
+  handleCheckCobA2 = (e) => {
+    this.setState({
+      add2__cobA: e.target.checked,
+      modalAdd2: e.target.checked,
+    });
+  };
+  handleCheckCobA3 = (e) => {
+    this.setState({
+      add3__cobA: e.target.checked,
+      modalAdd3: e.target.checked,
+    });
+  };
+  handleCheckCobA4 = (e) => {
+    this.setState({
+      add4__cobA: e.target.checked,
+      modalAdd4: e.target.checked,
+    });
+  };
+  handleCheckCobA5 = (e) => {
+    this.setState({
+      add5__cobA: e.target.checked,
+      modalAdd5: e.target.checked,
+    });
+  };
+
   /*_____________________
   
       ADICIONALES
   ______________________*/
+  add1True = () => {
+    this.setState({ add1: true });
+  };
+  add2True = () => {
+    this.setState({ add2: true });
+  };
+  add3True = () => {
+    this.setState({ add3: true });
+  };
+  add4True = () => {
+    this.setState({ add4: true });
+  };
+  add5True = () => {
+    this.setState({ add5: true });
+  };
+  add1False = () => {
+    this.setState({ add1: false });
+  };
+  add2False = () => {
+    this.setState({ add2: false });
+  };
+  add3False = () => {
+    this.setState({ add3: false });
+  };
+  add4False = () => {
+    this.setState({ add4: false });
+  };
+  add5False = () => {
+    this.setState({ add5: false });
+  };
   clearAdd1 = () => {
     this.setState({
-      add1__Name: "",
-      add1__LastNameP: "",
-      add1__LastNameM: "",
-      add1__Age: "",
-      add1__Genere: "",
-      add1__AgeDate: "",
+      add1__nombre: "",
+      add1__paterno: "",
+      add1__materno: "",
+      add1__edad: "",
+      add1__genero: "",
     });
   };
   clearAdd2 = () => {
     this.setState({
-      add2__Name: "",
-      add2__LastNameP: "",
-      add2__LastNameM: "",
-      add2__Age: "",
-      add2__Genere: "",
-      add2__AgeDate: "",
+      add2__nombre: "",
+      add2__paterno: "",
+      add2__materno: "",
+      add2__edad: "",
+      add2__genero: "",
     });
   };
   clearAdd3 = () => {
     this.setState({
-      add3__Name: "",
-      add3__LastNameP: "",
-      add3__LastNameM: "",
-      add3__Age: "",
-      add3__Genere: "",
-      add3__AgeDate: "",
+      add3__nombre: "",
+      add3__paterno: "",
+      add3__materno: "",
+      add3__edad: "",
+      add3__genero: "",
     });
   };
   clearAdd4 = () => {
     this.setState({
-      add4__Name: "",
-      add4__LastNameP: "",
-      add4__LastNameM: "",
-      add4__Age: "",
-      add4__Genere: "",
-      add4__AgeDate: "",
+      add4__nombre: "",
+      add4__paterno: "",
+      add4__materno: "",
+      add4__edad: "",
+      add4__genero: "",
     });
   };
   clearAdd5 = () => {
     this.setState({
-      add5__Name: "",
-      add5__LastNameP: "",
-      add5__LastNameM: "",
-      add5__Age: "",
-      add5__Genere: "",
-      add5__AgeDate: "",
+      add5__nombre: "",
+      add5__paterno: "",
+      add5__materno: "",
+      add5__edad: "",
+      add5__genero: "",
     });
   };
 
-  /*__________________________
+  /*_____________________
   
-     COST DEDUCTIBLE
-  ____________________________*/
-  costAdd0 = () => {
-    if (this.state.deductible__add0 === "") {
-      this.setState({
-        costDeductible__add0: 0,
-      });
+      BENEFICIADOS
+  ______________________*/
+  closeModalTitular = () => {
+    this.setState({
+      modalTitular: false,
+      titular__cobA: false,
+      add0__ben1: false,
+      add0__ben2: false,
+      add0__ben3: false,
+      add0__ben4: false,
+      add0__ben5: false,
+
+      add0__ben1_nombre: "",
+      add0__ben2_nombre: "",
+      add0__ben3_nombre: "",
+      add0__ben4_nombre: "",
+      add0__ben5_nombre: "",
+      add0__ben1_materno: "",
+      add0__ben2_materno: "",
+      add0__ben3_materno: "",
+      add0__ben4_materno: "",
+      add0__ben5_materno: "",
+      add0__ben1_paterno: "",
+      add0__ben2_paterno: "",
+      add0__ben3_paterno: "",
+      add0__ben4_paterno: "",
+      add0__ben5_paterno: "",
+      add0__ben1_porcentaje: "",
+      add0__ben2_porcentaje: "",
+      add0__ben3_porcentaje: "",
+      add0__ben4_porcentaje: "",
+      add0__ben5_porcentaje: "",
+      add0__ben1_parentesco: "",
+      add0__ben2_parentesco: "",
+      add0__ben3_parentesco: "",
+      add0__ben4_parentesco: "",
+      add0__ben5_parentesco: "",
+      add0__ben1_edad: "",
+      add0__ben2_edad: "",
+      add0__ben3_edad: "",
+      add0__ben4_edad: "",
+      add0__ben5_edad: "",
+      add0__ben1_titular: "",
+      add0__ben2_titular: "",
+      add0__ben3_titular: "",
+      add0__ben4_titular: "",
+      add0__ben5_titular: "",
+    });
+  };
+  closeModalAdd1 = () => {
+    this.setState({
+      add1__cobA: false,
+      modalAdd1: false,
+      add1__ben1: false,
+      add1__ben2: false,
+      add1__ben3: false,
+      add1__ben4: false,
+      add1__ben5: false,
+
+      add1__ben1_nombre: "",
+      add1__ben2_nombre: "",
+      add1__ben3_nombre: "",
+      add1__ben4_nombre: "",
+      add1__ben5_nombre: "",
+      add1__ben1_materno: "",
+      add1__ben2_materno: "",
+      add1__ben3_materno: "",
+      add1__ben4_materno: "",
+      add1__ben5_materno: "",
+      add1__ben1_paterno: "",
+      add1__ben2_paterno: "",
+      add1__ben3_paterno: "",
+      add1__ben4_paterno: "",
+      add1__ben5_paterno: "",
+      add1__ben1_porcentaje: "",
+      add1__ben2_porcentaje: "",
+      add1__ben3_porcentaje: "",
+      add1__ben4_porcentaje: "",
+      add1__ben5_porcentaje: "",
+      add1__ben1_parentesco: "",
+      add1__ben2_parentesco: "",
+      add1__ben3_parentesco: "",
+      add1__ben4_parentesco: "",
+      add1__ben5_parentesco: "",
+      add1__ben1_edad: "",
+      add1__ben2_edad: "",
+      add1__ben3_edad: "",
+      add1__ben4_edad: "",
+      add1__ben5_edad: "",
+      add1__ben1_titular: "",
+      add1__ben2_titular: "",
+      add1__ben3_titular: "",
+      add1__ben4_titular: "",
+      add1__ben5_titular: "",
+    });
+  };
+  closeModalAdd2 = () => {
+    this.setState({
+      add2__cobA: false,
+      modalAdd2: false,
+      add2__ben1: false,
+      add2__ben2: false,
+      add2__ben3: false,
+      add2__ben4: false,
+      add2__ben5: false,
+
+      add2__ben1_nombre: "",
+      add2__ben2_nombre: "",
+      add2__ben3_nombre: "",
+      add2__ben4_nombre: "",
+      add2__ben5_nombre: "",
+      add2__ben1_materno: "",
+      add2__ben2_materno: "",
+      add2__ben3_materno: "",
+      add2__ben4_materno: "",
+      add2__ben5_materno: "",
+      add2__ben1_paterno: "",
+      add2__ben2_paterno: "",
+      add2__ben3_paterno: "",
+      add2__ben4_paterno: "",
+      add2__ben5_paterno: "",
+      add2__ben1_porcentaje: "",
+      add2__ben2_porcentaje: "",
+      add2__ben3_porcentaje: "",
+      add2__ben4_porcentaje: "",
+      add2__ben5_porcentaje: "",
+      add2__ben1_parentesco: "",
+      add2__ben2_parentesco: "",
+      add2__ben3_parentesco: "",
+      add2__ben4_parentesco: "",
+      add2__ben5_parentesco: "",
+      add2__ben1_edad: "",
+      add2__ben2_edad: "",
+      add2__ben3_edad: "",
+      add2__ben4_edad: "",
+      add2__ben5_edad: "",
+      add2__ben1_titular: "",
+      add2__ben2_titular: "",
+      add2__ben3_titular: "",
+      add2__ben4_titular: "",
+      add2__ben5_titular: "",
+    });
+  };
+  closeModalAdd3 = () => {
+    this.setState({
+      add3__cobA: false,
+      modalAdd3: false,
+      add3__ben1: false,
+      add3__ben2: false,
+      add3__ben3: false,
+      add3__ben4: false,
+      add3__ben5: false,
+
+      add3__ben1_nombre: "",
+      add3__ben2_nombre: "",
+      add3__ben3_nombre: "",
+      add3__ben4_nombre: "",
+      add3__ben5_nombre: "",
+      add3__ben1_materno: "",
+      add3__ben2_materno: "",
+      add3__ben3_materno: "",
+      add3__ben4_materno: "",
+      add3__ben5_materno: "",
+      add3__ben1_paterno: "",
+      add3__ben2_paterno: "",
+      add3__ben3_paterno: "",
+      add3__ben4_paterno: "",
+      add3__ben5_paterno: "",
+      add3__ben1_porcentaje: "",
+      add3__ben2_porcentaje: "",
+      add3__ben3_porcentaje: "",
+      add3__ben4_porcentaje: "",
+      add3__ben5_porcentaje: "",
+      add3__ben1_parentesco: "",
+      add3__ben2_parentesco: "",
+      add3__ben3_parentesco: "",
+      add3__ben4_parentesco: "",
+      add3__ben5_parentesco: "",
+      add3__ben1_edad: "",
+      add3__ben2_edad: "",
+      add3__ben3_edad: "",
+      add3__ben4_edad: "",
+      add3__ben5_edad: "",
+      add3__ben1_titular: "",
+      add3__ben2_titular: "",
+      add3__ben3_titular: "",
+      add3__ben4_titular: "",
+      add3__ben5_titular: "",
+    });
+  };
+  closeModalAdd4 = () => {
+    this.setState({
+      add4__cobA: false,
+      modalAdd4: false,
+      add4__ben1: false,
+      add4__ben2: false,
+      add4__ben3: false,
+      add4__ben4: false,
+      add4__ben5: false,
+
+      add4__ben1_nombre: "",
+      add4__ben2_nombre: "",
+      add4__ben3_nombre: "",
+      add4__ben4_nombre: "",
+      add4__ben5_nombre: "",
+      add4__ben1_materno: "",
+      add4__ben2_materno: "",
+      add4__ben3_materno: "",
+      add4__ben4_materno: "",
+      add4__ben5_materno: "",
+      add4__ben1_paterno: "",
+      add4__ben2_paterno: "",
+      add4__ben3_paterno: "",
+      add4__ben4_paterno: "",
+      add4__ben5_paterno: "",
+      add4__ben1_porcentaje: "",
+      add4__ben2_porcentaje: "",
+      add4__ben3_porcentaje: "",
+      add4__ben4_porcentaje: "",
+      add4__ben5_porcentaje: "",
+      add4__ben1_parentesco: "",
+      add4__ben2_parentesco: "",
+      add4__ben3_parentesco: "",
+      add4__ben4_parentesco: "",
+      add4__ben5_parentesco: "",
+      add4__ben1_edad: "",
+      add4__ben2_edad: "",
+      add4__ben3_edad: "",
+      add4__ben4_edad: "",
+      add4__ben5_edad: "",
+      add4__ben1_titular: "",
+      add4__ben2_titular: "",
+      add4__ben3_titular: "",
+      add4__ben4_titular: "",
+      add4__ben5_titular: "",
+    });
+  };
+  closeModalAdd5 = () => {
+    this.setState({
+      add5__cobA: false,
+      modalAdd5: false,
+      add5__ben1: false,
+      add5__ben2: false,
+      add5__ben3: false,
+      add5__ben4: false,
+      add5__ben5: false,
+
+      add5__ben1_nombre: "",
+      add5__ben2_nombre: "",
+      add5__ben3_nombre: "",
+      add5__ben4_nombre: "",
+      add5__ben5_nombre: "",
+      add5__ben1_materno: "",
+      add5__ben2_materno: "",
+      add5__ben3_materno: "",
+      add5__ben4_materno: "",
+      add5__ben5_materno: "",
+      add5__ben1_paterno: "",
+      add5__ben2_paterno: "",
+      add5__ben3_paterno: "",
+      add5__ben4_paterno: "",
+      add5__ben5_paterno: "",
+      add5__ben1_porcentaje: "",
+      add5__ben2_porcentaje: "",
+      add5__ben3_porcentaje: "",
+      add5__ben4_porcentaje: "",
+      add5__ben5_porcentaje: "",
+      add5__ben1_parentesco: "",
+      add5__ben2_parentesco: "",
+      add5__ben3_parentesco: "",
+      add5__ben4_parentesco: "",
+      add5__ben5_parentesco: "",
+      add5__ben1_edad: "",
+      add5__ben2_edad: "",
+      add5__ben3_edad: "",
+      add5__ben4_edad: "",
+      add5__ben5_edad: "",
+      add5__ben1_titular: "",
+      add5__ben2_titular: "",
+      add5__ben3_titular: "",
+      add5__ben4_titular: "",
+      add5__ben5_titular: "",
+    });
+  };
+
+  acceptModalTitular = () => {
+    this.setState({
+      modalTitular: false,
+    });
+  };
+  acceptModalAdd1 = () => {
+    this.setState({
+      modalAdd1: false,
+    });
+  };
+  acceptModalAdd2 = () => {
+    this.setState({
+      modalAdd2: false,
+    });
+  };
+  acceptModalAdd3 = () => {
+    this.setState({
+      modalAdd3: false,
+    });
+  };
+  acceptModalAdd4 = () => {
+    this.setState({
+      modalAdd4: false,
+    });
+  };
+  acceptModalAdd5 = () => {
+    this.setState({
+      modalAdd5: false,
+    });
+  };
+
+  acc_add0__ben1 = () => {
+    if (this.state.add0__ben1 === false) {
+      this.setState({ add0__ben1: true });
     } else {
       this.setState({
-        costDeductible__add0: "",
+        add0__ben1: false,
+        add0__ben1_nombre: "",
+        add0__ben1_paterno: "",
+        add0__ben1_materno: "",
+        add0__ben1_porcentaje: "",
+        add0__ben1_parentesco: "",
+        add0__ben1_edad: "",
+        add0__ben1_titular: "",
       });
     }
   };
-  costAdd1 = () => {
-    if (this.state.deductible__add1 === "") {
-      this.setState({
-        costDeductible__add1: 0,
-      });
+  acc_add0__ben2 = () => {
+    if (this.state.add0__ben2 === false) {
+      this.setState({ add0__ben2: true });
     } else {
       this.setState({
-        costDeductible__add1: "",
+        add0__ben2: false,
+        add0__ben2_nombre: "",
+        add0__ben2_paterno: "",
+        add0__ben2_materno: "",
+        add0__ben2_porcentaje: "",
+        add0__ben2_parentesco: "",
+        add0__ben2_edad: "",
+        add0__ben2_titular: "",
       });
     }
   };
-  costAdd2 = () => {
-    if (this.state.deductible__add2 === "") {
-      this.setState({
-        costDeductible__add2: 0,
-      });
+  acc_add0__ben3 = () => {
+    if (this.state.add0__ben3 === false) {
+      this.setState({ add0__ben3: true });
     } else {
       this.setState({
-        costDeductible__add2: "",
+        add0__ben3: false,
+        add0__ben3_nombre: "",
+        add0__ben3_paterno: "",
+        add0__ben3_materno: "",
+        add0__ben3_porcentaje: "",
+        add0__ben3_parentesco: "",
+        add0__ben3_edad: "",
+        add0__ben3_titular: "",
       });
     }
   };
-  costAdd3 = () => {
-    if (this.state.deductible__add3 === "") {
-      this.setState({
-        costDeductible__add3: 0,
-      });
+  acc_add0__ben4 = () => {
+    if (this.state.add0__ben4 === false) {
+      this.setState({ add0__ben4: true });
     } else {
       this.setState({
-        costDeductible__add3: "",
+        add0__ben4: false,
+        add0__ben4_nombre: "",
+        add0__ben4_paterno: "",
+        add0__ben4_materno: "",
+        add0__ben4_porcentaje: "",
+        add0__ben4_parentesco: "",
+        add0__ben4_edad: "",
+        add0__ben4_titular: "",
       });
     }
   };
-  costAdd4 = () => {
-    if (this.state.deductible__add4 === "") {
-      this.setState({
-        costDeductible__add4: 0,
-      });
+  acc_add0__ben5 = () => {
+    if (this.state.add0__ben5 === false) {
+      this.setState({ add0__ben5: true });
     } else {
       this.setState({
-        costDeductible__add4: "",
+        add0__ben5: false,
+        add0__ben5_nombre: "",
+        add0__ben5_paterno: "",
+        add0__ben5_materno: "",
+        add0__ben5_porcentaje: "",
+        add0__ben5_parentesco: "",
+        add0__ben5_edad: "",
+        add0__ben5_titular: "",
       });
     }
   };
-  costAdd5 = () => {
-    if (this.state.deductible__add5 === "") {
-      this.setState({
-        costDeductible__add5: 0,
-      });
+  acc_add1__ben1 = () => {
+    if (this.state.add1__ben1 === false) {
+      this.setState({ add1__ben1: true });
     } else {
       this.setState({
-        costDeductible__add5: "",
+        add1__ben1: false,
+        add1__ben1_nombre: "",
+        add1__ben1_paterno: "",
+        add1__ben1_materno: "",
+        add1__ben1_porcentaje: "",
+        add1__ben1_parentesco: "",
+        add1__ben1_edad: "",
+        add1__ben1_titular: "",
+      });
+    }
+  };
+  acc_add1__ben2 = () => {
+    if (this.state.add1__ben2 === false) {
+      this.setState({ add1__ben2: true });
+    } else {
+      this.setState({
+        add1__ben2: false,
+        add1__ben2_nombre: "",
+        add1__ben2_paterno: "",
+        add1__ben2_materno: "",
+        add1__ben2_porcentaje: "",
+        add1__ben2_parentesco: "",
+        add1__ben2_edad: "",
+        add1__ben2_titular: "",
+      });
+    }
+  };
+  acc_add1__ben3 = () => {
+    if (this.state.add1__ben3 === false) {
+      this.setState({ add1__ben3: true });
+    } else {
+      this.setState({
+        add1__ben3: false,
+        add1__ben3_nombre: "",
+        add1__ben3_paterno: "",
+        add1__ben3_materno: "",
+        add1__ben3_porcentaje: "",
+        add1__ben3_parentesco: "",
+        add1__ben3_edad: "",
+        add1__ben3_titular: "",
+      });
+    }
+  };
+  acc_add1__ben4 = () => {
+    if (this.state.add1__ben4 === false) {
+      this.setState({ add1__ben4: true });
+    } else {
+      this.setState({
+        add1__ben4: false,
+        add1__ben4_nombre: "",
+        add1__ben4_paterno: "",
+        add1__ben4_materno: "",
+        add1__ben4_porcentaje: "",
+        add1__ben4_parentesco: "",
+        add1__ben4_edad: "",
+        add1__ben4_titular: "",
+      });
+    }
+  };
+  acc_add1__ben5 = () => {
+    if (this.state.add1__ben5 === false) {
+      this.setState({ add1__ben5: true });
+    } else {
+      this.setState({
+        add1__ben5: false,
+        add1__ben5_nombre: "",
+        add1__ben5_paterno: "",
+        add1__ben5_materno: "",
+        add1__ben5_porcentaje: "",
+        add1__ben5_parentesco: "",
+        add1__ben5_edad: "",
+        add1__ben5_titular: "",
+      });
+    }
+  };
+  acc_add2__ben1 = () => {
+    if (this.state.add2__ben1 === false) {
+      this.setState({ add2__ben1: true });
+    } else {
+      this.setState({
+        add2__ben1: false,
+        add2__ben1_nombre: "",
+        add2__ben1_paterno: "",
+        add2__ben1_materno: "",
+        add2__ben1_porcentaje: "",
+        add2__ben1_parentesco: "",
+        add2__ben1_edad: "",
+        add2__ben1_titular: "",
+      });
+    }
+  };
+  acc_add2__ben2 = () => {
+    if (this.state.add2__ben2 === false) {
+      this.setState({ add2__ben2: true });
+    } else {
+      this.setState({
+        add2__ben2: false,
+        add2__ben2_nombre: "",
+        add2__ben2_paterno: "",
+        add2__ben2_materno: "",
+        add2__ben2_porcentaje: "",
+        add2__ben2_parentesco: "",
+        add2__ben2_edad: "",
+        add2__ben2_titular: "",
+      });
+    }
+  };
+  acc_add2__ben3 = () => {
+    if (this.state.add2__ben3 === false) {
+      this.setState({ add2__ben3: true });
+    } else {
+      this.setState({
+        add2__ben3: false,
+        add2__ben3_nombre: "",
+        add2__ben3_paterno: "",
+        add2__ben3_materno: "",
+        add2__ben3_porcentaje: "",
+        add2__ben3_parentesco: "",
+        add2__ben3_edad: "",
+        add2__ben3_titular: "",
+      });
+    }
+  };
+  acc_add2__ben4 = () => {
+    if (this.state.add2__ben4 === false) {
+      this.setState({ add2__ben4: true });
+    } else {
+      this.setState({
+        add2__ben4: false,
+        add2__ben4_nombre: "",
+        add2__ben4_paterno: "",
+        add2__ben4_materno: "",
+        add2__ben4_porcentaje: "",
+        add2__ben4_parentesco: "",
+        add2__ben4_edad: "",
+        add2__ben4_titular: "",
+      });
+    }
+  };
+  acc_add2__ben5 = () => {
+    if (this.state.add2__ben5 === false) {
+      this.setState({ add2__ben5: true });
+    } else {
+      this.setState({
+        add2__ben5: false,
+        add2__ben5_nombre: "",
+        add2__ben5_paterno: "",
+        add2__ben5_materno: "",
+        add2__ben5_porcentaje: "",
+        add2__ben5_parentesco: "",
+        add2__ben5_edad: "",
+        add2__ben5_titular: "",
+      });
+    }
+  };
+  acc_add3__ben1 = () => {
+    if (this.state.add3__ben1 === false) {
+      this.setState({ add3__ben1: true });
+    } else {
+      this.setState({
+        add3__ben1: false,
+        add3__ben1_nombre: "",
+        add3__ben1_paterno: "",
+        add3__ben1_materno: "",
+        add3__ben1_porcentaje: "",
+        add3__ben1_parentesco: "",
+        add3__ben1_edad: "",
+        add3__ben1_titular: "",
+      });
+    }
+  };
+  acc_add3__ben2 = () => {
+    if (this.state.add3__ben2 === false) {
+      this.setState({ add3__ben2: true });
+    } else {
+      this.setState({
+        add3__ben2: false,
+        add3__ben2_nombre: "",
+        add3__ben2_paterno: "",
+        add3__ben2_materno: "",
+        add3__ben2_porcentaje: "",
+        add3__ben2_parentesco: "",
+        add3__ben2_edad: "",
+        add3__ben2_titular: "",
+      });
+    }
+  };
+  acc_add3__ben3 = () => {
+    if (this.state.add3__ben3 === false) {
+      this.setState({ add3__ben3: true });
+    } else {
+      this.setState({
+        add3__ben3: false,
+        add3__ben3_nombre: "",
+        add3__ben3_paterno: "",
+        add3__ben3_materno: "",
+        add3__ben3_porcentaje: "",
+        add3__ben3_parentesco: "",
+        add3__ben3_edad: "",
+        add3__ben3_titular: "",
+      });
+    }
+  };
+  acc_add3__ben4 = () => {
+    if (this.state.add3__ben4 === false) {
+      this.setState({ add3__ben4: true });
+    } else {
+      this.setState({
+        add3__ben4: false,
+        add3__ben4_nombre: "",
+        add3__ben4_paterno: "",
+        add3__ben4_materno: "",
+        add3__ben4_porcentaje: "",
+        add3__ben4_parentesco: "",
+        add3__ben4_edad: "",
+        add3__ben4_titular: "",
+      });
+    }
+  };
+  acc_add3__ben5 = () => {
+    if (this.state.add3__ben5 === false) {
+      this.setState({ add3__ben5: true });
+    } else {
+      this.setState({
+        add3__ben5: false,
+        add3__ben5_nombre: "",
+        add3__ben5_paterno: "",
+        add3__ben5_materno: "",
+        add3__ben5_porcentaje: "",
+        add3__ben5_parentesco: "",
+        add3__ben5_edad: "",
+        add3__ben5_titular: "",
+      });
+    }
+  };
+  acc_add4__ben1 = () => {
+    if (this.state.add4__ben1 === false) {
+      this.setState({ add4__ben1: true });
+    } else {
+      this.setState({
+        add4__ben1: false,
+        add4__ben1_nombre: "",
+        add4__ben1_paterno: "",
+        add4__ben1_materno: "",
+        add4__ben1_porcentaje: "",
+        add4__ben1_parentesco: "",
+        add4__ben1_edad: "",
+        add4__ben1_titular: "",
+      });
+    }
+  };
+  acc_add4__ben2 = () => {
+    if (this.state.add4__ben2 === false) {
+      this.setState({ add4__ben2: true });
+    } else {
+      this.setState({
+        add4__ben2: false,
+        add4__ben2_nombre: "",
+        add4__ben2_paterno: "",
+        add4__ben2_materno: "",
+        add4__ben2_porcentaje: "",
+        add4__ben2_parentesco: "",
+        add4__ben2_edad: "",
+        add4__ben2_titular: "",
+      });
+    }
+  };
+  acc_add4__ben3 = () => {
+    if (this.state.add4__ben3 === false) {
+      this.setState({ add4__ben3: true });
+    } else {
+      this.setState({
+        add4__ben3: false,
+        add4__ben3_nombre: "",
+        add4__ben3_paterno: "",
+        add4__ben3_materno: "",
+        add4__ben3_porcentaje: "",
+        add4__ben3_parentesco: "",
+        add4__ben3_edad: "",
+        add4__ben3_titular: "",
+      });
+    }
+  };
+  acc_add4__ben4 = () => {
+    if (this.state.add4__ben4 === false) {
+      this.setState({ add4__ben4: true });
+    } else {
+      this.setState({
+        add4__ben4: false,
+        add4__ben4_nombre: "",
+        add4__ben4_paterno: "",
+        add4__ben4_materno: "",
+        add4__ben4_porcentaje: "",
+        add4__ben4_parentesco: "",
+        add4__ben4_edad: "",
+        add4__ben4_titular: "",
+      });
+    }
+  };
+  acc_add4__ben5 = () => {
+    if (this.state.add4__ben5 === false) {
+      this.setState({ add4__ben5: true });
+    } else {
+      this.setState({
+        add4__ben5: false,
+        add4__ben5_nombre: "",
+        add4__ben5_paterno: "",
+        add4__ben5_materno: "",
+        add4__ben5_porcentaje: "",
+        add4__ben5_parentesco: "",
+        add4__ben5_edad: "",
+        add4__ben5_titular: "",
+      });
+    }
+  };
+  acc_add5__ben1 = () => {
+    if (this.state.add5__ben1 === false) {
+      this.setState({ add5__ben1: true });
+    } else {
+      this.setState({
+        add5__ben1: false,
+        add5__ben1_nombre: "",
+        add5__ben1_paterno: "",
+        add5__ben1_materno: "",
+        add5__ben1_porcentaje: "",
+        add5__ben1_parentesco: "",
+        add5__ben1_edad: "",
+        add5__ben1_titular: "",
+      });
+    }
+  };
+  acc_add5__ben2 = () => {
+    if (this.state.add5__ben2 === false) {
+      this.setState({ add5__ben2: true });
+    } else {
+      this.setState({
+        add5__ben2: false,
+        add5__ben2_nombre: "",
+        add5__ben2_paterno: "",
+        add5__ben2_materno: "",
+        add5__ben2_porcentaje: "",
+        add5__ben2_parentesco: "",
+        add5__ben2_edad: "",
+        add5__ben2_titular: "",
+      });
+    }
+  };
+  acc_add5__ben3 = () => {
+    if (this.state.add5__ben3 === false) {
+      this.setState({ add5__ben3: true });
+    } else {
+      this.setState({
+        add5__ben3: false,
+        add5__ben3_nombre: "",
+        add5__ben3_paterno: "",
+        add5__ben3_materno: "",
+        add5__ben3_porcentaje: "",
+        add5__ben3_parentesco: "",
+        add5__ben3_edad: "",
+        add5__ben3_titular: "",
+      });
+    }
+  };
+  acc_add5__ben4 = () => {
+    if (this.state.add5__ben4 === false) {
+      this.setState({ add5__ben4: true });
+    } else {
+      this.setState({
+        add5__ben4: false,
+        add5__ben4_nombre: "",
+        add5__ben4_paterno: "",
+        add5__ben4_materno: "",
+        add5__ben4_porcentaje: "",
+        add5__ben4_parentesco: "",
+        add5__ben4_edad: "",
+        add5__ben4_titular: "",
+      });
+    }
+  };
+  acc_add5__ben5 = () => {
+    if (this.state.add5__ben5 === false) {
+      this.setState({ add5__ben5: true });
+    } else {
+      this.setState({
+        add5__ben5: false,
+        add5__ben5_nombre: "",
+        add5__ben5_paterno: "",
+        add5__ben5_materno: "",
+        add5__ben5_porcentaje: "",
+        add5__ben5_parentesco: "",
+        add5__ben5_edad: "",
+        add5__ben5_titular: "",
       });
     }
   };
@@ -451,25 +1468,25 @@ class MainGM extends Component {
          SEND DATA
   ____________________________*/
   sendStep1 = () => {
-    this.nextStep();
+    console.log("enviar 1");
   };
   sendStep2 = () => {
-    this.nextStep();
+    console.log("enviar 2");
   };
   sendStep3 = () => {
-    this.nextStep();
+    console.log("enviar 3");
   };
   sendStep4 = () => {
-    this.nextStep();
+    console.log("enviar 4");
   };
   sendStep5 = () => {
-    this.nextStep();
+    console.log("enviar 5");
   };
   sendStep6 = () => {
-    this.nextStep();
+    console.log("enviar 6");
   };
   sendStep7 = () => {
-    this.nextStep();
+    console.log("enviar 7");
   };
 
   render() {
@@ -480,17 +1497,29 @@ class MainGM extends Component {
             state={this.state}
             activeStep={this.activeStep}
             handleChange={this.handleChange}
+            nextStep={this.nextStep}
             sendStep1={this.sendStep1}
           />
         );
       case 2:
         return (
           <Step2GM
-            data={this.state}
+            state={this.state}
             activeStep={this.activeStep}
             handleChange={this.handleChange}
+            nextStep={this.nextStep}
             prevStep={this.prevStep}
             sendStep2={this.sendStep2}
+            add1True={this.add1True}
+            add2True={this.add2True}
+            add3True={this.add3True}
+            add4True={this.add4True}
+            add5True={this.add5True}
+            add1False={this.add1False}
+            add2False={this.add2False}
+            add3False={this.add3False}
+            add4False={this.add4False}
+            add5False={this.add5False}
             clearAdd1={this.clearAdd1}
             clearAdd2={this.clearAdd2}
             clearAdd3={this.clearAdd3}
@@ -512,18 +1541,12 @@ class MainGM extends Component {
       case 4:
         return (
           <Step4GM
-            data={this.state}
+            state={this.state}
             activeStep={this.activeStep}
             handleChange={this.handleChange}
-            handleChangeCheck={this.handleChangeCheck}
+            nextStep={this.nextStep}
             prevStep={this.prevStep}
             sendStep4={this.sendStep4}
-            costAdd0={this.costAdd0}
-            costAdd1={this.costAdd1}
-            costAdd2={this.costAdd2}
-            costAdd3={this.costAdd3}
-            costAdd4={this.costAdd4}
-            costAdd5={this.costAdd5}
           />
         );
       case 5:
@@ -532,10 +1555,58 @@ class MainGM extends Component {
             state={this.state}
             activeStep={this.activeStep}
             handleChange={this.handleChange}
-            handleChangeCheck={this.handleChangeCheck}
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             sendStep5={this.sendStep5}
+            handleCheckCobertura={this.handleCheckCobertura}
+            handleCheckCobAT={this.handleCheckCobAT}
+            handleCheckCobA1={this.handleCheckCobA1}
+            handleCheckCobA2={this.handleCheckCobA2}
+            handleCheckCobA3={this.handleCheckCobA3}
+            handleCheckCobA4={this.handleCheckCobA4}
+            handleCheckCobA5={this.handleCheckCobA5}
+            closeModalTitular={this.closeModalTitular}
+            closeModalAdd1={this.closeModalAdd1}
+            closeModalAdd2={this.closeModalAdd2}
+            closeModalAdd3={this.closeModalAdd3}
+            closeModalAdd4={this.closeModalAdd4}
+            closeModalAdd5={this.closeModalAdd5}
+            acceptModalTitular={this.acceptModalTitular}
+            acceptModalAdd1={this.acceptModalAdd1}
+            acceptModalAdd2={this.acceptModalAdd2}
+            acceptModalAdd3={this.acceptModalAdd3}
+            acceptModalAdd4={this.acceptModalAdd4}
+            acceptModalAdd5={this.acceptModalAdd5}
+            acc_add0__ben1={this.acc_add0__ben1}
+            acc_add0__ben2={this.acc_add0__ben2}
+            acc_add0__ben3={this.acc_add0__ben3}
+            acc_add0__ben4={this.acc_add0__ben4}
+            acc_add0__ben5={this.acc_add0__ben5}
+            acc_add1__ben1={this.acc_add1__ben1}
+            acc_add1__ben2={this.acc_add1__ben2}
+            acc_add1__ben3={this.acc_add1__ben3}
+            acc_add1__ben4={this.acc_add1__ben4}
+            acc_add1__ben5={this.acc_add1__ben5}
+            acc_add2__ben1={this.acc_add2__ben1}
+            acc_add2__ben2={this.acc_add2__ben2}
+            acc_add2__ben3={this.acc_add2__ben3}
+            acc_add2__ben4={this.acc_add2__ben4}
+            acc_add2__ben5={this.acc_add2__ben5}
+            acc_add3__ben1={this.acc_add3__ben1}
+            acc_add3__ben2={this.acc_add3__ben2}
+            acc_add3__ben3={this.acc_add3__ben3}
+            acc_add3__ben4={this.acc_add3__ben4}
+            acc_add3__ben5={this.acc_add3__ben5}
+            acc_add4__ben1={this.acc_add4__ben1}
+            acc_add4__ben2={this.acc_add4__ben2}
+            acc_add4__ben3={this.acc_add4__ben3}
+            acc_add4__ben4={this.acc_add4__ben4}
+            acc_add4__ben5={this.acc_add4__ben5}
+            acc_add5__ben1={this.acc_add5__ben1}
+            acc_add5__ben2={this.acc_add5__ben2}
+            acc_add5__ben3={this.acc_add5__ben3}
+            acc_add5__ben4={this.acc_add5__ben4}
+            acc_add5__ben5={this.acc_add5__ben5}
           />
         );
       case 6:
@@ -561,8 +1632,6 @@ class MainGM extends Component {
             handleCheckChangeImg={this.handleCheckChangeImg}
           />
         );
-      case 8:
-        return <EndStep state={this.state} />;
       default:
         return (
           <section>

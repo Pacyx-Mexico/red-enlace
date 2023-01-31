@@ -1,88 +1,37 @@
-import { useEffect } from "react";
-import styled from "styled-components";
-import NextPrevStep from "../../Buttons/NextPrevStep";
+import React, { Component } from "react";
 import StepIndicatorAutos from "./StepIndicatorAutos";
-import SliderPackageCars from "./Inputs/PackagesCars/SliderPackageCars";
-import InstructionForm from "../../forms/InstructionForm";
+import InstructionForm from "../InstructionForm";
+import NextPrevStep from "../NextPrevStep";
+import AlertForm from "../AlertForm";
+import CotizacionAutos from "../Autos/Inputs/CotizacionAutos";
 
-function Step3Autos({ data, activeStep, prevStep, handleChangePackage }) {
-  useEffect(() => {
-    activeStep();
-  }, []);
+class Step3Autos extends Component {
 
-  return (
-    <>
-      <StepIndicatorAutos state={data} />
-      <InstructionForm instruction="Seleeciona el paquete de tu preferencia" />
+  render() {
+    return (
+      <section>
+        <StepIndicatorAutos state={this.props.state} />
 
-      <ContSlider className="pc">
-        <SliderPackageCars
-          data={data}
-          handleChangePackage={handleChangePackage}
-          navigation={false}
-          slides={5}
+        <InstructionForm instruction="Esta es tu cotización" />
+
+        <CotizacionAutos
+          state={this.props.state}
+          error={this.state}
+          activeStep={this.props.activeStep}
+          validationONStep1={this.validationONStep1}
+          handleChange={this.props.handleChange}
         />
-      </ContSlider>
 
-      <ContSlider className="tablet">
-        <SliderPackageCars
-          data={data}
-          handleChangePackage={handleChangePackage}
-          navigation={true}
-          slides={4}
+        <NextPrevStep
+          icon={true}
+          text="Continuar"
+          off={true}
+          prevStep={this.props.prevStep}
+          nextStep={this.props.nextStep}
         />
-      </ContSlider>
-
-      <ContSlider className="phone">
-        <SliderPackageCars
-          data={data}
-          handleChangePackage={handleChangePackage}
-          navigation={true}
-          slides={1}
-        />
-      </ContSlider>
-
-      <NextPrevStep
-        icon={true}
-        text="Siguiente"
-        prevStep={prevStep}
-        hideBtn={true}
-      />
-    </>
-  );
+      </section>
+    );
+  }
 }
-
-const ContSlider = styled.div`
-  width: 100%;
-  overflow: hidden;
-
-  &.pc {
-    display: block;
-  }
-  &.tablet {
-    display: none;
-  }
-  &.phone {
-    display: none;
-  }
-
-  @media screen and (max-width: 1200px) {
-    &.pc {
-      display: none;
-    }
-    &.tablet {
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    &.tablet {
-      display: none;
-    }
-    &.phone {
-      display: block;
-    }
-  }
-`;
 
 export default Step3Autos;

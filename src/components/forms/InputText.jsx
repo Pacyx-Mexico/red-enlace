@@ -30,7 +30,8 @@ export default function InputText({
 const Input = styled.input`
   width: 100%;
   height: 5.6rem;
-  font-size: var(--inputText-size);
+  font-size: 2.22rem;
+  font-size: 2.22rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 1rem;

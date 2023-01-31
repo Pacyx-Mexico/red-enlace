@@ -6,7 +6,8 @@ function NumberStepIndicator({ number, line, text, active, complete }) {
     <StepIndicatorContainer>
       <NumberLineContainer line={line}>
         <NumberStep complete={complete} active={active}>
-          {complete ? <BiCheck /> :  <>{number}</>}
+          <p>{number}</p>
+          <BiCheck />
         </NumberStep>
         <LineStep complete={complete} line={line}></LineStep>
       </NumberLineContainer>
@@ -38,8 +39,6 @@ const NumberStep = styled.div`
   width: 4.4rem;
   border-radius: 50%;
   font-weight: 600;
-  font-size: 2rem;
-
 
   color: ${({ active }) =>
     active ? "var(--secondary-color2);" : "var(--off-color)"};
@@ -54,6 +53,13 @@ const NumberStep = styled.div`
       ? "background-color: var(--secondary-color2); color: #fff; border: 2px solid var(--secondary-color2);"
       : ""}
   transition: all ease-in-out 0.2s;
+
+  p {
+    font-size: 2rem;
+
+    transform: scale(${({ complete }) => (complete ? "0" : "1")});
+    transition: all ease-in-out 0.3s;
+  }
 
   svg {
     font-size: 4rem;
@@ -72,6 +78,7 @@ const LineStep = styled.div`
 
   @media screen and (max-width: 600px) {
     width: 10%;
+
   }
 `;
 

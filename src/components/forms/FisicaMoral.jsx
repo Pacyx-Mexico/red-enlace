@@ -30,7 +30,8 @@ const MoralFisica = styled.div`
   justify-content: space-evenly;
   margin: 0 auto;
   font-size: 1rem;
-  padding-top: 2em;
+  padding-top: 4em;
+  padding-bottom: 2em;
 
   @media screen and (max-width: 600px) {
     width: 80%;
