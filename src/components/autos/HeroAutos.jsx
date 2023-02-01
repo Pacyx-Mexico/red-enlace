@@ -13,7 +13,7 @@ export const HeroAutos = () => {
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+732.png"}
-        alt="Gradient background element"
+        alt="fondo Gradiente"
       />
       <div className="align-items-center w-75 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-start text-center align-items-start">
@@ -43,7 +43,7 @@ export const HeroAutos = () => {
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
             src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+738.png"}
-            alt="Gradient background element"
+            alt="fondo Gradiente"
           />
         </div>
         <div className="d-flex justify-content-center w-100 d-md-none pt-5 mt-50">

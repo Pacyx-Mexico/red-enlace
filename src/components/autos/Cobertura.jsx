@@ -147,7 +147,7 @@ export const Cobertura = () => {
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
               <div className="text-center d-flex align-content-center justify-content-center">
                 <div className="icon-height icon-height-platform_icon mx-auto d-flex align-content-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+739.png" alt="" />
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+739.png" alt="Icono policia" />
                 </div>
               </div>
 {/*               <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">

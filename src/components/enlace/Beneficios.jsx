@@ -98,7 +98,7 @@ export const Beneficios = () => {
 
               <div className="d-flex align-content-center justify-content-center">
                 <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+738.png" alt="Icon money" className="icon"/>
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+738.png" alt="Icono dinero" className="icon"/>
                 </div>
               </div>
 {/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
@@ -120,7 +120,7 @@ export const Beneficios = () => {
               
               <div className="d-flex align-content-center justify-content-center">
                 <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+999.png" alt="Icon 72hrs" className="icon"/>
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+999.png" alt="Icono 72hrs" className="icon"/>
                 </div>
               </div>
 {/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
@@ -140,7 +140,7 @@ export const Beneficios = () => {
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
               <div className="d-flex align-content-center justify-content-center">
                 <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+740.png" alt="Icon hospital" className="icon"/>
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+740.png" alt="Icono hospital" className="icon"/>
                 </div>
               </div>
 {/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">
@@ -160,7 +160,7 @@ export const Beneficios = () => {
             <div className="col-auto d-flex flex-column justify-content-center align-items-center">
               <div className="d-flex align-content-center justify-content-center">
                 <div className="icon-height mx-auto d-flex align-content-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+740.png" alt="Icon hand" className="icon"/>
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+740.png" alt="Icono hand" className="icon"/>
                 </div>
               </div>
 {/*               <div className="card d-flex justify-content-center align-items-center border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg">

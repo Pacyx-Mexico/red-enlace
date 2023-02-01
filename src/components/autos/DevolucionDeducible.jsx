@@ -21,9 +21,9 @@ export const DevolucionDeducible = () => {
             <Image
               className="gradient_img_bg position-absolute"
               src={gradientImageBg}
-              alt="Gradient background element"
+              alt="fondo Gradiente"
             />
-            <Image className="phone_img position-absolute" src={phone} alt="" />
+            <Image className="phone_img position-absolute" src={phone} alt="telefono" />
           </div>
         </div>
       </div>

@@ -110,7 +110,7 @@ export const NewCharacteristics = () => {
                 onMouseOver={handleMouseOver4}
                 onMouseOut={handleMouseOut4}
               >
-                Innovación
+                innovación
               </p>
               {isHovering4 && (
                 <p className="fs-2 text-center ">
@@ -202,7 +202,7 @@ export const NewCharacteristics = () => {
       <div className="d-flex justify-content-center w-100 d-none d-md-block">
         <img
           src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Recurso+2.png"
-          alt=""
+          alt="Mancha"
           className="green_stain_bg"
         />
       </div>

@@ -13,7 +13,7 @@ export const GastosMedicosHero = () => {
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png"}
-        alt="Gradient background element"
+        alt="fondo Gradiente"
       />
       <div className="align-items-center position-relative top-25 w-75 d-none d-lg-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
@@ -42,7 +42,7 @@ export const GastosMedicosHero = () => {
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
             src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Gastos-medicos-mb.png"}
-            alt="Gradient background element"
+            alt="fondo Gradiente"
           />
         </div>
         <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">

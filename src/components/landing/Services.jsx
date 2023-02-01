@@ -41,12 +41,12 @@ export const Services = () => {
           <div className="position-relative">
             <img
               src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png"
-              alt=""
+              alt="Mano"
               className="hand hand-right position-absolute"
             />
             <img
               src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND1.png"
-              alt=""
+              alt="Mano"
               className="hand hand-left position-absolute"
             />
           </div>

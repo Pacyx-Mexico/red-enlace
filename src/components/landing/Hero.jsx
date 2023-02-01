@@ -22,19 +22,19 @@ export const Hero = () => {
         src={
           "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-principal.png"
         }
-        alt="Gradient background element"
+        alt="fondo Gradiente"
       />
       <Image
         className="gradient_img_bg position-absolute d-none d-lg-block"
         src={
           "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-principal.png"
         }
-        alt="Gradient background element"
+        alt="fondo Gradiente"
       />
       <Image
         className="man_img-bg position-absolute d-none d-lg-block"
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre.png"}
-        alt=""
+        alt="Hombre hero"
       />
       <div className="container position-absolute RE_img_bg d-none d-lg-block">
         <RedEnlaceBg />
@@ -82,6 +82,7 @@ export const Hero = () => {
           <Image
             className="redenlace_logo position-absolute d-none d-lg-block"
             src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+739.png"
+            alt="Red enlace logo"
           />
         </div>
       </div>
@@ -103,21 +104,21 @@ export const Hero = () => {
           src={
             "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png"
           }
-          alt=""
+          alt="Hombre mb"
         />
         <Image
           className="gradient_img_bg_sm position-absolute d-lg-none"
           src={
             "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg.png"
           }
-          alt="Gradient background element"
+          alt="fondo Gradiente"
         />
         <Image
           className="redlogo position-absolute d-m-none"
           src={
             "https://elementos-red-enlace.s3.amazonaws.com/Landing/RedLogo.png"
           }
-          alt="Gradient background element"
+          alt="fondo Gradiente"
         />
       </div>
     </HeroContainer>

@@ -10,9 +10,9 @@ export const Special = () => {
             <Image
               className="gradient_img_bg position-absolute"
               src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
-              alt="Gradient background element"
+              alt="fondo Gradiente"
             />
-            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="" />
+            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="telefono" />
           </div>
           <div className="col-lg-7 col-xl-6 offset-lg-1 d-flex flex-column justify-content-center align-items-start text-start text-lg-start">
             <h1 className="fw-normal mt-4">Contratación</h1>
@@ -39,9 +39,9 @@ export const Special = () => {
             <Image
               className="gradient_img_bg position-absolute"
               src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
-              alt="Gradient background element"
+              alt="fondo Gradiente"
             />
-            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="" />
+            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="telefono" />
             </div>
             <div className="d-flex flex-column align-items-center text-center special__last-text">
               <p className="mb-5 fs-30 fw-light">

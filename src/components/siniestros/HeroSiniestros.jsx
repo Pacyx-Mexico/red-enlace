@@ -7,7 +7,7 @@ export const HeroSiniestros = () => {
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+737.png"}
-        alt="Gradient background element"
+        alt="fondo Gradiente"
       />
       <div className="align-items-center position-absolute top-50 w-100 d-none d-lg-flex ms-10">
         <div className="home__info d-flex flex-column justify-content-center text-start align-items-start">
