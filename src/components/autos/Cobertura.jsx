@@ -27,15 +27,15 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-500 lh-sm text-dark fs-25">
+              <p className="card-title fw-normal lh-sm text-dark fs-25">
                 Llaves perdidas
                 <br />
-                (máximo 1 al año)
+                <span className="fw-normal fs-15">(máximo 1 al año)</span>
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark fs-25 mt-4 pt-5">
                 Máxima suma asegurada $5,000
               </p>
-              <p className="card-title fw-500 lh-sm text-dark fs-30">
+              <p className="card-title fw-normal mt-5 lh-sm text-dark fs-25">
                 Costo anual: $120.00
               </p>
             </div>
@@ -47,15 +47,14 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-500 lh-sm text-dark fs-25">
+              <p className="card-title fw-normal mt-4 lh-sm text-dark fs-25">
                 Cristalazo
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
-                Dev. deducible cristal y
-                <br />
-                $5,000.00 de ayuda por robo
+              <p className="card-title fw-normal lh-sm text-dark fs-25 mt-5 pt-5">
+                Dev. deducible cristal y $1,000.00 <br />
+                 de ayuda por robo de bienes
               </p>
-              <p className="card-title fw-500 lh-sm text-dark fs-30">
+              <p className="card-title fw-normal lh-sm text-dark mt-5 fs-25">
                 Costo $670.00
               </p>
             </div>
@@ -67,25 +66,26 @@ export const Cobertura = () => {
               </div>
             </div>
             <div className="card-body px-2 pb-0 mt-5 text-center">
-              <p className="card-title fw-500 lh-sm text-dark fs-25">
-                Plataformas con socios conductores <br />
-                (Cuotas anuales)
+              <p className="card-title fw-normal lh-sm text-dark fs-25">
+                Ayuda para app de <br />
+                transporte <br />
+                <span className="fw-normal fs-15">(máximo 1 al año)</span>
               </p>
-              <p className="card-title fw-normal lh-sm text-dark fs-25 pt-5">
+              <p className="card-title fw-normal lh-sm text-dark mt-3 fs-25 pt-5">
                 Por pérdida parcial, total o corralón.
               </p>
-              <p className="card-title fw-500 lh-sm text-dark fs-30">
-                $10,000 por 20 días <br />
-                $15,000 por 30 días
+              <p className="card-title fw-normal lh-sm mt-5 text-dark fs-25">
+                Hasta $10,000 por 20 días <br />
+                Hasta $15,000 por 30 días
                 <br />
-                $20,000 por 40 días
+                Hasta $20,000 por 40 días
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="container py-3 position-relative h-70 d-md-none">
+      <div className="container py-3 position-relative h-750 d-md-none">
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -107,15 +107,15 @@ export const Cobertura = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 lh-sm text-dark fs-30">
-                  <span className="fw-500 fs-30">Llaves perdidas</span>
+                <p className="card-title fw-normal lh-sm text-dark fs-30">
+                  <span className="fw-normal fs-30">Llaves perdidas</span>
                   <br />
                   (máximo 1 al año)
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-30 pt-5">
                   Máxima suma asegurada $5,000
                 </p>
-                <p className="card-title fs-11 fw-500 lh-sm text-dark mt-5">
+                <p className="card-title fs-30 fw-normal lh-sm text-dark mt-5">
                   Costo anual: $120.00
                 </p>
               </div>
@@ -129,13 +129,13 @@ export const Cobertura = () => {
                 </div>
               </div>
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-medium lh-sm text-dark fs-30">
-                  <span className="fw-500 fs">Cristalazo</span>
+                <p className="card-title fw-normal lh-sm text-dark fs-30">
+                  Cristalazo
                 </p>
-                <p className="card-title fw-500 lh-sm text-dark fs-30 mt-5 pt-5">
+                <p className="card-title fw-normal lh-sm text-dark fs-30 mt-5 pt-5">
                   Dev. deducible cristal y
                   <br />
-                  $5,000.00 de ayuda por robo
+                  $1,000.00 de ayuda por robo de bienes
                 </p>
                 <p className="card-title fs-11 fw-500 lh-sm text-dark mt-5">
                   Costo $670.00
@@ -147,7 +147,7 @@ export const Cobertura = () => {
             <div className="col-auto d-flex flex-column justify-content-ceenter align-items-center">
               <div className="text-center d-flex align-content-center justify-content-center">
                 <div className="icon-height icon-height-platform_icon mx-auto d-flex align-content-center justify-content-center">
-                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+739.png" alt="Icono policia" />
+                  <img src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Grupo+739.png" alt="Icono policia" className="radius-75"/>
                 </div>
               </div>
 {/*               <div className="card border border-4 border-primary rounded-5 py-5 px-5 text-center shadow-lg d-flex align-content-center justify-content-center">
@@ -156,20 +156,20 @@ export const Cobertura = () => {
                 </div>
               </div> */}
               <div className="card-body px-2 pb-0 mt-5 text-center">
-                <p className="card-title fw-500 lh-sm text-dark fs-30">
-                  <span  className="fw-500 fs-30">Plataformas con <br />
-                  socios conductores </span>
+                <p className="card-title fw-normal lh-sm text-dark fs-30">
+                  Plataformas con <br />
+                  socios conductores 
                   <br />
                   <span>(Cuotas anuales)</span>
                 </p>
                 <p className="card-title fw-normal lh-sm text-dark fs-30 my-3">
                   Por pérdida parcial, total o corralón.
                 </p>
-                <p className="card-title fs-11 fw-500 lh-sm text-dark">
-                  $10,000 por 20 días <br />
-                  $15,000 por 30 días
+                <p className="card-title fs-30 fw-normal lh-sm text-dark">
+                  Hasta $10,000 por 20 días <br />
+                  Hasta $15,000 por 30 días
                   <br />
-                  $20,000 por 40 días
+                  Hasta $20,000 por 40 días
                 </p>
               </div>
             </div>
@@ -177,7 +177,7 @@ export const Cobertura = () => {
         </Swiper>
       </div>
 
-      <div className="container-fluid mx-auto position-relative dudas__container mt-5 pt-5">
+      <div className="container-fluid mx-auto position-relative dudas__container mt-5">
         <h4 className="mt-5 mt-xxl-5 text-dark height-lile fw-500 py-4">
           Preguntas frecuentes
         </h4>
@@ -200,6 +200,10 @@ const CoberturaSection = styled.section`
   .icon svg {
     width: 30px;
     height: 30px;
+  }
+
+  .radius-75 {
+    border-radius: 7.5rem !important;
   }
 
   .card-title {
@@ -228,8 +232,8 @@ const CoberturaSection = styled.section`
     height: 50rem;
   }
 
-  .h-70 {
-    height: 70rem;
+  .h-750 {
+    height: 75rem;
   }
 
   .fs-35 {
@@ -326,6 +330,7 @@ const CoberturaSection = styled.section`
 
   @media (min-width: 768px) {
     height: 160rem;
+    padding-top:5rem;
     .card {
       width: 20rem;
       height: 20rem;

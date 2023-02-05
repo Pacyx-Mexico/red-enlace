@@ -64,7 +64,7 @@ export const Dudes = () => {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="fw-normal ms-5 ps-2 text-left fs-30 mt-3">
-                Si, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
+                Sí, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
