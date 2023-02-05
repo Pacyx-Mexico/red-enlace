@@ -28,7 +28,7 @@ export const SelectSiniestro = () => {
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                      alt="Gastos medicos hombre"
+                      alt="Hombre sonriente señalando teléfono"
                       className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                     />
                   </div>
@@ -61,7 +61,7 @@ export const SelectSiniestro = () => {
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                      alt="hombre auto"
+                      alt="hombre con camisa gris abrazando la parte trasera de un auto"
                       className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                     />
                   </div>
@@ -103,7 +103,7 @@ export const SelectSiniestro = () => {
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                      alt="Gastos medicos hombre"
+                      alt="Hombre sonriente señalando teléfono"
                       className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                     />
                   </div>
@@ -136,7 +136,7 @@ export const SelectSiniestro = () => {
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                      alt="Gastos medicos hombre"
+                      alt="hombre con camisa gris abrazando la parte trasera de un auto"
                       className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                     />
                   </div>

@@ -202,7 +202,7 @@ export const NewCharacteristics = () => {
       <div className="d-flex justify-content-center w-100 d-none d-md-block">
         <img
           src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Recurso+2.png"
-          alt="Mancha"
+          alt="Mancha verde"
           className="green_stain_bg"
         />
       </div>

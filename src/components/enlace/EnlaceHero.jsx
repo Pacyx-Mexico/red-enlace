@@ -13,7 +13,7 @@ export const EnlaceHero = () => {
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/Enlace-hero.png" }
-        alt="fondo Gradiente"
+        alt="Doctora sonriente con bata blanca señalando a la izquierda"
       />
       <div className="d-flex align-items-center position-absolute w-75 h-100 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
@@ -41,7 +41,7 @@ export const EnlaceHero = () => {
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
             src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png"}
-            alt="fondo Gradiente"
+            alt="Doctora sonriente con bata blanca señalando a la izquierda"
           />
         </div>
         <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
