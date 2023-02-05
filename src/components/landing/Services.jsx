@@ -41,36 +41,49 @@ export const Services = () => {
           <div className="position-relative">
             <img
               src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png"
-              alt="Mano"
+              alt="Mano recibiendo dinero"
               className="hand hand-right position-absolute"
             />
             <img
               src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND1.png"
-              alt="Mano"
+              alt="Mano entregando dinero"
               className="hand hand-left position-absolute"
             />
           </div>
-          <div className="primary-title-hdesk py-5 mt-5">
+          <div className="primary-title-hdesk d py-5 mt-5">
             <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">
               ¿Qué nos hace únicos?
             </h2>
-            <div className="d-flex py-5 flex-column bg-blue">
-              <p className="fs-11 mt-5 pt-5 fw-normal text-white">
-                Devolución <span className="fw-semibold">de deducible</span>
-              </p>
-              <p className="fs-25 fw-normal mb-5 pb-5 pt-5 mt-5 text-white">
-                Somos la empresa pionera en la creación de asistencias <br />
-                pensadas 100% en las necesitas en las necesidades de nuestros
-                clientes. <br />
-                Reescribimos la historia de las asistencias de seguros <br />
-                para{" "}
-                <span className="fw-semibold">
-                  reembolsar el pago de deducible
-                </span>{" "}
-                en caso de accidente
-                <br />
-                en tu auto, de enfermedad o en caso de ser hospitalizado.
-              </p>
+            <div className="d-flex align-items-center justify-content-center bg-blue">
+              <div className="d-flex justify-content-start flex-column align-items-start w-50 ps-10">
+                <p className="fs-11 fw-normal text-white text-start">
+                  Devolución <br />
+                  <span className="fw-semibold">de deducible</span>
+                </p>
+                <p className="text-white text-start fw-normal me-5 pe-5 mb-0 fs-23">
+                Somos los únicos <span className="fw-500">en pagarte en un<br />
+                máximo de 72 horas.</span>
+                </p>
+              </div>
+              <div className="d-flex flex-column justify-content-center text-start gap-5 w-50">
+                <div className="d-flex flex-column">
+                  <p className="fw-500 text-white fs-30 lh-sm pb-2">
+                    ¿Qué es el deducible?
+                  </p>
+                  <p className="fs-23 fw-normal text-white">
+                    Es la cantidad de dinero que le tienes que pagar a la aseguradora en caso de que hayas tenido un accidente
+                  </p>
+                </div>
+                <div className="d-flex flex-column">
+                  <p className="fw-500 text-white fs-30 lh-sm pb-2">
+                    ¿Qué hace Red Enlace?
+                  </p>
+                  <p className="fs-23 fw-normal text-white">
+                    Red Enlace es una empresa pionera en la creación de asistencias pensadas 100% en las necesidades de nuestros clientes. <br />
+                    Reescribimos la historia de las asistencias de seguros para reembolsar el pago de deducible en caso de accidente en tu auto, enfermedad o en caso de ser hospitalizado.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -93,7 +106,7 @@ export const Services = () => {
                     <div className="position-absolute d-flex align-items-center justify-content-center">
                       <img
                         src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                        alt="Gastos medicos hombre"
+                        alt="Hombre sonriente señalando teléfono"
                         className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                       />
                     </div>
@@ -126,7 +139,7 @@ export const Services = () => {
                     <div className="position-absolute d-flex align-items-center justify-content-center">
                       <img
                         src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                        alt="hombre auto"
+                        alt="hombre con camisa gris abrazando la parte trasera de un auto"
                         className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                       />
                     </div>
@@ -156,7 +169,7 @@ export const Services = () => {
                     <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                       <img
                         src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
-                        alt="hombre auto"
+                        alt="Doctora sonriente con bata blanca señalando a la izquierda"
                         className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
                       />
                     </div>
@@ -190,9 +203,21 @@ export const Services = () => {
               <h2 className="fs-11 mb-5 pb-5 fw-500">¿Qué nos hace únicos?</h2>
               <div className="d-flex py-5 flex-column bg-blue">
                 <p className="fs-50 mt-5 pt-5 fw-normal text-white">
-                  Devolución <span className="fw-semibold">de deducible</span>
+                  Devolución <span className="fw-semibold">de deducible</span><br />
                 </p>
-                <p className="fs-35 fw-normal mb-5 py-5 px-5 mx-5 mt-5 text-white">
+                <p className="fs-35 text-white lh-sm mt-3">Somos los únicos  
+                  <span className="fw-semibold"> en pagarte en un máximo de 72 horas.</span>
+                </p>
+                <p className="fw-semibold text-white fs-35 lh-sm pb-2 mt-5 d-flex flex-column align-items-center">
+                  ¿Qué es el deducible? <br />
+                  <span className="fs-35 fw-normal mt-5 px-5 mx-5 text-justify">
+                    Es la cantidad de dinero que le tienes que pagar la aseguradora en caso de que hayas tenido un accidente
+                  </span>
+                </p>
+                <p className="text-white fw-semibold fs-35 mt-5">
+                  ¿Qué hace Red Enlace?
+                </p>
+                <p className="fs-35 fw-normal mb-5 pb-5 px-5 mx-5 mt-5 text-white text-justify">
                   Somos la empresa pionera en la creación de asistencias
                   pensadas 100% en las necesitas en las necesidades de nuestros
                   clientes. Reescribimos la historia de las asistencias de
@@ -222,7 +247,7 @@ export const Services = () => {
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                    alt="Gastos medicos hombre"
+                    alt="Hombre sonriente señalando teléfono"
                     className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                   />
                 </div>
@@ -252,7 +277,7 @@ export const Services = () => {
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                    alt="Gastos medicos hombre"
+                    alt="hombre con camisa gris abrazando la parte trasera de un auto"
                     className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                   />
                 </div>
@@ -282,7 +307,7 @@ export const Services = () => {
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
-                    alt="Gastos medicos hombre"
+                    alt="Doctora sonriente con bata blanca señalando a la izquierda"
                     className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
                   />
                 </div>
@@ -339,6 +364,14 @@ const ServicesContainer = styled.section`
 
   .primary-title-h {
     margin-top: 10rem !important;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  .ps-10 {
+    padding-left: 10%;
   }
 
   .mb-5 {
@@ -493,6 +526,10 @@ const ServicesContainer = styled.section`
     }
   }
 
+  .ps-15 {
+    padding-left: 15rem;
+  }
+
   .services-title {
     padding-bottom: 20rem;
   }
@@ -542,6 +579,10 @@ const ServicesContainer = styled.section`
 
   .fs-50 {
     font-size: 5rem;
+  }
+
+  .fs-250 {
+    font-size: 2.5rem;
   }
 
   .fs-25 {
@@ -636,7 +677,7 @@ const ServicesContainer = styled.section`
 
     .hand-right {
       left: 65.8%;
-      top: 87%;
+      top: 90%;
       width: auto;
       height: 20.6%;
     }
@@ -686,7 +727,8 @@ const ServicesContainer = styled.section`
     .bg-blue {
       background: #5371d1;
       position: relative;
-      z-index: -1;
+      z-index: -1; 
+      padding: 10rem 7rem;
     }
 
     .bg-gradient-blue {
@@ -736,9 +778,21 @@ const ServicesContainer = styled.section`
       z-index: -1;
     }
 
+    .fs-23 {
+      font-size: 2.2rem;
+    }
+
     .fs-25 {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
       line-height: 3.4rem;
+    }
+
+    .fs-20 {
+      font-size: 2rem;
+    }
+
+    .fs-30 {
+      font-size: 3rem;
     }
 
     .hand {
@@ -748,15 +802,15 @@ const ServicesContainer = styled.section`
     }
 
     .hand-left {
-      right: 63.9%;
+      left: 0;
       top: 20rem;
       width: 31.1%;
       height: auto;
     }
 
     .hand-right {
-      left: 65%;
-      top: 62rem;
+      left: 71%;
+      top: 76rem;
       width: 30%;
       height: auto;
     }
