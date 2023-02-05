@@ -18,27 +18,10 @@ export const Hero = () => {
   return (
     <HeroContainer className="home position-relative" id="home">
       <Image
-        className="gradient_img_bg position-absolute d-none d-lg-block"
-        src={
-          "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-principal.png"
-        }
-        alt="fondo Gradiente"
-      />
-      <Image
-        className="gradient_img_bg position-absolute d-none d-lg-block"
-        src={
-          "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-principal.png"
-        }
-        alt="fondo Gradiente"
-      />
-      <Image
         className="man_img-bg position-absolute d-none d-lg-block"
-        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre.png"}
-        alt="Hombre hero"
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/PrincipalHero.png"}
+        alt="Hombre sonriente cruzado de brazos con camisa blanca"
       />
-      <div className="container position-absolute RE_img_bg d-none d-lg-block">
-        <RedEnlaceBg />
-      </div>
       <div className="position-absolute d-none d-lg-block z-index-15">
         <div onClick={scrollTop}>
           <ScrollLink
@@ -71,30 +54,31 @@ export const Hero = () => {
           </ScrollLink>
         </div>
       </div>
-      <div className="align-items-center position-absolute top-50 w-85 d-none d-lg-block">
-        <div className="home__info d-flex flex-column justify-content-center text-center align-items-center">
-          <h2 className="mb-4 pr-xxl-5 fw-bold pt-5 mt-5 z-index-3 text-primary h2-heading">
-            Ahorro &nbsp;<span className="text-white"> fácil y seguro</span>
+      <div className="align-items-start flex-column position-absolute top-75 w-50 d-none d-lg-flex home__info">
+          <h2 className="mb-4 pr-xxl-5 fw-bold z-index-3 text-primary text-start h2-heading">
+            Ahorra <br />
+            en tu póliza <br />
+            de seguros
           </h2>
-          <p className="text-white mb-4 mb-md-5 z-index-3 hero_subtitle">
-            te regresamos tu deducible
+          <p className="mb-4 mb-md-5 lh-base z-index-3 hero_subtitle">
+            con devolución de <br />
+            deducible
           </p>
-          <Image
-            className="redenlace_logo position-absolute d-none d-lg-block"
-            src="https://elementos-red-enlace.s3.amazonaws.com/Landing/Group+739.png"
-            alt="Red enlace logo"
-          />
-        </div>
       </div>
 
       <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-lg-none">
         <div className="home__info-mb d-flex flex-column justify-content-center align-items-center">
           <h2 className="pr-xxl-5 fw-bold z-index text-primary h1-heading primary_title">
-            Ahorro
+            Ahorra
           </h2>
-          <span className="text-primary primary_subtitle fw-bold">
-            fácil y seguro
+          <span className="text-primary text-center primary_subtitle fw-bold lh-sm">
+            En tu póliza de <br />
+            productos
           </span>
+          <p className="mb-4 mb-md-5 lh-base z-index-3 hero_subtitle-mb">
+            Con devolución de <br />
+            deducible
+          </p>
         </div>
       </div>
 
@@ -104,7 +88,7 @@ export const Hero = () => {
           src={
             "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png"
           }
-          alt="Hombre mb"
+          alt="Hombre sonriente cruzado de brazos con camisa blanca"
         />
         <Image
           className="gradient_img_bg_sm position-absolute d-lg-none"
@@ -114,7 +98,7 @@ export const Hero = () => {
           alt="fondo Gradiente"
         />
         <Image
-          className="redlogo position-absolute d-m-none"
+          className="redlogo position-absolute"
           src={
             "https://elementos-red-enlace.s3.amazonaws.com/Landing/RedLogo.png"
           }
@@ -145,8 +129,9 @@ const HeroContainer = styled.section`
   }
 
   .home__info {
-    position: relative;
     z-index: 3;
+    bottom: 3.5%;
+    left: 4%;
   }
 
   .z-index-3 {
@@ -155,19 +140,19 @@ const HeroContainer = styled.section`
 
   .z-index-15 {
     z-index: 15;
-    top: 58%;
-    right: 15%;
+    top: 89%;
+    left: 27rem;
   }
 
   .button-hero {
-    height: 6rem;
+    height: 5.5rem;
     min-width: auto;
     padding: 0 3rem;
     background: #fff;
     color: #5872c4;
-    border: 2px solid #5872c4;
+    border: 1px solid #5872c4;
     font-size: 2.3rem;
-    font-weight: 500;
+    font-weight: 400;
     transition: all ease 0.3s;
   }
 
@@ -177,10 +162,10 @@ const HeroContainer = styled.section`
   }
   .man_img-bg {
     z-index: 2;
-    height: 90%;
+    height: 88%;
     width: auto;
-    bottom: 2px;
-    left: -7rem;
+    bottom: 0;
+    right: 0;
   }
   .img-fluid {
     max-width: 100%;
@@ -203,11 +188,13 @@ const HeroContainer = styled.section`
     right: 0;
   }
   .hero_subtitle {
+    position: relative;
     font-size: 3.4rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
-    margin-left: 30rem;
+    text-align: start;
+    color: #5CA689;
   }
 
   @media (max-width: 992px) {
@@ -222,8 +209,18 @@ const HeroContainer = styled.section`
     .z-index-15 {
       z-index: 15;
       top: 90%;
-      right: 40%;
+      left: 40%;
     }
+
+    .hero_subtitle-mb {
+      font-size: 20px;
+      font-weight: 400;
+      z-index: 5;
+      text-align: center;
+      color: #5CA689;
+      position: relative;
+      top: 75rem;
+  }
 
     .RE_img_bg {
       display: none;
@@ -240,7 +237,7 @@ const HeroContainer = styled.section`
 
     .home__info-mb {
       position: absolute;
-      top: 20rem;
+      top: 15rem;
     }
 
     .man_img-mb {
