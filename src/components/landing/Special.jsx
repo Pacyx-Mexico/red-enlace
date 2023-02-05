@@ -12,14 +12,16 @@ export const Special = () => {
               src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
               alt="fondo Gradiente"
             />
-            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="telefono" />
+            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="telefono con texto Red Enlace" />
           </div>
           <div className="col-lg-7 col-xl-6 offset-lg-1 d-flex flex-column justify-content-center align-items-start text-start text-lg-start">
             <h1 className="fw-normal mt-4">Contratación</h1>
             <h1 className="fw-500">100% digital.</h1>
-            <p className="text-secondary mt-2 mb-5 fs-30 fw-light">
+            <p className="text-dark mt-2 mb-5 fs-20 fw-light">
               Somos la única opción de contratación <br />
-              100% digital de principio a fin.
+              100% digital de principio a fin. <br />
+              Cotiza desde cualquier displositivo y protege <br />
+              a tu familiay a ti de cualquier eventualidad.
             </p>
           </div>
         </div>
@@ -41,7 +43,7 @@ export const Special = () => {
               src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-right.png"}
               alt="fondo Gradiente"
             />
-            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="telefono" />
+            <Image className="phone_img position-absolute" src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/phone.png"} alt="telefono con texto Red Enlace" />
             </div>
             <div className="d-flex flex-column align-items-center text-center special__last-text">
               <p className="mb-5 fs-30 fw-light">
@@ -76,6 +78,10 @@ const SpecialContainer = styled.section`
 
   .fs-30 {
     font-size: 3rem;
+  }
+
+  .fs-20 {
+    font-size: 2rem;
   }
 
   .fs-70 {
