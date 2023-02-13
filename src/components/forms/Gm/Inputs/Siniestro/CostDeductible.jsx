@@ -31,21 +31,13 @@ function CostDeductible({ value, funct, off, cost }) {
     <>
       <CostCAPhone>
         <TitleCoverage
-          title={off ? "Cotización" : ""}
-          subtitle={off ? "(por persona)" : ""}
+          title="Cotización"
+          subtitle="(por persona)"
         />
-        {off ? (
           <InfoCost1>{loading ? <Spinner /> : cost}</InfoCost1>
-        ) : (
-          <InfoCost1></InfoCost1>
-        )}
       </CostCAPhone>
       <CostCAPC>
-        {off ? (
           <InfoCost1>{loading ? <Spinner h={"3.4rem"} /> : cost}</InfoCost1>
-        ) : (
-          <InfoCost1></InfoCost1>
-        )}
       </CostCAPC>
     </>
   );

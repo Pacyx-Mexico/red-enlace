@@ -10,7 +10,7 @@ import EndStep from "../EndStep";
 
 class MainAutos extends Component {
   state = {
-    step: 5,
+    step: 1,
 
     step1: true,
     step2: false,
@@ -52,8 +52,8 @@ class MainAutos extends Component {
     coverageB: false,
     coverageC: false,
 
-    costCoverageA: 1700,
-    costCoverageB: 1700,
+    costCoverageA: 120,
+    costCoverageB: 1850,
     costCoverageC: 670,
 
     reimburseCoverageB: "",

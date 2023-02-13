@@ -1,15 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   ContainerCotizacion,
   CotizacionTitle,
   Row32x68,
   Row40x60,
   FlexCenterBtn,
+  CotizacionAutos__Title,
 } from "../../../../styles/forms/CotizacionTabla.elements";
+import RowDetallesDesglose2 from "./Cotizacion/RowDetallesDesglose2.jsx";
+import RowDetallesDesglose from "./Cotizacion/RowDetallesDesglose.jsx";
 import ButtonDownload from "../../ButtonDownload";
 
 function CotizacionAutos({ activeStep, state }) {
+  const [showCov, setShowCov] = useState(false);
+  console.log("state: ", state)
+  const valCov = () => {
+    if (
+      state.coverageA === false &&
+      state.coverageB === false &&
+      state.coverageC === false
+    ) {
+      setShowCov(false);
+    } else {
+      setShowCov(true);
+    }
+  };
   useEffect(() => {
+    valCov()
     activeStep();
   }, []);
 
@@ -35,6 +52,39 @@ function CotizacionAutos({ activeStep, state }) {
             </>
           </p>
         </Row40x60>
+        {showCov ? (
+          <>
+            <CotizacionAutos__Title >
+              <p>Coberturas Adicionales</p>
+            </CotizacionAutos__Title >
+            <>
+              {state.coverageA === true && (
+                <RowDetallesDesglose2
+                  col1__Text="Perdida de llaves"
+                  state={state}
+                />
+              )}
+              {state.coverageB === true && (
+                <RowDetallesDesglose
+                  col1__Text="Ayuda para pago de app de transporte"
+                  col2__Text={state.costCoverageB}
+                />
+              )}
+              {state.coverageC === true && (
+                <RowDetallesDesglose
+                  col1__Text="Cristalazo"
+                  col2__Text={state.costCoverageC}
+                />
+              )}
+              <RowDetallesDesglose
+                total={true}
+                numberTotal=""
+              />
+            </>
+          </>
+        ) : (
+          <></>
+        )}
         <CotizacionTitle>
           <p>Descripción de tu auto</p>
         </CotizacionTitle>

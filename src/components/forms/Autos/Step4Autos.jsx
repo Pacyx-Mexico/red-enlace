@@ -3,7 +3,7 @@ import NextPrevStep from "../../Buttons/NextPrevStep";
 import StepIndicatorAutos from "./StepIndicatorAutos";
 import InstructionForm from "../InstructionForm";
 import CoverageCars from "./Inputs/CoverageCars/CoverageCars";
-import AlertForm from "../../Inputs/AlertForm";
+import AlertForm from "../../forms/AlertForm";
 
 const Step4Autos = ({
   data,
@@ -58,6 +58,10 @@ const Step4Autos = ({
     }
   };
 
+  const closedAlertStep4 = () => {
+    setAlert(false);
+  };
+
   useEffect(() => {
     activeStep();
   }, []);
@@ -93,9 +97,7 @@ const Step4Autos = ({
       <AlertForm
         text="Elige la suma asegurada, en caso de pérdida total, por daños materiales o robo"
         showAlert={alert}
-        closedAlert={() => {
-          setAlert(false);
-        }}
+        closedAlert={closedAlertStep4}
         linkId="coverageCars"
       />
     </>

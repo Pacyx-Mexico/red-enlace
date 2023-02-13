@@ -32,10 +32,8 @@ function SelectDeductible({ onChange, name, value, init, changeInit, off }) {
       onClick={changeInit}
       init={init}
       errorFX={errorFX}
-      off={off}
     >
       <Select2
-        off={off}
         defaultColor={defaultOption}
         name={name}
         value={value}
@@ -68,7 +66,6 @@ const SelectContainer2 = styled.div`
     ${({ errorFX }) =>
       errorFX ? "var(--errorInput-color)" : "var(--bgInput-color)"};
   ${({ init }) => (init ? "border: 2px solid var(--bgInput-color)" : "")};
-  ${({ off }) => (off ? "" : "border: 2px solid var(--bgInput-color)")};
 
   transition: all ease 0.3s;
 `;
@@ -83,9 +80,6 @@ const Select2 = styled.select`
   color: ${({ defaultColor }) => (defaultColor ? "gray" : "var(--text-color)")};
   ${({ errorFX }) => (errorFX ? " color: var(--errorInput-color);" : "")}
   ${({ init }) => (init ? "color: gray;" : "")}
-
-  display: ${({ off }) => (off ? "block" : "none")};
-  visibility: ${({ off }) => (off ? "visible" : "hidden")};
   transition: all ease 0.3s;
 `;
 

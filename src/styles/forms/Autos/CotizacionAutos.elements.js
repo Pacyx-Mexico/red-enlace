@@ -1,29 +1,12 @@
 import styled from "styled-components";
 
-export const ContainerCotizacion = styled.section`
+export const ContainerCotizacionAutos = styled.section`
   width: 80%;
   margin: 0 auto;
   padding-bottom: 4rem;
   overflow: hidden;
   @media screen and (max-width: 600px) {
     width: 86%;
-  }
-`;
-
-export const CotizacionTitle = styled.div`
-  padding: 1rem 2rem;
-  background-color: var(--primary-color3);
-  border-radius: 1rem;
-  margin-bottom: 0.8rem;
-  margin-top: 4rem;
-  height: 5rem;
-
-  p {
-    font-size: 2.2rem;
-    font-weight: 600;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
   }
 `;
 
@@ -44,12 +27,41 @@ export const CotizacionAutos__Title = styled.div`
   }
 `;
 
-export const Row32x68 = styled.div`
+export const RowAseguradosStyle = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: 9% 61% 29%;
+  justify-content: space-between;
+
+  p {
+    border: 2px solid var(--primary-color3);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    min-height: 5rem;
+    width: 100%;
+    padding: 0.2rem 2rem;
+  }
+  h6 {
+    border: 2px solid var(--primary-color3);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    min-height: 5rem;
+    width: 100%;
+    padding: 0.2rem 2rem;
+    font-weight: 500;
+  }
+`;
+
+export const Row2ColumCotizadorAutos = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: 32% 67.5%;
   justify-content: space-between;
-  margin-bottom: 0.6rem;
 
   p {
     border: 2px solid var(--primary-color3);
@@ -58,7 +70,7 @@ export const Row32x68 = styled.div`
     align-items: center;
     padding-left: 3rem;
     font-size: 2.2rem;
-
+    padding: 0.2rem 2rem;
     min-height: 5rem;
     width: 100%;
   }
@@ -76,52 +88,28 @@ export const Row32x68 = styled.div`
     width: 100%;
   }
 `;
-export const Row40x60 = styled.div`
-  display: grid;
+
+export const CotizacionAdd = styled.div`
+  border: 2px solid var(--primary-color3);
+  border-radius: 1rem;
+  padding: 0.4rem 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  grid-template-columns: 44% 55.5%;
-  justify-content: space-between;
-  padding: 0;
-  margin-bottom: 0.6rem;
 
   p {
-    border: 2px solid var(--primary-color3);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    padding-left: 3rem;
+    border: none;
     font-size: 2.2rem;
-    min-height: 5rem;
-    width: 100%;
+    padding: 0;
     margin: 0;
-
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
   }
-
   span {
-    margin-left: 0.5rem;
-  }
-
-  h5 {
-    border: 2px solid var(--primary-color3);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    padding-left: 3rem;
-    font-size: 2.4rem;
-    font-weight: 600;
-
-    height: 5rem;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 600px) {
-    ${({ responsive }) => (responsive ? "grid-template-columns: 100%;" : "")}
-    ${({ responsive }) => (responsive ? "gap: 0.2rem;" : "")}
+    margin-right: 0.6rem;
   }
 `;
+
+
 
 export const FlexCenterBtn = styled.div`
   display: flex;

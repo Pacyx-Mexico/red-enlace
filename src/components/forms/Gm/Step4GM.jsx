@@ -75,87 +75,20 @@ function Step4GM({
     });
   };
 
-  const valAdd0 = () => {
-    if (data.siniestro__add0) {
-      if (data.deductible__add0 !== "") {
-        setOnAdd0(true);
-      } else {
-        setOnAdd0(false);
-      }
-    } else {
-      setOnAdd0(true);
-    }
-  };
   const valAdd1 = () => {
-    if (data.siniestro__add1) {
-      if (data.deductible__add1 !== "") {
-        setOnAdd1(true);
-      } else {
-        setOnAdd1(false);
-      }
-    } else {
+    if (data.add1__Name !== '' && data.deductible__add1 !== "") {
+      setOnAdd1(true); 
+    } else if (data.add1__Name === "" && data.deductible__add1 === ""){
       setOnAdd1(true);
-    }
-  };
-  const valAdd2 = () => {
-    if (data.siniestro__add2) {
-      if (data.deductible__add2 !== "") {
-        setOnAdd2(true);
-      } else {
-        setOnAdd2(false);
-      }
     } else {
-      setOnAdd2(true);
+      setOnAdd1(false);
     }
-  };
-  const valAdd3 = () => {
-    if (data.siniestro__add3) {
-      if (data.deductible__add3 !== "") {
-        setOnAdd3(true);
-      } else {
-        setOnAdd3(false);
-      }
-    } else {
-      setOnAdd3(true);
-    }
-  };
-  const valAdd4 = () => {
-    if (data.siniestro__add4) {
-      if (data.deductible__add4 !== "") {
-        setOnAdd4(true);
-      } else {
-        setOnAdd4(false);
-      }
-    } else {
-      setOnAdd4(true);
-    }
-  };
-  const valAdd5 = () => {
-    if (data.siniestro__add5) {
-      if (data.deductible__add5 !== "") {
-        setOnAdd5(true);
-      } else {
-        setOnAdd5(false);
-      }
-    } else {
-      setOnAdd5(true);
-    }
+    console.log("onAdd1: ", onAdd1)
   };
 
   const validationONStep4 = () => {
-    if (onAdd0 && onAdd1 && onAdd2 && onAdd3 && onAdd4 && onAdd5) {
-      if (
-        data.siniestro__add0 === false &&
-        data.siniestro__add1 === false &&
-        data.siniestro__add2 === false &&
-        data.siniestro__add3 === false &&
-        data.siniestro__add4 === false &&
-        data.siniestro__add5 === false
-      ) {
-        setOffStep("false");
-      } else {
-        setOffStep("true");
-      }
+    if (data.deductible__add0 !== '' && onAdd1 === true) {
+      setOffStep("true");
     } else {
       setOffStep("false");
     }
@@ -194,12 +127,7 @@ function Step4GM({
   };
 
   useEffect(() => {
-    valAdd0();
     valAdd1();
-    valAdd2();
-    valAdd3();
-    valAdd4();
-    valAdd5();
     validationONStep4();
   }, [data]);
 

@@ -20,18 +20,9 @@ function DeductibleInputs({
 
   return (
     <ResultRow>
-      <IndeCheck>
-        <InputCheckbox
-          center={true}
-          onChange={handleChangeCheck}
-          name={nameCheck}
-          value={valueCheck}
-        />
-      </IndeCheck>
-      <AddCovA off={valueCheck}>
+      <AddCovA>
         <p>{nameAdd}</p>
         <SelectDeductible
-          off={valueCheck}
           onChange={handleChange}
           name={nameSelect}
           value={valueSelect}
@@ -45,10 +36,7 @@ function DeductibleInputs({
 }
 
 const ResultRow = styled.div`
-  display: grid;
   width: 100%;
-  grid-template-columns: 10% 89.5%;
-  justify-content: space-between;
 
   p {
     user-select: none;
@@ -74,8 +62,6 @@ const AddCovA = styled.div`
   width: 100%;
   grid-template-columns: 46% 26.4% 26.4%;
   justify-content: space-between;
-
-  opacity: ${({ off }) => (off ? "1" : "0.3")};
   transition: all ease 0.3s;
 
   @media screen and (max-width: 600px) {
@@ -92,7 +78,7 @@ const IndeCheck = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 0.8rem;
-  border: 2px solid var(--off-color);
+  border: 2px solid white;
 `;
 
 export default DeductibleInputs;

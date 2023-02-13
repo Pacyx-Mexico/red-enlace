@@ -37,7 +37,7 @@ function SiniestroDeductible({
   return (
     <ContResult>
       <ResultTitleCA>
-        <TitleCoverage title="Contratar" />
+        <TitleCoverage title="contratar" />
         <ResultTitleCA2>
           <TitleCoverage title="Nombre" />
           <TitleCoverage title="Porcentaje" />
@@ -49,8 +49,6 @@ function SiniestroDeductible({
         handleChange={handleChange}
         handleChangeCheck={handleChangeCheck}
         nameAdd={nameAdds.name}
-        valueCheck={data.siniestro__add0}
-        nameCheck="siniestro__add0"
         valueSelect={data.deductible__add0}
         nameSelect="deductible__add0"
         init={init.add0_i}
@@ -64,8 +62,6 @@ function SiniestroDeductible({
           handleChange={handleChange}
           handleChangeCheck={handleChangeCheck}
           nameAdd={nameAdds.add1}
-          valueCheck={data.siniestro__add1}
-          nameCheck="siniestro__add1"
           valueSelect={data.deductible__add1}
           nameSelect="deductible__add1"
           init={init.add1_i}
@@ -79,8 +75,6 @@ function SiniestroDeductible({
           handleChange={handleChange}
           handleChangeCheck={handleChangeCheck}
           nameAdd={nameAdds.add2}
-          valueCheck={data.siniestro__add2}
-          nameCheck="siniestro__add2"
           valueSelect={data.deductible__add2}
           nameSelect="deductible__add2"
           init={init.add2_i}
@@ -94,8 +88,6 @@ function SiniestroDeductible({
           handleChange={handleChange}
           handleChangeCheck={handleChangeCheck}
           nameAdd={nameAdds.add3}
-          valueCheck={data.siniestro__add3}
-          nameCheck="siniestro__add3"
           valueSelect={data.deductible__add3}
           nameSelect="deductible__add3"
           init={init.add3_i}
@@ -109,8 +101,6 @@ function SiniestroDeductible({
           handleChange={handleChange}
           handleChangeCheck={handleChangeCheck}
           nameAdd={nameAdds.add4}
-          valueCheck={data.siniestro__add4}
-          nameCheck="siniestro__add4"
           valueSelect={data.deductible__add4}
           nameSelect="deductible__add4"
           init={init.add4_i}
@@ -124,8 +114,6 @@ function SiniestroDeductible({
           handleChange={handleChange}
           handleChangeCheck={handleChangeCheck}
           nameAdd={nameAdds.add5}
-          valueCheck={data.siniestro__add5}
-          nameCheck="siniestro__add5"
           valueSelect={data.deductible__add5}
           nameSelect="deductible__add5"
           init={init.add5_i}
@@ -147,7 +135,7 @@ const ContResult = styled.form`
 const ResultTitleCA = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: 10% 89.5%;
+  grid-template-columns: 0% 99.5%;
   justify-content: space-between;
   margin-bottom: 1rem;
 

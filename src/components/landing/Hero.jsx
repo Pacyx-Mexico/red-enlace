@@ -58,7 +58,7 @@ export const Hero = () => {
           <h2 className="mb-4 pr-xxl-5 fw-bold z-index-3 text-primary text-start h2-heading">
             Ahorra <br />
             en tu póliza <br />
-            de seguros
+            de seguro
           </h2>
           <p className="mb-4 mb-md-5 lh-base z-index-3 hero_subtitle">
             con devolución de <br />
@@ -73,7 +73,7 @@ export const Hero = () => {
           </h2>
           <span className="text-primary text-center primary_subtitle fw-bold lh-sm">
             En tu póliza de <br />
-            productos
+            seguro
           </span>
           <p className="mb-4 mb-md-5 lh-base z-index-3 hero_subtitle-mb">
             Con devolución de <br />
