@@ -11,7 +11,7 @@ import EndStep from "../EndStep";
 
 class MainGM extends Component {
   state = {
-    step: 4,
+    step: 1,
 
     step1: true,
     step2: false,
@@ -29,7 +29,7 @@ class MainGM extends Component {
     completeStep6: false,
     completeStep7: false,
 
-    nombre: "Doniben",
+    nombre: "",
     paterno: "",
     materno: "",
     edad: "",
@@ -39,35 +39,35 @@ class MainGM extends Component {
     correo: "",
     tel: "",
 
-    add1__Name: "K",
+    add1__Name: "",
     add1__LastNameP: "",
     add1__LastNameM: "",
     add1__Age: "",
     add1__Genere: "",
     add1__AgeDate: "",
 
-    add2__Name: "L",
+    add2__Name: "",
     add2__LastNameP: "",
     add2__LastNameM: "",
     add2__Age: "",
     add2__Genere: "",
     add2__AgeDate: "",
 
-    add3__Name: "M",
+    add3__Name: "",
     add3__LastNameP: "",
     add3__LastNameM: "",
     add3__Age: "",
     add3__Genere: "",
     add3__AgeDate: "",
 
-    add4__Name: "V",
+    add4__Name: "",
     add4__LastNameP: "",
     add4__LastNameM: "",
     add4__Age: "",
     add4__Genere: "",
     add4__AgeDate: "",
 
-    add5__Name: "U",
+    add5__Name: "",
     add5__LastNameP: "",
     add5__LastNameM: "",
     add5__Age: "",
