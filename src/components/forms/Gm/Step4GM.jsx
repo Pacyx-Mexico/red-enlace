@@ -87,7 +87,7 @@ function Step4GM({
   };
 
   const validationONStep4 = () => {
-    if (data.deductible__add0 !== '' && onAdd1 === true) {
+    if (data.deductible__add0 !== '' && onAdd1 === true && onAdd2 === true && onAdd3 === true && onAdd4 === true && onAdd5 === true) {
       setOffStep("true");
     } else {
       setOffStep("false");
