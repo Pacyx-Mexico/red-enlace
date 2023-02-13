@@ -83,7 +83,6 @@ function Step4GM({
     } else {
       setOnAdd1(false);
     }
-    console.log("onAdd1: ", onAdd1)
   };
 
   const validationONStep4 = () => {
