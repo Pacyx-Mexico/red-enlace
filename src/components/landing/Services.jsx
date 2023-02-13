@@ -1,10 +1,7 @@
 import styled from "styled-components";
-import {
-  MedicineIcon,
-  MedicalExpensesIcon,
-  CarIcon,
-} from "../../assets/icons";
-import { NavLink, Link } from "react-router-dom";
+import { MedicineIcon, MedicalExpensesIcon, CarIcon } from "../../assets/icons";
+import { Link } from "react-router-dom";
+import { Element, animateScroll as scroll } from "react-scroll";
 
 export const Services = () => {
   let services = [
@@ -39,156 +36,298 @@ export const Services = () => {
   return (
     <ServicesContainer>
       {/* {map.services(service => console.log(service))} */}
-      <div className="services-title container-fluid text-center d-none d-lg-block">
-        <h3 className="pb-2 fw-semi-bold text-dark mt-5">
-          <span className="text-lile">Protege</span> a los que más quieres y
-          <br />
-          <span className="text-lile">ahorra</span> en el proceso
-        </h3>
-      </div>
-      <div className="services-title-mb container-fluid text-center d-lg-none">
-        <h4 className="fw-semi-bold text-dar mb-5 pb-5">
-          Conoce nuestros productos
-        </h4>
-      </div>
-      <div className="container-fluid py-3 position-relative d-none d-lg-block">
-        <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
-          <div className="col-auto mb-5 pb-5">
-            <Link
-              onClick={scrollTop}
-              to="/deducible-gastos-medicos"
-              className="w-100 text-decoration-none"
-            >
-              <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first">
-                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                    alt="Gastos medicos hombre"
-                    className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
-                  />
-                </div>
-              </div>
-              <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title fw-normal lh-sm text-center fs-2">
-                  Devolución de deducible
-                  <br />
-                  Gastos Médicos
-                </p>
-              </div>
-            </Link>
+      <div className="d-flex justify-content-center flex-column d-none d-lg-block">
+        <div className="text-center mt-5 pt-5 position-relative">
+          <div className="position-relative">
+            <img
+              src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND2.png"
+              alt="Mano recibiendo dinero"
+              className="hand hand-right position-absolute"
+            />
+            <img
+              src="https://elementos-red-enlace.s3.amazonaws.com/Landing/HND1.png"
+              alt="Mano entregando dinero"
+              className="hand hand-left position-absolute"
+            />
           </div>
-          <div className="col-auto mb-5 pb-5">
-            <NavLink onClick={ scrollTop } to="/deducible-autos" className="w-100 text-decoration-none">
-              <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second">
-                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                    alt="hombre auto"
-                    className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
-                  />
-                </div>
-              </div>
-              <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title fw-normal lh-sm text-center fs-2">
-                  Devolución de deducible
-                  <br />
-                  Autos
+          <div className="primary-title-hdesk d py-5 mt-5">
+            <h2 className="fs-10 mb-5 pb-5 pt-5 mt-5 fw-normal">
+              ¿Qué nos hace únicos?
+            </h2>
+            <div className="d-flex align-items-center justify-content-center bg-blue">
+              <div className="d-flex justify-content-start flex-column align-items-start w-50 ps-10">
+                <p className="fs-11 fw-normal text-white text-start">
+                  Devolución <br />
+                  <span className="fw-semibold">de deducible</span>
+                </p>
+                <p className="text-white text-start fw-normal me-5 pe-5 mb-0 fs-23">
+                Somos los únicos <span className="fw-500">en pagarte en un<br />
+                máximo de 72 horas.</span>
                 </p>
               </div>
-            </NavLink>
-          </div>
-          <div className="col-auto mb-5 pb-5">
-            <NavLink onClick={ scrollTop } to="/enlace" className="w-100 text-decoration-none">
-              <div className="card border border-4 border-fourth rounded-pill text-center opacity-75 position-relative card-hover_third">
-                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
-                    alt="hombre auto"
-                    className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
-                  />
+              <div className="d-flex flex-column justify-content-center text-start gap-5 w-50">
+                <div className="d-flex flex-column">
+                  <p className="fw-500 text-white fs-30 lh-sm pb-2">
+                    ¿Qué es el deducible?
+                  </p>
+                  <p className="fs-23 fw-normal text-white">
+                    Es la cantidad de dinero que le tienes que pagar a la aseguradora en caso de que hayas tenido un accidente
+                  </p>
+                </div>
+                <div className="d-flex flex-column">
+                  <p className="fw-500 text-white fs-30 lh-sm pb-2">
+                    ¿Qué hace Red Enlace?
+                  </p>
+                  <p className="fs-23 fw-normal text-white">
+                    Red Enlace es una empresa pionera en la creación de asistencias pensadas 100% en las necesidades de nuestros clientes. <br />
+                    Reescribimos la historia de las asistencias de seguros para reembolsar el pago de deducible en caso de accidente en tu auto, enfermedad o en caso de ser hospitalizado.
+                  </p>
                 </div>
               </div>
-              <div className="mt-5 d-flex justify-content-center w-100">
-                <p className="card-title fw-normal lh-sm text-center fs-2">
-                  Enlaces
-                </p>
-              </div>
-            </NavLink>
+            </div>
           </div>
         </div>
       </div>
+      <Element id="productos" name="productos" containerId="productos">
+        <div className="bg-gradient-blue d-none d-lg-block">
+          <div className="services-title container-fluid text-center pt-1 pb-5">
+            <h3 className="fs-10 fw-normal text-dark">
+              Conoce nuestros productos
+            </h3>
+          </div>
+          <div className="container-fluid px-5 h-auto position-relative d-none d-lg-block">
+            <div className="row pt-5 mb-5 mr-5 ml-5 d-flex justify-content-around gap-5">
+              <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+                <Link
+                  to="/deducible-gastos-medicos"
+                  className="w-100 text-decoration-none"
+                >
+                  <div className="card border-none border-first text-center position-relative card-hover_first">
+                    <div className="position-absolute d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
+                        alt="Hombre sonriente señalando teléfono"
+                        className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-5 d-flex justify-content-center w-100">
+                    <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                      Devolución de deducible
+                      <br />
+                      Gastos Médicos
+                    </p>
+                  </div>
+                  <div
+                    onClick={scrollTop}
+                    className="d-flex justify-content-center mt-5"
+                  >
+                    <Link to="/deducible-gastos-medicos">
+                      <button className="button-hero rounded-pill pt-1">
+                        Cotizar
+                      </button>
+                    </Link>
+                  </div>
+                </Link>
+              </div>
+              <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+                <Link
+                  to="/deducible-autos"
+                  className="w-100 text-decoration-none"
+                >
+                  <div className="card border border-4 border-second text-center position-relative card-hover_second">
+                    <div className="position-absolute d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
+                        alt="hombre con camisa gris abrazando la parte trasera de un auto"
+                        className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-5 d-flex justify-content-center w-100">
+                    <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                      Devolución de deducible
+                      <br />
+                      Autos
+                    </p>
+                  </div>
+                  <div
+                    onClick={scrollTop}
+                    className="d-flex justify-content-center mt-5"
+                  >
+                    <Link to="/deducible-autos">
+                      <button className="button-hero rounded-pill pt-1">
+                        Cotizar
+                      </button>
+                    </Link>
+                  </div>
+                </Link>
+              </div>
+              <div onClick={scrollTop} className="col-auto mb-5 pb-5">
+                <Link to="/enlace" className="w-100 text-decoration-none">
+                  <div className="card border border-4 border-fourth text-center position-relative card-hover_third">
+                    <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
+                        alt="Doctora sonriente con bata blanca señalando a la izquierda"
+                        className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-5 d-flex justify-content-center w-100">
+                    <p className="card-title card-title-lg fw-normal lh-sm text-center fs-25">
+                      Enlaces
+                    </p>
+                  </div>
+                  <div
+                    onClick={scrollTop}
+                    className="d-flex justify-content-center mt-5 pt-5"
+                  >
+                    <Link to="/enlace">
+                      <button className="button-hero rounded-pill pt-1">
+                        Cotizar
+                      </button>
+                    </Link>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Element>
 
-      <div className="container-fluid py-3 position-relative d-lg-none">
-        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-          <div className="col-auto mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
+      <div className="container-fluid position-relative d-lg-none">
+        <div className="d-flex justify-content-center flex-column mb-lg pb-5">
+          <div className="text-center position-relative">
+            <div className="primary-title-h">
+              <h2 className="fs-11 mb-5 pb-5 fw-500">¿Qué nos hace únicos?</h2>
+              <div className="d-flex py-5 flex-column bg-blue">
+                <p className="fs-50 mt-5 pt-5 fw-normal text-white">
+                  Devolución <span className="fw-semibold">de deducible</span><br />
+                </p>
+                <p className="fs-35 text-white lh-sm mt-3">Somos los únicos  
+                  <span className="fw-semibold"> en pagarte en un máximo de 72 horas.</span>
+                </p>
+                <p className="fw-semibold text-white fs-35 lh-sm pb-2 mt-5 d-flex flex-column align-items-center">
+                  ¿Qué es el deducible? <br />
+                  <span className="fs-35 fw-normal mt-5 px-5 mx-5 text-justify">
+                    Es la cantidad de dinero que le tienes que pagar la aseguradora en caso de que hayas tenido un accidente
+                  </span>
+                </p>
+                <p className="text-white fw-semibold fs-35 mt-5">
+                  ¿Qué hace Red Enlace?
+                </p>
+                <p className="fs-35 fw-normal mb-5 pb-5 px-5 mx-5 mt-5 text-white text-justify">
+                  Somos la empresa pionera en la creación de asistencias
+                  pensadas 100% en las necesitas en las necesidades de nuestros
+                  clientes. Reescribimos la historia de las asistencias de
+                  seguros para{" "}
+                  <span className="fw-semibold">
+                    reembolsar el pago de deducible
+                  </span>{" "}
+                  en caso de accidente en tu auto, de enfermedad o en caso de
+                  ser hospitalizado.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="services-title-mb container-fluid text-center d-lg-none">
+          <h4 className="fw-500 fs-50 text-dar mb-5 pb-5 mt-5 pt-5">
+            Conoce nuestros productos
+          </h4>
+        </div>
+        <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5 bg-gradient-blue">
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+            <Link
               to="/deducible-gastos-medicos"
               className="w-100 text-decoration-none"
             >
-              <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
+              <div className="card border-first text-center position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                    alt="Gastos medicos hombre"
+                    alt="Hombre sonriente señalando teléfono"
                     className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                   />
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                <p className="card-title fw-normal lh-sm text-center fs-20 w-100">
                   Devolución de deducible
                   <br />
                   Gastos Médicos
                 </p>
               </div>
-            </NavLink>
+              <div
+                onClick={scrollTop}
+                className="d-flex justify-content-center mt-5"
+              >
+                <Link to="/deducible-gastos-medicos">
+                  <button className="button-hero rounded-pill pt-1">
+                    Cotizar
+                  </button>
+                </Link>
+              </div>
+            </Link>
           </div>
-          <div className="col-auto mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
-              to="/deducible-autos"
-              className="w-100 text-decoration-none"
-            >
-              <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+            <Link to="/deducible-autos" className="w-100 text-decoration-none">
+              <div className="card border border-4 border-second text-center position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                    alt="Gastos medicos hombre"
+                    alt="hombre con camisa gris abrazando la parte trasera de un auto"
                     className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                   />
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                <p className="card-title fw-normal lh-sm text-center fs-20 w-100">
                   Devolución de deducible
                   <br />
                   Autos
                 </p>
               </div>
-            </NavLink>
+              <div
+                onClick={scrollTop}
+                className="d-flex justify-content-center mt-5"
+              >
+                <Link to="/deducible-autos">
+                  <button className="button-hero rounded-pill pt-1">
+                    Cotizar
+                  </button>
+                </Link>
+              </div>
+            </Link>
           </div>
-          <div className="col-auto mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
-              to="/enlace"
-              className="w-100 text-decoration-none"
-            >
-              <div className="card border border-4 border-third rounded-pill text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg">
+          <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+            <Link to="/enlace" className="w-100 text-decoration-none">
+              <div className="card border border-4 border-third text-center position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg rounded-pill">
                 <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                   <img
                     src="https://elementos-red-enlace.s3.amazonaws.com/Landing/mujer-enlaces.png"
-                    alt="Gastos medicos hombre"
+                    alt="Doctora sonriente con bata blanca señalando a la izquierda"
                     className="card_img-width card_img-width_third position-relative bottom-0 mx-auto"
                   />
                 </div>
               </div>
               <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
+                <p className="card-title fw-normal lh-sm text-center fs-20 w-100">
                   Enlaces
                 </p>
               </div>
-            </NavLink>
+              <div
+                onClick={scrollTop}
+                className="d-flex justify-content-center mt-5"
+              >
+                <Link to="/enlace">
+                  <button className="button-hero rounded-pill pt-1">
+                    Cotizar
+                  </button>
+                </Link>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -197,10 +336,19 @@ export const Services = () => {
 };
 
 const ServicesContainer = styled.section`
+  overflow-y: hidden;
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
+  overflow-x: hidden;
   .text-lile {
     color: #6983d6;
+  }
+
+  .bg-blue {
+    background: #5371d1;
+    position: relative;
+    z-index: -1;
+    margin: 0 5%;
   }
 
   .icon svg {
@@ -211,56 +359,84 @@ const ServicesContainer = styled.section`
   .card-title {
     margin-bottom: 0rem;
     color: #000000;
+    font-size: 3.5rem;
+  }
+
+  .primary-title-h {
+    margin-top: 10rem !important;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  .ps-10 {
+    padding-left: 10%;
+  }
+
+  .mb-5 {
+    margin-bottom: 5rem !important;
   }
 
   .text-,
   .border- {
     &first {
       color: white !important;
-      border-color: #1d45c2 !important;
-      background-color: #1d45c2 !important;
+      border: none !important;
+      border-color: rgba(29, 69, 194, 0.6) !important;
+      background-color: rgba(29, 69, 194, 0.6) !important;
     }
 
     &second {
       color: white !important;
-      border-color: #1a6a8b !important;
-      background-color: #1a6a8b !important;
+      border: none !important;
+      background-color: rgba(26, 106, 139, 0.6) !important;
     }
 
     &third {
       color: white !important;
-      border-color: #1b8e5c !important;
-      background-color: #1b8e5c !important;
+      border: none !important;
+      background-color: rgba(29, 169, 57, 0.6) !important;
     }
 
     &fourth {
       color: white !important;
-      border-color: #1da939 !important;
-      background-color: #1da939 !important;
+      border: none !important;
+      background-color: rgba(29, 169, 57, 0.6) !important;
     }
   }
 
   .card {
     width: 41rem;
-    height: 56rem;
+    height: 64rem;
+  }
+
+  .bg-gradient-blue {
+    background-image: linear-gradient(#fff, #bec9eb);
+    padding: 0 10rem;
+    margin: 0 10rem;
+    height: 100%;
   }
 
   .card_img-width_first {
-    width: 31rem;
-    top: 2.4rem;
+    width: 39.2rem;
+    top: 3rem;
     right: 0;
+    border-radius: 41.5%;
   }
 
   .card_img-width_second {
-    width: 32rem;
-    top: 4rem;
-    right: 4.9rem;
+    width: 41.1rem;
+    top: 5.1rem;
+    right: 0;
+    border-radius: 0 21rem 21rem;
   }
 
   .card_img-width_third {
-    width: 33.9rem;
-    top: 2.9rem;
-    right: 2rem;
+    width: 42.9rem;
+    top: 2.3rem;
+    right: 0.4rem;
+    border-radius: 31rem;
   }
 
   .card-hover_first:hover {
@@ -296,11 +472,11 @@ const ServicesContainer = styled.section`
   }
 
   .btn-second {
-    background-color: #1a6a8b;
-    border: 3px solid #1a6a8b !important;
+    background-color: #6f87d2;
+    border: 3px solid #6f87d2 !important;
 
     &.text-white:hover {
-      color: #1a6a8b !important;
+      color: #6f87d2 !important;
     }
 
     &:hover {
@@ -308,12 +484,28 @@ const ServicesContainer = styled.section`
     }
   }
 
+  .button-hero {
+    height: 6rem;
+    min-width: auto;
+    padding: 0 3rem;
+    background: #fff;
+    color: #5872c4;
+    border: 2px solid #5872c4;
+    font-size: 2.3rem;
+    font-weight: 500;
+    transition: all ease 0.3s;
+  }
+  .button-hero:hover {
+    background-color: #5872c4;
+    color: #fff;
+  }
+
   .btn-third {
-    background-color: #1b8e5c;
-    border: 3px solid #1b8e5c !important;
+    background-color: #409e75;
+    border: 3px solid #409e75 !important;
 
     &.text-white:hover {
-      color: #1b8e5c !important;
+      color: #409e75 !important;
     }
 
     &:hover {
@@ -334,18 +526,73 @@ const ServicesContainer = styled.section`
     }
   }
 
+  .ps-15 {
+    padding-left: 15rem;
+  }
+
   .services-title {
     padding-bottom: 20rem;
+  }
+
+  .bg-gradient {
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .hand {
+    z-index: -1;
+    width: auto;
+    height: 55rem;
+  }
+
+  .hand-left {
+    right: -11%;
+    top: 3rem;
+    width: auto;
+    height: 30rem;
+  }
+
+  .hand-right {
+    left: -47px;
+    top: 30rem;
+    width: auto;
+    height: 20rem;
   }
 
   .gap-10 {
     gap: 10rem;
   }
 
+  .fs-11 {
+    font-size: 7.5rem;
+    line-height: 9rem;
+  }
+
+  .fs-10 {
+    font-size: 5rem;
+  }
+
+  .fs-35 {
+    font-size: 3.5rem;
+  }
+
+  .fs-50 {
+    font-size: 5rem;
+  }
+
+  .fs-250 {
+    font-size: 2.5rem;
+  }
+
+  .fs-25 {
+    font-size: 2rem;
+  }
+
   @media (min-width: 576px) {
     .card {
       width: 41rem;
-      height: 54rem;
+      height: 63.8rem;
     }
 
     .card-body {
@@ -359,38 +606,61 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 9rem;
     }
+
+    .fs-25 {
+      font-size: 2.5rem;
+    }
+
+    .hand-right {
+      z-index: 1;
+      left: 54.8%;
+      top: 87%;
+      width: auto;
+      height: 20rem;
+    }
   }
 
   @media (min-width: 768px) {
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .button-hero:hover {
+      background-color: #5872c4;
+      color: #fff;
+    }
 
     .services-title-mb h3 {
       padding: 0 3rem 15rem;
       text-align: start;
     }
 
+    .fs-25 {
+      font-size: 2.5rem;
+    }
+
     .card {
-      width: 50rem;
-      height: 75rem;
+      width: 34rem;
+      height: 54rem;
     }
 
     .card_img-width_first {
-      width: 44rem;
-      top: 3.6rem;
+      width: 35.5rem;
+      top: 0.7rem;
       right: 0rem;
+      border-radius: 25rem;
     }
 
     .card_img-width_second {
-      width: 44rem;
-      top: 5.9rem;
-      right: 3.3rem;
+      width: 33.6rem;
+      top: 5.1rem;
+      right: 0.1rem;
     }
 
     .card_img-width_third {
-      width: 49.1rem;
-      top: 2rem;
-      right: 2.5rem;
+      width: 38rem;
+      top: 0.8rem;
+      right: 0.3rem;
+      border-radius: 21rem;
     }
 
     .car-text {
@@ -404,30 +674,145 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 25rem;
     }
+
+    .hand-right {
+      left: 65.8%;
+      top: 90%;
+      width: auto;
+      height: 20.6%;
+    }
+
+    .hand-left {
+      right: -8%;
+      top: 17rem;
+      width: auto;
+      height: 63rem;
+    }
+
+    .primary-title-hdesk {
+      height: 100vh;
+    }
   }
 
   @media (min-width: 992px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 210vh;
     .card {
-      width: 36rem;
-      height: 55rem;
+      width: 34rem;
+      height: 53.5rem;
+      border-radius: 50rem;
+      opacity: 0.9;
     }
 
     .card_img-width_first {
-      width: 31rem;
-      top: 8rem;
-      left: 2rem;
+      width: 35.5rem;
+      top: 0.9rem;
+      right: 0.8rem;
+      border-radius: 19rem;
+    }
+
+    .primary-title-h {
+      margin-top: 10rem !important;
+    }
+
+    .mb-5 {
+      margin-bottom: 5rem !important;
+    }
+
+    .mb-lg {
+      margin-bottom: 15rem;
+    }
+
+    .bg-blue {
+      background: #5371d1;
+      position: relative;
+      z-index: -1; 
+      padding: 10rem 7rem;
+    }
+
+    .bg-gradient-blue {
+      background-image: linear-gradient(#fff, #bec9eb);
+      padding: 0 10rem;
+      margin: 0 10rem;
+      height: 95vh;
+    }
+
+    .fs-11 {
+      font-size: 7.5rem;
+      line-height: 9rem;
+    }
+
+    .fs-10- {
+      font-size: 10rem;
     }
 
     .card_img-width_second {
-      width: 32.3rem;
-      top: 11rem;
-      right: 0.9rem;
+      border-radius: 0 21rem 21rem;
+      width: 34rem;
+      top: 9.1rem;
+      right: 0rem;
     }
 
     .card_img-width_third {
-      width: 35.9rem;
-      top: 4rem;
-      right: 3rem;
+      width: 37rem;
+      top: 2.2rem;
+      right: 1.9rem;
+      border-radius: 24rem;
+    }
+
+    .services-title {
+      padding-top: 68rem;
+      padding-bottom: 0;
+    }
+
+    .fs-10 {
+      font-size: 5.5rem;
+    }
+
+    .bg-gradient {
+      width: 100%;
+      height: 300rem;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .fs-23 {
+      font-size: 2.2rem;
+    }
+
+    .fs-25 {
+      font-size: 2.5rem;
+      line-height: 3.4rem;
+    }
+
+    .fs-20 {
+      font-size: 2rem;
+    }
+
+    .fs-30 {
+      font-size: 3rem;
+    }
+
+    .hand {
+      z-index: 1;
+      width: auto;
+      height: 55rem;
+    }
+
+    .hand-left {
+      left: 0;
+      top: 20rem;
+      width: 31.1%;
+      height: auto;
+    }
+
+    .hand-right {
+      left: 71%;
+      top: 76rem;
+      width: 30%;
+      height: auto;
     }
   }
 `;

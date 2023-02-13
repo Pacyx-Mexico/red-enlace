@@ -10,6 +10,8 @@ function InputDate({
   errorFX,
   init,
   changeInit,
+  max,
+  min,
 }) {
   useEffect(() => {
     validation();
@@ -24,6 +26,8 @@ function InputDate({
         name={name}
         onChange={onChange}
         value={value}
+        max={max}
+        min={min}
       />
     </DateInput>
   );

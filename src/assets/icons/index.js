@@ -16,4 +16,8 @@ export * from './PlatformsIcon';
 export * from './MoneyIcon';
 export * from './SeventyTwoHoursIcon';
 export * from './MoneyTwoIcon'
+export * from './HandSecure'
+export * from './DocumentIcon'
+export * from './CarCrash'
+export * from './Point'
 // export * from './RedLogo';

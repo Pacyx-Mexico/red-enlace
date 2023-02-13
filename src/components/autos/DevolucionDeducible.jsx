@@ -11,7 +11,7 @@ export const DevolucionDeducible = () => {
         <div className="row pt-5 mt-5">
           <div className="col-lg-7 col-xl-6 offset-lg-1 d-flex flex-column justify-content-end align-items-end text-end text-lg-end">
             <h1 className="fw-normal mt-4">Contratación</h1>
-            <h1 className="fw-bold">100% digital.</h1>
+            <h1 className="fw-500">100% digital.</h1>
             <p className="text-secondary mt-2 mb-5 fs-1 fw-light">
               Somos la única opción de contratación <br />
               100% digital de principio a fin.
@@ -21,9 +21,9 @@ export const DevolucionDeducible = () => {
             <Image
               className="gradient_img_bg position-absolute"
               src={gradientImageBg}
-              alt="Gradient background element"
+              alt="fondo Gradiente"
             />
-            <Image className="phone_img position-absolute" src={phone} alt="" />
+            <Image className="phone_img position-absolute" src={phone} alt="telefono" />
           </div>
         </div>
       </div>

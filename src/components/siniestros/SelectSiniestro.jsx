@@ -2,81 +2,108 @@ import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { NavLink, Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
-export const SelectSiniestro= () => {
+export const SelectSiniestro = () => {
   const scrollTop = () => {
     scroll.scrollToTop();
   };
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <SelectSiniestroContainer>
         <div className="services-title container-fluid text-center d-none d-lg-block">
-          <h3 className="pb-2 fw-semi-bold text-dark mt-5">
-          Selecciona el producto
+          <h3 className="pb-2 fw-normal fs-40 text-dark mt-5">
+            Selecciona el producto
           </h3>
         </div>
         <div className="container-fluid py-3 position-relative d-none d-lg-block">
           <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-center gap-10">
-            <div className="col-auto mb-5 pb-5">
+            <div onClick={scrollTop} className="col-auto">
               <Link
-                onClick={scrollTop}
-                to="/siniestro-gm"
+                to="/reclamacion-siniestros/gastos-medicos-form"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first">
+                <div className="card border border-4 border-first rounded-pill text-center position-relative card-hover_first">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                      alt="Gastos medicos hombre"
+                      alt="Hombre sonriente señalando teléfono"
                       className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                     />
                   </div>
                 </div>
                 <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title fw-normal lh-sm text-center fs-2">
+                  <p className="card-title fw-normal lh-sm text-center fs-25">
                     Devolución de deducible
                     <br />
                     Gastos Médicos
                   </p>
+                </div>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/gastos-medicos-form">
+                    <button className="button-hero rounded-pill pt-1">
+                      Seleccionar
+                    </button>
+                  </Link>
                 </div>
               </Link>
             </div>
-            <div className="col-auto mb-5 pb-5">
-              <NavLink onClick={ scrollTop } to="/siniestro-auto" className="w-100 text-decoration-none">
-                <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second">
+            <div onClick={scrollTop} className="col-auto">
+              <Link
+                to="/reclamacion-siniestros/auto-form"
+                className="w-100 text-decoration-none"
+              >
+                <div className="card border border-4 border-second rounded-pill text-center position-relative card-hover_second">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                      alt="hombre auto"
+                      alt="hombre con camisa gris abrazando la parte trasera de un auto"
                       className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                     />
                   </div>
                 </div>
                 <div className="mt-5 d-flex justify-content-center w-100">
-                  <p className="card-title fw-normal lh-sm text-center fs-2">
+                  <p className="card-title fw-normal lh-sm text-center fs-25 ">
                     Devolución de deducible
                     <br />
                     Autos
                   </p>
                 </div>
-              </NavLink>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/auto-form">
+                    <button className="button-hero rounded-pill pt-1">
+                      Seleccionar
+                    </button>
+                  </Link>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="container-fluid py-3 position-relative d-lg-none">
+        <div className="container-fluid pb-3 pt-5 mt-5 position-relative d-lg-none">
           <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-            <div className="col-auto mb-5 pb-5 w-75">
-              <NavLink
-                onClick={scrollTop}
-                to="/siniestro-gm"
+            <div className="services-title container-fluid text-center">
+              <h3 className="pb-2 fw-normal text-dark mt-5">
+                Selecciona el producto
+              </h3>
+            </div>
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+              <Link
+                to="/reclamacion-siniestros/gastos-medicos-form"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-first rounded-5 text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="card border border-4 border-first rounded-pill text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-gastos-medicos.png"
-                      alt="Gastos medicos hombre"
+                      alt="Hombre sonriente señalando teléfono"
                       className="card_img-width card_img-width_first position-relative bottom-0 mx-auto"
                     />
                   </div>
@@ -88,19 +115,28 @@ export const SelectSiniestro= () => {
                     Gastos Médicos
                   </p>
                 </div>
-              </NavLink>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/gastos-medicos-form">
+                    <button className="button-hero rounded-pill pt-1">
+                      Seleccionar
+                    </button>
+                  </Link>
+                </div>
+              </Link>
             </div>
-            <div className="col-auto mb-5 pb-5 w-75">
-              <NavLink
-                onClick={scrollTop}
-                to="/siniestro-auto"
+            <div onClick={scrollTop} className="col-auto mb-5 pb-5 w-75">
+              <Link
+                to="/reclamacion-siniestros/auto-form"
                 className="w-100 text-decoration-none"
               >
-                <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
+                <div className="card border border-4 border-second rounded-pill text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
                   <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
                     <img
                       src="https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-autos.png"
-                      alt="Gastos medicos hombre"
+                      alt="hombre con camisa gris abrazando la parte trasera de un auto"
                       className="card_img-width card_img-width_second position-relative bottom-0 mx-auto"
                     />
                   </div>
@@ -112,7 +148,17 @@ export const SelectSiniestro= () => {
                     Autos
                   </p>
                 </div>
-              </NavLink>
+                <div
+                  onClick={scrollTop}
+                  className="d-flex justify-content-center mt-5"
+                >
+                  <Link to="/reclamacion-siniestros/auto-form">
+                    <button className="button-hero rounded-pill pt-1">
+                      Seleccionar
+                    </button>
+                  </Link>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -123,6 +169,7 @@ export const SelectSiniestro= () => {
 };
 
 const SelectSiniestroContainer = styled.section`
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
   .text-lile {
@@ -138,19 +185,34 @@ const SelectSiniestroContainer = styled.section`
     margin-bottom: 0rem;
     color: #000000;
   }
+  .button-hero {
+    height: 6rem;
+    min-width: auto;
+    padding: 0 3rem;
+    background: #fff;
+    color: #5872c4;
+    border: 2px solid #5872c4;
+    font-size: 2.3rem;
+    font-weight: 500;
+    transition: all ease 0.3s;
+  }
+  .button-hero:hover {
+    background-color: #5872c4;
+    color: #FFF;  
+  }
 
   .text-,
   .border- {
     &first {
       color: white !important;
-      border-color: #1d45c2 !important;
-      background-color: #1d45c2 !important;
+      border-color: #b5c2e8 !important;
+      background-color: #b5c2e8 !important;
     }
 
     &second {
       color: white !important;
-      border-color: #1a6a8b !important;
-      background-color: #1a6a8b !important;
+      border-color: #b5c2e8  !important;
+      background-color: #b5c2e8  !important;
     }
 
     &third {
@@ -168,19 +230,25 @@ const SelectSiniestroContainer = styled.section`
 
   .card {
     width: 41rem;
-    height: 41rem;
+    height: 64rem;
+  }
+
+  .fs-25 {
+    font-size: 2.5rem;
   }
 
   .card_img-width_first {
-    width: 31rem;
-    top: -2.4rem;
+    width: 37rem;
+    top: 4.9rem;
     right: 0;
+    border-radius: 50rem;
   }
 
   .card_img-width_second {
-    width: 32rem;
-    top: 0rem;
-    right: 4.9rem;
+    width: 41.1rem;
+    top: 5.1rem;
+    right: 0;
+    border-radius: 0 21rem 21rem;
   }
 
   .card_img-width_third {
@@ -261,17 +329,18 @@ const SelectSiniestroContainer = styled.section`
   }
 
   .services-title {
-    padding-bottom: 20rem;
+    padding-bottom: 5rem;
   }
 
   .gap-10 {
     gap: 10rem;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 570px) {
+    height: 210rem;
     .card {
       width: 41rem;
-      height: 41rem;
+      height: 63.8rem;
     }
 
     .card-body {
@@ -288,7 +357,8 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    padding-top: 20rem;
+    height: 260rem;
+    padding-top: 14rem;
     padding-bottom: 20rem;
 
     .services-title-mb h3 {
@@ -296,21 +366,25 @@ const SelectSiniestroContainer = styled.section`
       text-align: start;
     }
 
+    .fs-40 {
+      font-size: 4rem;
+    }
+
     .card {
       width: 50rem;
-      height: 58rem;
+      height: 80rem;
     }
 
     .card_img-width_first {
-      width: 44rem;
-      top: -3.6rem;
+      width: 47rem;
+      top: 5.7rem;
       right: 0rem;
     }
 
     .card_img-width_second {
-      width: 44rem;
-      top: 0.9rem;
-      right: 3.3rem;
+      width: 50rem;
+      top: 7.4rem;
+      right: 0.1rem;
     }
 
     .card_img-width_third {
@@ -333,21 +407,27 @@ const SelectSiniestroContainer = styled.section`
   }
 
   @media (min-width: 992px) {
+    height: 105vh;
     .card {
-      width: 36rem;
-      height: 59rem;
+      width: 31rem;
+      height: 49rem;
+    }
+
+    .services-title {
+      padding-bottom: 2rem;
     }
 
     .card_img-width_first {
-      width: 31rem;
-      top: -4.5rem;
-      left: 2rem;
+      width: 32rem;
+      top: 0.9rem;
+      left: -1.3rem;
     }
 
     .card_img-width_second {
-      width: 32.3rem;
-      top: -0.7rem;
-      right: 0.9rem;
+      border-radius: 0 21rem 21rem;
+      width: 30.9rem;
+      top: 8rem;
+      right: 0.6rem;
     }
 
     .card_img-width_third {
@@ -357,4 +437,3 @@ const SelectSiniestroContainer = styled.section`
     }
   }
 `;
-

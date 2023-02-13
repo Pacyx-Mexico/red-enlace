@@ -9,19 +9,19 @@ export const GastosMedicosHero = () => {
     scroll.scrollToTop();
   };
   return (
-    <HeroContainer className="home position-relative" id="home">
+    <HeroContainer className="home d-flex" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block"
         src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/hero-gastos-medicos.png"}
-        alt="Gradient background element"
+        alt="Hombre sonriente señalando teléfono"
       />
-      <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
+      <div className="align-items-center position-relative top-25 w-75 d-none d-lg-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark text-start">
+          <h2 className="mb-4 pt-5 fs-65 fw-normal z-index text-dark text-start">
             Devolución de deducible <br />
-            <span className="fst-italic">Gastos Médicos</span>
+            <span>Gastos Médicos</span>
           </h2>
-          <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
+          <p className="text-secondary pb-5 mb-5 mt-4 lh-md hero_subtitle fw-light">
             Te cuidamos. Te devolvemos tu deducible de manera garantizada
           </p>
           <div onClick={scrollTop}>
@@ -33,15 +33,16 @@ export const GastosMedicosHero = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid d-flex flex-column w-100 h-100 d-md-none">
-        <h2 className="fw-normal fw-medium text-dark h2-heading primary_title">
-          Devolución de deducible <br /><span className="fst-italic"> Gastos Médicos</span>
+      <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-lg-none">
+        <h2 className="fw-normal fw-medium text-dark primary_title mb-5 pb-5">
+          Devolución de deducible <br />
+          Gastos Médicos
         </h2>
-        <div className="d-flex justify-content-center px-5 mx-5">
+        <div className="d-flex justify-content-center px-5 mx-5 h-50">
           <Image
             className="gradient_img_bg_sm img-fluid px-5 d-md-none"
             src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/Gastos-medicos-mb.png"}
-            alt="Gradient background element"
+            alt="Hombre sonriente señalando teléfono"
           />
         </div>
         <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
@@ -61,10 +62,15 @@ export const GastosMedicosHero = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 120rem;
+  height: 100vh;
+
+  .ihjuak {
+    background:  #FFF !important;
+    color: #5872c4;
+  }
   .gradient_img_bg {
     z-index: 1;
-    height: 90%;
+    height: 85%;
     width: auto;
     top: 16rem;
     right: 0;
@@ -80,17 +86,18 @@ const HeroContainer = styled.section`
 
   .hero-title {
     margin-left: 10rem;
+    margin-bottom: 7.5rem;
   }
-
+  .primary_title {
+    font-size: 25px;
+  }
   .img-fluid {
     width: auto;
-    height: 60rem;
+    height: 100%;
   }
-
-  .gradient_img_bg_sm {
-    margin-top: 7rem;
+  .mt-11 {
+    margin-top: 11rem;
   }
-
   .w-85 {
     width: 85%;
   }
@@ -108,16 +115,14 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.4rem;
+    font-size: 2.79rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
     margin-left: 0rem;
+    text-align: start;
   }
 
-  .primary_title {
-      margin-top: 20rem;
-  }
 
   @media (min-width: 576px) {
     height: 160rem;
@@ -129,7 +134,7 @@ const HeroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 94rem;
+    height:100vh;
     .gradient_img_bg_sm {
       width: 70%;
       height: 100%;
@@ -169,6 +174,11 @@ const HeroContainer = styled.section`
       bottom: 0;
       left: 0;
       z-index: 15;
+    }
+
+    .fs-65 {
+      font-size: 7rem;
+      margin-top: 14rem;
     }
   }
 `;

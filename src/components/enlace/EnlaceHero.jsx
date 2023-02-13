@@ -9,18 +9,18 @@ export const EnlaceHero = () => {
     scroll.scrollToTop();
   };
   return (
-    <HeroContainer className="home position-relative mb-5 pb-5" id="home">
+    <HeroContainer className="home d-flex align-items-center" id="home">
       <Image
         className="gradient_img_bg position-absolute d-none d-md-block mb-5 pb-5"
         src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/Enlace-hero.png" }
-        alt="Gradient background element"
+        alt="Doctora sonriente con bata blanca señalando a la izquierda"
       />
-      <div className="d-flex align-items-center position-absolute w-50 h-100 d-none d-md-flex">
+      <div className="d-flex align-items-center position-absolute w-75 h-100 d-none d-md-flex">
         <div className="hero-title d-flex flex-column justify-content-center text-center align-items-start">
-          <h2 className="mb-4 pr-xxl-5 fw-normal z-index text-dark text-start">
+          <h2 className="mb-4 pr-xxl-5 fw-normal fs-65 z-index text-dark text-start">
             Enlaces
           </h2>
-          <p className="text-secondary mb-4 mb-lg-5 hero_subtitle fw-light">
+          <p className="text-secondary pb-5 mb-5 mt-4 mb-lg-5 hero_subtitle fw-light">
           Ahorra en tu póliza de Gastos Médicos con "Enlace"
           </p>
           <div onClick={scrollTop}>
@@ -33,13 +33,35 @@ export const EnlaceHero = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
-        <h2 className="fw-normal fw-medium text-dark fst-italic h2-title primary_title py-5">
+      <div className="container d-flex flex-column justify-content-center w-100 h-100 d-md-none">
+        <h2 className="fw-normal fw-500 text-dark h2-heading primary_title mb-5 pb-5">
+          Enlaces
+        </h2>
+        <div className="d-flex justify-content-center h-auto">
+          <Image
+            className="gradient_img_bg_sm img-fluid px-5 d-md-none"
+            src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png"}
+            alt="Doctora sonriente con bata blanca señalando a la izquierda"
+          />
+        </div>
+        <div className="d-flex justify-content-center w-100 d-md-none mt-5 pt-5">
+          <div onClick={scrollTop}>
+            <Link
+              to="/cotizador-deducible-gastos-medicos"
+              className="headerTitle__btn"
+            >
+              <Button text="Contratar" />
+            </Link>
+          </div>
+        </div>
+      </div>
+{/*       <div className="container-fluid d-flex flex-column justify-content-center w-100 h-100 d-md-none">
+        <h2 className="fw-normal fw-medium text-dark   h2-title primary_title py-5">
         Enlaces
         </h2>
-        <div className="d-flex justify-content-center px-5 mx-5">
+        <div className="d-flex justify-content-center px-5 h-50 mx-5">
           <Image
-            className="gradient_img_bg_sm px-5 d-md-none"
+            className="gradient_img_bg_sm px-5 d-md-none mb-5"
             src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/enlace-hero-mobile.png" }
             alt="Gradient background element"
           />
@@ -54,14 +76,14 @@ export const EnlaceHero = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
     </HeroContainer>
   );
 };
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 133rem;
+  height: 100vh;
   .gradient_img_bg {
     z-index: 1;
     height: 90%;
@@ -72,7 +94,7 @@ const HeroContainer = styled.section`
   }
 
   .h2-title {
-    margin-top: 20rem;
+    margin-top: 15rem;
     margin-bottom: 12rem;
   }
 
@@ -83,7 +105,6 @@ const HeroContainer = styled.section`
     top: 9.6rem;
     left: -16rem;
   }
-
   .hero-title {
     margin-left: 10rem;
   }
@@ -109,7 +130,7 @@ const HeroContainer = styled.section`
     opacity: 0.2;
   }
   .hero_subtitle {
-    font-size: 2.4rem;
+    font-size: 2.79rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
@@ -117,7 +138,7 @@ const HeroContainer = styled.section`
   }
 
   .gradient_img_bg_sm {
-      width: 70rem;
+      width: auto;
       height: 100%;
   }
 
@@ -130,7 +151,7 @@ const HeroContainer = styled.section`
   }
 
   @media (min-width: 768px) {
-    height: 80rem;
+    height: 100vh;
 
     .gradient_img_bg {
       height: 90%;
@@ -144,7 +165,7 @@ const HeroContainer = styled.section`
 
     .primary_title {
       font-size: 25px;
-      margin-bottom: 10rem;
+      margin-bottom: 8.5rem;
     }
 
     .primary_subtitle {
@@ -154,6 +175,10 @@ const HeroContainer = styled.section`
     .home__info-mb {
       position: absolute;
       top: 20rem;
+    }
+
+    .fs-65 {
+      font-size: 7rem;;
     }
 
     .man_img-mb {

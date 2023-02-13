@@ -8,6 +8,102 @@ export const ContainerNav = styled.header`
   background-color: var(--primary-color);
   padding: 0 5rem;
   box-shadow: 3px 3px 8px var(--shadow-color2);
+
+  .show>.btn-success.dropdown-toggle {
+    color: #fff;
+    background: none !important;
+    border-color: none !important;
+    box-shadow: none !important;
+  }
+  
+  .dropdown-menu {
+    inset: 3.4rem auto auto -958% !important;
+    gap: 5rem;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0 0;
+    transform: translate3d(121.3rem, 54%, 0px) !important;
+    width: auto;
+
+    a {
+      justify-content: start;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+    }
+  }
+
+  .dropdown button,
+  .btn-success {
+    background: none;
+    border: none;
+    font-size: 2.25rem;
+    color:var(--off-color);
+    font-weight: 500;
+    height: 12rem;
+
+    &::after {
+      display: none;
+    }
+
+    .show>.btn-success.dropdown-toggle:focus {
+      box-shadow: none !important;
+    }
+
+    &:focus,
+    &:active,
+    &:focus {
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .dropdown-menu {
+      transform: translate3d(191.3rem,-24px,0px) !important;
+    }
+    .dropdown button {
+      font-size: 3.25rem;
+    }
+  }
+
+  .accordion-item {
+    background: none;
+    color: #fff;
+    border: none; 
+  }
+
+  .accordion-button {
+    color: var(--off-color);
+    background: none;
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+
+    &:focus {
+      border: none;
+      color: #fff;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .accordion-body {
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -97,7 +193,7 @@ export const MenuItem = styled.li`
     height: 12rem;
 
     a {
-      font-size: 2.6rem;
+      font-size: 3.5rem;
       padding: 0 1.2em;
     }
   }

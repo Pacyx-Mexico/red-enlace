@@ -6,21 +6,23 @@ function Button({ text }) {
 
 const Btn = styled.button`
   height: 6rem;
-  min-width: 20rem;
+  min-width: auto;
   border-radius: 5rem;
-  padding: 0 1rem;
-  border: none;
-  font-size: 2.3rem;
+  padding: 0 4rem;
+  border: 2px solid var(--primary-color2);
+  font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
-  color: #fff;
+  padding-top: 0.25rem;
+  color: var(--primary-color2);
   box-shadow: 2px 2px 3px var(--shadow-color);
-  background-color: var(--primary-color2); 
+  background-color: #FFFFFF; 
   transition: all ease 0.3s;
 
   &:hover {
-    background-color: var(--secondary-color2);
+    background-color: var(--primary-color2);
     transition: all ease 0.3s;
+    color: #FFFFFF;
   }
 `;
 

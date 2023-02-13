@@ -1,135 +1,134 @@
 import styled from "styled-components";
-import { MedicineIcon, MedicalExpensesIcon, CarIcon } from "../../assets/icons";
+import { Point } from "../../assets/icons";
 import { NavLink, Link } from "react-router-dom";
 import Button from "../Button";
+import { IoIosArrowDown } from "react-icons/io";
+import { animateScroll as scroll } from "react-scroll";
 
 export const SiniestroSteps = () => {
   const scrollTop = () => {
     scroll.scrollToTop();
   };
   return (
-    <ServicesContainer>
+    <ServicesContainer className="position-relative">
       {/* {map.services(service => console.log(service))} */}
       <div className="services-title container-fluid text-center d-none d-lg-block">
-        <h3 className="pb-2 fw-normal text-dark mt-5">
-          Sigue estos
-          <span className="text-black fw-bold"> 3 sencillos pasos</span>
+        <h3 className="pb-2 fw-normal fs-40 text-dark mt-5">
+          Sigue estos 3 sencillos pasos
         </h3>
       </div>
-      <div className="services-title-mb container-fluid text-center d-lg-none">
-        <h4 className="fw-semi-bold text-dar mb-5 pb-5">
-          Conoce nuestros productos
-        </h4>
-      </div>
-      <div className="container-fluid py-3 position-relative d-none d-lg-block">
-        <div className="row px-5 mx-5 mr-5 ml-5 d-flex justify-content-around gap-5">
-          <div className="col-auto mb-5 pb-5">
+      <div className="container-fluid position-relative d-none d-lg-block ms-10">
+        <div className="flex-column d-flex w-50 justify-content-start gap-5">
+          <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
-              <div className="icon-width d-flex align-items-center justify-content-center">
-                <h2 className="number-fs">1</h2>
+              <div className="icon-width d-flex align-items-center">
+                <Point />
+                <h2 className="ms-5 number-fs  ">Paso 1</h2>
               </div>
             </div>
-            <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-1">
+            <div className="ms-5 ps-3 d-flex w-100">
+              <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
                 Selecciona el producto
               </p>
             </div>
+            <hr className="custom-hr" />
           </div>
-          <div className="col-auto mb-5 pb-5">
+          <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
-              <div className="icon-width d-flex align-items-center justify-content-center">
-                <h2 className="number-fs">2</h2>
+              <div className="icon-width d-flex align-items-center">
+                <Point />
+                <h2 className="ms-5 number-fs  ">Paso 2</h2>
               </div>
             </div>
-            <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-1">
-                Descarga y requisita los <br />
-                formatos correspondientes, <br />
-                no olvides firmarlos
+            <div className="ms-5 ps-3 d-flex w-100">
+              <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                Descarga y requisita los formatos correspondientes, no olvides
+                firmarlos
               </p>
             </div>
+            <hr className="custom-hr" />
           </div>
-          <div className="col-auto mb-5 pb-5">
+          <div className="col-auto mb-5">
             <div className=" text-center card-hover_first">
-              <div className="icon-width d-flex align-items-center justify-content-center">
-                <h2 className="number-fs">3</h2>
+              <div className="icon-width d-flex align-items-center">
+                <Point />
+                <h2 className="ms-5 number-fs  ">Paso 3</h2>
               </div>
             </div>
-            <div className="mt-5 d-flex justify-content-center w-100">
-              <p className="card-title fw-normal lh-sm text-center fs-1">
-                Completa tu información y <br />
-                adjunta la documentación <br />
-                solicitada
+            <div className="ms-5 ps-3 d-flex w-100">
+              <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                Completa tu información y adjunta la documentación solicitada
               </p>
             </div>
+            <hr className="custom-hr" />
           </div>
-          <div className="d-flex justify-content-center w-100 mt-5 pt-5">
-            <div onClick={scrollTop}>
-              <Link to="/select-siniestro" className="headerTitle__btn">
-                <Button text="Reclamar siniestro" />
-              </Link>
-            </div>
-          </div>
+        </div>
+      </div>
+
+      <div className="justify-content-center w-100 mt-5 pt-5 d-none d-lg-flex">
+        <div onClick={scrollTop}>
+          <Link
+            to="/reclamacion-siniestros/select"
+            className="headerTitle__btn"
+          >
+            <Button text="Reclamar siniestro" />
+          </Link>
         </div>
       </div>
 
       <div className="container-fluid py-3 position-relative d-lg-none">
         <div className="flex-column px-5 mx-5 mr-5 ml-5 d-flex align-items-center justify-content-center gap-5">
-          <div className="col-auto mb-5 pb-5 w-75">
-            <div className="card border border-4 border-first rounded-5 text-center opacity-75 position-relative card-hover_first d-flex align-items-center justify-content-center mx-auto shadow-lg">
-              <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                <div className="icon-width d-flex align-items-center justify-content-center">
-                  <h2 className="number-fs">1</h2>
+          <div className="flex-column d-flex w-100 justify-content-start gap-5">
+            <div className="col-auto mb-5">
+              <div className=" text-center card-hover_first">
+                <div className="icon-width d-flex align-items-center">
+                  <Point />
+                  <h2 className="ms-5 number-fs  ">Paso 1</h2>
                 </div>
               </div>
-            </div>
-            <div className="mt-5 d-flex justify-content-center">
-              <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
-                Selecciona el producto
-              </p>
-            </div>
-          </div>
-          <div className="col-auto mb-5 pb-5 w-75">
-            <div className="card border border-4 border-second rounded-5 text-center opacity-75 position-relative card-hover_second d-flex align-items-center justify-content-center mx-auto shadow-lg">
-              <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                <div className="icon-width d-flex align-items-center justify-content-center">
-                  <h2 className="number-fs">2</h2>
-                </div>
-              </div>
-            </div>
-            <div className="mt-5 d-flex justify-content-center">
-              <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
-                Descarga y requisita los <br />
-                formatos correspondientes, <br />
-                no olvides firmarlos
-              </p>
-            </div>
-          </div>
-          <div className="mb-5 pb-5 w-75">
-            <NavLink
-              onClick={scrollTop}
-              to="/deducible-gastos-medicos"
-              className="w-100 text-decoration-none"
-            >
-              <div className="card border border-4 border-third rounded-5 text-center opacity-75 position-relative card-hover_third d-flex align-items-center justify-content-center mx-auto shadow-lg">
-                <div className="icon-width position-absolute d-flex align-items-center justify-content-center">
-                  <div className="icon-width d-flex align-items-center justify-content-center">
-                    <h2 className="number-fs">3</h2>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-5 d-flex justify-content-center">
-                <p className="card-title fw-normal lh-sm text-center fs-2 w-100">
-                  Completa tu información y <br />
-                  adjunta la documentación <br />
-                  solicitada
+              <div className="ms-5 ps-3 d-flex w-100">
+                <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                  Selecciona el producto
                 </p>
               </div>
-            </NavLink>
+              <hr className="custom-hr" />
+            </div>
+            <div className="col-auto mb-5">
+              <div className=" text-center card-hover_first">
+                <div className="icon-width d-flex align-items-center">
+                  <Point />
+                  <h2 className="ms-5 number-fs  ">Paso 2</h2>
+                </div>
+              </div>
+              <div className="ms-5 ps-3 d-flex w-100">
+                <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                  Descarga y requisita los formatos correspondientes, no olvides
+                  firmarlos
+                </p>
+              </div>
+              <hr className="custom-hr" />
+            </div>
+            <div className="col-auto mb-5">
+              <div className=" text-center card-hover_first">
+                <div className="icon-width d-flex align-items-center">
+                  <Point />
+                  <h2 className="ms-5 number-fs  ">Paso 3</h2>
+                </div>
+              </div>
+              <div className="ms-5 ps-3 d-flex w-100">
+                <p className="card-title fw-normal lh-sm text-start mb-5 pb-5">
+                  Completa tu información y adjunta la documentación solicitada
+                </p>
+              </div>
+              <hr className="custom-hr" />
+            </div>
           </div>
           <div className="d-flex justify-content-center w-100 mt-5 pt-5">
             <div onClick={scrollTop}>
-              <Link to="/select-siniestro" className="headerTitle__btn">
+              <Link
+                to="/reclamacion-siniestros/select"
+                className="headerTitle__btn"
+              >
                 <Button text="Reclamar siniestro" />
               </Link>
             </div>
@@ -143,6 +142,7 @@ export const SiniestroSteps = () => {
 const ServicesContainer = styled.section`
   padding-top: 10rem;
   padding-bottom: 10rem;
+  z-index: 2;
   .text-lile {
     color: #6983d6;
   }
@@ -155,10 +155,11 @@ const ServicesContainer = styled.section`
   .card-title {
     margin-bottom: 0rem;
     color: #000000;
+    font-size: 2.5rem;
   }
 
   .number-fs {
-    font-size: 30rem;
+    font-size: 3.5rem;
   }
 
   .text-,
@@ -189,8 +190,9 @@ const ServicesContainer = styled.section`
   }
 
   .card {
-    width: 41rem;
-    height: 41rem;
+    width: 30rem;
+    height: 30rem;
+    background: #e8ebfa;
   }
 
   .card_img-width_first {
@@ -213,6 +215,19 @@ const ServicesContainer = styled.section`
 
   .rounded-5 {
     border-radius: 5.5rem !important;
+  }
+
+  .fs-30 {
+    font-size: 3rem;
+  }
+
+  .arrow {
+    width: 40%;
+  }
+
+  .arrow svg {
+    width: auto;
+    height: 5rem;
   }
 
   .btn-first {
@@ -254,6 +269,10 @@ const ServicesContainer = styled.section`
     }
   }
 
+  .w-76 {
+    width: 76rem;
+  }
+
   .btn-fourth {
     background-color: #1da939;
     border: 3px solid #1da939 !important;
@@ -269,6 +288,10 @@ const ServicesContainer = styled.section`
 
   .services-title {
     padding-bottom: 20rem;
+  }
+
+  .services-title-mb {
+    font-size: 4.5rem;
   }
 
   .gap-10 {
@@ -292,16 +315,20 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 9rem;
     }
+
+    .card-title {
+      font-size: 3.5rem;
+    }
+
+    .w-76 {
+      width: 76rem;
+    }
   }
 
   @media (min-width: 768px) {
+    z-index: 2;
     padding-top: 20rem;
     padding-bottom: 20rem;
-
-    .services-title-mb h3 {
-      padding: 0 3rem 15rem;
-      text-align: start;
-    }
 
     .card {
       width: 50rem;
@@ -337,12 +364,29 @@ const ServicesContainer = styled.section`
     .gap-10 {
       gap: 25rem;
     }
+
+    .card-title {
+      font-size: 2.5rem;
+    }
+
+    .w-76 {
+      width: 153rem;
+    }
   }
 
   @media (min-width: 992px) {
     .card {
       width: 36rem;
       height: 42rem;
+    }
+
+    .custom-hr {
+      height: 0.5rem;
+      background: #c5e3d6;
+      border-top: none;
+      opacity: 1;
+      border-radius: 20rem;
+      margin: 0;
     }
 
     .card_img-width_first {
@@ -357,10 +401,18 @@ const ServicesContainer = styled.section`
       right: 0.9rem;
     }
 
+    .ms-10 {
+      margin-left: 13rem;
+    }
+
     .card_img-width_third {
       width: 35.9rem;
       top: -8.4rem;
       right: 3rem;
+    }
+
+    .fs-40 {
+      font-size: 4rem;
     }
   }
 `;

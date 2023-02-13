@@ -8,6 +8,9 @@
   --secondary-color3: #1da939;
   --secondary-color4: #4aba6012;
 
+  --tertiary-color: #3F809B;
+
+  --bgInput-color: #1d46c214;
   --errorInput-color: #f30000;
 
   --cards-color: #f5f7f9;
@@ -24,6 +27,9 @@
   --h4-size: 3em;
   --h5-size: 2.2em;
   --h6-size: 1em;
+
+  --inputHeight-size: 5.6rem;
+  --inputText-size: 2.2rem;
 }
 
 html {
@@ -41,6 +47,7 @@ body {
   font-weight: 500;
   background-color: #ffffff;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -83,6 +90,41 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .displayNone {
   display: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.btn-square {
+  background: #d9dff4;
+  color: #000;
+  padding: 0 4rem;
+  height: 6rem;
+  width: auto;
+  border: none;
+  font-weight: 500;
+  font-size: 2rem;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 3px var(--shadow-color);
+  transition: all ease 0.3s;
+}
+.btn-square:hover {
+  background: #8198dc;
+  color: #FFF;
+}
+
+.ms-10 {
+  margin-left: 10rem;
 }
 
 /* SCROLLBAR */

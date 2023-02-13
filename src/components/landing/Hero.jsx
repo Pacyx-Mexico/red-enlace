@@ -1,55 +1,108 @@
 import styled from "styled-components";
 import { Image } from "react-bootstrap";
 import { RedEnlaceBg } from "../../assets/backgrounds";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export const Hero = () => {
+  const scrollTop = () => {
+    scroll.scrollToTop();
+  };
+
+  const scrollToSection = () => {
+    scroll.scrollTo("productos", {
+      containerId: "productos",
+    });
+  };
+
   return (
     <HeroContainer className="home position-relative" id="home">
       <Image
-        className="gradient_img_bg position-absolute d-none d-md-block"
-        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-no-op.png" }
-        alt="Gradient background element"
+        className="man_img-bg position-absolute d-none d-lg-block"
+        src={"https://elementos-red-enlace.s3.amazonaws.com/Landing/PrincipalHero.png"}
+        alt="Hombre sonriente cruzado de brazos con camisa blanca"
       />
-      <Image
-        className="gradient_img_bg position-absolute d-none d-md-block"
-        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg-no-op.png" }
-        alt="Gradient background element"
-      />
-      <Image className="man_img-bg position-absolute d-none d-md-block" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre.png" } alt="" />
-      <div className=" container w-50 position-absolute RE_img_bg d-none d-md-block">
-        <RedEnlaceBg />
+      <div className="position-absolute d-none d-lg-block z-index-15">
+        <div onClick={scrollTop}>
+          <ScrollLink
+            to="productos"
+            spy={false}
+            hashSpy={true}
+            smooth={true}
+            offset={-90}
+            duration={500}
+            className="color-white"
+            activeClass="some-active-class"
+          >
+            <button className="button-hero rounded-pill pt-1">Cotizar</button>
+          </ScrollLink>
+        </div>
       </div>
-      <div className="align-items-center position-absolute top-50 w-85 d-none d-md-block">
-        <div className="home__info d-flex flex-column justify-content-center text-center align-items-center">
-          <h2 className="mb-4 pr-xxl-5 fw-bold pt-5 mt-5 z-index text-primary h2-heading">
-            Ahorro &nbsp;<span className="text-white"> fácil y seguro</span>
+      <div className="position-absolute d-lg-none z-index-15">
+        <div onClick={scrollTop}>
+          <ScrollLink
+            to="productos"
+            spy={false}
+            hashSpy={true}
+            smooth={true}
+            offset={560}
+            duration={500}
+            className="color-white"
+            activeClass="some-active-class"
+          >
+            <button className="button-hero rounded-pill pt-1">Cotizar</button>
+          </ScrollLink>
+        </div>
+      </div>
+      <div className="align-items-start flex-column position-absolute top-75 w-50 d-none d-lg-flex home__info">
+          <h2 className="mb-4 pr-xxl-5 fw-bold z-index-3 text-primary text-start h2-heading">
+            Ahorra <br />
+            en tu póliza <br />
+            de seguro
           </h2>
-          <p className="text-white mb-4 mb-lg-5 hero_subtitle">
-            te regresamos tu deducible
+          <p className="mb-4 mb-md-5 lh-base z-index-3 hero_subtitle">
+            con devolución de <br />
+            deducible
+          </p>
+      </div>
+
+      <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-lg-none">
+        <div className="home__info-mb d-flex flex-column justify-content-center align-items-center">
+          <h2 className="pr-xxl-5 fw-bold z-index text-primary h1-heading primary_title">
+            Ahorra
+          </h2>
+          <span className="text-primary text-center primary_subtitle fw-bold lh-sm">
+            En tu póliza de <br />
+            seguro
+          </span>
+          <p className="mb-4 mb-md-5 lh-base z-index-3 hero_subtitle-mb">
+            Con devolución de <br />
+            deducible
           </p>
         </div>
       </div>
 
-      <div className="d-flex align-items-center justify-content-center position-absolute w-100 d-md-none">
-        <div className="home__info-mb d-flex flex-column justify-content-center align-items-center">
-          <h2 className="pr-xxl-5 fw-bold z-index text-primary h1-heading primary_title">
-            Ahorro
-          </h2>
-          <span className="text-primary primary_subtitle fw-bold">fácil y seguro</span>
-        </div>
-      </div>
-
-      <div className="d-flex justify-content-center z-index-2 position-absolute w-100 h-100">
-        <Image className="man_img-mb img-fluid d-md-none position-relative" src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png" } alt="" />
+      <div className="d-flex justify-content-center z-index-2 position-absolute w-100 h-100  d-lg-none">
         <Image
-        className="gradient_img_bg_sm img-fluid position-absolute d-md-none"
-        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg.png" }
-        alt="Gradient background element"
+          className="man_img-mb position-relative"
+          src={
+            "https://elementos-red-enlace.s3.amazonaws.com/Landing/hombre-mobile.png"
+          }
+          alt="Hombre sonriente cruzado de brazos con camisa blanca"
         />
         <Image
-        className="redlogo img-fluid position-absolute d-m-none"
-        src={ "https://elementos-red-enlace.s3.amazonaws.com/Landing/RedLogo.png" }
-        alt="Gradient background element"
+          className="gradient_img_bg_sm position-absolute d-lg-none"
+          src={
+            "https://elementos-red-enlace.s3.amazonaws.com/Landing/gradient-image-bg.png"
+          }
+          alt="fondo Gradiente"
+        />
+        <Image
+          className="redlogo position-absolute"
+          src={
+            "https://elementos-red-enlace.s3.amazonaws.com/Landing/RedLogo.png"
+          }
+          alt="fondo Gradiente"
         />
       </div>
     </HeroContainer>
@@ -58,20 +111,61 @@ export const Hero = () => {
 
 const HeroContainer = styled.section`
   background-color: #fff;
-  height: 100rem;
+  height: 100vh;
   .gradient_img_bg {
-    z-index: 1;
-    height: 90%;
-    width: 75%;
-    top: 16rem;
+    z-index: 2;
+    height: 78.5%;
+    width: 66%;
+    bottom: 0rem;
     opacity: 0.9;
+  }
+
+  .redenlace_logo {
+    z-index: 1;
+    height: 50rem;
+    width: auto;
+    left: 90rem;
+    opacity: 0.1;
+  }
+
+  .home__info {
+    z-index: 3;
+    bottom: 3.5%;
+    left: 4%;
+  }
+
+  .z-index-3 {
+    z-index: 3;
+  }
+
+  .z-index-15 {
+    z-index: 15;
+    top: 89%;
+    left: 27rem;
+  }
+
+  .button-hero {
+    height: 5.5rem;
+    min-width: auto;
+    padding: 0 3rem;
+    background: #fff;
+    color: #5872c4;
+    border: 1px solid #5872c4;
+    font-size: 2.3rem;
+    font-weight: 400;
+    transition: all ease 0.3s;
+  }
+
+  .button-hero:hover {
+    background-color: #5872c4;
+    color: #fff;
   }
   .man_img-bg {
     z-index: 2;
-    height: 90%;
+    height: 88%;
     width: auto;
-    top: 9.6rem;
-    left: -16rem;
+    bottom: 0;
+    right: 0;
   }
   .img-fluid {
     max-width: 100%;
@@ -88,20 +182,22 @@ const HeroContainer = styled.section`
   }
   .RE_img_bg {
     z-index: 1;
-    height: 40% !important;
+    width: 47% !important;
     top: 30%;
+    opacity: 0.1;
     right: 0;
-    opacity: 0.2;
   }
   .hero_subtitle {
+    position: relative;
     font-size: 3.4rem;
     font-weight: 400;
     line-height: 2rem;
     z-index: 2;
-    margin-left: 30rem;
+    text-align: start;
+    color: #5CA689;
   }
 
-  @media (max-width:768px) {
+  @media (max-width: 992px) {
     height: 168rem;
     .gradient_img_bg_sm {
       left: 0;
@@ -110,8 +206,24 @@ const HeroContainer = styled.section`
       height: 112rem;
     }
 
+    .z-index-15 {
+      z-index: 15;
+      top: 90%;
+      left: 40%;
+    }
+
+    .hero_subtitle-mb {
+      font-size: 20px;
+      font-weight: 400;
+      z-index: 5;
+      text-align: center;
+      color: #5CA689;
+      position: relative;
+      top: 75rem;
+  }
+
     .RE_img_bg {
-      display:none;
+      display: none;
     }
 
     .primary_title {
@@ -120,12 +232,12 @@ const HeroContainer = styled.section`
     }
 
     .primary_subtitle {
-      font-size:32px;
+      font-size: 32px;
     }
 
     .home__info-mb {
       position: absolute;
-      top: 20rem;
+      top: 15rem;
     }
 
     .man_img-mb {
@@ -133,17 +245,13 @@ const HeroContainer = styled.section`
       left: 0;
       width: auto;
       height: 60%;
-      z-index:4
-    }
-
-    .z-index-2 {
-      z-index:10;
+      z-index: 4;
     }
 
     .redlogo {
-    bottom: 0;
-    left: 0;
-    z-index: 15;
+      bottom: 0;
+      left: 0;
+      z-index: 15;
     }
   }
 `;

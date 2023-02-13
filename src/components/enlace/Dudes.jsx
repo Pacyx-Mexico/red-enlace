@@ -6,70 +6,76 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import "react-accessible-accordion/dist/fancy-example.css";
 
 export const Dudes = () => {
   return (
-    <DudesSection className="container d-block text-center fs-2 height-lile">
-      <h4 className="mt-5 mt-xxl-5 text-dark fst-italic pb-5">
-        Resolvemos tus dudas
+    <DudesSection className="container d-block text-center  fs-2">
+      <h4 className="mt-5 mt-xxl-5 fw-500 fs-50 text-dark pb-5">
+        Preguntas frecuentes
       </h4>
       <div className="container my-5">
-        <Accordion className="border-none">
+        <Accordion allowZeroExpanded className="border-none d-flex flex-column gap-5">
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Qué condiciones de mi póliza actual pierdo si contrato Red Enlace?
+                <span className="secondary-color3 me-4">&#8226; </span>
+                <span className="">
+                  ¿Qué condiciones de mi póliza actual pierdo si contrato Red Enlace?
+                </span> 
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-3">
-              Ninguna, incluso se te aumentan beneficios de forma inmediata y se quedan las mismas condiciones de tu póliza actual.
+              <p className="fw-normal ms-5 ps-2 fs-30 mt-3">
+                Ninguna, incluso se te aumentan beneficios de forma inmediata y se quedan las mismas condiciones de tu póliza actual.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Cuáles son los beneficios extras sin costo que obtengo al contratar un endoso de Red Enlace?
+                <span className="secondary-color3 me-4">&#8226; </span>
+                <span className="">¿Cuáles son los beneficios extras sin costo que obtengo al contratar un endoso de Red Enlace?</span>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-3">
-                Los beneficios se activan desde el primer minuto en el que contratas el endoso.
-              </p>
-              <p className="fw-normal fs-3">
-                - En caso de siniestro te damos una ayuda hospitalaria de $1,000 pesos diarios (topado a 30 días), depositado directamente a tu cuenta, esto aplica únicamente en caso de enfermedades graves (politraumatismo, derrame cerebral o transplante de órganos).
-              </p>
-              <p className="fw-normal fs-3">
-                - El 100% de tu deducible es cubierto por Red Enlace.
-              </p>
-              <p className="fw-normal fs-3">
-                - El pago de siniestros lo realizamos en máximo 72 horas.
-              </p>
+              <div className="d-flex flex-column gap-3">
+                <p className="fw-normal ms-5 ps-2 fs-30 mt-3">
+                  Los beneficios se activan desde el primer minuto en el que contratas el endoso.
+                </p>
+                <p className="fw-normal ms-5 ps-2 fs-30 mt-3">
+                  - En caso de siniestro te damos una ayuda hospitalaria de $1,000 pesos diarios (topado a 30 días), depositado directamente a tu cuenta, esto aplica únicamente en caso de enfermedades graves (politraumatismo, derrame cerebral o transplante de órganos).
+                </p>
+                <p className="fw-normal ms-5 ps-2 fs-30 mt-3">
+                  - El 100% de tu deducible es cubierto por Red Enlace.
+                </p>
+                <p className="fw-normal ms-5 ps-2 fs-30 mt-3">
+                  - El pago de siniestros lo realizamos en máximo 72 horas.
+                </p>
+              </div>
             </AccordionItemPanel>
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton>
-                <span className="secondary-color3 me-4">&#8226; </span> ¿Esta asistencia funciona con todas las pólizas de gastos médicos?
+                <span className="secondary-color3 me-4">&#8226; </span>
+                <span className="">
+                ¿Esta asistencia funciona con todas las pólizas de gastos médicos?</span>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="fw-normal fs-3 text-left">
-                Si, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
+              <p className="fw-normal ms-5 ps-2 text-left fs-30 mt-3">
+                Sí, se adiciona a cualquier póliza de cualquier compañía con cobertura nacional e internacional.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
         </Accordion>
       </div>
-      <button className="btn btn-primary rounded-pill btn-lg fs-3 fs-md-2 bg-white border border-secondary border-2 text-dark px-5 opacity-50">Ver más</button>
     </DudesSection>
   );
 };
 
 const DudesSection = styled.section`
-  height: 95rem;
+  height: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
 
@@ -79,6 +85,19 @@ const DudesSection = styled.section`
 
   .accordion__panel {
     text-align: left;
+  }
+
+  .fs-40 {
+    font-size: 4rem;
+  }
+
+  .fs-30 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .fs-50 {
+    font-size: 5rem;
   }
 
   .secondary-color3 {
@@ -93,6 +112,12 @@ const DudesSection = styled.section`
   .accordion__button {
     background-color: #FFFFFF;
     text-align: start !important;
+    font-size: 3rem;
+    font-weight: 400;
+
+    &:focus {
+      font-weight: 600;
+    }
   }
 
   .accordion__button:after {
@@ -101,8 +126,14 @@ const DudesSection = styled.section`
     height: 10px;
     width: 10px;
     margin-left: 6%;
-    border-bottom: 2px solid #409e75;
-    border-right: 2px solid #409e75;
+    border-bottom: 4px solid #409e75;
+    border-right: 4px solid #409e75;
     transform: rotate(-45deg);
+  }
+
+  @media (min-width: 768px) {
+    .fs-30 {
+      font-size: 2.3rem;
+    }
   }
 `;

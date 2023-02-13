@@ -11,7 +11,7 @@ export const Characteristics = () => {
     <CharacteristicSection>
       <div className="services-title container text-center">
         <h3 className="pb-2 fw-semi-bold text-dark">
-          <span className="text-dark fw-normal">La única <span className="text-dark fw-bold">opción digital</span> para <br />
+          <span className="text-dark fw-normal">La única <span className="text-dark fw-500">opción digital</span> para <br />
             complementar tu protección</span>
         </h3>
         <h5 className="text-dark fs-1 fw-normal text-center pt-4">Trabajamos para superar tus expectativas con:</h5>
@@ -24,7 +24,7 @@ export const Characteristics = () => {
                 <PersonIcon />
               </div>
               <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold lh-sm text-primary">
+                <p className="card-title fw-500 lh-sm text-primary">
                   Productos <br />a la medida
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary mt-3">
@@ -40,7 +40,7 @@ export const Characteristics = () => {
                 <ReportIcon />
               </div>
               <div className="card-body">
-                <p className="card-title fw-bold lh-sm text-primary">
+                <p className="card-title fw-500 lh-sm text-primary">
                   Procesos <br />eficientes
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary mt-3">
@@ -55,7 +55,7 @@ export const Characteristics = () => {
                 <ChatIcon />
               </div>
               <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold lh-sm text-primary">
+                <p className="card-title fw-500 lh-sm text-primary">
                   Atención personalizada
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary mt-3">
@@ -70,7 +70,7 @@ export const Characteristics = () => {
                 <IdeaIcon />
               </div>
               <div className="card-body px-2 pb-0">
-                <p className="card-title fw-bold lh-sm text-primary">
+                <p className="card-title fw-500 lh-sm text-primary">
                   Innovación
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary mt-4">
@@ -90,7 +90,7 @@ export const Characteristics = () => {
                 <PersonIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-500 lh-sm text-primary fs-1">
                   Productos a la medida
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5 align-self-center">
@@ -105,7 +105,7 @@ export const Characteristics = () => {
                 <ReportIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-500 lh-sm text-primary fs-1">
                   Procesos eficientes
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5">
@@ -120,7 +120,7 @@ export const Characteristics = () => {
                 <ChatIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-500 lh-sm text-primary fs-1">
                   Atención personalizada
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5">
@@ -135,7 +135,7 @@ export const Characteristics = () => {
                 <IdeaIcon />
               </div>
               <div className="card-body px-2 pb-0 d-flex flex-column justify-content-center">
-                <p className="card-title fw-bold lh-sm text-primary fs-1">
+                <p className="card-title fw-500 lh-sm text-primary fs-1">
                   Innovación
                 </p>
                 <p className="card-title fw-normal lh-sm text-primary fs-2 mt-5">

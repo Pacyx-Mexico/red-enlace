@@ -18,7 +18,7 @@ export const MedicalExpensesIcon = () => {
           <path
             id="Path_174"
             data-name="Path 174"
-            class="cls-1"
+            className="cls-1"
             fill="white"
             stroke="white"
             stroke-miterlimit="10"

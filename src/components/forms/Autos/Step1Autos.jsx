@@ -39,8 +39,9 @@ class Step1Autos extends Component {
     errorNull__razonSocial: false,
 
     initGenero: true,
+    initAgeDate: true,
 
-    offStep1: false,
+    offStep1: "false",
     showAlertStep1: false,
   };
 
@@ -50,6 +51,7 @@ class Step1Autos extends Component {
       this.props.state.paterno !== "" &&
       this.props.state.materno !== "" &&
       this.props.state.edad !== "" &&
+      this.props.state.ageDate !== "" &&
       this.props.state.genero !== "" &&
       this.props.state.rfc !== "" &&
       this.props.state.correo !== "" &&
@@ -65,12 +67,12 @@ class Step1Autos extends Component {
         this.state.errorTest__tel !== true
       ) {
         this.setState({
-          offStep1: true,
+          offStep1: "true",
         });
       }
     } else {
       this.setState({
-        offStep1: false,
+        offStep1: "false",
       });
     }
   };
@@ -87,12 +89,12 @@ class Step1Autos extends Component {
         this.state.errorTest__tel !== true
       ) {
         this.setState({
-          offStep1: true,
+          offStep1: "true",
         });
       }
     } else {
       this.setState({
-        offStep1: false,
+        offStep1: "false",
       });
     }
   };
@@ -207,6 +209,11 @@ class Step1Autos extends Component {
       initGenero: false,
     });
   };
+  changeInitAgeDate = () => {
+    this.setState({
+      initAgeDate: false,
+    });
+  };
   validationRFC = () => {
     if (this.props.state.rfc !== "") {
       if (
@@ -306,7 +313,7 @@ class Step1Autos extends Component {
 
   nextStep1 = () => {
     if (this.props.state.fisica_o_moral === "fisica") {
-      if (this.state.offStep1 === false) {
+      if (this.state.offStep1 === "false") {
         this.setState({
           showAlertStep1: true,
         });
@@ -314,6 +321,7 @@ class Step1Autos extends Component {
         this.validationPaterno();
         this.validationMaterno();
         this.validationEdad();
+        this.changeInitAgeDate();
         this.changeInitGenero();
         this.validationRFC();
         this.validationCorreo();
@@ -328,7 +336,6 @@ class Step1Autos extends Component {
           this.state.errorTest__correo !== true &&
           this.state.errorTest__tel !== true
         ) {
-          this.props.nextStep();
           this.props.sendStep1();
         } else {
           this.setState({
@@ -338,6 +345,7 @@ class Step1Autos extends Component {
           this.validationPaterno();
           this.validationMaterno();
           this.validationEdad();
+          this.changeInitAgeDate();
           this.changeInitGenero();
           this.validationRFC();
           this.validationCorreo();
@@ -345,7 +353,7 @@ class Step1Autos extends Component {
         }
       }
     } else {
-      if (this.state.offStep1 === false) {
+      if (this.state.offStep1 === "false") {
         this.setState({
           showAlertStep1: true,
         });
@@ -359,7 +367,6 @@ class Step1Autos extends Component {
           this.state.errorTest__correo !== true &&
           this.state.errorTest__tel !== true
         ) {
-          this.props.nextStep();
           this.props.sendStep1();
         } else {
           this.setState({
@@ -403,6 +410,7 @@ class Step1Autos extends Component {
             validationCorreo={this.validationCorreo}
             validationTel={this.validationTel}
             changeInitGenero={this.changeInitGenero}
+            changeInitAgeDate={this.changeInitAgeDate}
           />
         )}
         {this.props.state.fisica_o_moral === "moral" && (
